@@ -11,22 +11,22 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       background: #fff;
       color: #111;
-      font-size: 15px;
+      font-size: 20px;
       line-height: 1.65;
-      padding: 52px 20px 90px;
+      padding: 48px 20px 96px;
     }
 
     .container {
-      max-width: 620px;
+      max-width: 980px;
       margin: 0 auto;
     }
 
     .back {
       display: inline-block;
-      margin-bottom: 34px;
-      color: #777;
+      margin-bottom: 56px;
+      color: #999;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .back:hover {
@@ -35,70 +35,81 @@
     }
 
     header {
-      margin-bottom: 44px;
+      max-width: 760px;
+      margin-bottom: 72px;
     }
 
     h1 {
-      font-size: 34px;
-      font-weight: 600;
+      font-size: clamp(54px, 9vw, 96px);
+      font-weight: 520;
       letter-spacing: -0.04em;
-      line-height: 1;
-      margin-bottom: 14px;
+      line-height: 0.95;
+      margin-bottom: 22px;
+    }
+
+    .date {
+      color: #aaa;
+      font-size: 16px;
+      margin-bottom: 34px;
     }
 
     .intro {
-      max-width: 560px;
-      color: #555;
-      font-size: 15px;
+      color: #333;
+      font-size: clamp(22px, 3vw, 31px);
+      line-height: 1.42;
     }
 
     section {
-      margin-bottom: 58px;
+      padding-top: 54px;
+      margin-bottom: 76px;
+      border-top: 1px solid #eeeeee;
     }
 
     h2 {
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
+      font-size: 28px;
+      font-weight: 540;
+      letter-spacing: -0.025em;
       color: #999;
-      margin-bottom: 16px;
+      margin-bottom: 28px;
     }
 
     .copy {
-      border-left: 2px solid #ebebeb;
-      padding-left: 14px;
-      margin-bottom: 18px;
+      max-width: 760px;
+      margin-bottom: 32px;
     }
 
     .copy strong {
       display: block;
       color: #111;
-      font-size: 15px;
-      font-weight: 500;
-      margin-bottom: 4px;
+      font-size: clamp(25px, 3.8vw, 38px);
+      font-weight: 520;
+      line-height: 1.18;
+      letter-spacing: -0.035em;
+      margin-bottom: 22px;
     }
 
     .copy p {
-      color: #555;
+      color: #222;
+      font-size: clamp(20px, 2.4vw, 29px);
+      line-height: 1.45;
+    }
+
+    .media-block {
+      margin-top: 28px;
+    }
+
+    .media-tools {
+      margin-bottom: 10px;
+      color: #999;
       font-size: 14px;
-      line-height: 1.58;
     }
 
-    .embed-card {
-      border: 1px solid #eeeeee;
-      border-radius: 12px;
-      padding: 12px;
-      background: #fafafa;
-    }
-
-    .embed-card a {
-      color: #777;
+    .media-tools a {
+      color: #999;
       text-decoration: none;
-      font-size: 13px;
     }
 
-    .embed-card a:hover {
+    .media-tools a:hover {
       color: #111;
       text-decoration: underline;
     }
@@ -114,6 +125,30 @@
       color: #ccc;
       margin-top: 64px;
     }
+
+    @media (max-width: 640px) {
+      body {
+        font-size: 17px;
+        padding: 34px 18px 72px;
+      }
+
+      .back {
+        margin-bottom: 42px;
+      }
+
+      header {
+        margin-bottom: 56px;
+      }
+
+      section {
+        padding-top: 38px;
+        margin-bottom: 58px;
+      }
+
+      h2 {
+        font-size: 23px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -122,6 +157,7 @@
 
     <header>
       <h1>Selected Work</h1>
+      <div class="date">18 June, 2026</div>
       <p class="intro">A few public examples of media, product storytelling, and interface work across Hyperliquid, Harmonix, and prediction-market ideas.</p>
     </header>
 
@@ -131,11 +167,11 @@
         <strong>Launch storytelling for Hyperliquid.</strong>
         <p>Campaign work around the HYPE TGE, built for a crypto-native audience and designed to turn a major protocol moment into something people could share, reference, and remember.</p>
       </div>
-      <div class="embed-card">
+      <div class="media-block">
+        <div class="media-tools"><a href="https://x.com/christophorusan/status/1855778920747954342?s=20" target="_blank">Open on X</a></div>
         <blockquote class="twitter-tweet" data-dnt="true">
           <a href="https://x.com/christophorusan/status/1855778920747954342?s=20">Hyperliquid TGE campaign</a>
         </blockquote>
-        <a href="https://x.com/christophorusan/status/1855778920747954342?s=20" target="_blank">Open on X</a>
       </div>
     </section>
 
@@ -145,11 +181,11 @@
         <strong>Interfaces and narratives for on-chain markets.</strong>
         <p>Product and market work focused on making financial infrastructure feel understandable, usable, and distribution-ready for users who live across apps, wallets, and social feeds.</p>
       </div>
-      <div class="embed-card">
+      <div class="media-block">
+        <div class="media-tools"><a href="https://x.com/christophorusan/status/2062653950562812222?s=20" target="_blank">Open on X</a></div>
         <blockquote class="twitter-tweet" data-dnt="true">
           <a href="https://x.com/christophorusan/status/2062653950562812222?s=20">Product and market work</a>
         </blockquote>
-        <a href="https://x.com/christophorusan/status/2062653950562812222?s=20" target="_blank">Open on X</a>
       </div>
     </section>
 
@@ -159,11 +195,11 @@
         <strong>Phone-first prediction-market design.</strong>
         <p>A mobile concept exploring how prediction markets could feel more immediate, lightweight, and native to everyday consumer behavior.</p>
       </div>
-      <div class="embed-card">
+      <div class="media-block">
+        <div class="media-tools"><a href="https://x.com/christophorusan/status/2051887694285091313?s=20" target="_blank">Open on X</a></div>
         <blockquote class="twitter-tweet" data-dnt="true">
           <a href="https://x.com/christophorusan/status/2051887694285091313?s=20">Polymarket phone app</a>
         </blockquote>
-        <a href="https://x.com/christophorusan/status/2051887694285091313?s=20" target="_blank">Open on X</a>
       </div>
     </section>
 
