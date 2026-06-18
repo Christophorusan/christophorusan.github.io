@@ -10,8 +10,8 @@
     .container { max-width: 680px; margin: 0 auto; }
     .back { display: inline-block; color: #8f8f8f; font-size: 14px; text-decoration: none; margin-bottom: 42px; }
     .back:hover { color: #111; text-decoration: underline; }
-    header { max-width: 620px; margin-bottom: 48px; }
-    .date { color: #a0a0a0; font-size: 13px; margin-bottom: 12px; }
+    header { max-width: 620px; margin-bottom: 46px; padding-top: 20px; }
+    .date { color: #a0a0a0; font-size: 13px; margin-bottom: 18px; }
     h1 { font-size: clamp(38px, 7vw, 58px); font-weight: 520; letter-spacing: -0.035em; line-height: 1; margin-bottom: 18px; }
     .intro { color: #2b2b2b; font-size: clamp(17px, 2vw, 20px); line-height: 1.5; }
     .work-list { border-bottom: 1px solid #ededed; }
@@ -22,11 +22,16 @@
     .work-link:hover span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
     .work-static:hover span { text-decoration: none; }
     .case-study { border-top: 1px solid #ededed; padding: 22px 0 24px; }
+    .lead-case { padding: 30px 0 34px; }
     .case-study h2 { display: flex; flex-direction: column; font-size: 19px; font-weight: 520; letter-spacing: -0.015em; line-height: 1.2; margin-bottom: 10px; }
     .case-study time { color: #aaa; font-size: 12px; font-weight: 500; letter-spacing: 0; margin-top: 4px; }
     .case-study p { color: #333; font-size: 16px; line-height: 1.55; max-width: 620px; }
     .case-study p + p { margin-top: 10px; }
     .case-study a { color: #111; text-decoration: underline; text-underline-offset: 4px; }
+    .lead-case h2 { color: #9a9a9a; font-size: 14px; font-weight: 560; letter-spacing: 0; margin-bottom: 18px; }
+    .lead-case time { color: #b0b0b0; font-size: 12px; margin-top: 5px; }
+    .lead-case p { color: #222; font-size: clamp(17px, 2vw, 20px); line-height: 1.55; max-width: 650px; }
+    .lead-case p + p { margin-top: 16px; }
     .photo-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-top: 18px; }
     .photo-grid img { aspect-ratio: 1 / 1; border-radius: 8px; display: block; filter: none; object-fit: cover; width: 100%; }
     .compact-case { padding: 18px 0 20px; }
@@ -55,14 +60,17 @@
     <header>
       <div class="date">18 June, 2026</div>
       <h1>Persona LTD</h1>
-      <p class="intro">Founder experience and publicity work from the agency I built across institutional, media, culture, and crypto clients.</p>
+      <p class="intro">A publicity agency I founded and scaled across culture, media, technology, and crypto.</p>
     </header>
 
     <nav class="work-list" aria-label="Persona LTD work">
-      <article class="case-study">
+      <article class="case-study lead-case">
         <h2>Agency Buildout <time>Dublin, Ireland · Remote</time></h2>
         <p>
-          I founded and scaled Persona into a 25-person publicity agency working across more than five countries. The agency built performance-driven campaigns across digital ads, radio, television, print press, and institutional media, generating 50,000+ ticket sales, 50M+ online views, and up to 3x ROI per campaign.
+          I founded Persona as a publicity agency for culture, media, technology, and crypto. It grew into a 25-person remote team working across more than five countries.
+        </p>
+        <p>
+          The agency built performance-driven campaigns across digital ads, radio, television, print press, and institutional media, generating 50,000+ ticket sales, 50M+ online views, and up to 3x ROI per campaign.
         </p>
         <p>
           The work sat between culture and distribution: shaping public narratives, building demand, and moving audiences for partners including EFG, CaixaBank, BBC, ARTE, Institut Français, and major European festivals.
