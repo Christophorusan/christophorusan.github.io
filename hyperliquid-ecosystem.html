@@ -87,7 +87,8 @@
     p + p { margin-top: 18px; }
 
     .media {
-      margin-top: 30px;
+      margin: 30px auto 0;
+      max-width: 640px;
     }
 
     video {
@@ -100,6 +101,7 @@
 
     .square video {
       max-width: 520px;
+      margin: 0 auto;
     }
 
     .caption {
@@ -117,28 +119,116 @@
       font-weight: 560;
     }
 
-    .links {
-      border-bottom: 1px solid #eee;
-      margin-top: 28px;
-    }
-
-    .links a {
-      border-top: 1px solid #eee;
+    .work-stack {
       display: grid;
-      gap: 20px;
-      grid-template-columns: minmax(150px, 0.34fr) 1fr;
-      padding: 15px 0;
+      gap: 34px;
+      margin-top: 30px;
     }
 
-    .links strong {
-      font-size: 16px;
+    .embedded-work {
+      margin: 0 auto;
+      max-width: 640px;
+      width: 100%;
+    }
+
+    .work-preview {
+      align-items: center;
+      aspect-ratio: 16 / 10;
+      background: #f8f8f8;
+      border: 1px solid #ececec;
+      border-radius: 10px;
+      color: #111;
+      display: grid;
+      justify-items: center;
+      overflow: hidden;
+      padding: 38px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .work-preview:hover {
+      text-decoration: none;
+    }
+
+    .work-preview::before,
+    .work-preview::after {
+      border: 1px solid #e5e5e5;
+      border-radius: 999px;
+      content: "";
+      height: 180px;
+      position: absolute;
+      width: 180px;
+    }
+
+    .work-preview::before {
+      left: -58px;
+      top: -58px;
+    }
+
+    .work-preview::after {
+      bottom: -72px;
+      right: -48px;
+    }
+
+    .preview-inner {
+      display: grid;
+      gap: 14px;
+      max-width: 430px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-kicker {
+      color: #999;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .preview-title {
+      font-size: clamp(30px, 6vw, 56px);
       font-weight: 560;
+      letter-spacing: -0.05em;
+      line-height: 0.95;
     }
 
-    .links span {
-      color: #777;
-      font-size: 14px;
+    .preview-copy {
+      color: #666;
+      font-size: 15px;
       line-height: 1.45;
+      margin: 0 auto;
+      max-width: 360px;
+    }
+
+    .preview-mark {
+      border: 1px solid #e0e0e0;
+      border-radius: 999px;
+      color: #777;
+      display: inline-grid;
+      font-size: 13px;
+      height: 38px;
+      place-items: center;
+      justify-self: center;
+      letter-spacing: -0.02em;
+      margin-top: 4px;
+      min-width: 38px;
+      padding: 0 14px;
+    }
+
+    .preview-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    .preview-dot {
+      background: #111;
+      border-radius: 50%;
+      height: 7px;
+      opacity: 0.16;
+      width: 7px;
     }
 
     footer {
@@ -152,7 +242,7 @@
       .back { margin-bottom: 42px; }
       header { margin-bottom: 48px; }
       section { margin-top: 42px; padding-top: 28px; }
-      .links a { grid-template-columns: 1fr; gap: 4px; }
+      .work-preview { padding: 26px; }
     }
   </style>
 </head>
@@ -224,20 +314,59 @@
       <p>
         The broader ecosystem work includes early PURR launch distribution, futures.xyz, and concepts for bringing trading into social surfaces.
       </p>
-      <nav class="links" aria-label="Other Hyperliquid work">
-        <a href="https://x.com/christophorusan/status/1833874341932532122?s=20" target="_blank" rel="noreferrer">
-          <strong>PURR Launch</strong>
-          <span>Launch work for an early Hyperliquid ecosystem moment.</span>
-        </a>
-        <a href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">
-          <strong>futures.xyz</strong>
-          <span>Hyperliquid and HyperEVM all-in-one terminal concept.</span>
-        </a>
-        <a href="https://x.com/christophorusan/status/2044833918743162901" target="_blank" rel="noreferrer">
-          <strong>X x Hyperliquid</strong>
-          <span>Consumer distribution idea for trading inside social surfaces.</span>
-        </a>
-      </nav>
+      <div class="work-stack" aria-label="Other Hyperliquid work">
+        <article class="embedded-work">
+          <a class="work-preview" href="https://x.com/christophorusan/status/1833874341932532122?s=20" target="_blank" rel="noreferrer">
+            <span class="preview-inner">
+              <span class="preview-kicker">Launch</span>
+              <span class="preview-title">PURR</span>
+              <span class="preview-copy">Early Hyperliquid ecosystem distribution, built for a fast-moving crypto-native moment.</span>
+              <span class="preview-mark">Hyperliquid</span>
+            </span>
+          </a>
+          <div class="caption">
+            <strong>PURR Launch</strong>
+            <span>Launch work for an early Hyperliquid ecosystem moment.</span>
+            <a href="https://x.com/christophorusan/status/1833874341932532122?s=20" target="_blank" rel="noreferrer">Open original</a>
+          </div>
+        </article>
+
+        <article class="embedded-work">
+          <a class="work-preview" href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">
+            <span class="preview-inner">
+              <span class="preview-kicker">Product Concept</span>
+              <span class="preview-title">futures.xyz</span>
+              <span class="preview-copy">A Hyperliquid and HyperEVM all-in-one terminal concept for spot, perps, and trading workflows.</span>
+              <span class="preview-row" aria-hidden="true">
+                <span class="preview-dot"></span>
+                <span class="preview-dot"></span>
+                <span class="preview-dot"></span>
+              </span>
+            </span>
+          </a>
+          <div class="caption">
+            <strong>futures.xyz</strong>
+            <span>Hyperliquid and HyperEVM all-in-one terminal concept.</span>
+            <a href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">Open project</a>
+          </div>
+        </article>
+
+        <article class="embedded-work">
+          <a class="work-preview" href="https://x.com/christophorusan/status/2044833918743162901" target="_blank" rel="noreferrer">
+            <span class="preview-inner">
+              <span class="preview-kicker">Distribution</span>
+              <span class="preview-title">X x Hyperliquid</span>
+              <span class="preview-copy">A consumer distribution idea for bringing trading into social surfaces where attention already lives.</span>
+              <span class="preview-mark">X</span>
+            </span>
+          </a>
+          <div class="caption">
+            <strong>X x Hyperliquid</strong>
+            <span>Consumer distribution idea for trading inside social surfaces.</span>
+            <a href="https://x.com/christophorusan/status/2044833918743162901" target="_blank" rel="noreferrer">Open original</a>
+          </div>
+        </article>
+      </div>
     </section>
 
     <footer>&copy; 2026 Christophorus</footer>
