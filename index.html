@@ -7,280 +7,151 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :root {
-      --text: #111;
-      --muted: #8f8f8f;
-      --soft: #666;
-      --line: #ebebeb;
-      --wash: #f8f8f8;
-    }
-
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       background: #fff;
-      color: var(--text);
+      color: #111;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       font-size: 16px;
       line-height: 1.65;
-      padding: 56px 20px 96px;
+      padding: 56px 20px 92px;
     }
 
     .page {
-      max-width: 760px;
+      max-width: 640px;
       margin: 0 auto;
     }
 
     a {
-      color: var(--text);
+      color: #111;
       text-decoration: none;
     }
 
-    a:hover { text-decoration: underline; text-underline-offset: 4px; }
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    header {
+      margin-bottom: 48px;
+    }
 
     .profile {
-      display: flex;
       align-items: center;
+      display: flex;
       gap: 18px;
-      margin-bottom: 44px;
+      margin-bottom: 28px;
     }
 
     .profile img {
-      width: 64px;
-      height: 64px;
       border-radius: 50%;
-      object-fit: cover;
       flex-shrink: 0;
-    }
-
-    .profile-name {
-      font-size: 20px;
-      font-weight: 560;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-
-    .profile-meta {
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 3px;
-    }
-
-    .intro {
-      max-width: 690px;
-      margin-bottom: 54px;
-    }
-
-    .label {
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      margin-bottom: 14px;
-      text-transform: uppercase;
+      height: 64px;
+      object-fit: cover;
+      width: 64px;
     }
 
     h1 {
-      font-size: clamp(36px, 8vw, 72px);
-      font-weight: 520;
-      letter-spacing: -0.045em;
-      line-height: 0.98;
-      margin-bottom: 22px;
-      max-width: 700px;
+      font-size: 22px;
+      font-weight: 560;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin-bottom: 3px;
     }
 
-    .intro-copy {
+    .updated {
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    .intro p {
       color: #222;
-      font-size: clamp(18px, 2.35vw, 24px);
-      line-height: 1.45;
-      max-width: 690px;
+      margin-bottom: 14px;
     }
 
-    .intro-copy + .intro-copy { margin-top: 16px; }
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
 
     .contact {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 28px;
+      gap: 17px;
+      margin-top: 26px;
     }
 
     .contact a {
-      color: var(--soft);
+      color: #777;
       font-size: 14px;
     }
 
-    .archive {
-      border-bottom: 1px solid var(--line);
+    .contact a:hover {
+      color: #111;
     }
 
-    details.archive-section {
-      border-top: 1px solid var(--line);
+    section {
+      margin-top: 46px;
     }
 
-    summary {
+    h2 {
+      color: #999;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .writing-list {
+      border-bottom: 1px solid #eee;
+    }
+
+    .writing-link {
       align-items: baseline;
-      cursor: pointer;
+      border-top: 1px solid #eee;
       display: grid;
-      grid-template-columns: minmax(170px, 0.36fr) 1fr 18px;
-      gap: 24px;
-      list-style: none;
-      padding: 24px 0;
+      gap: 18px;
+      grid-template-columns: minmax(170px, 0.42fr) 1fr;
+      padding: 14px 0;
     }
 
-    summary::-webkit-details-marker { display: none; }
-
-    .section-title {
-      font-size: clamp(22px, 3vw, 32px);
-      font-weight: 520;
-      letter-spacing: -0.035em;
-      line-height: 1.05;
-    }
-
-    .section-desc {
-      color: var(--soft);
-      font-size: 15px;
-      line-height: 1.48;
-    }
-
-    .plus {
-      color: var(--muted);
-      font-size: 22px;
-      line-height: 1;
-      text-align: right;
-      transition: transform 180ms ease;
-    }
-
-    details[open] .plus { transform: rotate(45deg); }
-
-    .section-body {
-      padding: 0 0 42px;
-      max-width: 700px;
-    }
-
-    .note {
-      color: #252525;
+    .writing-link strong {
       font-size: 17px;
-      line-height: 1.6;
-      margin-bottom: 26px;
-      max-width: 660px;
-    }
-
-    .work-grid {
-      display: grid;
-      gap: 28px;
-    }
-
-    .media-piece {
-      margin: 0;
-    }
-
-    .media-piece video {
-      background: var(--wash);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      display: block;
-      width: 100%;
-    }
-
-    .media-piece.square video {
-      max-width: 520px;
-    }
-
-    .caption {
-      color: var(--soft);
-      display: grid;
-      gap: 4px;
-      font-size: 14px;
-      line-height: 1.45;
-      margin-top: 10px;
-    }
-
-    .caption strong {
-      color: var(--text);
-      font-size: 15px;
-      font-weight: 560;
-    }
-
-    .caption a {
-      color: var(--muted);
-      width: fit-content;
-    }
-
-    .work-list {
-      border-bottom: 1px solid var(--line);
-      margin-top: 4px;
-    }
-
-    .work-row {
-      display: grid;
-      grid-template-columns: minmax(150px, 0.34fr) 1fr;
-      gap: 22px;
-      border-top: 1px solid var(--line);
-      padding: 15px 0;
-    }
-
-    .work-row strong {
-      font-size: 16px;
-      font-weight: 560;
-      letter-spacing: -0.015em;
+      font-weight: 520;
+      letter-spacing: -0.02em;
       line-height: 1.25;
     }
 
-    .work-row span,
-    .work-row p {
-      color: var(--soft);
+    .writing-link span {
+      color: #777;
       font-size: 14px;
-      line-height: 1.48;
-    }
-
-    .post {
-      background: #fff;
-      border-left: 2px solid var(--line);
-      color: #222;
-      margin: 22px 0 28px;
-      padding: 2px 0 2px 16px;
-    }
-
-    .post p {
-      font-size: 16px;
-      line-height: 1.58;
-      margin-bottom: 10px;
-    }
-
-    .post a {
-      color: var(--muted);
-      font-size: 14px;
+      line-height: 1.45;
     }
 
     .beliefs {
       list-style: none;
-      margin: 0;
-      padding: 0;
     }
 
     .beliefs li {
-      border-top: 1px solid var(--line);
+      border-top: 1px solid #eee;
       color: #222;
-      padding: 14px 0;
+      padding: 13px 0;
     }
 
-    @media (max-width: 680px) {
+    .beliefs li:last-child {
+      border-bottom: 1px solid #eee;
+    }
+
+    footer {
+      color: #ccc;
+      font-size: 12px;
+      margin-top: 62px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
       body { padding: 36px 18px 72px; }
-      .profile { margin-bottom: 34px; }
-      .intro { margin-bottom: 42px; }
-      summary {
-        grid-template-columns: 1fr 18px;
-        gap: 10px;
-        padding: 22px 0;
-      }
-      .section-desc {
-        grid-column: 1 / -1;
-        grid-row: 2;
-      }
-      .plus {
-        grid-column: 2;
-        grid-row: 1;
-      }
-      .work-row {
+      header { margin-bottom: 40px; }
+      .writing-link {
         grid-template-columns: 1fr;
         gap: 4px;
       }
@@ -289,219 +160,71 @@
 </head>
 <body>
   <main class="page">
-    <div class="profile">
-      <img src="BFj1ujC7_400x400.jpg" alt="Christophorus" />
-      <div>
-        <div class="profile-name">Christophorus</div>
-        <div class="profile-meta">Seattle / Hyperliquid / Harmonix</div>
+    <header>
+      <div class="profile">
+        <img src="BFj1ujC7_400x400.jpg" alt="Christophorus" />
+        <div>
+          <h1>Christophorus</h1>
+          <div class="updated">Updated 18 June, 2026</div>
+        </div>
       </div>
-    </div>
 
-    <section class="intro">
-      <div class="label">Intro</div>
-      <h1>Building yield infrastructure, distribution, and market-native products.</h1>
-      <p class="intro-copy">
-        Core contributor at <a href="https://harmonix.fi" target="_blank" rel="noreferrer">Harmonix</a>, a yield protocol built on <a href="https://hyperliquid.xyz" target="_blank" rel="noreferrer">Hyperliquid</a>.
-      </p>
-      <p class="intro-copy">
-        Previously founded and scaled Persona, an agency serving public and private institutional clients across tech, media, culture, and crypto.
-      </p>
-      <div class="contact">
+      <div class="intro">
+        <p>
+          I work on <a href="https://harmonix.fi" target="_blank" rel="noreferrer">Harmonix</a>, a yield protocol built on <a href="https://hyperliquid.xyz" target="_blank" rel="noreferrer">Hyperliquid</a>.
+        </p>
+        <p>
+          Previously I founded and scaled Persona, an agency serving public and private institutional clients across tech, media, culture, and crypto.
+        </p>
+        <p>
+          This is an archive of product work, launch campaigns, writing, research, and beliefs.
+        </p>
+      </div>
+
+      <nav class="contact" aria-label="Contact">
         <a href="https://t.me/christophorusan" target="_blank" rel="noreferrer">Telegram</a>
         <a href="https://github.com/Christophorusan" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://x.com/christophorusan" target="_blank" rel="noreferrer">X</a>
         <a href="https://paragraph.com/0xee152ac16e3b50e51f229e867451ebc3e5652e59" target="_blank" rel="noreferrer">Blog</a>
-      </div>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Projects</h2>
+      <nav class="writing-list" aria-label="Projects">
+        <a class="writing-link" href="hyperliquid-ecosystem.html">
+          <strong>Hyperliquid</strong>
+          <span>Launch campaigns, product concepts, market interfaces, and ecosystem work.</span>
+        </a>
+        <a class="writing-link" href="harmonix-finance.html">
+          <strong>Harmonix</strong>
+          <span>Vault products, partner docs, GTM, integrations, and protocol distribution.</span>
+        </a>
+        <a class="writing-link" href="persona-ltd.html">
+          <strong>Persona</strong>
+          <span>Founder experience, institutional campaigns, media, culture, and creative work.</span>
+        </a>
+        <a class="writing-link" href="research.html">
+          <strong>Research</strong>
+          <span>Market writing, protocol analysis, experiments, and technical exploration.</span>
+        </a>
+      </nav>
     </section>
 
-    <div class="archive">
-      <details class="archive-section" open>
-        <summary>
-          <span class="section-title">Hyperliquid</span>
-          <span class="section-desc">Launch campaigns, product concepts, market interfaces, and ecosystem work around Hyperliquid.</span>
-          <span class="plus">+</span>
-        </summary>
-        <div class="section-body">
-          <p class="note">
-            Work here sits at the intersection of crypto-native distribution and product imagination: what should feel obvious once finance becomes always-on, social, and programmable.
-          </p>
+    <section>
+      <h2>Beliefs</h2>
+      <ul class="beliefs">
+        <li>The mission is what matters.</li>
+        <li>Narratives drive results.</li>
+        <li>The financial system is becoming global, programmable, and available 24/7.</li>
+        <li>Financial freedom only matters if it is paired with financial security.</li>
+        <li>AI will be a core layer of what we build, not a separate category.</li>
+        <li>Products and companies should be built to endure.</li>
+        <li>Smaller teams win because speed compounds.</li>
+      </ul>
+    </section>
 
-          <div class="work-grid">
-            <figure class="media-piece">
-              <video controls playsinline preload="metadata">
-                <source src="assets/work-media/hyperliquid-tge.mp4" type="video/mp4" />
-              </video>
-              <figcaption class="caption">
-                <strong>Hyperliquid TGE</strong>
-                <span>Launch storytelling for a protocol moment, made for a crypto-native audience.</span>
-                <a href="https://x.com/christophorusan/status/1855778920747954342?s=20" target="_blank" rel="noreferrer">Open original</a>
-              </figcaption>
-            </figure>
-
-            <figure class="media-piece square">
-              <video controls playsinline preload="metadata">
-                <source src="assets/work-media/product-direction.mp4" type="video/mp4" />
-              </video>
-              <figcaption class="caption">
-                <strong>Product Direction</strong>
-                <span>P2P challenges, social payments, spot, perps, borrowing, cards, and yield as one Hyperliquid-native financial OS.</span>
-                <a href="https://x.com/christophorusan/status/2062653950562812222?s=20" target="_blank" rel="noreferrer">Open original</a>
-              </figcaption>
-            </figure>
-
-            <figure class="media-piece">
-              <video controls playsinline preload="metadata">
-                <source src="assets/work-media/mobile-markets.mp4" type="video/mp4" />
-              </video>
-              <figcaption class="caption">
-                <strong>Mobile Markets</strong>
-                <span>A phone-first prediction-market interface focused on faster decisions and clearer actions.</span>
-                <a href="https://x.com/christophorusan/status/2051887694285091313?s=20" target="_blank" rel="noreferrer">Open original</a>
-              </figcaption>
-            </figure>
-          </div>
-
-          <div class="post">
-            <p>Early launch work for PURR and Hyperliquid ecosystem distribution, plus interface concepts like futures.xyz and X x Hyperliquid.</p>
-            <a href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">Open futures.xyz</a>
-          </div>
-        </div>
-      </details>
-
-      <details class="archive-section">
-        <summary>
-          <span class="section-title">Harmonix</span>
-          <span class="section-desc">Vault products, partner docs, GTM, integrations, and protocol distribution for Hyperliquid-native yield.</span>
-          <span class="plus">+</span>
-        </summary>
-        <div class="section-body">
-          <p class="note">
-            Harmonix is yield infrastructure for Hyperliquid. The work spans vault product surfaces, partner-facing documentation, integration narratives, and distribution across the ecosystem.
-          </p>
-
-          <div class="work-list">
-            <a class="work-row" href="https://app.harmonix.fi/earn" target="_blank" rel="noreferrer">
-              <strong>Harmonix App</strong>
-              <span>Earn interface, haUSDC, and vault product surface.</span>
-            </a>
-            <a class="work-row" href="https://harmonixfi.github.io/harmonix-docs-v2/harmonix-docs-v2.html" target="_blank" rel="noreferrer">
-              <strong>Partner Docs</strong>
-              <span>Vault architecture, integration docs, and partner-facing explainers.</span>
-            </a>
-            <a class="work-row" href="https://x.com/harmonixfi/status/1999061884125999114?s=20" target="_blank" rel="noreferrer">
-              <strong>Echo Raise</strong>
-              <span>Year-one fundraise and distribution milestone.</span>
-            </a>
-            <a class="work-row" href="https://x.com/harmonixfi/status/1929365326036189611" target="_blank" rel="noreferrer">
-              <strong>HyperEVM Migration</strong>
-              <span>Partner and chain rollout for Harmonix on HyperEVM.</span>
-            </a>
-            <a class="work-row" href="https://x.com/harmonixfi/status/2006381895517352265?s=20" target="_blank" rel="noreferrer">
-              <strong>$2M to $18M TVL</strong>
-              <span>Recap of peak year-one growth.</span>
-            </a>
-            <a class="work-row" href="https://x.com/harmonixfi/status/2023565078344384624" target="_blank" rel="noreferrer">
-              <strong>2026 Roadmap</strong>
-              <span>Product and distribution direction for the next phase of Harmonix.</span>
-            </a>
-          </div>
-        </div>
-      </details>
-
-      <details class="archive-section">
-        <summary>
-          <span class="section-title">Persona</span>
-          <span class="section-desc">Founder experience, institutional campaigns, media, culture, and creative work.</span>
-          <span class="plus">+</span>
-        </summary>
-        <div class="section-body">
-          <p class="note">
-            I founded, scaled, and exited a 25-person cross-border agency headquartered in Dublin, operating across six European markets.
-          </p>
-
-          <div class="work-list">
-            <div class="work-row">
-              <strong>Institutional Clients</strong>
-              <p>BBC, Arte TV, Institut Francais, CaixaBank, EFG Private Banking, TEDx Talks, Arweave, and other public and private clients across tech, media, culture, and finance.</p>
-            </div>
-            <a class="work-row" href="https://x.com/christophorusan/status/1788154455432556613?s=20" target="_blank" rel="noreferrer">
-              <strong>Arweave</strong>
-              <span>Campaign and creative work.</span>
-            </a>
-            <a class="work-row" href="https://x.com/christophorusan/status/1877742044505911511?s=20" target="_blank" rel="noreferrer">
-              <strong>ETH Zurich</strong>
-              <span>Ad work and event-facing creative.</span>
-            </a>
-            <a class="work-row" href="https://x.com/christophorusan/status/1839326982477414407?s=20" target="_blank" rel="noreferrer">
-              <strong>Sagrada Familia x AR.IO</strong>
-              <span>Culture and infrastructure campaign work.</span>
-            </a>
-          </div>
-        </div>
-      </details>
-
-      <details class="archive-section">
-        <summary>
-          <span class="section-title">Research</span>
-          <span class="section-desc">Market writing, protocol analysis, experiments, and technical exploration.</span>
-          <span class="plus">+</span>
-        </summary>
-        <div class="section-body">
-          <p class="note">
-            Research is where the product and market work starts: early ecosystem theses, exchange structure, stablecoin yield, protocol experiments, and small technical builds.
-          </p>
-
-          <div class="work-list">
-            <a class="work-row" href="https://x.com/christophorusan/status/1833874341932532122?s=20" target="_blank" rel="noreferrer">
-              <strong>Early to HYPE</strong>
-              <span>Early ecosystem thesis and market read.</span>
-            </a>
-            <a class="work-row" href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">
-              <strong>2024 Protocols to Watch</strong>
-              <span>Stablecoin and DeFi market analysis.</span>
-            </a>
-            <a class="work-row" href="https://x.com/christophorusan/status/2045611398248722799" target="_blank" rel="noreferrer">
-              <strong>HYPE vs Binance</strong>
-              <span>Market structure and exchange positioning.</span>
-            </a>
-            <a class="work-row" href="https://x.com/christophorusan/status/2006504610777936264?s=20" target="_blank" rel="noreferrer">
-              <strong>Lighter to HYPE</strong>
-              <span>Allocation logic and market conviction.</span>
-            </a>
-            <a class="work-row" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">
-              <strong>Louis</strong>
-              <span>Morpho fork experiment on HyperEVM.</span>
-            </a>
-            <a class="work-row" href="https://github.com/Christophorusan/oslo" target="_blank" rel="noreferrer">
-              <strong>Oslo</strong>
-              <span>AI agent system for company operations, marketing, BD, engineering, and security.</span>
-            </a>
-          </div>
-        </div>
-      </details>
-
-      <details class="archive-section">
-        <summary>
-          <span class="section-title">Beliefs</span>
-          <span class="section-desc">The operating notes behind the work.</span>
-          <span class="plus">+</span>
-        </summary>
-        <div class="section-body">
-          <ul class="beliefs">
-            <li>The mission is what matters.</li>
-            <li>Narratives drive results.</li>
-            <li>The financial system is becoming global, programmable, and available 24/7. The question is no longer if this transition will happen, but who will build it.</li>
-            <li>Financial freedom only matters if it is paired with financial security.</li>
-            <li>AI will be a core layer of what we build, not a separate category.</li>
-            <li>Robots will become part of everyday life.</li>
-            <li>Products and companies should be built to endure.</li>
-            <li>Smaller teams win because speed compounds.</li>
-            <li>Sport is a core part of a well-built life.</li>
-            <li>Good food matters.</li>
-          </ul>
-        </div>
-      </details>
-    </div>
+    <footer>&copy; 2026 Christophorus</footer>
   </main>
 </body>
 </html>

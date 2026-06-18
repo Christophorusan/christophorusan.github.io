@@ -3,61 +3,242 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hyperliquid & Ecosystem - Christophorus</title>
+  <title>Hyperliquid - Christophorus</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: #fff; color: #111; font-size: 16px; line-height: 1.62; padding: 46px 20px 84px; }
-    .container { max-width: 680px; margin: 0 auto; }
-    .back { display: inline-block; color: #8f8f8f; font-size: 14px; text-decoration: none; margin-bottom: 42px; }
-    .back:hover { color: #111; text-decoration: underline; }
-    header { max-width: 620px; margin-bottom: 48px; }
-    .date { color: #a0a0a0; font-size: 13px; margin-bottom: 12px; }
-    h1 { font-size: clamp(38px, 7vw, 58px); font-weight: 520; letter-spacing: -0.035em; line-height: 1; margin-bottom: 18px; }
-    .intro { color: #2b2b2b; font-size: clamp(17px, 2vw, 20px); line-height: 1.5; }
-    .work-list { border-bottom: 1px solid #ededed; }
-    .work-link { display: grid; grid-template-columns: minmax(150px, 0.36fr) 1fr; gap: 22px; color: #111; text-decoration: none; border-top: 1px solid #ededed; padding: 16px 0; }
-    .work-link span { font-size: 17px; font-weight: 520; letter-spacing: -0.015em; line-height: 1.25; }
-    .work-link small { color: #666; font-size: 14px; line-height: 1.45; align-self: center; }
-    .work-link:hover span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
-    footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } }
+
+    body {
+      background: #fff;
+      color: #111;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      padding: 46px 20px 90px;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .back {
+      color: #999;
+      display: inline-block;
+      font-size: 14px;
+      margin-bottom: 54px;
+    }
+
+    header {
+      max-width: 680px;
+      margin-bottom: 68px;
+    }
+
+    .date {
+      color: #aaa;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 9vw, 86px);
+      font-weight: 520;
+      letter-spacing: -0.045em;
+      line-height: 0.98;
+      margin-bottom: 28px;
+    }
+
+    .intro {
+      color: #222;
+      font-size: clamp(20px, 2.5vw, 28px);
+      line-height: 1.45;
+    }
+
+    section {
+      border-top: 1px solid #eee;
+      margin-top: 54px;
+      padding-top: 34px;
+    }
+
+    h2 {
+      color: #999;
+      font-size: 26px;
+      font-weight: 520;
+      letter-spacing: -0.025em;
+      margin-bottom: 22px;
+    }
+
+    p {
+      color: #222;
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.5;
+      max-width: 700px;
+    }
+
+    p + p { margin-top: 18px; }
+
+    .media {
+      margin-top: 30px;
+    }
+
+    video {
+      background: #f8f8f8;
+      border: 1px solid #ececec;
+      border-radius: 10px;
+      display: block;
+      width: 100%;
+    }
+
+    .square video {
+      max-width: 520px;
+    }
+
+    .caption {
+      color: #777;
+      display: grid;
+      gap: 4px;
+      font-size: 14px;
+      line-height: 1.45;
+      margin-top: 10px;
+    }
+
+    .caption strong {
+      color: #111;
+      font-size: 15px;
+      font-weight: 560;
+    }
+
+    .links {
+      border-bottom: 1px solid #eee;
+      margin-top: 28px;
+    }
+
+    .links a {
+      border-top: 1px solid #eee;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: minmax(150px, 0.34fr) 1fr;
+      padding: 15px 0;
+    }
+
+    .links strong {
+      font-size: 16px;
+      font-weight: 560;
+    }
+
+    .links span {
+      color: #777;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    footer {
+      color: #ccc;
+      font-size: 13px;
+      margin-top: 72px;
+    }
+
+    @media (max-width: 700px) {
+      body { padding: 34px 18px 72px; }
+      .back { margin-bottom: 42px; }
+      header { margin-bottom: 48px; }
+      section { margin-top: 42px; padding-top: 28px; }
+      .links a { grid-template-columns: 1fr; gap: 4px; }
+    }
   </style>
 </head>
 <body>
-  <main class="container">
+  <main class="page">
     <a class="back" href="index.html">Index</a>
+
     <header>
+      <h1>Hyperliquid</h1>
       <div class="date">18 June, 2026</div>
-      <h1>Hyperliquid &amp; Ecosystem</h1>
-      <p class="intro">Launch work, product concepts, and interface ideas around Hyperliquid and the surrounding on-chain finance ecosystem.</p>
+      <p class="intro">
+        Work around Hyperliquid: launch campaigns, product imagination, market interfaces, and ecosystem distribution.
+      </p>
     </header>
 
-    <nav class="work-list" aria-label="Hyperliquid and ecosystem work">
-      <a class="work-link" href="work-hyperliquid-tge.html">
-        <span>Hyperliquid TGE</span>
-        <small>Launch storytelling for a protocol moment, with the original video shown directly.</small>
-      </a>
-      <a class="work-link" href="work-product-direction.html">
-        <span>Product Direction</span>
-        <small>P2P challenges and a broader Hyperliquid-native financial OS concept.</small>
-      </a>
-      <a class="work-link" href="work-mobile-markets.html">
-        <span>Mobile Markets</span>
-        <small>Phone-first prediction-market design.</small>
-      </a>
-      <a class="work-link" href="https://x.com/christophorusan/status/1833874341932532122?s=20" target="_blank" rel="noreferrer">
-        <span>PURR Launch</span>
-        <small>Launch work for an early Hyperliquid ecosystem moment.</small>
-      </a>
-      <a class="work-link" href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">
-        <span>futures.xyz</span>
-        <small>Hyperliquid and HyperEVM all-in-one terminal concept.</small>
-      </a>
-      <a class="work-link" href="https://x.com/christophorusan/status/2044833918743162901" target="_blank" rel="noreferrer">
-        <span>X x Hyperliquid</span>
-        <small>Consumer distribution idea for trading inside social surfaces.</small>
-      </a>
-    </nav>
+    <section>
+      <h2>Launch</h2>
+      <p>
+        The HYPE TGE work was built for a crypto-native audience: simple, fast, shareable, and designed to turn a protocol moment into something people could remember.
+      </p>
+      <figure class="media">
+        <video controls playsinline preload="metadata">
+          <source src="assets/work-media/hyperliquid-tge.mp4" type="video/mp4" />
+        </video>
+        <figcaption class="caption">
+          <strong>Hyperliquid TGE</strong>
+          <span>Wherever, whenever. Trade instantly on Hyperliquid.</span>
+          <a href="https://x.com/christophorusan/status/1855778920747954342?s=20" target="_blank" rel="noreferrer">Open original</a>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Product Direction</h2>
+      <p>
+        A concept for where Hyperliquid can go next: P2P challenges, social payments, spendable PnL, spot, perps, borrowing, and yield in one coherent consumer surface.
+      </p>
+      <figure class="media square">
+        <video controls playsinline preload="metadata">
+          <source src="assets/work-media/product-direction.mp4" type="video/mp4" />
+        </video>
+        <figcaption class="caption">
+          <strong>Hyperliquid-native financial OS</strong>
+          <span>Prediction markets as a wedge into a larger financial interface.</span>
+          <a href="https://x.com/christophorusan/status/2062653950562812222?s=20" target="_blank" rel="noreferrer">Open original</a>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Mobile Markets</h2>
+      <p>
+        After using the Polymarket US app, I rebuilt the interface around faster decisions, clearer actions, and a more phone-native market experience.
+      </p>
+      <figure class="media">
+        <video controls playsinline preload="metadata">
+          <source src="assets/work-media/mobile-markets.mp4" type="video/mp4" />
+        </video>
+        <figcaption class="caption">
+          <strong>Mobile prediction-market design</strong>
+          <span>Kept the signature blue, cut the noise.</span>
+          <a href="https://x.com/christophorusan/status/2051887694285091313?s=20" target="_blank" rel="noreferrer">Open original</a>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Other Work</h2>
+      <p>
+        The broader ecosystem work includes early PURR launch distribution, futures.xyz, and concepts for bringing trading into social surfaces.
+      </p>
+      <nav class="links" aria-label="Other Hyperliquid work">
+        <a href="https://x.com/christophorusan/status/1833874341932532122?s=20" target="_blank" rel="noreferrer">
+          <strong>PURR Launch</strong>
+          <span>Launch work for an early Hyperliquid ecosystem moment.</span>
+        </a>
+        <a href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">
+          <strong>futures.xyz</strong>
+          <span>Hyperliquid and HyperEVM all-in-one terminal concept.</span>
+        </a>
+        <a href="https://x.com/christophorusan/status/2044833918743162901" target="_blank" rel="noreferrer">
+          <strong>X x Hyperliquid</strong>
+          <span>Consumer distribution idea for trading inside social surfaces.</span>
+        </a>
+      </nav>
+    </section>
 
     <footer>&copy; 2026 Christophorus</footer>
   </main>
