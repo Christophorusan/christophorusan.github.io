@@ -39,6 +39,13 @@
       top: 0;
     }
     .apy-chart svg { display: block; height: 100%; position: relative; width: 100%; z-index: 1; }
+    .growth-visual { background: #fff; border: 1px solid #ededed; border-radius: 10px; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.04); display: grid; gap: 22px; padding: 28px; }
+    .growth-kicker { color: #999; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .growth-number { font-size: clamp(46px, 9vw, 84px); font-weight: 520; letter-spacing: -0.055em; line-height: 0.95; }
+    .growth-number span { color: #20c25e; }
+    .growth-track { background: #f1f1f1; border-radius: 999px; height: 10px; overflow: hidden; }
+    .growth-track span { background: #20c25e; border-radius: inherit; display: block; height: 100%; width: 86%; }
+    .growth-meta { color: #666; display: grid; gap: 8px; font-size: 14px; grid-template-columns: 1fr 1fr; line-height: 1.4; }
     .caption { color: #777; display: grid; gap: 4px; font-size: 14px; line-height: 1.45; margin-top: 10px; }
     .caption strong { color: #111; font-size: 15px; font-weight: 560; }
     .caption time { color: #aaa; font-size: 12px; font-weight: 500; margin-top: -2px; }
@@ -49,7 +56,7 @@
     .work-link small { color: #666; font-size: 14px; line-height: 1.45; align-self: center; }
     .work-link:hover span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .featured { margin-bottom: 34px; padding-top: 24px; } .apy-visual { padding: 18px; } .apy-top { grid-template-columns: 1fr; } .apy-metric { min-width: 0; } .apy-chart { height: 190px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .featured { margin-bottom: 34px; padding-top: 24px; } .apy-visual, .growth-visual { padding: 18px; } .apy-top { grid-template-columns: 1fr; } .apy-metric { min-width: 0; } .apy-chart { height: 190px; } .growth-meta { grid-template-columns: 1fr; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } }
   </style>
 </head>
 <body>
@@ -91,6 +98,23 @@
           <strong>haUSDC live APY tracking</strong>
           <time>May 2026</time>
           <span>Performance interface for vault monitoring and user-facing yield transparency.</span>
+          <span>Open original</span>
+        </span>
+      </a>
+      <a class="media-card" href="https://x.com/harmonixfi/status/2006381895517352265?s=20" target="_blank" rel="noreferrer">
+        <div class="growth-visual" aria-hidden="true">
+          <div class="growth-kicker">Year-one Growth</div>
+          <div class="growth-number">$2M <span>to</span> $18M</div>
+          <div class="growth-track"><span></span></div>
+          <div class="growth-meta">
+            <span>TVL expansion across Harmonix vault products.</span>
+            <span>Distribution, integrations, and ecosystem growth.</span>
+          </div>
+        </div>
+        <span class="caption">
+          <strong>$2M to $18M TVL</strong>
+          <time>Dec 2025</time>
+          <span>Recap of peak year-one growth and vault distribution progress.</span>
           <span>Open original</span>
         </span>
       </a>

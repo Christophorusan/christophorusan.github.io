@@ -26,11 +26,10 @@
     .case-study time { color: #aaa; font-size: 12px; font-weight: 500; letter-spacing: 0; margin-top: 4px; }
     .case-study p { color: #333; font-size: 16px; line-height: 1.55; max-width: 620px; }
     .case-study a { color: #111; text-decoration: underline; text-underline-offset: 4px; }
-    .photo-grid { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; margin-top: 18px; }
-    .photo-grid img { aspect-ratio: 4 / 3; border-radius: 8px; display: block; object-fit: cover; width: 100%; }
-    .photo-grid img:first-child { grid-column: 1 / -1; }
+    .photo-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-top: 18px; }
+    .photo-grid img { aspect-ratio: 1 / 1; border-radius: 8px; display: block; object-fit: cover; width: 100%; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid { grid-template-columns: 1fr; } .photo-grid img:first-child { grid-column: auto; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   </style>
 </head>
 <body>
@@ -39,7 +38,7 @@
     <header>
       <div class="date">18 June, 2026</div>
       <h1>Persona LTD</h1>
-      <p class="intro">Founder experience and creative work from the agency I built across institutional, media, culture, and crypto clients.</p>
+      <p class="intro">Founder experience and publicity work from the agency I built across institutional, media, culture, and crypto clients.</p>
     </header>
 
     <nav class="work-list" aria-label="Persona LTD work">
@@ -61,7 +60,7 @@
       <article class="case-study">
         <h2>Snape Maltings <time>2023</time></h2>
         <p>
-          Sold out <a href="https://www.brittenpearsarts.org/?gad_source=1&gad_campaignid=927608615&gbraid=0AAAAADgVlQOh1GXA0imfIZcF6tm0yOwVz&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD2mSDkiol4iL2n3zVto1GXQqQHOwuScbrwg0gIik6RQEGmI8DS1ZlYaAlQXEALw_wcB" target="_blank" rel="noreferrer">Snape Maltings</a>, an 850-seat venue in a remote location in the UK, through online ads, audience development, and campaign execution.
+          Sold out <a href="https://www.brittenpearsarts.org/?gad_source=1&gad_campaignid=927608615&gbraid=0AAAAADgVlQOh1GXA0imfIZcF6tm0yOwVz&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD2mSDkiol4iL2n3zVto1GXQqQHOwuScbrwg0gIik6RQEGmI8DS1ZlYaAlQXEALw_wcB" target="_blank" rel="noreferrer">Snape Maltings</a>, an 850-seat venue in a remote location in the UK, through online ads, BBC Radio, audience development, and campaign execution.
         </p>
         <div class="photo-grid" aria-label="Snape Maltings campaign photos">
           <img src="assets/persona-snape/snape-maltings-01.jpg" alt="Snape Maltings venue seating from the stage" loading="lazy" />
@@ -79,14 +78,14 @@
         </div>
       </article>
       <article class="case-study">
-        <h2>Jazz a la Villette <time>2022</time></h2>
+        <h2>Jazz à la Villette <time>2022</time></h2>
         <p>
-          Sold out Jazz a la Villette in Paris by coordinating radio, TV, and film production support across France TV, France Culture, France 24, Mezzo, and Culturebox.
+          Sold out Jazz à la Villette in Paris by driving publicity strategy, broadcast relationships, and media production support across France TV, France Culture, France 24, Mezzo, and Culturebox.
         </p>
         <div class="photo-grid" aria-label="Jazz a la Villette campaign photos">
           <img src="assets/persona-jazz-villette/jazz-villette-01.jpg" alt="Jazz a la Villette signage at Grande Halle in Paris" loading="lazy" />
           <img src="assets/persona-jazz-villette/jazz-villette-02.jpg" alt="Jazz a la Villette venue and stage setup" loading="lazy" />
-          <img src="assets/persona-jazz-villette/jazz-villette-03.jpg" alt="Jazz a la Villette broadcast production screen" loading="lazy" />
+          <img src="assets/persona-jazz-villette/jazz-villette-03.jpg" alt="Mezzo TV broadcast partner logo" loading="lazy" />
         </div>
       </article>
       <article class="case-study">
@@ -113,17 +112,25 @@
         <span>Institutional Clients <time>2018-2024</time></span>
         <small>Work across public and private clients including BBC, Arte TV, Institut Francais, CaixaBank, EFG Private Banking, TEDx Talks, and Arweave.</small>
       </div>
-      <a class="work-link" href="https://x.com/christophorusan/status/1788154455432556613?s=20" target="_blank" rel="noreferrer">
-        <span>Arweave <time>May 2024</time></span>
-        <small>Campaign and creative work.</small>
-      </a>
+      <article class="case-study">
+        <h2>Arweave <time>2024</time></h2>
+        <p>
+          Publicity and campaign work around cultural infrastructure, permanent storage, and public-facing ecosystem storytelling.
+        </p>
+        <div class="work-list" aria-label="Arweave work">
+          <a class="work-link" href="https://x.com/christophorusan/status/1788154455432556613?s=20" target="_blank" rel="noreferrer">
+            <span>Arweave <time>May 2024</time></span>
+            <small>Campaign and publicity work.</small>
+          </a>
+          <a class="work-link" href="https://x.com/christophorusan/status/1839326982477414407?s=20" target="_blank" rel="noreferrer">
+            <span>Sagrada Familia x AR.IO <time>Sep 2024</time></span>
+            <small>Culture and infrastructure campaign work.</small>
+          </a>
+        </div>
+      </article>
       <a class="work-link" href="https://x.com/christophorusan/status/1877742044505911511?s=20" target="_blank" rel="noreferrer">
         <span>ETH Zurich <time>Jan 2025</time></span>
         <small>Ad work and event-facing creative.</small>
-      </a>
-      <a class="work-link" href="https://x.com/christophorusan/status/1839326982477414407?s=20" target="_blank" rel="noreferrer">
-        <span>Sagrada Familia x AR.IO <time>Sep 2024</time></span>
-        <small>Culture and infrastructure campaign work.</small>
       </a>
     </nav>
 
