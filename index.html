@@ -21,7 +21,6 @@
       margin: 0 auto;
     }
 
-    /* ── Profile ───────────────────────────────── */
     .profile {
       display: flex;
       align-items: center;
@@ -49,22 +48,20 @@
       margin-top: 3px;
     }
 
-    /* ── Bio ───────────────────────────────────── */
     .bio {
       color: #222;
       margin: 0 0 8px;
     }
-    .bio:last-of-type {
-      margin-bottom: 26px;
-    }
 
-    .bio a {
+    .bio:last-of-type { margin-bottom: 26px; }
+
+    a {
       color: #111;
       text-decoration: none;
     }
-    .bio a:hover { text-decoration: underline; }
 
-    /* ── Contact ───────────────────────────────── */
+    a:hover { text-decoration: underline; }
+
     .contact {
       display: flex;
       gap: 18px;
@@ -74,18 +71,12 @@
 
     .contact a {
       color: #777;
-      text-decoration: none;
       font-size: 14px;
     }
-    .contact a:hover {
-      color: #111;
-      text-decoration: underline;
-    }
 
-    /* ── Sections ──────────────────────────────── */
-    section {
-      margin-bottom: 44px;
-    }
+    .contact a:hover { color: #111; }
+
+    section { margin-bottom: 44px; }
 
     section h2 {
       font-size: 12px;
@@ -96,16 +87,31 @@
       margin-bottom: 16px;
     }
 
-    /* ── Items ─────────────────────────────────── */
-    .item {
-      border-left: 2px solid #ebebeb;
-      padding-left: 14px;
-      margin-bottom: 16px;
+    .section-link {
+      display: grid;
+      grid-template-columns: minmax(130px, 0.38fr) 1fr;
+      gap: 16px;
+      border-top: 1px solid #ededed;
+      padding: 15px 0;
     }
 
-    .item:last-child { margin-bottom: 0; }
+    .section-link:last-child { border-bottom: 1px solid #ededed; }
 
-    /* ── Beliefs ───────────────────────────────── */
+    .section-link strong {
+      color: #111;
+      font-size: 15px;
+      font-weight: 560;
+      letter-spacing: -0.01em;
+    }
+
+    .section-link span {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .section-link:hover strong { text-decoration: underline; text-underline-offset: 4px; }
+
     .beliefs {
       list-style: none;
       padding: 0;
@@ -121,229 +127,67 @@
 
     .beliefs li:last-child { margin-bottom: 0; }
 
-    .beliefs li strong {
-      font-weight: 600;
-      color: #111;
-    }
-
-    .item-title {
-      font-size: 15px;
-      font-weight: 500;
-    }
-
-    .item-title a {
-      color: #111;
-      text-decoration: none;
-    }
-    .item-title a:hover {
-      color: #111;
-      text-decoration: underline;
-    }
-
-    .item-meta {
-      font-size: 13px;
-      color: #999;
-      margin-top: 2px;
-    }
-
-    .item-meta a {
-      color: #555;
-      text-decoration: none;
-    }
-    .item-meta a:hover {
-      color: #111;
-      text-decoration: underline;
-    }
-
-    .item-desc {
-      font-size: 14px;
-      color: #555;
-      margin-top: 5px;
-    }
-
-    .work-row {
-      display: flex;
-      gap: 14px;
-      margin-bottom: 10px;
-      align-items: baseline;
-    }
-
-    .work-cat {
-      flex: 0 0 110px;
-      font-style: italic;
-      color: #888;
-      font-size: 14px;
-    }
-
-    .work-body {
-      flex: 1;
-      color: #222;
-      font-size: 14.5px;
-      line-height: 1.55;
-    }
-
-    .work-body a {
-      color: #555;
-      text-decoration: none;
-    }
-    .work-body a:hover {
-      color: #111;
-      text-decoration: underline;
-    }
-
-    /* ── Dimmed (older work) ───────────────────── */
-    .dimmed { opacity: 0.45; }
-
-    /* ── Footer ────────────────────────────────── */
     footer {
       text-align: center;
       font-size: 12px;
       color: #ccc;
       margin-top: 64px;
     }
+
+    @media (max-width: 640px) {
+      .section-link {
+        grid-template-columns: 1fr;
+        gap: 3px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-
-    <!-- Profile -->
     <div class="profile">
       <img src="BFj1ujC7_400x400.jpg" alt="Christophorus" />
       <div>
         <div class="profile-name">Christophorus</div>
-        <div class="profile-updated">Updated Jun 2, 2026</div>
+        <div class="profile-updated">Updated Jun 18, 2026</div>
       </div>
     </div>
 
-    <!-- Bio -->
     <p class="bio">
-      Core contributor at <a href="https://harmonix.fi" target="_blank">Harmonix</a>,
-      a yield protocol built on <a href="https://hyperliquid.xyz" target="_blank">Hyperliquid</a>.
+      Core contributor at <a href="https://harmonix.fi" target="_blank" rel="noreferrer">Harmonix</a>,
+      a yield protocol built on <a href="https://hyperliquid.xyz" target="_blank" rel="noreferrer">Hyperliquid</a>.
     </p>
     <p class="bio">
-      Previously founded and scaled <strong>Persona</strong>, an agency
-      serving public and private institutional clients, including Arweave, across 15+ countries in European tech, media, and culture.
+      Previously founded and scaled <strong>Persona</strong>, an agency serving public and private institutional clients across tech, media, culture, and crypto.
       Grew up in Seattle, WA.
     </p>
 
-    <!-- Contact -->
     <div class="contact">
-      <a href="https://t.me/christophorusan" target="_blank">Telegram</a>
-      <a href="https://github.com/Christophorusan" target="_blank">GitHub</a>
-      <a href="https://x.com/christophorusan" target="_blank">X</a>
-      <a href="https://paragraph.com/0xee152ac16e3b50e51f229e867451ebc3e5652e59" target="_blank">Blog</a>
+      <a href="https://t.me/christophorusan" target="_blank" rel="noreferrer">Telegram</a>
+      <a href="https://github.com/Christophorusan" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://x.com/christophorusan" target="_blank" rel="noreferrer">X</a>
+      <a href="https://paragraph.com/0xee152ac16e3b50e51f229e867451ebc3e5652e59" target="_blank" rel="noreferrer">Blog</a>
     </div>
 
-    <!-- On Hyperliquid and Harmonix Finance -->
     <section>
-      <h2>On Hyperliquid and Harmonix Finance</h2>
-
-      <div class="item">
-        <div class="item-title">Launch Campaigns for HYPE and PURR</div>
-        <div class="item-meta"><a href="https://x.com/christophorusan/status/1855778920747954342" target="_blank">HYPE TGE</a> &middot; <a href="https://x.com/christophorusan/status/1833874341932532122?s=20" target="_blank">PURR launch</a> &middot; online and IRL campaigns across crypto events</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">$2M Raise Closed on Echo</div>
-        <div class="item-meta"><a href="https://x.com/harmonixfi/status/1999061884125999114?s=20" target="_blank">Echo by Sonar</a> &middot; year-one fundraise</div>
-      </div>
-
-
-      <div class="item">
-        <div class="item-title">HyperEVM Migration Anchored</div>
-        <div class="item-meta"><a href="https://x.com/harmonixfi/status/1929365326036189611" target="_blank">Move to HyperEVM</a> &middot; partner and chain rollout</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">Built: Clearstar &middot; Superform</div>
-        <div class="item-meta"><a href="https://x.com/harmonixfi/status/2041198793455276340?s=20" target="_blank">Clearstar</a> &middot; <a href="https://x.com/harmonixfi/status/1929365326036189611" target="_blank">HyperEVM</a></div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">Partner Docs, Architecture, and Integration Playbooks Shipped</div>
-        <div class="item-meta"><a href="https://harmonixfi.github.io/harmonix-docs-v2/harmonix-docs-v2.html" target="_blank">V2 docs</a> &middot; <a href="https://harmonixfi.github.io/harmonix-docs-v2/harmonix-docs-v2.html#vault-architecture" target="_blank">vault architecture</a> &middot; <a href="https://x.com/christophorusan/status/1919007345033486513?s=20" target="_blank">haHYPE explainer</a></div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">Async GTM Across Asia, EU, and US</div>
-        <div class="item-meta"><a href="https://x.com/harmonixfi/status/2047462063824568461" target="_blank">year-one retrospective</a> &middot; <a href="https://x.com/harmonixfi/status/2023565078344384624" target="_blank">2026 roadmap</a> &middot; <a href="https://www.notion.so/Growth-Strategy-2c5cf7cfca1180f9be61e1ff5536677d" target="_blank">growth strategy</a></div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <a href="https://x.com/harmonixfi/status/2006381895517352265?s=20" target="_blank">$2M &rarr; $18M TVL</a>
-        </div>
-        <div class="item-meta">2025 recap &middot; peak year-one growth &middot; <a href="https://x.com/christophorusan/status/1955342838373191859?s=20" target="_blank">Aug milestone: $3M &rarr; $10M</a></div>
-      </div>
-
+      <h2>Work</h2>
+      <a class="section-link" href="hyperliquid-ecosystem.html">
+        <strong>Hyperliquid &amp; Ecosystem</strong>
+        <span>Launch campaigns, product concepts, market interfaces, and ecosystem work around Hyperliquid.</span>
+      </a>
+      <a class="section-link" href="harmonix-finance.html">
+        <strong>Harmonix Finance</strong>
+        <span>Vault products, partner docs, GTM, integrations, and protocol distribution.</span>
+      </a>
+      <a class="section-link" href="persona-ltd.html">
+        <strong>Persona LTD</strong>
+        <span>Founder experience, institutional campaigns, media, culture, and creative work.</span>
+      </a>
+      <a class="section-link" href="research.html">
+        <strong>Research</strong>
+        <span>Market writing, protocol analysis, experiments, and technical exploration.</span>
+      </a>
     </section>
 
-    <!-- Founder Experience -->
-    <section id="founder-experience">
-      <h2>Founder Experience</h2>
-
-      <div class="item">
-        <div class="item-title">Founder &amp; CEO · Persona Agency</div>
-        <div class="item-meta">2019 – 2024</div>
-        <div class="item-desc">Founded, scaled, and exited a 25-person cross-border agency headquartered in Dublin, operating across six European markets. Served public and private institutions across tech, media, culture, and finance: BBC, Arte TV, Institut Français, CaixaBank, EFG Private Banking, TEDx Talks, and Arweave.</div>
-      </div>
-
-    </section>
-
-    <!-- Selected Work -->
-    <section>
-      <h2>Selected Work</h2>
-
-      <div class="work-row">
-        <div class="work-cat">Media</div>
-        <div class="work-body">
-          <a href="selected-work.html">Selected work with videos and images</a>.
-        </div>
-      </div>
-
-      <div class="work-row">
-        <div class="work-cat">Analysis</div>
-        <div class="work-body">
-          <a href="https://x.com/christophorusan/status/1833874341932532122?s=20" target="_blank">Early to HYPE</a>,
-          <a href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank">2024 protocols to watch</a>,
-          <a href="https://x.com/christophorusan/status/2045611398248722799" target="_blank">HYPE vs Binance</a>,
-          <a href="https://x.com/christophorusan/status/2006504610777936264?s=20" target="_blank">invested in Lighter and sold for HYPE</a>.
-        </div>
-      </div>
-
-      <div class="work-row">
-        <div class="work-cat">Product design</div>
-        <div class="work-body">
-          <a href="https://app.harmonix.fi/earn" target="_blank">Harmonix app</a>,
-          haUSDC yield-bearing token,
-          <a href="https://x.com/christophorusan/status/2044833918743162901" target="_blank">X &times; Hyperliquid integration</a>,
-          <a href="https://christophorusan.github.io/futuresxyz/perps" target="_blank">futures.xyz</a> (Hyperliquid + HyperEVM all-in-one terminal),
-          <a href="https://x.com/christophorusan/status/2051887694285091313?s=20" target="_blank">Polymarket phone app</a>.
-        </div>
-      </div>
-
-      <div class="work-row">
-        <div class="work-cat">Ads</div>
-        <div class="work-body">
-          <a href="https://x.com/christophorusan/status/1855778920747954342" target="_blank">Hyperliquid TGE</a> (made directly with the core Hyperliquid team ahead of their TGE),
-          <a href="https://x.com/christophorusan/status/1833874341932532122?s=20" target="_blank">Launch of $PURR on Hyperliquid</a>,
-          <a href="https://x.com/christophorusan/status/1788154455432556613?s=20" target="_blank">Arweave</a>,
-          <a href="https://x.com/christophorusan/status/1877742044505911511?s=20" target="_blank">ETH Zurich</a>,
-          <a href="https://x.com/christophorusan/status/1839326982477414407?s=20" target="_blank">Sagrada Fam&iacute;lia &times; AR.IO</a>.
-        </div>
-      </div>
-
-      <div class="work-row">
-        <div class="work-cat">Engineering</div>
-        <div class="work-body">
-          <a href="https://github.com/Christophorusan/louis" target="_blank">Louis</a> (Morpho fork on HyperEVM),
-          <a href="https://github.com/Christophorusan/oslo" target="_blank">Oslo</a> (<a href="https://christophorusan.github.io/oslo-architecture/" target="_blank">Architecture</a>) (AI agent for company ops, marketing, BD, engineering, and security).
-        </div>
-      </div>
-
-    </section>
-
-    <!-- Beliefs -->
     <section>
       <h2>Beliefs</h2>
       <ul class="beliefs">
@@ -361,7 +205,6 @@
     </section>
 
     <footer>&copy; 2026 Christophorus</footer>
-
   </div>
 </body>
 </html>
