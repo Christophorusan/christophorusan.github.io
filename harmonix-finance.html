@@ -19,6 +19,9 @@
     .featured p { color: #222; font-size: clamp(17px, 2vw, 20px); line-height: 1.5; max-width: 680px; }
     .media-card { color: #111; display: block; margin: 26px auto 0; max-width: 640px; text-decoration: none; }
     .media-card:hover { text-decoration: none; }
+    .archive-card { margin: 30px auto; }
+    .media-frame { background: #fff; border: 1px solid #ededed; border-radius: 10px; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.04); overflow: hidden; }
+    .media-frame img, .media-frame video { background: #fff; display: block; filter: none; height: auto; max-height: 620px; object-fit: contain; width: 100%; }
     .apy-visual { background: #fff; border: 1px solid #ededed; border-radius: 10px; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.04); padding: 24px; }
     .apy-top { align-items: start; display: grid; gap: 16px; grid-template-columns: 1fr auto auto; margin-bottom: 26px; }
     .apy-label { color: #777; font-size: 14px; margin-bottom: 4px; }
@@ -56,7 +59,7 @@
     .work-link small { color: #666; font-size: 14px; line-height: 1.45; align-self: center; }
     .work-link:hover span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .featured { margin-bottom: 34px; padding-top: 24px; } .apy-visual, .growth-visual { padding: 18px; } .apy-top { grid-template-columns: 1fr; } .apy-metric { min-width: 0; } .apy-chart { height: 190px; } .growth-meta { grid-template-columns: 1fr; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .featured { margin-bottom: 34px; padding-top: 24px; } .apy-visual, .growth-visual { padding: 18px; } .apy-top { grid-template-columns: 1fr; } .apy-metric { min-width: 0; } .apy-chart { height: 190px; } .growth-meta { grid-template-columns: 1fr; } .media-frame img, .media-frame video { max-height: 520px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } }
   </style>
 </head>
 <body>
@@ -72,27 +75,10 @@
       <h2 id="live-apy-heading">Featured Work</h2>
       <p>Live APY tracking for Harmonix's haUSDC vault, built to make vault performance easier to read and monitor.</p>
       <a class="media-card" href="https://x.com/christophorusan/status/2056426770157412415?s=20" target="_blank" rel="noreferrer">
-        <div class="apy-visual" aria-hidden="true">
-          <div class="apy-top">
-            <div>
-              <div class="apy-label">Share Price (USDC)</div>
-              <div class="apy-price">1.0066 <span class="apy-chip">+0.66%</span></div>
-            </div>
-            <div class="apy-metric">
-              <div class="apy-label">TVL</div>
-              <strong>275.80K USDC</strong>
-            </div>
-            <div class="apy-metric">
-              <div class="apy-label">APY</div>
-              <strong>10.18%</strong>
-            </div>
-          </div>
-          <div class="apy-chart">
-            <svg viewBox="0 0 640 230" role="img" aria-label="Live APY line chart preview">
-              <path d="M6 64 C36 64 54 64 74 58 C96 51 124 66 134 84 C146 108 145 132 166 140 C186 148 206 112 232 102 C260 92 304 106 336 101 C370 96 384 128 408 122 C432 116 444 94 476 91 C508 88 524 104 552 99 C584 94 602 108 634 96" fill="none" stroke="#20c25e" stroke-width="3" stroke-linecap="round" />
-              <path d="M6 64 C36 64 54 64 74 58 C96 51 124 66 134 84 C146 108 145 132 166 140 C186 148 206 112 232 102 C260 92 304 106 336 101 C370 96 384 128 408 122 C432 116 444 94 476 91 C508 88 524 104 552 99 C584 94 602 108 634 96 L634 230 L6 230 Z" fill="rgba(32, 194, 94, 0.12)" />
-            </svg>
-          </div>
+        <div class="media-frame" aria-hidden="true">
+          <video autoplay muted loop playsinline controls preload="metadata" poster="assets/harmonix-media/hausdc-apy-poster.jpg">
+            <source src="assets/harmonix-media/hausdc-apy.mp4" type="video/mp4" />
+          </video>
         </div>
         <span class="caption">
           <strong>haUSDC live APY tracking</strong>
@@ -133,6 +119,19 @@
         <span>Docs Launch <time>Apr 2026</time></span>
         <small>Public documentation for Harmonix vault architecture, protocol mechanics, and partner integration context.</small>
       </a>
+      <a class="media-card archive-card" href="https://x.com/harmonixfi/status/2043709762605367710?s=20" target="_blank" rel="noreferrer">
+        <div class="media-frame" aria-hidden="true">
+          <video autoplay muted loop playsinline controls preload="metadata" poster="assets/harmonix-media/docs-launch-poster.jpg">
+            <source src="assets/harmonix-media/docs-launch.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <span class="caption">
+          <strong>Docs Launch</strong>
+          <time>Apr 2026</time>
+          <span>Original launch visual for Harmonix vault documentation.</span>
+          <span>Open original</span>
+        </span>
+      </a>
       <a class="work-link" href="https://harmonixfi.github.io/harmonix-docs-v2/harmonix-docs-v2.html#vault-architecture" target="_blank" rel="noreferrer">
         <span>Vault Architecture <time>2026</time></span>
         <small>Technical breakdown of Harmonix vault design and partner integration surfaces.</small>
@@ -141,13 +140,48 @@
         <span>Proof of Funds <time>Jun 2026</time></span>
         <small>Octav-based vault transparency showing transactions, wallets, and deployed capital across Harmonix strategies.</small>
       </a>
+      <a class="media-card archive-card" href="https://x.com/christophorusan/status/2064404310104907789?s=20" target="_blank" rel="noreferrer">
+        <div class="media-frame" aria-hidden="true">
+          <video autoplay muted loop playsinline controls preload="metadata" poster="assets/harmonix-media/proof-of-funds-poster.jpg">
+            <source src="assets/harmonix-media/proof-of-funds.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <span class="caption">
+          <strong>Proof of Funds</strong>
+          <time>Jun 2026</time>
+          <span>Octav-based transparency showing transactions, wallets, and deployed capital.</span>
+          <span>Open original</span>
+        </span>
+      </a>
       <a class="work-link" href="https://x.com/harmonixfi/status/1999061884125999114?s=20" target="_blank" rel="noreferrer">
         <span>Echo Raise <time>Dec 2025</time></span>
         <small>Year-one fundraise and distribution milestone.</small>
       </a>
+      <a class="media-card archive-card" href="https://x.com/harmonixfi/status/1999061884125999114?s=20" target="_blank" rel="noreferrer">
+        <div class="media-frame" aria-hidden="true">
+          <img src="assets/harmonix-media/har-tge.jpg" alt="Harmonix HAR TGE announcement visual" loading="lazy" />
+        </div>
+        <span class="caption">
+          <strong>HAR TGE</strong>
+          <time>Dec 2025</time>
+          <span>Original Harmonix TGE announcement visual.</span>
+          <span>Open original</span>
+        </span>
+      </a>
       <a class="work-link" href="https://x.com/harmonixfi/status/1982838348441174336?s=20" target="_blank" rel="noreferrer">
         <span>Harmonix Milestone <time>Oct 2025</time></span>
         <small>Protocol update and ecosystem distribution work.</small>
+      </a>
+      <a class="media-card archive-card" href="https://x.com/harmonixfi/status/1982838348441174336?s=20" target="_blank" rel="noreferrer">
+        <div class="media-frame" aria-hidden="true">
+          <img src="assets/harmonix-media/tvl-16m.jpg" alt="Harmonix TVL all-time high visual" loading="lazy" />
+        </div>
+        <span class="caption">
+          <strong>Harmonix TVL Milestone</strong>
+          <time>Oct 2025</time>
+          <span>Original visual for the $16.7M TVL milestone.</span>
+          <span>Open original</span>
+        </span>
       </a>
       <a class="work-link" href="https://x.com/harmonixfi/status/1955341237902287035?s=20" target="_blank" rel="noreferrer">
         <span>Harmonix Update <time>Aug 2025</time></span>
@@ -157,6 +191,17 @@
         <span>Harmonix Work <time>May 2025</time></span>
         <small>Product, protocol, and ecosystem development around Harmonix.</small>
       </a>
+      <a class="media-card archive-card" href="https://x.com/christophorusan/status/1919007345033486513?s=20" target="_blank" rel="noreferrer">
+        <div class="media-frame" aria-hidden="true">
+          <img src="assets/harmonix-media/hahype-testnet.jpg" alt="Harmonix haHYPE testnet visual" loading="lazy" />
+        </div>
+        <span class="caption">
+          <strong>haHYPE Testnet</strong>
+          <time>May 2025</time>
+          <span>Original visual explaining Harmonix's yield-bearing HYPE token.</span>
+          <span>Open original</span>
+        </span>
+      </a>
       <a class="work-link" href="https://x.com/harmonixfi/status/1929365326036189611" target="_blank" rel="noreferrer">
         <span>HyperEVM Migration <time>Jun 2025</time></span>
         <small>Partner and chain rollout for Harmonix on HyperEVM.</small>
@@ -164,6 +209,17 @@
       <a class="work-link" href="https://x.com/harmonixfi/status/2041198793455276340?s=20" target="_blank" rel="noreferrer">
         <span>Clearstar and Superform <time>Apr 2026</time></span>
         <small>Partner buildout and ecosystem distribution work.</small>
+      </a>
+      <a class="media-card archive-card" href="https://x.com/harmonixfi/status/2041198793455276340?s=20" target="_blank" rel="noreferrer">
+        <div class="media-frame" aria-hidden="true">
+          <img src="assets/harmonix-media/clearstar-superform.jpg" alt="Harmonix Clearstar and Superform partner visual" loading="lazy" />
+        </div>
+        <span class="caption">
+          <strong>Clearstar and Superform</strong>
+          <time>Apr 2026</time>
+          <span>Original partner buildout and ecosystem distribution visual.</span>
+          <span>Open original</span>
+        </span>
       </a>
       <a class="work-link" href="https://x.com/harmonixfi/status/2006381895517352265?s=20" target="_blank" rel="noreferrer">
         <span>$2M to $18M TVL <time>Dec 2025</time></span>
