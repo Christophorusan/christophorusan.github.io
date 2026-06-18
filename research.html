@@ -6,71 +6,601 @@
   <title>Research - Cristobal Silva</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: #fff; color: #111; font-size: 16px; line-height: 1.62; padding: 46px 20px 84px; }
-    .container { max-width: 680px; margin: 0 auto; }
-    .back { display: inline-block; color: #8f8f8f; font-size: 14px; text-decoration: none; margin-bottom: 42px; }
-    .back:hover { color: #111; text-decoration: underline; }
-    header { max-width: 620px; margin-bottom: 48px; }
-    .date { color: #a0a0a0; font-size: 13px; margin-bottom: 12px; }
-    h1 { font-size: clamp(38px, 7vw, 58px); font-weight: 520; letter-spacing: -0.035em; line-height: 1; margin-bottom: 18px; }
-    .intro { color: #2b2b2b; font-size: clamp(17px, 2vw, 20px); line-height: 1.5; }
-    .work-list { border-bottom: 1px solid #ededed; }
-    .work-link { display: grid; grid-template-columns: minmax(150px, 0.36fr) 1fr; gap: 22px; color: #111; text-decoration: none; border-top: 1px solid #ededed; padding: 16px 0; }
-    .work-link span { display: flex; flex-direction: column; font-size: 17px; font-weight: 520; letter-spacing: -0.015em; line-height: 1.25; }
-    .work-link time { color: #aaa; font-size: 12px; font-weight: 500; letter-spacing: 0; margin-top: 3px; }
-    .work-link small { color: #666; font-size: 14px; line-height: 1.45; align-self: center; }
-    .work-link:hover span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
-    footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } }
+
+    body {
+      background: #fff;
+      color: #111;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      padding: 46px 20px 90px;
+    }
+
+    .page {
+      margin: 0 auto;
+      max-width: 760px;
+    }
+
+    a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .back {
+      color: #999;
+      display: inline-block;
+      font-size: 14px;
+      margin-bottom: 54px;
+    }
+
+    header {
+      margin-bottom: 68px;
+      max-width: 680px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 9vw, 86px);
+      font-weight: 520;
+      letter-spacing: -0.045em;
+      line-height: 0.98;
+      margin-bottom: 16px;
+    }
+
+    .date {
+      color: #aaa;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .intro {
+      color: #222;
+      font-size: clamp(20px, 2.5vw, 28px);
+      line-height: 1.45;
+    }
+
+    section {
+      border-top: 1px solid #eee;
+      margin-top: 54px;
+      padding-top: 34px;
+    }
+
+    h2 {
+      color: #999;
+      font-size: 26px;
+      font-weight: 520;
+      letter-spacing: -0.025em;
+      margin-bottom: 22px;
+    }
+
+    p {
+      color: #222;
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.5;
+      max-width: 700px;
+    }
+
+    .work-stack {
+      display: grid;
+      gap: 34px;
+      margin-top: 30px;
+    }
+
+    .embedded-work {
+      margin: 0 auto;
+      max-width: 640px;
+      width: 100%;
+    }
+
+    .media-frame,
+    .work-preview {
+      background: #fff;
+      border: 1px solid #ececec;
+      border-radius: 10px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.04);
+      display: block;
+      overflow: hidden;
+    }
+
+    .media-frame video,
+    .media-frame img {
+      background: #fff;
+      display: block;
+      height: auto;
+      max-height: 620px;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    .work-preview {
+      align-items: center;
+      aspect-ratio: 16 / 10;
+      color: #111;
+      display: grid;
+      justify-items: center;
+      padding: 38px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .work-preview:hover {
+      text-decoration: none;
+    }
+
+    .work-preview::before,
+    .work-preview::after {
+      border: 1px solid #e5e5e5;
+      border-radius: 999px;
+      content: "";
+      height: 180px;
+      position: absolute;
+      width: 180px;
+    }
+
+    .work-preview::before {
+      left: -58px;
+      top: -58px;
+    }
+
+    .work-preview::after {
+      bottom: -72px;
+      right: -48px;
+    }
+
+    .preview-inner {
+      display: grid;
+      gap: 14px;
+      max-width: 430px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-kicker {
+      color: #999;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .preview-title {
+      font-size: clamp(30px, 6vw, 56px);
+      font-weight: 560;
+      letter-spacing: -0.05em;
+      line-height: 0.95;
+    }
+
+    .preview-copy {
+      color: #666;
+      font-size: 15px;
+      line-height: 1.45;
+      margin: 0 auto;
+      max-width: 360px;
+    }
+
+    .preview-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    .preview-dot {
+      background: #111;
+      border-radius: 50%;
+      height: 7px;
+      opacity: 0.16;
+      width: 7px;
+    }
+
+    .tweet-card {
+      align-items: stretch;
+      aspect-ratio: auto;
+      background: #fff;
+      display: grid;
+      justify-items: stretch;
+      padding: 22px;
+      text-align: left;
+    }
+
+    .tweet-card::before,
+    .tweet-card::after {
+      display: none;
+    }
+
+    .tweet-head {
+      align-items: center;
+      display: flex;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .tweet-avatar {
+      background: #111;
+      border-radius: 50%;
+      color: #fff;
+      display: grid;
+      flex: 0 0 36px;
+      font-size: 13px;
+      font-weight: 600;
+      height: 36px;
+      place-items: center;
+      width: 36px;
+    }
+
+    .tweet-name {
+      color: #111;
+      display: block;
+      font-size: 14px;
+      font-weight: 560;
+      line-height: 1.2;
+    }
+
+    .tweet-handle {
+      color: #888;
+      display: block;
+      font-size: 13px;
+      line-height: 1.2;
+    }
+
+    .tweet-text {
+      color: #1f1f1f;
+      font-size: 17px;
+      line-height: 1.45;
+      margin-bottom: 16px;
+      white-space: pre-line;
+    }
+
+    .note-visual {
+      aspect-ratio: 4 / 3;
+      background: linear-gradient(135deg, #fafafa, #f4f4f4);
+      border: 1px solid #ececec;
+      border-radius: 8px;
+      display: grid;
+      overflow: hidden;
+      padding: 26px;
+      position: relative;
+    }
+
+    .note-visual::before {
+      border: 1px solid #e1e1e1;
+      border-radius: 999px;
+      content: "";
+      height: 230px;
+      position: absolute;
+      right: -74px;
+      top: -82px;
+      width: 230px;
+    }
+
+    .note-visual::after {
+      background: #111;
+      bottom: 28px;
+      content: "";
+      height: 1px;
+      left: 26px;
+      opacity: 0.12;
+      position: absolute;
+      right: 26px;
+    }
+
+    .note-grid {
+      align-self: end;
+      display: grid;
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .note-kicker {
+      color: #999;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .note-title {
+      font-size: clamp(28px, 5vw, 46px);
+      font-weight: 560;
+      letter-spacing: -0.045em;
+      line-height: 0.98;
+    }
+
+    .note-line {
+      background: #111;
+      height: 8px;
+      opacity: 0.08;
+      width: 70%;
+    }
+
+    .note-line.short {
+      width: 45%;
+    }
+
+    .caption {
+      color: #777;
+      display: grid;
+      gap: 4px;
+      font-size: 14px;
+      line-height: 1.45;
+      margin-top: 10px;
+    }
+
+    .caption strong {
+      color: #111;
+      font-size: 15px;
+      font-weight: 560;
+    }
+
+    .caption time {
+      color: #aaa;
+      font-size: 12px;
+      font-weight: 500;
+      margin-top: -2px;
+    }
+
+    footer {
+      color: #ccc;
+      font-size: 13px;
+      margin-top: 72px;
+    }
+
+    @media (max-width: 700px) {
+      body { padding: 34px 18px 72px; }
+      .back { margin-bottom: 42px; }
+      header { margin-bottom: 48px; }
+      section { margin-top: 42px; padding-top: 28px; }
+      .work-preview { padding: 26px; }
+      .tweet-card { padding: 18px; }
+      .media-frame video,
+      .media-frame img { max-height: 520px; }
+    }
   </style>
 </head>
 <body>
-  <main class="container">
+  <main class="page">
     <a class="back" href="index.html">Index</a>
+
     <header>
-      <div class="date">18 June, 2026</div>
       <h1>Research</h1>
+      <div class="date">18 June, 2026</div>
       <p class="intro">Market writing, protocol analysis, technical experiments, and early ecosystem theses.</p>
     </header>
 
-    <nav class="work-list" aria-label="Research work">
-      <a class="work-link" href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">
-        <span>2024 Protocols to Watch <time>2024</time></span>
-        <small>Stablecoin and DeFi market analysis.</small>
-      </a>
-      <a class="work-link" href="https://x.com/christophorusan/status/2041169845212049453?s=20" target="_blank" rel="noreferrer">
-        <span>Research Note <time>Apr 2026</time></span>
-        <small>Market research and ecosystem analysis.</small>
-      </a>
-      <a class="work-link" href="https://x.com/christophorusan/status/2003516149443805462?s=20" target="_blank" rel="noreferrer">
-        <span>Research Note <time>Dec 2025</time></span>
-        <small>Protocol and market research.</small>
-      </a>
-      <a class="work-link" href="https://x.com/christophorusan/status/1958601471290917269?s=20" target="_blank" rel="noreferrer">
-        <span>Research Note <time>Aug 2025</time></span>
-        <small>Market thesis and ecosystem research.</small>
-      </a>
-      <a class="work-link" href="https://x.com/christophorusan/status/1943423137015538003?s=20" target="_blank" rel="noreferrer">
-        <span>Research Note <time>Jul 2025</time></span>
-        <small>Protocol thesis and market analysis.</small>
-      </a>
-      <a class="work-link" href="work-mobile-markets.html">
-        <span>Mobile Prediction Markets <time>2026</time></span>
-        <small>Polymarket app critique and phone-native market-interface redesign.</small>
-      </a>
-      <a class="work-link" href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">
-        <span>futures.xyz <time>2026</time></span>
-        <small>A Hyperliquid and HyperEVM all-in-one terminal concept for spot, perps, and trading workflows.</small>
-      </a>
-      <a class="work-link" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">
-        <span>Louis <time>2025</time></span>
-        <small>Morpho fork experiment on HyperEVM.</small>
-      </a>
-      <a class="work-link" href="https://github.com/Christophorusan/oslo" target="_blank" rel="noreferrer">
-        <span>Oslo <time>2026</time></span>
-        <small>AI agent system for company operations, marketing, BD, engineering, and security.</small>
-      </a>
-    </nav>
+    <section>
+      <h2>Interfaces</h2>
+      <p>
+        Research often turns into product sketches: how markets should feel on a phone, how a trading terminal should compress spot and perps, and where infrastructure becomes usable.
+      </p>
+      <div class="work-stack">
+        <article class="embedded-work">
+          <a class="media-frame" href="work-mobile-markets.html">
+            <video autoplay muted loop playsinline controls preload="metadata">
+              <source src="assets/work-media/mobile-markets.mp4" type="video/mp4" />
+            </video>
+          </a>
+          <div class="caption">
+            <strong>Mobile Prediction Markets</strong>
+            <time>2026</time>
+            <span>Phone-native market-interface redesign and Polymarket critique.</span>
+            <a href="work-mobile-markets.html">Open project</a>
+          </div>
+        </article>
+
+        <article class="embedded-work">
+          <a class="work-preview" href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">
+            <span class="preview-inner">
+              <span class="preview-kicker">Product Concept</span>
+              <span class="preview-title">futures.xyz</span>
+              <span class="preview-copy">A Hyperliquid and HyperEVM all-in-one terminal concept for spot, perps, and trading workflows.</span>
+              <span class="preview-row" aria-hidden="true">
+                <span class="preview-dot"></span>
+                <span class="preview-dot"></span>
+                <span class="preview-dot"></span>
+              </span>
+            </span>
+          </a>
+          <div class="caption">
+            <strong>futures.xyz</strong>
+            <time>2026</time>
+            <span>Hyperliquid and HyperEVM all-in-one terminal concept.</span>
+            <a href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">Open project</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Market Notes</h2>
+      <p>
+        Public notes on protocol positioning, market structure, stablecoins, and how liquidity moves through crypto systems.
+      </p>
+      <div class="work-stack">
+        <article class="embedded-work">
+          <a class="work-preview tweet-card" href="https://x.com/christophorusan/status/2041169845212049453?s=20" target="_blank" rel="noreferrer">
+            <span class="tweet-head">
+              <span class="tweet-avatar" aria-hidden="true">C</span>
+              <span>
+                <span class="tweet-name">Christophorus</span>
+                <span class="tweet-handle">@christophorusan</span>
+              </span>
+            </span>
+            <span class="tweet-text">Research note on market structure, liquidity, and ecosystem positioning.</span>
+            <span class="note-visual" aria-hidden="true">
+              <span class="note-grid">
+                <span class="note-kicker">Market Research</span>
+                <span class="note-title">Liquidity and positioning</span>
+                <span class="note-line"></span>
+                <span class="note-line short"></span>
+              </span>
+            </span>
+          </a>
+          <div class="caption">
+            <strong>Research Note</strong>
+            <time>Apr 2026</time>
+            <span>Market research and ecosystem analysis.</span>
+            <a href="https://x.com/christophorusan/status/2041169845212049453?s=20" target="_blank" rel="noreferrer">Open original</a>
+          </div>
+        </article>
+
+        <article class="embedded-work">
+          <a class="work-preview tweet-card" href="https://x.com/christophorusan/status/2003516149443805462?s=20" target="_blank" rel="noreferrer">
+            <span class="tweet-head">
+              <span class="tweet-avatar" aria-hidden="true">C</span>
+              <span>
+                <span class="tweet-name">Christophorus</span>
+                <span class="tweet-handle">@christophorusan</span>
+              </span>
+            </span>
+            <span class="tweet-text">Protocol note on how markets, incentives, and distribution connect inside emerging ecosystems.</span>
+            <span class="note-visual" aria-hidden="true">
+              <span class="note-grid">
+                <span class="note-kicker">Protocol Research</span>
+                <span class="note-title">Incentives and distribution</span>
+                <span class="note-line"></span>
+                <span class="note-line short"></span>
+              </span>
+            </span>
+          </a>
+          <div class="caption">
+            <strong>Research Note</strong>
+            <time>Dec 2025</time>
+            <span>Protocol and market research.</span>
+            <a href="https://x.com/christophorusan/status/2003516149443805462?s=20" target="_blank" rel="noreferrer">Open original</a>
+          </div>
+        </article>
+
+        <article class="embedded-work">
+          <a class="work-preview tweet-card" href="https://x.com/christophorusan/status/1958601471290917269?s=20" target="_blank" rel="noreferrer">
+            <span class="tweet-head">
+              <span class="tweet-avatar" aria-hidden="true">C</span>
+              <span>
+                <span class="tweet-name">Christophorus</span>
+                <span class="tweet-handle">@christophorusan</span>
+              </span>
+            </span>
+            <span class="tweet-text">Market thesis and ecosystem research around emerging crypto infrastructure.</span>
+            <span class="note-visual" aria-hidden="true">
+              <span class="note-grid">
+                <span class="note-kicker">Market Thesis</span>
+                <span class="note-title">Infrastructure as markets</span>
+                <span class="note-line"></span>
+                <span class="note-line short"></span>
+              </span>
+            </span>
+          </a>
+          <div class="caption">
+            <strong>Research Note</strong>
+            <time>Aug 2025</time>
+            <span>Market thesis and ecosystem research.</span>
+            <a href="https://x.com/christophorusan/status/1958601471290917269?s=20" target="_blank" rel="noreferrer">Open original</a>
+          </div>
+        </article>
+
+        <article class="embedded-work">
+          <a class="work-preview tweet-card" href="https://x.com/christophorusan/status/1943423137015538003?s=20" target="_blank" rel="noreferrer">
+            <span class="tweet-head">
+              <span class="tweet-avatar" aria-hidden="true">C</span>
+              <span>
+                <span class="tweet-name">Christophorus</span>
+                <span class="tweet-handle">@christophorusan</span>
+              </span>
+            </span>
+            <span class="tweet-text">Protocol thesis and market analysis for early-stage crypto networks.</span>
+            <span class="note-visual" aria-hidden="true">
+              <span class="note-grid">
+                <span class="note-kicker">Protocol Thesis</span>
+                <span class="note-title">Networks and demand</span>
+                <span class="note-line"></span>
+                <span class="note-line short"></span>
+              </span>
+            </span>
+          </a>
+          <div class="caption">
+            <strong>Research Note</strong>
+            <time>Jul 2025</time>
+            <span>Protocol thesis and market analysis.</span>
+            <a href="https://x.com/christophorusan/status/1943423137015538003?s=20" target="_blank" rel="noreferrer">Open original</a>
+          </div>
+        </article>
+
+        <article class="embedded-work">
+          <a class="work-preview" href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">
+            <span class="preview-inner">
+              <span class="preview-kicker">Article</span>
+              <span class="preview-title">2024 Protocols to Watch</span>
+              <span class="preview-copy">Stablecoin and DeFi market analysis around yield, fiat alternatives, and protocol opportunity.</span>
+              <span class="preview-row" aria-hidden="true">
+                <span class="preview-dot"></span>
+                <span class="preview-dot"></span>
+                <span class="preview-dot"></span>
+              </span>
+            </span>
+          </a>
+          <div class="caption">
+            <strong>2024 Protocols to Watch</strong>
+            <time>2024</time>
+            <span>Stablecoin and DeFi market analysis.</span>
+            <a href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">Open article</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Experiments</h2>
+      <p>
+        Small systems and repo experiments for protocol interfaces, AI operations, and HyperEVM infrastructure.
+      </p>
+      <div class="work-stack">
+        <article class="embedded-work">
+          <a class="work-preview" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">
+            <span class="preview-inner">
+              <span class="preview-kicker">Experiment</span>
+              <span class="preview-title">Louis</span>
+              <span class="preview-copy">Morpho fork experiment on HyperEVM.</span>
+              <span class="preview-row" aria-hidden="true">
+                <span class="preview-dot"></span>
+                <span class="preview-dot"></span>
+                <span class="preview-dot"></span>
+              </span>
+            </span>
+          </a>
+          <div class="caption">
+            <strong>Louis</strong>
+            <time>2025</time>
+            <span>Morpho fork experiment on HyperEVM.</span>
+            <a href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">Open repository</a>
+          </div>
+        </article>
+
+        <article class="embedded-work">
+          <a class="work-preview" href="https://github.com/Christophorusan/oslo" target="_blank" rel="noreferrer">
+            <span class="preview-inner">
+              <span class="preview-kicker">System</span>
+              <span class="preview-title">Oslo</span>
+              <span class="preview-copy">AI agent system for company operations, marketing, BD, engineering, and security.</span>
+              <span class="preview-row" aria-hidden="true">
+                <span class="preview-dot"></span>
+                <span class="preview-dot"></span>
+                <span class="preview-dot"></span>
+              </span>
+            </span>
+          </a>
+          <div class="caption">
+            <strong>Oslo</strong>
+            <time>2026</time>
+            <span>AI agent system for company operations, marketing, BD, engineering, and security.</span>
+            <a href="https://github.com/Christophorusan/oslo" target="_blank" rel="noreferrer">Open repository</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <footer>&copy; 2026 Cristobal Silva</footer>
   </main>
