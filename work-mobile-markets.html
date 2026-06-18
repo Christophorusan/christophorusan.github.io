@@ -28,7 +28,7 @@
 
     .back:hover { color: #111; text-decoration: underline; }
 
-    header { max-width: 620px; margin-bottom: 46px; }
+    header { max-width: 620px; margin-bottom: 36px; }
 
     .date {
       color: #a0a0a0;
@@ -52,28 +52,27 @@
 
     .section {
       border-top: 1px solid #ededed;
-      padding-top: 26px;
+      padding-top: 24px;
       max-width: 640px;
     }
 
-    .media-tools {
-      margin-bottom: 16px;
-      font-size: 14px;
+    .media {
+      display: block;
+      width: min(100%, 560px);
+      border: 1px solid #ececec;
+      border-radius: 10px;
+      background: #f8f8f8;
     }
 
-    .media-tools a {
+    .source {
       color: #777;
+      display: inline-block;
+      font-size: 14px;
+      margin-top: 14px;
       text-decoration: none;
     }
 
-    .media-tools a:hover { color: #111; text-decoration: underline; }
-
-    .media-block {
-      max-width: 430px;
-      overflow: hidden;
-    }
-
-    .twitter-tweet { max-width: 430px !important; }
+    .source:hover { color: #111; text-decoration: underline; }
 
     footer {
       color: #c6c6c6;
@@ -84,9 +83,8 @@
     @media (max-width: 700px) {
       body { padding: 32px 18px 64px; font-size: 15px; }
       .back { margin-bottom: 34px; }
-      header { margin-bottom: 38px; }
-      .section { padding-top: 22px; }
-      .media-block { max-width: 100%; }
+      header { margin-bottom: 30px; }
+      .section { padding-top: 20px; }
     }
   </style>
 </head>
@@ -103,18 +101,13 @@
     </header>
 
     <section class="section">
-      <div class="media-tools">
-        <a href="https://x.com/christophorusan/status/2051887694285091313?s=20" target="_blank" rel="noreferrer">Open on X</a>
-      </div>
-      <div class="media-block">
-        <blockquote class="twitter-tweet" data-width="430">
-          <a href="https://x.com/christophorusan/status/2051887694285091313?s=20"></a>
-        </blockquote>
-      </div>
+      <video class="media" controls playsinline preload="metadata">
+        <source src="assets/work-media/mobile-markets.mp4" type="video/mp4" />
+      </video>
+      <a class="source" href="https://x.com/christophorusan/status/2051887694285091313?s=20" target="_blank" rel="noreferrer">Open original</a>
     </section>
 
     <footer>&copy; 2026 Christophorus</footer>
   </main>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
