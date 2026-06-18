@@ -20,8 +20,15 @@
     .work-link small { color: #666; font-size: 14px; line-height: 1.45; align-self: center; }
     .work-link:hover span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
     .work-static:hover span { text-decoration: none; }
+    .case-study { border-top: 1px solid #ededed; padding: 22px 0 24px; }
+    .case-study h2 { font-size: 22px; font-weight: 520; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 10px; }
+    .case-study p { color: #333; font-size: 16px; line-height: 1.55; max-width: 620px; }
+    .case-study a { color: #111; text-decoration: underline; text-underline-offset: 4px; }
+    .photo-grid { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; margin-top: 18px; }
+    .photo-grid img { aspect-ratio: 4 / 3; border-radius: 8px; display: block; object-fit: cover; width: 100%; }
+    .photo-grid img:first-child { grid-column: 1 / -1; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid { grid-template-columns: 1fr; } .photo-grid img:first-child { grid-column: auto; } }
   </style>
 </head>
 <body>
@@ -38,6 +45,17 @@
         <span>Persona Agency</span>
         <small>Founded, scaled, and exited a 25-person cross-border agency headquartered in Dublin, operating across six European markets.</small>
       </div>
+      <article class="case-study">
+        <h2>Rendez-vous de l'Erdre</h2>
+        <p>
+          Sold out 5,000 seats for <a href="https://www.rendezvouserdre.com/" target="_blank" rel="noreferrer">Rendez-vous de l'Erdre</a> in Nantes, France through an integrated campaign across online ads, radio, and printed press.
+        </p>
+        <div class="photo-grid" aria-label="Rendez-vous de l'Erdre campaign photos">
+          <img src="assets/persona-rendezvous/rendezvous-erdre-01.jpg" alt="Rendez-vous de l'Erdre stage view with audience in Nantes" loading="lazy" />
+          <img src="assets/persona-rendezvous/rendezvous-erdre-02.jpg" alt="Rendez-vous de l'Erdre campaign event photo" loading="lazy" />
+          <img src="assets/persona-rendezvous/rendezvous-erdre-03.jpg" alt="Rendez-vous de l'Erdre campaign crowd photo" loading="lazy" />
+        </div>
+      </article>
       <div class="work-link work-static">
         <span>Institutional Clients</span>
         <small>Work across public and private clients including BBC, Arte TV, Institut Francais, CaixaBank, EFG Private Banking, TEDx Talks, and Arweave.</small>
