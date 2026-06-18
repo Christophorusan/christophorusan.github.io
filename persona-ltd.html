@@ -29,6 +29,10 @@
     .case-study a { color: #111; text-decoration: underline; text-underline-offset: 4px; }
     .photo-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-top: 18px; }
     .photo-grid img { aspect-ratio: 1 / 1; border-radius: 8px; display: block; filter: none; object-fit: cover; width: 100%; }
+    .compact-case { padding: 18px 0 20px; }
+    .compact-case h2 { font-size: 19px; margin-bottom: 8px; }
+    .compact-case p { font-size: 15px; line-height: 1.5; max-width: 560px; }
+    .compact-case .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 14px; max-width: 520px; }
     .poster-wall { display: grid; gap: 10px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 20px; }
     .poster-card { min-width: 0; }
     .poster-card img { aspect-ratio: 1 / 1; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; object-fit: contain; padding: 6px; width: 100%; }
@@ -41,7 +45,7 @@
     .video-card figcaption span { color: #111; font-size: 14px; font-weight: 520; }
     .video-card figcaption a { color: #777; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid, .poster-wall { grid-template-columns: repeat(3, minmax(0, 1fr)); } .poster-card figcaption { display: none; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid, .poster-wall { grid-template-columns: repeat(3, minmax(0, 1fr)); } .compact-case .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .poster-card figcaption { display: none; } }
   </style>
 </head>
 <body>
@@ -54,10 +58,6 @@
     </header>
 
     <nav class="work-list" aria-label="Persona LTD work">
-      <div class="work-link work-static">
-        <span>Institutional Clients <time>2018-2024</time></span>
-        <small>Work across public and private clients including BBC, Arte TV, Institut Francais, CaixaBank, EFG Private Banking, TEDx Talks, and Arweave.</small>
-      </div>
       <article class="case-study">
         <h2>Arweave <time>2024</time></h2>
         <p>
@@ -90,6 +90,10 @@
         <span>ETH Zurich <time>Jan 2025</time></span>
         <small>Ad work and event-facing creative.</small>
       </a>
+      <div class="work-link work-static">
+        <span>Institutional Clients <time>2018-2024</time></span>
+        <small>Work across public and private clients including BBC, Arte TV, Institut Francais, CaixaBank, EFG Private Banking, TEDx Talks, and Arweave.</small>
+      </div>
       <div class="work-link work-static">
         <span>Persona Agency <time>2018-2024</time></span>
         <small>Founded, scaled, and exited a 25-person cross-border agency headquartered in Dublin, operating across six European markets.</small>
@@ -164,7 +168,7 @@
           </figure>
         </div>
       </article>
-      <article class="case-study">
+      <article class="case-study compact-case">
         <h2>Rendez-vous de l'Erdre <time>2023</time></h2>
         <p>
           Sold out 5,000 seats for <a href="https://www.rendezvouserdre.com/" target="_blank" rel="noreferrer">Rendez-vous de l'Erdre</a> in Nantes, France through an integrated campaign across online ads, radio, and printed press.
@@ -175,7 +179,7 @@
           <img src="assets/persona-rendezvous/rendezvous-erdre-03.jpg" alt="Rendez-vous de l'Erdre campaign crowd photo" loading="lazy" />
         </div>
       </article>
-      <article class="case-study">
+      <article class="case-study compact-case">
         <h2>Snape Maltings <time>2023</time></h2>
         <p>
           Sold out <a href="https://www.brittenpearsarts.org/?gad_source=1&gad_campaignid=927608615&gbraid=0AAAAADgVlQOh1GXA0imfIZcF6tm0yOwVz&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD2mSDkiol4iL2n3zVto1GXQqQHOwuScbrwg0gIik6RQEGmI8DS1ZlYaAlQXEALw_wcB" target="_blank" rel="noreferrer">Snape Maltings</a>, an 850-seat venue in a remote location in the UK, through online ads, BBC Radio, audience development, and campaign execution.
@@ -185,7 +189,7 @@
           <img src="assets/persona-snape/snape-maltings-02.jpg" alt="Snape Maltings campaign event photo" loading="lazy" />
         </div>
       </article>
-      <article class="case-study">
+      <article class="case-study compact-case">
         <h2>BBC x London Jazz Festival <time>2023</time></h2>
         <p>
           Worked with the BBC and London Jazz Festival to sell out the venue through audience development and campaign execution.
@@ -195,7 +199,7 @@
           <img src="assets/persona-bbc-london-jazz/bbc-london-jazz-02.jpg" alt="BBC and London Jazz Festival venue photo" loading="lazy" />
         </div>
       </article>
-      <article class="case-study">
+      <article class="case-study compact-case">
         <h2>Jazz à la Villette <time>2022</time></h2>
         <p>
           Sold out Jazz à la Villette in Paris by driving publicity strategy, broadcast relationships, and media production support across France TV, France Culture, France 24, Mezzo, and Culturebox.
@@ -207,7 +211,7 @@
           <img src="assets/persona-culturebox/culturebox-france-tv.jpg" alt="Culturebox France TV broadcast publicity screenshot" loading="lazy" />
         </div>
       </article>
-      <article class="case-study">
+      <article class="case-study compact-case">
         <h2>Jazz sous les Pommiers <time>2023</time></h2>
         <p>
           Sold out <a href="https://www.jazzsouslespommiers.com/" target="_blank" rel="noreferrer">Jazz sous les Pommiers</a> while working with TV and production companies, and was awarded a residency to produce and promote culture in the region.
@@ -217,7 +221,7 @@
           <img src="assets/persona-jazz-pommiers/jazz-pommiers-02.jpg" alt="Jazz sous les Pommiers sold-out performance from the stage" loading="lazy" />
         </div>
       </article>
-      <article class="case-study">
+      <article class="case-study compact-case">
         <h2>Rudolstadt Festival <time>2023</time></h2>
         <p>
           Sold out a 5,000-seat venue in Germany for Rudolstadt Festival through audience development and campaign execution.
@@ -227,7 +231,7 @@
           <img src="assets/persona-rudolstadt/rudolstadt-02.jpg" alt="Rudolstadt Festival sold-out crowd from the stage" loading="lazy" />
         </div>
       </article>
-      <article class="case-study">
+      <article class="case-study compact-case">
         <h2>Parco archeologico del Colosseo <time>2022</time></h2>
         <p>
           Worked with Parco archeologico del Colosseo to sell out a concert at the Palace of Venus in Rome, bringing publicity and audience development into one of the city's most symbolic historical sites.
