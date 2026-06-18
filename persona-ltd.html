@@ -32,7 +32,8 @@
     .compact-case { padding: 18px 0 20px; }
     .compact-case h2 { font-size: 18px; margin-bottom: 8px; }
     .compact-case p { font-size: 15px; line-height: 1.5; max-width: 560px; }
-    .compact-case .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 14px; max-width: 520px; }
+    .compact-case .photo-grid { gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 14px; max-width: 430px; }
+    .compact-case .photo-grid .wide-shot { aspect-ratio: 16 / 9; grid-column: 1 / -1; object-fit: cover; }
     .poster-wall { display: grid; gap: 10px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 20px; }
     .poster-card { min-width: 0; }
     .poster-card img { aspect-ratio: 1 / 1; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; object-fit: contain; padding: 6px; width: 100%; }
@@ -45,7 +46,7 @@
     .video-card figcaption span { color: #111; font-size: 14px; font-weight: 520; }
     .video-card figcaption a { color: #777; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid, .poster-wall { grid-template-columns: repeat(3, minmax(0, 1fr)); } .compact-case .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .poster-card figcaption { display: none; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid, .poster-wall { grid-template-columns: repeat(3, minmax(0, 1fr)); } .compact-case .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
   </style>
 </head>
 <body>
@@ -187,7 +188,7 @@
           <img src="assets/persona-jazz-villette/jazz-villette-01.jpg" alt="Jazz a la Villette signage at Grande Halle in Paris" loading="lazy" />
           <img src="assets/persona-jazz-villette/jazz-villette-02.jpg" alt="Jazz a la Villette venue and stage setup" loading="lazy" />
           <img src="assets/persona-jazz-villette/jazz-villette-03.jpg" alt="Jazz a la Villette campaign and broadcast production image" loading="lazy" />
-          <img src="assets/persona-culturebox/culturebox-france-tv.jpg" alt="Culturebox France TV broadcast publicity screenshot" loading="lazy" />
+          <img class="wide-shot" src="assets/persona-culturebox/culturebox-france-tv.jpg" alt="Culturebox France TV broadcast publicity screenshot" loading="lazy" />
         </div>
       </article>
       <article class="case-study compact-case">
