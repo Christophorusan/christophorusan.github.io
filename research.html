@@ -16,7 +16,8 @@
     .intro { color: #2b2b2b; font-size: clamp(17px, 2vw, 20px); line-height: 1.5; }
     .work-list { border-bottom: 1px solid #ededed; }
     .work-link { display: grid; grid-template-columns: minmax(150px, 0.36fr) 1fr; gap: 22px; color: #111; text-decoration: none; border-top: 1px solid #ededed; padding: 16px 0; }
-    .work-link span { font-size: 17px; font-weight: 520; letter-spacing: -0.015em; line-height: 1.25; }
+    .work-link span { display: flex; flex-direction: column; font-size: 17px; font-weight: 520; letter-spacing: -0.015em; line-height: 1.25; }
+    .work-link time { color: #aaa; font-size: 12px; font-weight: 500; letter-spacing: 0; margin-top: 3px; }
     .work-link small { color: #666; font-size: 14px; line-height: 1.45; align-self: center; }
     .work-link:hover span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
@@ -34,39 +35,39 @@
 
     <nav class="work-list" aria-label="Research work">
       <a class="work-link" href="https://x.com/christophorusan/status/1833874341932532122?s=20" target="_blank" rel="noreferrer">
-        <span>Early to HYPE</span>
+        <span>Early to HYPE <time>Sep 2024</time></span>
         <small>Early ecosystem thesis and market read.</small>
       </a>
       <a class="work-link" href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">
-        <span>2024 Protocols to Watch</span>
+        <span>2024 Protocols to Watch <time>2024</time></span>
         <small>Stablecoin and DeFi market analysis.</small>
       </a>
       <a class="work-link" href="https://x.com/christophorusan/status/2041169845212049453?s=20" target="_blank" rel="noreferrer">
-        <span>Research Note</span>
+        <span>Research Note <time>Apr 2026</time></span>
         <small>Market research and ecosystem analysis.</small>
       </a>
       <a class="work-link" href="https://x.com/christophorusan/status/2003516149443805462?s=20" target="_blank" rel="noreferrer">
-        <span>Research Note</span>
+        <span>Research Note <time>Dec 2025</time></span>
         <small>Protocol and market research.</small>
       </a>
       <a class="work-link" href="https://x.com/christophorusan/status/1958601471290917269?s=20" target="_blank" rel="noreferrer">
-        <span>Research Note</span>
+        <span>Research Note <time>Aug 2025</time></span>
         <small>Market thesis and ecosystem research.</small>
       </a>
       <a class="work-link" href="https://x.com/christophorusan/status/1943423137015538003?s=20" target="_blank" rel="noreferrer">
-        <span>Research Note</span>
+        <span>Research Note <time>Jul 2025</time></span>
         <small>Protocol thesis and market analysis.</small>
       </a>
       <a class="work-link" href="work-mobile-markets.html">
-        <span>Mobile Prediction Markets</span>
+        <span>Mobile Prediction Markets <time>2026</time></span>
         <small>Polymarket app critique and phone-native market-interface redesign.</small>
       </a>
       <a class="work-link" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">
-        <span>Louis</span>
+        <span>Louis <time>2025</time></span>
         <small>Morpho fork experiment on HyperEVM.</small>
       </a>
       <a class="work-link" href="https://github.com/Christophorusan/oslo" target="_blank" rel="noreferrer">
-        <span>Oslo</span>
+        <span>Oslo <time>2026</time></span>
         <small>AI agent system for company operations, marketing, BD, engineering, and security.</small>
       </a>
     </nav>

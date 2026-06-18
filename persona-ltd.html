@@ -16,12 +16,14 @@
     .intro { color: #2b2b2b; font-size: clamp(17px, 2vw, 20px); line-height: 1.5; }
     .work-list { border-bottom: 1px solid #ededed; }
     .work-link { display: grid; grid-template-columns: minmax(150px, 0.36fr) 1fr; gap: 22px; color: #111; text-decoration: none; border-top: 1px solid #ededed; padding: 16px 0; }
-    .work-link span { font-size: 17px; font-weight: 520; letter-spacing: -0.015em; line-height: 1.25; }
+    .work-link span { display: flex; flex-direction: column; font-size: 17px; font-weight: 520; letter-spacing: -0.015em; line-height: 1.25; }
+    .work-link time { color: #aaa; font-size: 12px; font-weight: 500; letter-spacing: 0; margin-top: 3px; }
     .work-link small { color: #666; font-size: 14px; line-height: 1.45; align-self: center; }
     .work-link:hover span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
     .work-static:hover span { text-decoration: none; }
     .case-study { border-top: 1px solid #ededed; padding: 22px 0 24px; }
-    .case-study h2 { font-size: 22px; font-weight: 520; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 10px; }
+    .case-study h2 { display: flex; flex-direction: column; font-size: 22px; font-weight: 520; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 10px; }
+    .case-study time { color: #aaa; font-size: 12px; font-weight: 500; letter-spacing: 0; margin-top: 4px; }
     .case-study p { color: #333; font-size: 16px; line-height: 1.55; max-width: 620px; }
     .case-study a { color: #111; text-decoration: underline; text-underline-offset: 4px; }
     .photo-grid { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; margin-top: 18px; }
@@ -42,11 +44,11 @@
 
     <nav class="work-list" aria-label="Persona LTD work">
       <div class="work-link work-static">
-        <span>Persona Agency</span>
+        <span>Persona Agency <time>2018-2024</time></span>
         <small>Founded, scaled, and exited a 25-person cross-border agency headquartered in Dublin, operating across six European markets.</small>
       </div>
       <article class="case-study">
-        <h2>Rendez-vous de l'Erdre</h2>
+        <h2>Rendez-vous de l'Erdre <time>2023</time></h2>
         <p>
           Sold out 5,000 seats for <a href="https://www.rendezvouserdre.com/" target="_blank" rel="noreferrer">Rendez-vous de l'Erdre</a> in Nantes, France through an integrated campaign across online ads, radio, and printed press.
         </p>
@@ -57,7 +59,7 @@
         </div>
       </article>
       <article class="case-study">
-        <h2>Snape Maltings</h2>
+        <h2>Snape Maltings <time>2023</time></h2>
         <p>
           Sold out <a href="https://www.brittenpearsarts.org/?gad_source=1&gad_campaignid=927608615&gbraid=0AAAAADgVlQOh1GXA0imfIZcF6tm0yOwVz&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD2mSDkiol4iL2n3zVto1GXQqQHOwuScbrwg0gIik6RQEGmI8DS1ZlYaAlQXEALw_wcB" target="_blank" rel="noreferrer">Snape Maltings</a>, an 850-seat venue in a remote location in the UK, through online ads, audience development, and campaign execution.
         </p>
@@ -67,7 +69,7 @@
         </div>
       </article>
       <article class="case-study">
-        <h2>BBC x London Jazz Festival</h2>
+        <h2>BBC x London Jazz Festival <time>2023</time></h2>
         <p>
           Worked with the BBC and London Jazz Festival to sell out the venue through audience development and campaign execution.
         </p>
@@ -77,7 +79,7 @@
         </div>
       </article>
       <article class="case-study">
-        <h2>Jazz a la Villette</h2>
+        <h2>Jazz a la Villette <time>2022</time></h2>
         <p>
           Sold out Jazz a la Villette in Paris by coordinating radio, TV, and film production support across France TV, France Culture, France 24, Mezzo, and Culturebox.
         </p>
@@ -88,7 +90,7 @@
         </div>
       </article>
       <article class="case-study">
-        <h2>Jazz sous les Pommiers</h2>
+        <h2>Jazz sous les Pommiers <time>2023</time></h2>
         <p>
           Sold out <a href="https://www.jazzsouslespommiers.com/" target="_blank" rel="noreferrer">Jazz sous les Pommiers</a> while working with TV and production companies, and was awarded a residency to produce and promote culture in the region.
         </p>
@@ -98,7 +100,7 @@
         </div>
       </article>
       <article class="case-study">
-        <h2>Rudolstadt Festival</h2>
+        <h2>Rudolstadt Festival <time>2023</time></h2>
         <p>
           Sold out a 5,000-seat venue in Germany for Rudolstadt Festival through audience development and campaign execution.
         </p>
@@ -108,19 +110,19 @@
         </div>
       </article>
       <div class="work-link work-static">
-        <span>Institutional Clients</span>
+        <span>Institutional Clients <time>2018-2024</time></span>
         <small>Work across public and private clients including BBC, Arte TV, Institut Francais, CaixaBank, EFG Private Banking, TEDx Talks, and Arweave.</small>
       </div>
       <a class="work-link" href="https://x.com/christophorusan/status/1788154455432556613?s=20" target="_blank" rel="noreferrer">
-        <span>Arweave</span>
+        <span>Arweave <time>May 2024</time></span>
         <small>Campaign and creative work.</small>
       </a>
       <a class="work-link" href="https://x.com/christophorusan/status/1877742044505911511?s=20" target="_blank" rel="noreferrer">
-        <span>ETH Zurich</span>
+        <span>ETH Zurich <time>Jan 2025</time></span>
         <small>Ad work and event-facing creative.</small>
       </a>
       <a class="work-link" href="https://x.com/christophorusan/status/1839326982477414407?s=20" target="_blank" rel="noreferrer">
-        <span>Sagrada Familia x AR.IO</span>
+        <span>Sagrada Familia x AR.IO <time>Sep 2024</time></span>
         <small>Culture and infrastructure campaign work.</small>
       </a>
     </nav>
