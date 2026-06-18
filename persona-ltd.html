@@ -28,8 +28,13 @@
     .case-study a { color: #111; text-decoration: underline; text-underline-offset: 4px; }
     .photo-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-top: 18px; }
     .photo-grid img { aspect-ratio: 1 / 1; border-radius: 8px; display: block; object-fit: cover; width: 100%; }
+    .poster-wall { display: grid; gap: 10px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 20px; }
+    .poster-card { min-width: 0; }
+    .poster-card img { aspect-ratio: 1 / 1; border: 1px solid #ededed; border-radius: 8px; display: block; object-fit: cover; width: 100%; }
+    .poster-card figcaption { color: #777; font-size: 12px; line-height: 1.35; margin-top: 7px; }
+    .poster-card figcaption span { color: #111; display: block; font-size: 13px; font-weight: 520; letter-spacing: -0.01em; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid, .poster-wall { grid-template-columns: repeat(3, minmax(0, 1fr)); } .poster-card figcaption { display: none; } }
   </style>
 </head>
 <body>
@@ -46,6 +51,58 @@
         <span>Persona Agency <time>2018-2024</time></span>
         <small>Founded, scaled, and exited a 25-person cross-border agency headquartered in Dublin, operating across six European markets.</small>
       </div>
+      <article class="case-study">
+        <h2>Festival Publicity <time>2018-2024</time></h2>
+        <p>
+          A selection of festivals I helped sell out and build publicity for across Europe. The work moved between online ads, radio, television, printed press, local media, and cultural partnerships; less about noise, more about making each event feel inevitable in its city.
+        </p>
+        <div class="poster-wall" aria-label="Selection of festival publicity posters">
+          <figure class="poster-card">
+            <img src="assets/persona-posters/fiestasete-2024.jpg" alt="Fiest'a Sete 2024 festival poster" loading="lazy" />
+            <figcaption><span>Fiest'a Sete</span>2024</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="assets/persona-posters/paris-jazz-festival-2022.jpg" alt="Paris Jazz Festival 2022 poster" loading="lazy" />
+            <figcaption><span>Paris Jazz Festival</span>2022</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="assets/persona-posters/jazz-villette-2022.jpg" alt="Jazz a la Villette 2022 poster" loading="lazy" />
+            <figcaption><span>Jazz à la Villette</span>2022</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="assets/persona-posters/cully-jazz-2018.jpg" alt="Cully Jazz 2018 poster" loading="lazy" />
+            <figcaption><span>Cully Jazz</span>2018</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="assets/persona-posters/jazz-sous-pommiers-2023.jpg" alt="Jazz sous les Pommiers 2023 poster" loading="lazy" />
+            <figcaption><span>Jazz sous les Pommiers</span>2023</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="assets/persona-posters/festival-parc-floral-2022.jpg" alt="Festivals du Parc Floral 2022 poster" loading="lazy" />
+            <figcaption><span>Festivals du Parc Floral</span>2022</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="assets/persona-posters/marseille-jazz-2024.jpg" alt="Marseille Jazz des Cinq Continents 2024 poster" loading="lazy" />
+            <figcaption><span>Marseille Jazz</span>2024</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="assets/persona-posters/womad-2023.jpg" alt="WOMAD 2023 poster" loading="lazy" />
+            <figcaption><span>WOMAD</span>2023</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="assets/persona-posters/jazz-in-marciac-2023.jpg" alt="Jazz in Marciac 2023 poster" loading="lazy" />
+            <figcaption><span>Jazz in Marciac</span>2023</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="assets/persona-posters/jazz-a-vienne-2023.jpg" alt="Jazz a Vienne 2023 poster" loading="lazy" />
+            <figcaption><span>Jazz à Vienne</span>2023</figcaption>
+          </figure>
+          <figure class="poster-card">
+            <img src="assets/persona-posters/bari-in-jazz-2024.jpg" alt="Bari in Jazz 2024 poster" loading="lazy" />
+            <figcaption><span>Bari in Jazz</span>2024</figcaption>
+          </figure>
+        </div>
+      </article>
       <article class="case-study">
         <h2>Rendez-vous de l'Erdre <time>2023</time></h2>
         <p>
