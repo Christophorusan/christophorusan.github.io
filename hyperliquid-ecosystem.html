@@ -183,6 +183,74 @@
       aspect-ratio: 4 / 5;
     }
 
+    .tweet-card {
+      align-items: stretch;
+      aspect-ratio: auto;
+      background: #fff;
+      justify-items: stretch;
+      padding: 22px;
+      text-align: left;
+    }
+
+    .tweet-card .tweet-head {
+      align-items: center;
+      display: flex;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .tweet-avatar {
+      background: #111;
+      border-radius: 50%;
+      color: #fff;
+      display: grid;
+      flex: 0 0 36px;
+      font-size: 13px;
+      font-weight: 600;
+      height: 36px;
+      place-items: center;
+      width: 36px;
+    }
+
+    .tweet-name {
+      color: #111;
+      display: block;
+      font-size: 14px;
+      font-weight: 560;
+      line-height: 1.2;
+    }
+
+    .tweet-handle {
+      color: #888;
+      display: block;
+      font-size: 13px;
+      line-height: 1.2;
+    }
+
+    .tweet-text {
+      color: #1f1f1f;
+      font-size: 17px;
+      line-height: 1.45;
+      margin-bottom: 16px;
+      white-space: pre-line;
+    }
+
+    .tweet-image {
+      background: #fafafa;
+      border: 1px solid #ececec;
+      border-radius: 8px;
+      display: block;
+      max-height: 520px;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    .tweet-meta {
+      color: #999;
+      font-size: 13px;
+      margin-top: 12px;
+    }
+
     .work-preview::before,
     .work-preview::after {
       border: 1px solid #e5e5e5;
@@ -359,8 +427,21 @@
         </article>
 
         <article class="embedded-work">
-          <a class="work-preview has-media portrait" href="https://x.com/christophorusan/status/2006504610777936264?s=20" target="_blank" rel="noreferrer">
-            <img src="assets/hyperliquid-media/lighter-to-hype.jpg" alt="Lighter to HYPE allocation logic post image" loading="lazy" />
+          <a class="work-preview tweet-card" href="https://x.com/christophorusan/status/2006504610777936264?s=20" target="_blank" rel="noreferrer">
+            <span class="tweet-head">
+              <span class="tweet-avatar" aria-hidden="true">C</span>
+              <span>
+                <span class="tweet-name">Christophorus</span>
+                <span class="tweet-handle">@christophorusan</span>
+              </span>
+            </span>
+            <span class="tweet-text">Sold all my LIT and rotated back to Hyperliquid.
+
+As Hyperliquid retakes first place in perps volume.
+
+Protocols worth farming / looking into: Unit, TradeXYZ, Ventuals, Felix.</span>
+            <img class="tweet-image" src="assets/hyperliquid-media/lighter-to-hype.jpg" alt="Lighter to HYPE allocation logic post image" loading="lazy" />
+            <span class="tweet-meta">Dec 31, 2025</span>
           </a>
           <div class="caption">
             <strong>Lighter to HYPE</strong>
