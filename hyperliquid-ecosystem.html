@@ -158,6 +158,31 @@
       text-decoration: none;
     }
 
+    .work-preview.has-media {
+      background: #fafafa;
+      padding: 0;
+    }
+
+    .work-preview.has-media::before,
+    .work-preview.has-media::after {
+      display: none;
+    }
+
+    .work-preview.has-media img,
+    .work-preview.has-media video {
+      background: #fafafa;
+      border: 0;
+      border-radius: 0;
+      display: block;
+      height: 100%;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    .work-preview.portrait {
+      aspect-ratio: 4 / 5;
+    }
+
     .work-preview::before,
     .work-preview::after {
       border: 1px solid #e5e5e5;
@@ -308,13 +333,10 @@
       </p>
       <div class="work-stack" aria-label="Other Hyperliquid work">
         <article class="embedded-work">
-          <a class="work-preview" href="https://x.com/christophorusan/status/1833874341932532122?s=20" target="_blank" rel="noreferrer">
-            <span class="preview-inner">
-              <span class="preview-kicker">Launch</span>
-              <span class="preview-title">PURR</span>
-              <span class="preview-copy">Early Hyperliquid ecosystem distribution, built for a fast-moving crypto-native moment.</span>
-              <span class="preview-mark">Hyperliquid</span>
-            </span>
+          <a class="work-preview has-media" href="https://x.com/christophorusan/status/1833874341932532122?s=20" target="_blank" rel="noreferrer">
+            <video autoplay muted loop playsinline preload="metadata" poster="assets/hyperliquid-media/purr-launch-poster.jpg">
+              <source src="assets/hyperliquid-media/purr-launch.mp4" type="video/mp4" />
+            </video>
           </a>
           <div class="caption">
             <strong>PURR Launch</strong>
@@ -325,13 +347,8 @@
         </article>
 
         <article class="embedded-work">
-          <a class="work-preview" href="https://x.com/christophorusan/status/2045611398248722799?s=20" target="_blank" rel="noreferrer">
-            <span class="preview-inner">
-              <span class="preview-kicker">Analysis</span>
-              <span class="preview-title">HYPE vs Binance</span>
-              <span class="preview-copy">A market-structure read on Hyperliquid, exchange positioning, and why HYPE matters beyond a single token trade.</span>
-              <span class="preview-mark">Research</span>
-            </span>
+          <a class="work-preview has-media" href="https://x.com/christophorusan/status/2045611398248722799?s=20" target="_blank" rel="noreferrer">
+            <img src="assets/hyperliquid-media/hype-vs-binance.jpg" alt="HYPE vs Binance market structure analysis" loading="lazy" />
           </a>
           <div class="caption">
             <strong>HYPE vs Binance</strong>
@@ -342,13 +359,8 @@
         </article>
 
         <article class="embedded-work">
-          <a class="work-preview" href="https://x.com/christophorusan/status/2006504610777936264?s=20" target="_blank" rel="noreferrer">
-            <span class="preview-inner">
-              <span class="preview-kicker">Thesis</span>
-              <span class="preview-title">Lighter to HYPE</span>
-              <span class="preview-copy">Allocation logic and market conviction around Hyperliquid's position in the broader exchange landscape.</span>
-              <span class="preview-mark">HYPE</span>
-            </span>
+          <a class="work-preview has-media portrait" href="https://x.com/christophorusan/status/2006504610777936264?s=20" target="_blank" rel="noreferrer">
+            <img src="assets/hyperliquid-media/lighter-to-hype.jpg" alt="Lighter to HYPE allocation logic post image" loading="lazy" />
           </a>
           <div class="caption">
             <strong>Lighter to HYPE</strong>
@@ -380,13 +392,8 @@
         </article>
 
         <article class="embedded-work">
-          <a class="work-preview" href="https://x.com/christophorusan/status/2044833918743162901?s=20" target="_blank" rel="noreferrer">
-            <span class="preview-inner">
-              <span class="preview-kicker">Distribution</span>
-              <span class="preview-title">X x Hyperliquid</span>
-              <span class="preview-copy">A consumer distribution idea for bringing trading into social surfaces where attention already lives.</span>
-              <span class="preview-mark">X</span>
-            </span>
+          <a class="work-preview has-media" href="https://x.com/christophorusan/status/2044833918743162901?s=20" target="_blank" rel="noreferrer">
+            <img src="assets/hyperliquid-media/x-hyperliquid.jpg" alt="X and Hyperliquid trading surface mockup" loading="lazy" />
           </a>
           <div class="caption">
             <strong>X x Hyperliquid</strong>
