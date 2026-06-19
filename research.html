@@ -158,6 +158,36 @@
       padding: 22px;
     }
 
+    .hermes-core {
+      align-items: center;
+      background: #111;
+      border-radius: 10px;
+      color: #fff;
+      display: grid;
+      gap: 6px;
+      min-height: 88px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .hermes-core strong {
+      color: #fff;
+      display: block;
+      font-size: 24px;
+      font-weight: 560;
+      letter-spacing: -0.035em;
+      line-height: 1;
+    }
+
+    .hermes-core span {
+      color: rgba(255, 255, 255, 0.66);
+      display: block;
+      font-size: 12px;
+      font-weight: 520;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
     .docs-flow {
       display: grid;
       gap: 10px;
@@ -215,7 +245,7 @@
       grid-template-columns: 1fr 1fr;
     }
 
-    .docs-map div {
+    .docs-map > span {
       background: #fff;
       border: 1px solid #e8e8e8;
       border-radius: 8px;
@@ -989,23 +1019,28 @@
         <article class="embedded-work">
           <a class="visual-card" href="https://github.com/Christophorusan/oslo" target="_blank" rel="noreferrer">
             <span class="docs-diagram">
-              <span class="visual-topline">Oslo Engineering Docs <span>Agent System</span></span>
+              <span class="visual-topline">Oslo <span>Hermes AI Agent</span></span>
+              <span class="hermes-core" aria-hidden="true">
+                <span>Operating Layer</span>
+                <strong>Hermes</strong>
+                <span>Company memory + execution</span>
+              </span>
               <span class="docs-flow" aria-hidden="true">
-                <span class="docs-step"><strong>Spec Intake</strong><span></span><span></span><span></span></span>
-                <span class="docs-step"><strong>Agent Plan</strong><span></span><span></span><span></span></span>
+                <span class="docs-step"><strong>Specs</strong><span></span><span></span><span></span></span>
+                <span class="docs-step"><strong>Tasks</strong><span></span><span></span><span></span></span>
                 <span class="docs-step"><strong>Engineering Docs</strong><span></span><span></span><span></span></span>
-                <span class="docs-step"><strong>Review Loop</strong><span></span><span></span><span></span></span>
+                <span class="docs-step"><strong>Review Memory</strong><span></span><span></span><span></span></span>
               </span>
               <span class="docs-map" aria-hidden="true">
-                <span><strong>Company Memory</strong><span></span><span></span><span></span></span>
-                <span><strong>Engineering Surface</strong><span></span><span></span><span></span></span>
+                <span><strong>Ops + BD</strong><span></span><span></span><span></span></span>
+                <span><strong>Security + Engineering</strong><span></span><span></span><span></span></span>
               </span>
             </span>
           </a>
           <div class="caption">
             <strong>Oslo</strong>
             <time>2026</time>
-            <span>AI agent system for company operations and engineering documentation, shown as a docs flow instead of unrelated product media.</span>
+            <span>AI agent system with Hermes as the operating layer for company memory, engineering documentation, tasks, review loops, BD, operations, and security workflows.</span>
             <a href="https://github.com/Christophorusan/oslo" target="_blank" rel="noreferrer">Open repository</a>
           </div>
         </article>
