@@ -32,13 +32,12 @@
     .lead-case time { color: #b0b0b0; font-size: 12px; margin-top: 5px; }
     .lead-case p { color: #222; font-size: clamp(17px, 2vw, 20px); line-height: 1.55; max-width: 650px; }
     .lead-case p + p { margin-top: 16px; }
-    .method-grid { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 20px; max-width: 620px; }
-    .method-card { background: #fafafa; border: 1px solid #ededed; border-radius: 8px; padding: 14px; }
-    .method-card strong { color: #111; display: block; font-size: 13px; font-weight: 560; letter-spacing: -0.01em; line-height: 1.25; margin-bottom: 6px; }
-    .method-card span { color: #555; display: block; font-size: 13px; line-height: 1.45; }
-    .method-note { background: #fafafa; border: 1px solid #ededed; border-radius: 8px; color: #444; display: grid; gap: 8px; margin-top: 14px; max-width: 560px; padding: 14px; }
-    .method-note strong { color: #111; font-size: 13px; font-weight: 560; letter-spacing: -0.01em; line-height: 1.25; }
-    .method-note span { color: #555; font-size: 13px; line-height: 1.45; }
+    .pov-block { display: grid; gap: 10px; margin-top: 18px; max-width: 640px; }
+    .pov-block p { color: #333; font-size: 16px; line-height: 1.58; }
+    .pov-block strong { color: #111; font-weight: 560; }
+    .method-note { color: #444; display: grid; gap: 5px; margin-top: 12px; max-width: 560px; }
+    .method-note strong { color: #111; font-size: 14px; font-weight: 560; letter-spacing: -0.01em; line-height: 1.25; }
+    .method-note span { color: #555; font-size: 14px; line-height: 1.48; }
     .photo-grid { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 18px; max-width: 430px; }
     .photo-grid img { aspect-ratio: 1 / 1; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; height: auto; object-fit: contain; width: 100%; }
     .venue-group { display: grid; gap: 24px; }
@@ -67,7 +66,7 @@
     .video-card figcaption span { color: #111; font-size: 14px; font-weight: 520; }
     .video-card figcaption a { color: #777; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .method-grid, .photo-grid, .poster-wall, .compact-case .photo-grid, .case-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid, .poster-wall, .compact-case .photo-grid, .case-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
   </style>
 </head>
 <body>
@@ -91,23 +90,16 @@
         <p>
           The work sat between culture and distribution: shaping public narratives, building demand, and moving audiences for partners including EFG, CaixaBank, BBC, ARTE TV, Institut Français, and major European festivals.
         </p>
-        <div class="method-grid" aria-label="Persona campaign method">
-          <div class="method-card">
-            <strong>Audit the market</strong>
-            <span>Map the venue, audience geography, ticket velocity, historic media habits, and the gap between cultural relevance and actual demand.</span>
-          </div>
-          <div class="method-card">
-            <strong>Build the narrative</strong>
-            <span>Turn each festival or partner into a clear public story for press, radio, TV, institutions, and local cultural networks.</span>
-          </div>
-          <div class="method-card">
-            <strong>Make ads accountable</strong>
-            <span>Move print-heavy budgets into repeatable online campaigns with tracked audiences, creative testing, retargeting, and measurable ROI.</span>
-          </div>
-          <div class="method-card">
-            <strong>Compound distribution</strong>
-            <span>Use broadcast, editorial coverage, partner lists, city media, and paid social together so each channel made the others more effective.</span>
-          </div>
+        <div class="pov-block" aria-label="Persona campaign point of view">
+          <p>
+            <strong>POV.</strong> The work started by reading the market before spending into it: the venue, audience geography, ticket velocity, historic media habits, and the gap between cultural relevance and actual demand.
+          </p>
+          <p>
+            From there, each festival or partner became a public story that could travel across press, radio, TV, institutions, local cultural networks, and paid social. The goal was not simply visibility; it was to make attention measurable, repeatable, and useful.
+          </p>
+          <p>
+            A major part of the work was moving print-heavy budgets into online ad systems with tracked audiences, creative testing, retargeting, and ROI discipline, then compounding those campaigns with broadcast, editorial coverage, partner lists, and city media.
+          </p>
         </div>
       </article>
       <article class="case-study">
@@ -143,9 +135,13 @@
         <p>
           A selection of festivals I helped sell out and build publicity for across Europe. Many were still relying on print-heavy advertising habits; my work focused on making campaigns more profitable, sustainable, and repeatable by pairing radio, television, local media, and cultural partnerships with online ad strategies that could be measured, amplified, and reused across markets.
         </p>
-        <div class="method-note">
-          <strong>How the campaigns worked</strong>
-          <span>We started from ticketing pressure, not aesthetics: which cities were underperforming, which audiences were likely to convert, which media partners could create trust, and which creative angles could be tested quickly. From there we built campaign systems that made cultural events easier to discover, easier to justify, and easier to buy.</span>
+        <div class="pov-block">
+          <p>
+            <strong>POV.</strong> These campaigns started from ticketing pressure, not aesthetics: which cities were underperforming, which audiences were likely to convert, which media partners could create trust, and which creative angles could be tested quickly.
+          </p>
+          <p>
+            The proof of work is in the festival surface itself: posters, broadcast moments, local press, radio, and paid social working together so cultural events became easier to discover, easier to justify, and easier to buy.
+          </p>
         </div>
         <div class="poster-wall" aria-label="Selection of festival publicity posters">
           <figure class="poster-card">
