@@ -17,8 +17,9 @@
     .featured, .story-section { border-top: 1px solid #ededed; margin-bottom: 42px; padding-top: 30px; }
     .featured h2, .story-section h2 { color: #999; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; margin-bottom: 16px; text-transform: uppercase; }
     .featured p, .story-section p { color: #222; font-size: clamp(17px, 2vw, 20px); line-height: 1.5; max-width: 680px; }
-    .media-card { color: #111; display: block; margin: 26px auto 0; max-width: 640px; text-decoration: none; }
-    .media-card:hover { text-decoration: none; }
+    .media-card { color: #111; display: block; margin: 26px auto 0; max-width: 640px; }
+    .media-link { display: block; text-decoration: none; }
+    .media-link:hover { text-decoration: none; }
     .archive-card { margin: 30px auto; }
     .media-frame { aspect-ratio: 16 / 10; background: #fff; border: 1px solid #ededed; border-radius: 10px; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.04); display: grid; overflow: hidden; }
     .media-frame img, .media-frame video { background: #fff; display: block; filter: none; height: 100%; object-fit: contain; width: 100%; }
@@ -54,6 +55,8 @@
     .caption { color: #777; display: grid; gap: 4px; font-size: 14px; line-height: 1.45; margin-top: 10px; }
     .caption strong { color: #111; font-size: 15px; font-weight: 560; }
     .caption time { color: #aaa; font-size: 12px; font-weight: 500; margin-top: -2px; }
+    .caption a { color: #111; font-size: 13px; text-decoration: none; width: fit-content; }
+    .caption a:hover { text-decoration: underline; text-underline-offset: 4px; }
     .story-grid { display: grid; gap: 28px; margin-top: 26px; }
     .story-grid .media-card { margin-top: 0; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
@@ -72,165 +75,165 @@
     <section class="featured" aria-labelledby="product-heading">
       <h2 id="product-heading">Product Surface</h2>
       <p>Interface work for Harmonix vaults: making APY, TVL, and vault performance legible enough for users and partners to monitor without reading the protocol from the inside out.</p>
-      <a class="media-card" href="https://app.harmonix.fi/earn" target="_blank" rel="noreferrer">
-        <div class="media-frame" aria-hidden="true">
+      <article class="media-card">
+        <a class="media-link media-frame" href="https://app.harmonix.fi/earn" target="_blank" rel="noreferrer" aria-label="Open Harmonix app">
           <img src="assets/harmonix-media/harmonix-product-interface.gif" alt="Harmonix vault product interface animation" loading="eager" />
-        </div>
-        <span class="caption">
+        </a>
+        <div class="caption">
           <strong>Harmonix App</strong>
           <time>2025-Now</time>
           <span>Earn interface, haUSDC, and vault product surface.</span>
-          <span>Open app</span>
-        </span>
-      </a>
-      <a class="media-card" href="https://x.com/christophorusan/status/2056426770157412415?s=20" target="_blank" rel="noreferrer">
-        <div class="media-frame" aria-hidden="true">
+          <a href="https://app.harmonix.fi/earn" target="_blank" rel="noreferrer">Open app</a>
+        </div>
+      </article>
+      <article class="media-card">
+        <a class="media-link media-frame" href="https://x.com/christophorusan/status/2056426770157412415?s=20" target="_blank" rel="noreferrer" aria-label="Open haUSDC live APY tracking">
           <video autoplay muted loop playsinline controls preload="metadata" poster="assets/harmonix-media/hausdc-apy-poster.jpg">
             <source src="assets/harmonix-media/hausdc-apy.mp4" type="video/mp4" />
           </video>
-        </div>
-        <span class="caption">
+        </a>
+        <div class="caption">
           <strong>haUSDC live APY tracking</strong>
           <time>May 2026</time>
           <span>Performance interface for vault monitoring and user-facing yield transparency.</span>
-          <span>Open original</span>
-        </span>
-      </a>
+          <a href="https://x.com/christophorusan/status/2056426770157412415?s=20" target="_blank" rel="noreferrer">Open original</a>
+        </div>
+      </article>
     </section>
 
     <section class="story-section" aria-labelledby="proof-heading">
       <h2 id="proof-heading">Transparency</h2>
       <p>Proof-of-funds work with Octav, showing how Harmonix vault capital can be traced through wallets, transactions, and deployed protocol positions.</p>
-      <a class="media-card" href="https://x.com/christophorusan/status/2064404310104907789?s=20" target="_blank" rel="noreferrer">
-        <div class="media-frame" aria-hidden="true">
+      <article class="media-card">
+        <a class="media-link media-frame" href="https://x.com/christophorusan/status/2064404310104907789?s=20" target="_blank" rel="noreferrer" aria-label="Open Proof of Funds post">
           <video autoplay muted loop playsinline controls preload="metadata" poster="assets/harmonix-media/proof-of-funds-poster.jpg">
             <source src="assets/harmonix-media/proof-of-funds.mp4" type="video/mp4" />
           </video>
-        </div>
-        <span class="caption">
+        </a>
+        <div class="caption">
           <strong>Proof of Funds</strong>
           <time>Jun 2026</time>
           <span>Octav-based transparency showing transactions, wallets, and deployed capital.</span>
-          <span>Open original</span>
-        </span>
-      </a>
+          <a href="https://x.com/christophorusan/status/2064404310104907789?s=20" target="_blank" rel="noreferrer">Open original</a>
+        </div>
+      </article>
     </section>
 
     <section class="story-section" aria-labelledby="docs-heading">
       <h2 id="docs-heading">Docs and Architecture</h2>
       <p>Partner-facing documentation for explaining vault architecture, integration surfaces, proof-of-funds workflows, and how Harmonix fits into Hyperliquid-native liquidity.</p>
-      <a class="media-card" href="https://x.com/harmonixfi/status/2043709762605367710?s=20" target="_blank" rel="noreferrer">
-        <div class="media-frame" aria-hidden="true">
+      <article class="media-card">
+        <a class="media-link media-frame" href="https://x.com/harmonixfi/status/2043709762605367710?s=20" target="_blank" rel="noreferrer" aria-label="Open Docs Launch post">
           <video autoplay muted loop playsinline controls preload="metadata" poster="assets/harmonix-media/docs-launch-poster.jpg">
             <source src="assets/harmonix-media/docs-launch.mp4" type="video/mp4" />
           </video>
-        </div>
-        <span class="caption">
+        </a>
+        <div class="caption">
           <strong>Docs Launch</strong>
           <time>Apr 2026</time>
           <span>Original launch visual for Harmonix vault documentation.</span>
-          <span>Open original</span>
-        </span>
-      </a>
+          <a href="https://x.com/harmonixfi/status/2043709762605367710?s=20" target="_blank" rel="noreferrer">Open original</a>
+        </div>
+      </article>
     </section>
 
     <section class="story-section" aria-labelledby="vault-heading">
       <h2 id="vault-heading">Vault Products</h2>
       <p>Early vault product work around yield-bearing assets such as haUSDC and haHYPE, turning Hyperliquid-native strategies into products that can be understood, integrated, and distributed.</p>
-      <a class="media-card" href="https://x.com/christophorusan/status/1919007345033486513?s=20" target="_blank" rel="noreferrer">
-        <div class="media-frame" aria-hidden="true">
+      <article class="media-card">
+        <a class="media-link media-frame" href="https://x.com/christophorusan/status/1919007345033486513?s=20" target="_blank" rel="noreferrer" aria-label="Open haHYPE Testnet post">
           <img src="assets/harmonix-media/hahype-testnet.jpg" alt="Harmonix haHYPE testnet visual" loading="lazy" />
-        </div>
-        <span class="caption">
+        </a>
+        <div class="caption">
           <strong>haHYPE Testnet</strong>
           <time>May 2025</time>
           <span>Original visual explaining Harmonix's yield-bearing HYPE token.</span>
-          <span>Open original</span>
-        </span>
-      </a>
+          <a href="https://x.com/christophorusan/status/1919007345033486513?s=20" target="_blank" rel="noreferrer">Open original</a>
+        </div>
+      </article>
     </section>
 
     <section class="story-section" aria-labelledby="growth-heading">
       <h2 id="growth-heading">Growth and Distribution</h2>
       <p>Fundraise, TVL, partner, and ecosystem distribution moments that helped move Harmonix from product into broader Hyperliquid-native infrastructure.</p>
       <div class="story-grid">
-        <a class="media-card" href="https://x.com/harmonixfi/status/1999061884125999114?s=20" target="_blank" rel="noreferrer">
-          <div class="media-frame" aria-hidden="true">
+        <article class="media-card">
+          <a class="media-link media-frame" href="https://x.com/harmonixfi/status/1999061884125999114?s=20" target="_blank" rel="noreferrer" aria-label="Open Seed Round post">
             <img src="assets/harmonix-media/har-tge.jpg" alt="Harmonix seed round announcement visual" loading="lazy" />
-          </div>
-          <span class="caption">
+          </a>
+          <div class="caption">
             <strong>Seed Round</strong>
             <time>Dec 2025</time>
             <span>Original Harmonix seed round announcement visual.</span>
-            <span>Open original</span>
-          </span>
-        </a>
-        <a class="media-card" href="https://x.com/harmonixfi/status/1982838348441174336?s=20" target="_blank" rel="noreferrer">
-          <div class="media-frame" aria-hidden="true">
-            <img src="assets/harmonix-media/tvl-16m.jpg" alt="Harmonix TVL all-time high visual" loading="lazy" />
+            <a href="https://x.com/harmonixfi/status/1999061884125999114?s=20" target="_blank" rel="noreferrer">Open original</a>
           </div>
-          <span class="caption">
+        </article>
+        <article class="media-card">
+          <a class="media-link media-frame" href="https://x.com/harmonixfi/status/1982838348441174336?s=20" target="_blank" rel="noreferrer" aria-label="Open Harmonix TVL milestone post">
+            <img src="assets/harmonix-media/tvl-16m.jpg" alt="Harmonix TVL all-time high visual" loading="lazy" />
+          </a>
+          <div class="caption">
             <strong>Harmonix TVL Milestone</strong>
             <time>Oct 2025</time>
             <span>Original visual for the $16.7M TVL milestone.</span>
-            <span>Open original</span>
-          </span>
-        </a>
-        <a class="media-card" href="https://x.com/harmonixfi/status/1929365326036189611" target="_blank" rel="noreferrer">
-          <div class="media-frame" aria-hidden="true">
-            <img src="assets/harmonix-media/hyperevm-migration-visual.svg" alt="HyperEVM migration visual for Harmonix vault rollout" loading="lazy" />
+            <a href="https://x.com/harmonixfi/status/1982838348441174336?s=20" target="_blank" rel="noreferrer">Open original</a>
           </div>
-          <span class="caption">
+        </article>
+        <article class="media-card">
+          <a class="media-link media-frame" href="https://x.com/harmonixfi/status/1929365326036189611" target="_blank" rel="noreferrer" aria-label="Open HyperEVM Migration post">
+            <img src="assets/harmonix-media/hyperevm-migration.jpg" alt="HyperEVM migration visual for Harmonix vault rollout" loading="lazy" />
+          </a>
+          <div class="caption">
             <strong>HyperEVM Migration</strong>
             <time>Jun 2025</time>
             <span>Partner and chain rollout for Harmonix on HyperEVM.</span>
-            <span>Open original</span>
-          </span>
-        </a>
-        <a class="media-card" href="https://x.com/harmonixfi/status/1955341237902287035?s=20" target="_blank" rel="noreferrer">
-          <div class="media-frame" aria-hidden="true">
-            <img src="assets/harmonix-media/harmonix-update-visual.svg" alt="Harmonix ecosystem update visual showing TVL, product, partners, and security" loading="lazy" />
+            <a href="https://x.com/harmonixfi/status/1929365326036189611" target="_blank" rel="noreferrer">Open original</a>
           </div>
-          <span class="caption">
+        </article>
+        <article class="media-card">
+          <a class="media-link media-frame" href="https://x.com/harmonixfi/status/1955341237902287035?s=20" target="_blank" rel="noreferrer" aria-label="Open Harmonix Update post">
+            <img src="assets/harmonix-media/harmonix-update.jpg" alt="Harmonix ecosystem update visual showing TVL, product, partners, and security" loading="lazy" />
+          </a>
+          <div class="caption">
             <strong>Harmonix Update</strong>
             <time>Aug 2025</time>
             <span>Protocol growth, product, and ecosystem update.</span>
-            <span>Open original</span>
-          </span>
-        </a>
-        <a class="media-card" href="https://x.com/harmonixfi/status/2006381895517352265?s=20" target="_blank" rel="noreferrer">
-          <div class="media-frame" aria-hidden="true">
-            <img src="assets/harmonix-media/recap-tge.jpg" alt="Harmonix 2025 recap TVL growth visual" loading="lazy" />
+            <a href="https://x.com/harmonixfi/status/1955341237902287035?s=20" target="_blank" rel="noreferrer">Open original</a>
           </div>
-          <span class="caption">
+        </article>
+        <article class="media-card">
+          <a class="media-link media-frame" href="https://x.com/harmonixfi/status/2006381895517352265?s=20" target="_blank" rel="noreferrer" aria-label="Open TVL Growth post">
+            <img src="assets/harmonix-media/recap-tge.jpg" alt="Harmonix 2025 recap TVL growth visual" loading="lazy" />
+          </a>
+          <div class="caption">
             <strong>TVL Growth</strong>
             <time>Dec 2025</time>
             <span>Original Harmonix 2025 recap visual showing TVL growth from $1.9M to $12M.</span>
-            <span>Open original</span>
-          </span>
-        </a>
-        <a class="media-card" href="https://x.com/harmonixfi/status/2023565078344384624" target="_blank" rel="noreferrer">
-          <div class="media-frame" aria-hidden="true">
-            <img src="assets/harmonix-media/roadmap-2026-visual.svg" alt="Harmonix 2026 roadmap visual showing product and distribution milestones" loading="lazy" />
+            <a href="https://x.com/harmonixfi/status/2006381895517352265?s=20" target="_blank" rel="noreferrer">Open original</a>
           </div>
-          <span class="caption">
+        </article>
+        <article class="media-card">
+          <a class="media-link media-frame" href="https://x.com/harmonixfi/status/2023565078344384624" target="_blank" rel="noreferrer" aria-label="Open 2026 Roadmap post">
+            <img src="assets/harmonix-media/roadmap-2026.jpg" alt="Harmonix 2026 roadmap visual showing product and distribution milestones" loading="lazy" />
+          </a>
+          <div class="caption">
             <strong>2026 Roadmap</strong>
             <time>Feb 2026</time>
             <span>Product and distribution direction for the next phase of Harmonix.</span>
-            <span>Open original</span>
-          </span>
-        </a>
-        <a class="media-card" href="https://x.com/harmonixfi/status/2041198793455276340?s=20" target="_blank" rel="noreferrer">
-          <div class="media-frame" aria-hidden="true">
-            <img src="assets/harmonix-media/clearstar-superform.jpg" alt="Harmonix Clearstar and Superform partner visual" loading="lazy" />
+            <a href="https://x.com/harmonixfi/status/2023565078344384624" target="_blank" rel="noreferrer">Open original</a>
           </div>
-          <span class="caption">
+        </article>
+        <article class="media-card">
+          <a class="media-link media-frame" href="https://x.com/harmonixfi/status/2041198793455276340?s=20" target="_blank" rel="noreferrer" aria-label="Open Clearstar and Superform post">
+            <img src="assets/harmonix-media/clearstar-superform.jpg" alt="Harmonix Clearstar and Superform partner visual" loading="lazy" />
+          </a>
+          <div class="caption">
             <strong>Clearstar and Superform</strong>
             <time>Apr 2026</time>
             <span>Original partner buildout and ecosystem distribution visual.</span>
-            <span>Open original</span>
-          </span>
-        </a>
+            <a href="https://x.com/harmonixfi/status/2041198793455276340?s=20" target="_blank" rel="noreferrer">Open original</a>
+          </div>
+        </article>
       </div>
     </section>
 
