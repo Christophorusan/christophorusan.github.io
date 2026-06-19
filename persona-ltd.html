@@ -32,6 +32,13 @@
     .lead-case time { color: #b0b0b0; font-size: 12px; margin-top: 5px; }
     .lead-case p { color: #222; font-size: clamp(17px, 2vw, 20px); line-height: 1.55; max-width: 650px; }
     .lead-case p + p { margin-top: 16px; }
+    .method-grid { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 20px; max-width: 620px; }
+    .method-card { background: #fafafa; border: 1px solid #ededed; border-radius: 8px; padding: 14px; }
+    .method-card strong { color: #111; display: block; font-size: 13px; font-weight: 560; letter-spacing: -0.01em; line-height: 1.25; margin-bottom: 6px; }
+    .method-card span { color: #555; display: block; font-size: 13px; line-height: 1.45; }
+    .method-note { background: #fafafa; border: 1px solid #ededed; border-radius: 8px; color: #444; display: grid; gap: 8px; margin-top: 14px; max-width: 560px; padding: 14px; }
+    .method-note strong { color: #111; font-size: 13px; font-weight: 560; letter-spacing: -0.01em; line-height: 1.25; }
+    .method-note span { color: #555; font-size: 13px; line-height: 1.45; }
     .photo-grid { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 18px; max-width: 430px; }
     .photo-grid img { aspect-ratio: 1 / 1; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; height: auto; object-fit: contain; width: 100%; }
     .venue-group { display: grid; gap: 24px; }
@@ -60,7 +67,7 @@
     .video-card figcaption span { color: #111; font-size: 14px; font-weight: 520; }
     .video-card figcaption a { color: #777; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid, .poster-wall, .compact-case .photo-grid, .case-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .method-grid, .photo-grid, .poster-wall, .compact-case .photo-grid, .case-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
   </style>
 </head>
 <body>
@@ -84,6 +91,24 @@
         <p>
           The work sat between culture and distribution: shaping public narratives, building demand, and moving audiences for partners including EFG, CaixaBank, BBC, ARTE TV, Institut Français, and major European festivals.
         </p>
+        <div class="method-grid" aria-label="Persona campaign method">
+          <div class="method-card">
+            <strong>Audit the market</strong>
+            <span>Map the venue, audience geography, ticket velocity, historic media habits, and the gap between cultural relevance and actual demand.</span>
+          </div>
+          <div class="method-card">
+            <strong>Build the narrative</strong>
+            <span>Turn each festival or partner into a clear public story for press, radio, TV, institutions, and local cultural networks.</span>
+          </div>
+          <div class="method-card">
+            <strong>Make ads accountable</strong>
+            <span>Move print-heavy budgets into repeatable online campaigns with tracked audiences, creative testing, retargeting, and measurable ROI.</span>
+          </div>
+          <div class="method-card">
+            <strong>Compound distribution</strong>
+            <span>Use broadcast, editorial coverage, partner lists, city media, and paid social together so each channel made the others more effective.</span>
+          </div>
+        </div>
       </article>
       <article class="case-study">
         <h2>Arweave <time>2024</time></h2>
@@ -118,6 +143,10 @@
         <p>
           A selection of festivals I helped sell out and build publicity for across Europe. Many were still relying on print-heavy advertising habits; my work focused on making campaigns more profitable, sustainable, and repeatable by pairing radio, television, local media, and cultural partnerships with online ad strategies that could be measured, amplified, and reused across markets.
         </p>
+        <div class="method-note">
+          <strong>How the campaigns worked</strong>
+          <span>We started from ticketing pressure, not aesthetics: which cities were underperforming, which audiences were likely to convert, which media partners could create trust, and which creative angles could be tested quickly. From there we built campaign systems that made cultural events easier to discover, easier to justify, and easier to buy.</span>
+        </div>
         <div class="poster-wall" aria-label="Selection of festival publicity posters">
           <figure class="poster-card">
             <img src="assets/persona-posters/fiestasete-2024.jpg" alt="Fiest'a Sete 2024 festival poster" loading="lazy" />
@@ -175,6 +204,10 @@
           <p>
             Sold out 5,000 seats for <a href="https://www.rendezvouserdre.com/" target="_blank" rel="noreferrer">Rendez-vous de l'Erdre</a> in Nantes, France through an integrated campaign across online ads, radio, and printed press.
           </p>
+          <div class="method-note">
+            <strong>Execution</strong>
+            <span>Built demand locally first, then widened the campaign through radio and paid social. The work connected the festival's regional identity to conversion-focused audiences, making the campaign feel cultural while still being accountable to ticket sales.</span>
+          </div>
           <div class="case-gallery" aria-label="Rendez-vous de l'Erdre campaign photos">
             <figure><img src="assets/persona-rendezvous/rendezvous-erdre-01.jpg" alt="Rendez-vous de l'Erdre stage view with audience in Nantes" loading="lazy" /></figure>
             <figure><img src="assets/persona-rendezvous/rendezvous-erdre-03.jpg" alt="Rendez-vous de l'Erdre campaign crowd photo" loading="lazy" /></figure>
@@ -185,6 +218,10 @@
           <p>
             Sold out <a href="https://www.brittenpearsarts.org/?gad_source=1&gad_campaignid=927608615&gbraid=0AAAAADgVlQOh1GXA0imfIZcF6tm0yOwVz&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD2mSDkiol4iL2n3zVto1GXQqQHOwuScbrwg0gIik6RQEGmI8DS1ZlYaAlQXEALw_wcB" target="_blank" rel="noreferrer">Snape Maltings</a>, an 850-seat venue in a remote location in the UK, through online ads, BBC Radio, audience development, and campaign execution.
           </p>
+          <div class="method-note">
+            <strong>Execution</strong>
+            <span>The challenge was distance: a strong venue, but a harder conversion path. We used BBC Radio and audience development to create legitimacy, then paired it with targeted online ads that reached people likely to travel for a high-value cultural event.</span>
+          </div>
           <div class="case-gallery" aria-label="Snape Maltings campaign photos">
             <figure><img src="assets/persona-snape/snape-maltings-01.jpg" alt="Snape Maltings venue seating from the stage" loading="lazy" /></figure>
             <figure><img src="assets/persona-snape/snape-maltings-02.jpg" alt="Snape Maltings campaign event photo" loading="lazy" /></figure>
@@ -197,6 +234,10 @@
         <p>
           Built broadcast and radio publicity around festival campaigns, working across BBC, London Jazz Festival, RFI, France TV, France 24, Culturebox, and media production teams to move audiences from cultural coverage into ticket demand.
         </p>
+        <div class="method-note">
+          <strong>How broadcast became distribution</strong>
+          <span>The goal was not coverage for its own sake. TV and radio were used to create authority, explain why the event mattered, and give paid campaigns stronger proof points. Editorial moments became audience signals that could be reused in ads, partner communications, and local press.</span>
+        </div>
         <div class="photo-grid broadcast-grid" aria-label="Broadcast, radio, and TV publicity photos">
           <img class="wide-shot" src="assets/persona-broadcast/culturebox-studio.jpg" alt="Culturebox France TV studio production setup" loading="lazy" />
           <img class="wide-shot" src="assets/persona-broadcast/culturebox-france-tv.jpg" alt="Culturebox France TV broadcast publicity screenshot" loading="lazy" />
@@ -211,6 +252,10 @@
         <p>
           Sold out Jazz à la Villette in Paris by driving publicity strategy, broadcast relationships, and media production support across France TV, France Culture, France 24, Mezzo, and Culturebox.
         </p>
+        <div class="method-note">
+          <strong>Execution</strong>
+          <span>Positioned the festival through the credibility of French cultural media, then connected that attention back into ticket demand. The campaign used broadcast relationships and production access as a distribution layer, not just as a brand signal.</span>
+        </div>
         <div class="photo-grid" aria-label="Jazz a la Villette campaign photos">
           <img src="assets/persona-jazz-villette/jazz-villette-01.jpg" alt="Jazz a la Villette signage at Grande Halle in Paris" loading="lazy" />
           <img src="assets/persona-jazz-villette/jazz-villette-02.jpg" alt="Jazz a la Villette venue and stage setup" loading="lazy" />
@@ -222,6 +267,10 @@
         <p>
           Sold out <a href="https://www.jazzsouslespommiers.com/" target="_blank" rel="noreferrer">Jazz sous les Pommiers</a> while working with TV and production companies, and was awarded a residency to produce and promote culture in the region.
         </p>
+        <div class="method-note">
+          <strong>Execution</strong>
+          <span>Combined regional storytelling, production relationships, and audience development so the festival was promoted as both a local cultural institution and a destination event. The system made each media appearance useful beyond the initial broadcast window.</span>
+        </div>
         <div class="photo-grid" aria-label="Jazz sous les Pommiers campaign photos">
           <img src="assets/persona-jazz-pommiers/jazz-pommiers-01.jpg" alt="Jazz sous les Pommiers stage and venue setup" loading="lazy" />
           <img src="assets/persona-jazz-pommiers/jazz-pommiers-02.jpg" alt="Jazz sous les Pommiers sold-out performance from the stage" loading="lazy" />
