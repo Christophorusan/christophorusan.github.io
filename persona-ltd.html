@@ -33,11 +33,17 @@
     .lead-case p { color: #222; font-size: clamp(17px, 2vw, 20px); line-height: 1.55; max-width: 650px; }
     .lead-case p + p { margin-top: 16px; }
     .photo-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-top: 18px; }
-    .photo-grid img { aspect-ratio: 1 / 1; border-radius: 8px; display: block; filter: none; object-fit: cover; width: 100%; }
+    .photo-grid img { aspect-ratio: 1 / 1; border-radius: 8px; display: block; filter: none; height: auto; object-fit: cover; width: 100%; }
+    .venue-group { display: grid; gap: 24px; }
+    .venue-entry { display: grid; gap: 14px; }
+    .venue-entry h2 { margin-bottom: -4px; }
+    .case-gallery { display: grid; gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 430px; }
+    .case-gallery figure { aspect-ratio: 1 / 1; background: #f7f7f7; border-radius: 8px; overflow: hidden; }
+    .case-gallery img { display: block; filter: none; height: 100%; object-fit: cover; width: 100%; }
     .compact-case { padding: 18px 0 20px; }
     .compact-case h2 { font-size: 18px; margin-bottom: 8px; }
     .compact-case p { font-size: 15px; line-height: 1.5; max-width: 560px; }
-    .compact-case .photo-grid { gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 14px; max-width: 380px; }
+    .compact-case .photo-grid { gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 14px; max-width: 430px; }
     .compact-case .photo-grid .wide-shot { aspect-ratio: 16 / 9; grid-column: 1 / -1; object-fit: cover; }
     .compact-case .broadcast-grid { max-width: 560px; }
     .compact-case .broadcast-grid .wide-shot { aspect-ratio: 16 / 9; grid-column: 1 / -1; object-fit: cover; }
@@ -54,7 +60,7 @@
     .video-card figcaption span { color: #111; font-size: 14px; font-weight: 520; }
     .video-card figcaption a { color: #777; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid, .poster-wall { grid-template-columns: repeat(3, minmax(0, 1fr)); } .compact-case .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid, .poster-wall { grid-template-columns: repeat(3, minmax(0, 1fr)); } .compact-case .photo-grid, .case-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
   </style>
 </head>
 <body>
@@ -163,25 +169,27 @@
           </figure>
         </div>
       </article>
-      <article class="case-study compact-case">
-        <h2>Rendez-vous de l'Erdre <time>2023</time></h2>
-        <p>
-          Sold out 5,000 seats for <a href="https://www.rendezvouserdre.com/" target="_blank" rel="noreferrer">Rendez-vous de l'Erdre</a> in Nantes, France through an integrated campaign across online ads, radio, and printed press.
-        </p>
-        <div class="photo-grid" aria-label="Rendez-vous de l'Erdre campaign photos">
-          <img src="assets/persona-rendezvous/rendezvous-erdre-01.jpg" alt="Rendez-vous de l'Erdre stage view with audience in Nantes" loading="lazy" />
-          <img src="assets/persona-rendezvous/rendezvous-erdre-03.jpg" alt="Rendez-vous de l'Erdre campaign crowd photo" loading="lazy" />
+      <article class="case-study compact-case venue-group">
+        <div class="venue-entry">
+          <h2>Rendez-vous de l'Erdre <time>2023</time></h2>
+          <p>
+            Sold out 5,000 seats for <a href="https://www.rendezvouserdre.com/" target="_blank" rel="noreferrer">Rendez-vous de l'Erdre</a> in Nantes, France through an integrated campaign across online ads, radio, and printed press.
+          </p>
+          <div class="case-gallery" aria-label="Rendez-vous de l'Erdre campaign photos">
+            <figure><img src="assets/persona-rendezvous/rendezvous-erdre-01.jpg" alt="Rendez-vous de l'Erdre stage view with audience in Nantes" loading="lazy" /></figure>
+            <figure><img src="assets/persona-rendezvous/rendezvous-erdre-03.jpg" alt="Rendez-vous de l'Erdre campaign crowd photo" loading="lazy" /></figure>
+          </div>
         </div>
-      </article>
-      <article class="case-study compact-case">
-        <h2>Snape Maltings <time>2023</time></h2>
-        <p>
-          Sold out <a href="https://www.brittenpearsarts.org/?gad_source=1&gad_campaignid=927608615&gbraid=0AAAAADgVlQOh1GXA0imfIZcF6tm0yOwVz&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD2mSDkiol4iL2n3zVto1GXQqQHOwuScbrwg0gIik6RQEGmI8DS1ZlYaAlQXEALw_wcB" target="_blank" rel="noreferrer">Snape Maltings</a>, an 850-seat venue in a remote location in the UK, through online ads, BBC Radio, audience development, and campaign execution.
-        </p>
-        <div class="photo-grid" aria-label="Snape Maltings campaign photos">
-          <img src="assets/persona-snape/snape-maltings-01.jpg" alt="Snape Maltings venue seating from the stage" loading="lazy" />
-          <img src="assets/persona-snape/snape-maltings-02.jpg" alt="Snape Maltings campaign event photo" loading="lazy" />
-          <img src="assets/persona-snape/snape-maltings-03.jpg" alt="Snape Maltings exterior in Suffolk" loading="lazy" />
+        <div class="venue-entry">
+          <h2>Snape Maltings <time>2023</time></h2>
+          <p>
+            Sold out <a href="https://www.brittenpearsarts.org/?gad_source=1&gad_campaignid=927608615&gbraid=0AAAAADgVlQOh1GXA0imfIZcF6tm0yOwVz&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD2mSDkiol4iL2n3zVto1GXQqQHOwuScbrwg0gIik6RQEGmI8DS1ZlYaAlQXEALw_wcB" target="_blank" rel="noreferrer">Snape Maltings</a>, an 850-seat venue in a remote location in the UK, through online ads, BBC Radio, audience development, and campaign execution.
+          </p>
+          <div class="case-gallery" aria-label="Snape Maltings campaign photos">
+            <figure><img src="assets/persona-snape/snape-maltings-01.jpg" alt="Snape Maltings venue seating from the stage" loading="lazy" /></figure>
+            <figure><img src="assets/persona-snape/snape-maltings-02.jpg" alt="Snape Maltings campaign event photo" loading="lazy" /></figure>
+            <figure><img src="assets/persona-snape/snape-maltings-03.jpg" alt="Snape Maltings exterior in Suffolk" loading="lazy" /></figure>
+          </div>
         </div>
       </article>
       <article class="case-study compact-case">
