@@ -33,20 +33,20 @@
     .lead-case p { color: #222; font-size: clamp(17px, 2vw, 20px); line-height: 1.55; max-width: 650px; }
     .lead-case p + p { margin-top: 16px; }
     .photo-grid { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 18px; max-width: 430px; }
-    .photo-grid img { aspect-ratio: 1 / 1; border-radius: 8px; display: block; filter: none; height: auto; object-fit: cover; width: 100%; }
+    .photo-grid img { aspect-ratio: 1 / 1; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; height: auto; object-fit: contain; width: 100%; }
     .venue-group { display: grid; gap: 24px; }
     .venue-entry { display: grid; gap: 14px; }
     .venue-entry h2 { margin-bottom: -4px; }
     .case-gallery { display: grid; gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 430px; }
     .case-gallery figure { aspect-ratio: 1 / 1; background: #f7f7f7; border-radius: 8px; overflow: hidden; }
-    .case-gallery img { display: block; filter: none; height: 100%; object-fit: cover; width: 100%; }
+    .case-gallery img { background: #fafafa; display: block; filter: none; height: 100%; object-fit: contain; width: 100%; }
     .compact-case { padding: 18px 0 20px; }
     .compact-case h2 { font-size: 18px; margin-bottom: 8px; }
     .compact-case p { font-size: 15px; line-height: 1.5; max-width: 560px; }
     .compact-case .photo-grid { gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 14px; max-width: 430px; }
-    .compact-case .photo-grid .wide-shot { aspect-ratio: 16 / 9; grid-column: 1 / -1; object-fit: cover; }
+    .compact-case .photo-grid .wide-shot { aspect-ratio: 1 / 1; grid-column: auto; object-fit: contain; }
     .compact-case .broadcast-grid { max-width: 560px; }
-    .compact-case .broadcast-grid .wide-shot { aspect-ratio: 16 / 9; grid-column: 1 / -1; object-fit: cover; }
+    .compact-case .broadcast-grid .wide-shot { aspect-ratio: 1 / 1; grid-column: auto; object-fit: contain; }
     .compact-case .broadcast-grid .contain-shot { background: #fafafa; object-fit: contain; }
     .poster-wall { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 20px; max-width: 520px; }
     .poster-card { min-width: 0; }
