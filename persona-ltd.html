@@ -54,6 +54,14 @@
     .compact-case .broadcast-grid { max-width: 560px; }
     .compact-case .broadcast-grid .wide-shot { aspect-ratio: 1 / 1; grid-column: auto; object-fit: cover; }
     .compact-case .broadcast-grid .contain-shot { background: #fafafa; object-fit: cover; }
+    .festival-proof-grid { display: grid; gap: 0 22px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .festival-proof-grid .compact-case { padding: 16px 0 18px; }
+    .festival-proof-grid .compact-case h2 { font-size: 16px; margin-bottom: 7px; }
+    .festival-proof-grid .compact-case p { font-size: 13.5px; line-height: 1.45; }
+    .festival-proof-grid .method-note { gap: 3px; margin-top: 9px; }
+    .festival-proof-grid .method-note strong { font-size: 12.5px; }
+    .festival-proof-grid .method-note span { font-size: 12.5px; line-height: 1.4; }
+    .festival-proof-grid .photo-grid { gap: 6px; margin-top: 10px; max-width: 100%; }
     .poster-wall { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 20px; max-width: 520px; }
     .poster-card { min-width: 0; }
     .poster-card img { aspect-ratio: 1 / 1; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; object-fit: contain; padding: 6px; width: 100%; }
@@ -66,7 +74,7 @@
     .video-card figcaption span { color: #111; font-size: 14px; font-weight: 520; }
     .video-card figcaption a { color: #777; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid, .poster-wall, .compact-case .photo-grid, .case-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .festival-proof-grid { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .poster-wall, .compact-case .photo-grid, .case-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
   </style>
 </head>
 <body>
@@ -243,55 +251,57 @@
           <img src="assets/persona-bbc-london-jazz/bbc-london-jazz-02.jpg" alt="BBC and London Jazz Festival venue photo" loading="lazy" />
         </div>
       </article>
-      <article class="case-study compact-case">
-        <h2>Jazz à la Villette <time>2022</time></h2>
-        <p>
-          Sold out Jazz à la Villette in Paris by driving publicity strategy, broadcast relationships, and media production support across France TV, France Culture, France 24, Mezzo, and Culturebox.
-        </p>
-        <div class="method-note">
-          <strong>Execution</strong>
-          <span>Positioned the festival through the credibility of French cultural media, then connected that attention back into ticket demand. The campaign used broadcast relationships and production access as a distribution layer, not just as a brand signal.</span>
-        </div>
-        <div class="photo-grid" aria-label="Jazz a la Villette campaign photos">
-          <img src="assets/persona-jazz-villette/jazz-villette-01.jpg" alt="Jazz a la Villette signage at Grande Halle in Paris" loading="lazy" />
-          <img src="assets/persona-jazz-villette/jazz-villette-02.jpg" alt="Jazz a la Villette venue and stage setup" loading="lazy" />
-          <img src="assets/persona-jazz-villette/jazz-villette-03.jpg" alt="Jazz a la Villette campaign and broadcast production image" loading="lazy" />
-        </div>
-      </article>
-      <article class="case-study compact-case">
-        <h2>Jazz sous les Pommiers <time>2023</time></h2>
-        <p>
-          Sold out <a href="https://www.jazzsouslespommiers.com/" target="_blank" rel="noreferrer">Jazz sous les Pommiers</a> while working with TV and production companies, and was awarded a residency to produce and promote culture in the region.
-        </p>
-        <div class="method-note">
-          <strong>Execution</strong>
-          <span>Combined regional storytelling, production relationships, and audience development so the festival was promoted as both a local cultural institution and a destination event. The system made each media appearance useful beyond the initial broadcast window.</span>
-        </div>
-        <div class="photo-grid" aria-label="Jazz sous les Pommiers campaign photos">
-          <img src="assets/persona-jazz-pommiers/jazz-pommiers-01.jpg" alt="Jazz sous les Pommiers stage and venue setup" loading="lazy" />
-          <img src="assets/persona-jazz-pommiers/jazz-pommiers-02.jpg" alt="Jazz sous les Pommiers sold-out performance from the stage" loading="lazy" />
-        </div>
-      </article>
-      <article class="case-study compact-case">
-        <h2>Rudolstadt Festival <time>2023</time></h2>
-        <p>
-          Sold out a 5,000-seat venue in Germany for Rudolstadt Festival through audience development and campaign execution.
-        </p>
-        <div class="photo-grid" aria-label="Rudolstadt Festival campaign photos">
-          <img src="assets/persona-rudolstadt/rudolstadt-01.jpg" alt="Rudolstadt Festival outdoor stage and audience in Germany" loading="lazy" />
-          <img src="assets/persona-rudolstadt/rudolstadt-02.jpg" alt="Rudolstadt Festival sold-out crowd from the stage" loading="lazy" />
-        </div>
-      </article>
-      <article class="case-study compact-case">
-        <h2>Parco archeologico del Colosseo <time>2022</time></h2>
-        <p>
-          Worked with Parco archeologico del Colosseo to sell out a concert at the Palace of Venus in Rome, bringing publicity and audience development into one of the city's most symbolic historical sites.
-        </p>
-        <div class="photo-grid" aria-label="Parco archeologico del Colosseo concert photos">
-          <img src="assets/persona-colosseo/colosseo-palace-venus-01.jpg" alt="Concert seating at the Palace of Venus facing the Colosseum in Rome" loading="lazy" />
-          <img src="assets/persona-colosseo/colosseo-palace-venus-02.jpg" alt="Colosseum exterior near the Palace of Venus concert venue" loading="lazy" />
-        </div>
-      </article>
+      <div class="festival-proof-grid" aria-label="Additional festival publicity proof points">
+        <article class="case-study compact-case">
+          <h2>Jazz à la Villette <time>2022</time></h2>
+          <p>
+            Sold out Jazz à la Villette in Paris by driving publicity strategy, broadcast relationships, and media production support across France TV, France Culture, France 24, Mezzo, and Culturebox.
+          </p>
+          <div class="method-note">
+            <strong>Execution</strong>
+            <span>Used French cultural media as a distribution layer, turning broadcast credibility into demand signals for ticket conversion.</span>
+          </div>
+          <div class="photo-grid" aria-label="Jazz a la Villette campaign photos">
+            <img src="assets/persona-jazz-villette/jazz-villette-01.jpg" alt="Jazz a la Villette signage at Grande Halle in Paris" loading="lazy" />
+            <img src="assets/persona-jazz-villette/jazz-villette-02.jpg" alt="Jazz a la Villette venue and stage setup" loading="lazy" />
+            <img src="assets/persona-jazz-villette/jazz-villette-03.jpg" alt="Jazz a la Villette campaign and broadcast production image" loading="lazy" />
+          </div>
+        </article>
+        <article class="case-study compact-case">
+          <h2>Jazz sous les Pommiers <time>2023</time></h2>
+          <p>
+            Sold out <a href="https://www.jazzsouslespommiers.com/" target="_blank" rel="noreferrer">Jazz sous les Pommiers</a> while working with TV and production companies, and was awarded a residency to produce and promote culture in the region.
+          </p>
+          <div class="method-note">
+            <strong>Execution</strong>
+            <span>Combined regional storytelling, production access, and audience development so media attention could keep compounding after each appearance.</span>
+          </div>
+          <div class="photo-grid" aria-label="Jazz sous les Pommiers campaign photos">
+            <img src="assets/persona-jazz-pommiers/jazz-pommiers-01.jpg" alt="Jazz sous les Pommiers stage and venue setup" loading="lazy" />
+            <img src="assets/persona-jazz-pommiers/jazz-pommiers-02.jpg" alt="Jazz sous les Pommiers sold-out performance from the stage" loading="lazy" />
+          </div>
+        </article>
+        <article class="case-study compact-case">
+          <h2>Rudolstadt Festival <time>2023</time></h2>
+          <p>
+            Sold out a 5,000-seat venue in Germany for Rudolstadt Festival through audience development and campaign execution.
+          </p>
+          <div class="photo-grid" aria-label="Rudolstadt Festival campaign photos">
+            <img src="assets/persona-rudolstadt/rudolstadt-01.jpg" alt="Rudolstadt Festival outdoor stage and audience in Germany" loading="lazy" />
+            <img src="assets/persona-rudolstadt/rudolstadt-02.jpg" alt="Rudolstadt Festival sold-out crowd from the stage" loading="lazy" />
+          </div>
+        </article>
+        <article class="case-study compact-case">
+          <h2>Parco archeologico del Colosseo <time>2022</time></h2>
+          <p>
+            Sold out a concert at the Palace of Venus in Rome by pairing audience development with publicity around one of the city's most symbolic historical sites.
+          </p>
+          <div class="photo-grid" aria-label="Parco archeologico del Colosseo concert photos">
+            <img src="assets/persona-colosseo/colosseo-palace-venus-01.jpg" alt="Concert seating at the Palace of Venus facing the Colosseum in Rome" loading="lazy" />
+            <img src="assets/persona-colosseo/colosseo-palace-venus-02.jpg" alt="Colosseum exterior near the Palace of Venus concert venue" loading="lazy" />
+          </div>
+        </article>
+      </div>
     </nav>
 
     <footer>&copy; 2026 Cristobal Silva</footer>
