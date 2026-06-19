@@ -124,10 +124,38 @@
       margin-top: 3px;
     }
 
-    .writing-link span {
+    .writing-link > span {
       color: #777;
       font-size: 14px;
       line-height: 1.45;
+    }
+
+    .writing-preview {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 11px;
+      max-width: 260px;
+    }
+
+    .writing-preview span {
+      aspect-ratio: 1 / 1;
+      background: #f7f7f7;
+      border: 1px solid #ececec;
+      display: block;
+      overflow: hidden;
+    }
+
+    .writing-preview img,
+    .writing-preview video {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .writing-preview .contain {
+      object-fit: contain;
     }
 
     .beliefs {
@@ -212,7 +240,17 @@
         </a>
         <a class="writing-link" href="research.html">
           <strong>Research <time>2023-2026</time></strong>
-          <span>Market writing, protocol analysis, AI agents, and technical exploration.</span>
+          <span>
+            Market writing, protocol analysis, AI agents, and technical exploration.
+            <span class="writing-preview" aria-label="Research preview visuals">
+              <span><img class="contain" src="assets/hyperliquid-media/hype-vs-binance.jpg" alt="Hyperliquid market structure research preview" loading="lazy"></span>
+              <span>
+                <video autoplay muted loop playsinline preload="metadata" poster="assets/hyperliquid-media/purr-launch-poster.jpg">
+                  <source src="assets/work-media/mobile-markets.mp4" type="video/mp4">
+                </video>
+              </span>
+            </span>
+          </span>
         </a>
       </nav>
     </section>

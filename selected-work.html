@@ -104,6 +104,39 @@
       align-self: center;
     }
 
+    .work-link small > em {
+      display: block;
+      font-style: normal;
+    }
+
+    .work-preview {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 11px;
+      max-width: 260px;
+    }
+
+    .work-preview span {
+      aspect-ratio: 1 / 1;
+      background: #f7f7f7;
+      border: 1px solid #ececec;
+      display: block;
+      overflow: hidden;
+    }
+
+    .work-preview img,
+    .work-preview video {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .work-preview .contain {
+      object-fit: contain;
+    }
+
     .work-link:hover span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
     footer {
@@ -153,7 +186,17 @@
       </a>
       <a class="work-link" href="research.html">
         <span>Research <time>2023-Now</time></span>
-        <small>Market writing, protocol analysis, experiments, and technical exploration.</small>
+        <small>
+          <em>Market writing, protocol analysis, AI agents, and technical exploration.</em>
+          <span class="work-preview" aria-label="Research preview visuals">
+            <span><img class="contain" src="assets/hyperliquid-media/hype-vs-binance.jpg" alt="Hyperliquid market structure research preview" loading="lazy"></span>
+            <span>
+              <video autoplay muted loop playsinline preload="metadata" poster="assets/hyperliquid-media/purr-launch-poster.jpg">
+                <source src="assets/work-media/mobile-markets.mp4" type="video/mp4">
+              </video>
+            </span>
+          </span>
+        </small>
       </a>
     </section>
 
