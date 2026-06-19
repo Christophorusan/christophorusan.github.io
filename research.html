@@ -39,16 +39,16 @@
     }
 
     header {
-      margin-bottom: 68px;
+      margin-bottom: 40px;
       max-width: 680px;
     }
 
     h1 {
-      font-size: clamp(38px, 7vw, 58px);
-      font-weight: 520;
-      letter-spacing: -0.035em;
-      line-height: 1;
-      margin-bottom: 18px;
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 560;
+      letter-spacing: -0.025em;
+      line-height: 1.12;
+      margin-bottom: 8px;
     }
 
     .date {
@@ -59,8 +59,54 @@
 
     .intro {
       color: #222;
-      font-size: clamp(20px, 2.5vw, 28px);
-      line-height: 1.45;
+      font-size: 17px;
+      line-height: 1.55;
+      max-width: 620px;
+    }
+
+    .research-visual-strip {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 24px;
+      max-width: 640px;
+    }
+
+    .research-visual-card {
+      background: #fff;
+      border: 1px solid #ececec;
+      border-radius: 10px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.04);
+      color: #111;
+      display: grid;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .research-visual-card:hover {
+      text-decoration: none;
+    }
+
+    .research-visual-media {
+      aspect-ratio: 1 / 1;
+      background: #f7f7f7;
+      display: block;
+      overflow: hidden;
+    }
+
+    .research-visual-media video,
+    .research-visual-media img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .research-visual-label {
+      color: #777;
+      font-size: 13px;
+      line-height: 1.35;
+      padding: 10px 12px 12px;
     }
 
     section {
@@ -542,7 +588,8 @@
     @media (max-width: 700px) {
       body { padding: 34px 18px 72px; }
       .back { margin-bottom: 42px; }
-      header { margin-bottom: 48px; }
+      header { margin-bottom: 38px; }
+      .research-visual-strip { grid-template-columns: 1fr; }
       section { margin-top: 42px; padding-top: 28px; }
       h2 { font-size: 13px; }
       .work-preview { padding: 26px; }
@@ -569,6 +616,22 @@
       <h1>Research</h1>
       <div class="date">18 June, 2026</div>
       <p class="intro">Market writing, protocol analysis, interface studies, and AI agent systems.</p>
+      <div class="research-visual-strip" aria-label="Research visual examples">
+        <a class="research-visual-card" href="work-mobile-markets.html">
+          <span class="research-visual-media">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="assets/work-media/mobile-markets.mp4" type="video/mp4" />
+            </video>
+          </span>
+          <span class="research-visual-label">Market interface studies</span>
+        </a>
+        <a class="research-visual-card" href="hyperliquid-ecosystem.html">
+          <span class="research-visual-media">
+            <img src="assets/hyperliquid-media/x-hyperliquid.jpg" alt="Hyperliquid social trading interface concept" loading="eager" />
+          </span>
+          <span class="research-visual-label">Protocol and distribution surfaces</span>
+        </a>
+      </div>
     </header>
 
     <section>
