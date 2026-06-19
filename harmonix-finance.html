@@ -22,6 +22,15 @@
     .archive-card { margin: 30px auto; }
     .media-frame { background: #fff; border: 1px solid #ededed; border-radius: 10px; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.04); overflow: hidden; }
     .media-frame img, .media-frame video { background: #fff; display: block; filter: none; height: auto; max-height: 620px; object-fit: contain; width: 100%; }
+    .constructed-visual { background: #f8faf8; display: grid; gap: 22px; min-height: 300px; padding: 28px; }
+    .visual-kicker { color: #7f8b80; font-size: 12px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; }
+    .visual-title { color: #102014; font-size: clamp(24px, 4vw, 38px); font-weight: 560; letter-spacing: 0; line-height: 1.02; max-width: 460px; }
+    .visual-row { align-items: center; display: grid; gap: 12px; grid-template-columns: repeat(3, 1fr); }
+    .visual-node, .visual-metric, .visual-step { background: #fff; border: 1px solid #e4ebe4; border-radius: 8px; min-height: 92px; padding: 14px; }
+    .visual-node strong, .visual-metric strong, .visual-step strong { color: #101510; display: block; font-size: 15px; font-weight: 620; letter-spacing: -0.01em; margin-bottom: 4px; }
+    .visual-node span, .visual-metric span, .visual-step span { color: #778077; display: block; font-size: 12px; line-height: 1.35; }
+    .visual-arrow { color: #b8c3b8; font-size: 22px; justify-self: center; }
+    .metrics-grid, .timeline-grid { display: grid; gap: 10px; grid-template-columns: repeat(2, 1fr); }
     .apy-visual { background: #fff; border: 1px solid #ededed; border-radius: 10px; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.04); padding: 24px; }
     .apy-top { align-items: start; display: grid; gap: 16px; grid-template-columns: 1fr auto auto; margin-bottom: 26px; }
     .apy-label { color: #777; font-size: 14px; margin-bottom: 4px; }
@@ -48,7 +57,7 @@
     .story-grid { display: grid; gap: 28px; margin-top: 26px; }
     .story-grid .media-card { margin-top: 0; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .featured, .story-section { margin-bottom: 34px; padding-top: 24px; } .apy-visual { padding: 18px; } .apy-top { grid-template-columns: 1fr; } .apy-metric { min-width: 0; } .apy-chart { height: 190px; } .media-frame img, .media-frame video { max-height: 520px; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .featured, .story-section { margin-bottom: 34px; padding-top: 24px; } .apy-visual { padding: 18px; } .apy-top { grid-template-columns: 1fr; } .apy-metric { min-width: 0; } .apy-chart { height: 190px; } .constructed-visual { min-height: 0; padding: 20px; } .visual-row, .metrics-grid, .timeline-grid { grid-template-columns: 1fr; } .visual-arrow { font-size: 12px; justify-self: start; } .media-frame img, .media-frame video { max-height: 520px; } }
   </style>
 </head>
 <body>
@@ -68,9 +77,9 @@
           <img src="assets/harmonix-media/harmonix-product-interface.gif" alt="Harmonix vault product interface animation" loading="eager" />
         </div>
         <span class="caption">
-          <strong>Harmonix vault interface</strong>
-          <time>2026</time>
-          <span>Yield markets, vault APYs, deposits, and rewards presented as a clean product surface.</span>
+          <strong>Harmonix App</strong>
+          <time>2025-Now</time>
+          <span>Earn interface, haUSDC, and vault product surface.</span>
           <span>Open app</span>
         </span>
       </a>
@@ -167,6 +176,45 @@
             <span>Open original</span>
           </span>
         </a>
+        <a class="media-card" href="https://x.com/harmonixfi/status/1929365326036189611" target="_blank" rel="noreferrer">
+          <div class="media-frame" aria-hidden="true">
+            <div class="constructed-visual">
+              <span class="visual-kicker">Chain rollout</span>
+              <strong class="visual-title">HyperEVM Migration</strong>
+              <div class="visual-row">
+                <span class="visual-node"><strong>Vaults</strong><span>Yield products prepared for Hyperliquid-native liquidity.</span></span>
+                <span class="visual-arrow">to</span>
+                <span class="visual-node"><strong>HyperEVM</strong><span>Partner and chain rollout for the next protocol phase.</span></span>
+              </div>
+            </div>
+          </div>
+          <span class="caption">
+            <strong>HyperEVM Migration</strong>
+            <time>Jun 2025</time>
+            <span>Partner and chain rollout for Harmonix on HyperEVM.</span>
+            <span>Open original</span>
+          </span>
+        </a>
+        <a class="media-card" href="https://x.com/harmonixfi/status/1955341237902287035?s=20" target="_blank" rel="noreferrer">
+          <div class="media-frame" aria-hidden="true">
+            <div class="constructed-visual">
+              <span class="visual-kicker">Ecosystem update</span>
+              <strong class="visual-title">Growth across product, capital, and integrations</strong>
+              <div class="metrics-grid">
+                <span class="visual-metric"><strong>TVL</strong><span>Capital growth and vault adoption.</span></span>
+                <span class="visual-metric"><strong>Product</strong><span>V2, staking, and swap surface.</span></span>
+                <span class="visual-metric"><strong>Partners</strong><span>Integration layer across HyperEVM.</span></span>
+                <span class="visual-metric"><strong>Security</strong><span>Audits, monitoring, and risk systems.</span></span>
+              </div>
+            </div>
+          </div>
+          <span class="caption">
+            <strong>Harmonix Update</strong>
+            <time>Aug 2025</time>
+            <span>Protocol growth, product, and ecosystem update.</span>
+            <span>Open original</span>
+          </span>
+        </a>
         <a class="media-card" href="https://x.com/harmonixfi/status/2006381895517352265?s=20" target="_blank" rel="noreferrer">
           <div class="media-frame" aria-hidden="true">
             <img src="assets/harmonix-media/recap-tge.jpg" alt="Harmonix 2025 recap TVL growth visual" loading="lazy" />
@@ -175,6 +223,26 @@
             <strong>TVL Growth</strong>
             <time>Dec 2025</time>
             <span>Original Harmonix 2025 recap visual showing TVL growth from $1.9M to $12M.</span>
+            <span>Open original</span>
+          </span>
+        </a>
+        <a class="media-card" href="https://x.com/harmonixfi/status/2023565078344384624" target="_blank" rel="noreferrer">
+          <div class="media-frame" aria-hidden="true">
+            <div class="constructed-visual">
+              <span class="visual-kicker">Roadmap</span>
+              <strong class="visual-title">2026 product and distribution direction</strong>
+              <div class="timeline-grid">
+                <span class="visual-step"><strong>Mar</strong><span>haUSDC and HIP-3 vault launch.</span></span>
+                <span class="visual-step"><strong>Apr</strong><span>Stablecoin vault expansion.</span></span>
+                <span class="visual-step"><strong>May</strong><span>haUSDT and convertible bond launch.</span></span>
+                <span class="visual-step"><strong>Jun</strong><span>AI agent execution layer.</span></span>
+              </div>
+            </div>
+          </div>
+          <span class="caption">
+            <strong>2026 Roadmap</strong>
+            <time>Feb 2026</time>
+            <span>Product and distribution direction for the next phase of Harmonix.</span>
             <span>Open original</span>
           </span>
         </a>
