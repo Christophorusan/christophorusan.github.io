@@ -32,7 +32,7 @@
     .lead-case time { color: #b0b0b0; font-size: 12px; margin-top: 5px; }
     .lead-case p { color: #222; font-size: clamp(17px, 2vw, 20px); line-height: 1.55; max-width: 650px; }
     .lead-case p + p { margin-top: 16px; }
-    .photo-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-top: 18px; }
+    .photo-grid { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 18px; max-width: 430px; }
     .photo-grid img { aspect-ratio: 1 / 1; border-radius: 8px; display: block; filter: none; height: auto; object-fit: cover; width: 100%; }
     .venue-group { display: grid; gap: 24px; }
     .venue-entry { display: grid; gap: 14px; }
@@ -48,7 +48,7 @@
     .compact-case .broadcast-grid { max-width: 560px; }
     .compact-case .broadcast-grid .wide-shot { aspect-ratio: 16 / 9; grid-column: 1 / -1; object-fit: cover; }
     .compact-case .broadcast-grid .contain-shot { background: #fafafa; object-fit: contain; }
-    .poster-wall { display: grid; gap: 10px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 20px; }
+    .poster-wall { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 20px; max-width: 520px; }
     .poster-card { min-width: 0; }
     .poster-card img { aspect-ratio: 1 / 1; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; object-fit: contain; padding: 6px; width: 100%; }
     .poster-card figcaption { color: #777; font-size: 12px; line-height: 1.35; margin-top: 7px; }
@@ -60,7 +60,7 @@
     .video-card figcaption span { color: #111; font-size: 14px; font-weight: 520; }
     .video-card figcaption a { color: #777; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid, .poster-wall { grid-template-columns: repeat(3, minmax(0, 1fr)); } .compact-case .photo-grid, .case-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } .photo-grid, .poster-wall, .compact-case .photo-grid, .case-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
   </style>
 </head>
 <body>
