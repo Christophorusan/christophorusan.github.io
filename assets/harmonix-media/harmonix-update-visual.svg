@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Harmonix Update visual</title>
+  <desc id="desc">Harmonix growth update across TVL, product, integrations, and security.</desc>
+  <rect width="1600" height="1000" fill="#f8faf8"/>
+  <rect x="72" y="72" width="1456" height="856" rx="34" fill="#ffffff" stroke="#e2e9e2" stroke-width="2"/>
+  <text x="132" y="168" fill="#7b8a7d" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="4">ECOSYSTEM UPDATE</text>
+  <text x="132" y="262" fill="#102014" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="92" font-weight="620">Growth update</text>
+  <text x="132" y="332" fill="#536257" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="35">Protocol growth, product surface, capital movement, and partner distribution.</text>
+  <rect x="132" y="430" width="620" height="190" rx="24" fill="#f4f8f4" stroke="#dfe8df" stroke-width="2"/>
+  <text x="174" y="510" fill="#102014" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="48" font-weight="650">TVL</text>
+  <text x="174" y="570" fill="#657266" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="30">Capital growth and vault adoption.</text>
+  <rect x="848" y="430" width="620" height="190" rx="24" fill="#f4f8f4" stroke="#dfe8df" stroke-width="2"/>
+  <text x="890" y="510" fill="#102014" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="48" font-weight="650">Product</text>
+  <text x="890" y="570" fill="#657266" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="30">V2, staking, and swap surface.</text>
+  <rect x="132" y="670" width="620" height="190" rx="24" fill="#102014"/>
+  <text x="174" y="750" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="48" font-weight="650">Partners</text>
+  <text x="174" y="810" fill="#cde3ce" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="30">Integration layer across HyperEVM.</text>
+  <rect x="848" y="670" width="620" height="190" rx="24" fill="#102014"/>
+  <text x="890" y="750" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="48" font-weight="650">Security</text>
+  <text x="890" y="810" fill="#cde3ce" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="30">Audits, monitoring, and risk systems.</text>
+</svg>
