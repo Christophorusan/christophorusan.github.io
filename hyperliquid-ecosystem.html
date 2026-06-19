@@ -282,6 +282,36 @@
       margin-top: 12px;
     }
 
+    .tweet-engagement {
+      border-top: 1px solid #ededed;
+      color: #8a8a8a;
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 14px;
+      padding-top: 12px;
+    }
+
+    .tweet-engagement span {
+      display: grid;
+      gap: 1px;
+      min-width: 0;
+    }
+
+    .tweet-engagement strong {
+      color: #555;
+      font-size: 12px;
+      font-weight: 560;
+      line-height: 1.2;
+    }
+
+    .tweet-engagement em {
+      color: #aaa;
+      font-size: 12px;
+      font-style: normal;
+      line-height: 1.2;
+    }
+
     .work-preview::before,
     .work-preview::after {
       border: 1px solid #e5e5e5;
@@ -375,6 +405,7 @@
       section { margin-top: 42px; padding-top: 28px; }
       h2 { font-size: 13px; }
       .work-preview { padding: 26px; }
+      .tweet-engagement { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
   </style>
 </head>
@@ -472,6 +503,12 @@ $2.95T in 2025 with 11 employees. 2x Coinbase, 12x Robinhood.
 Binance's perps volume is down 24% over the past 12 months. Hyperliquid's is up 75%.</span>
             <img class="tweet-image" src="assets/hyperliquid-media/hype-vs-binance.jpg" alt="HYPE vs Binance market structure analysis" loading="lazy" />
             <span class="tweet-meta">Apr 18, 2026</span>
+            <span class="tweet-engagement" aria-label="Tweet engagement metrics">
+              <span><strong>Replies</strong><em>Live on X</em></span>
+              <span><strong>Reposts</strong><em>Live on X</em></span>
+              <span><strong>Likes</strong><em>Live on X</em></span>
+              <span><strong>Views</strong><em>Live on X</em></span>
+            </span>
           </a>
           <div class="caption">
             <strong>HYPE vs Binance</strong>
@@ -500,6 +537,12 @@ As Hyperliquid retakes first place in perps volume.
 Protocols worth farming / looking into: Unit, TradeXYZ, Ventuals, Felix.</span>
             <img class="tweet-image" src="assets/hyperliquid-media/lighter-to-hype.jpg" alt="Lighter to HYPE allocation logic post image" loading="lazy" />
             <span class="tweet-meta">Dec 31, 2025</span>
+            <span class="tweet-engagement" aria-label="Tweet engagement metrics">
+              <span><strong>Replies</strong><em>Live on X</em></span>
+              <span><strong>Reposts</strong><em>Live on X</em></span>
+              <span><strong>Likes</strong><em>Live on X</em></span>
+              <span><strong>Views</strong><em>Live on X</em></span>
+            </span>
           </a>
           <div class="caption">
             <strong>Lighter to HYPE</strong>
