@@ -35,31 +35,31 @@
       color: #999;
       display: inline-block;
       font-size: 14px;
-      margin-bottom: 54px;
+      margin-bottom: 42px;
     }
 
     header {
-      margin-bottom: 40px;
-      max-width: 680px;
+      margin-bottom: 48px;
+      max-width: 620px;
     }
 
     h1 {
-      font-size: clamp(28px, 4vw, 36px);
-      font-weight: 560;
-      letter-spacing: -0.025em;
-      line-height: 1.12;
-      margin-bottom: 8px;
+      font-size: clamp(34px, 6vw, 48px);
+      font-weight: 520;
+      letter-spacing: -0.035em;
+      line-height: 1;
+      margin-bottom: 18px;
     }
 
     .date {
       color: #aaa;
-      font-size: 14px;
-      margin-bottom: 24px;
+      font-size: 13px;
+      margin-bottom: 12px;
     }
 
     .intro {
       color: #222;
-      font-size: 17px;
+      font-size: clamp(17px, 2vw, 20px);
       line-height: 1.55;
       max-width: 620px;
     }
@@ -126,7 +126,7 @@
 
     p {
       color: #222;
-      font-size: clamp(18px, 2vw, 22px);
+      font-size: clamp(17px, 2vw, 20px);
       line-height: 1.5;
       max-width: 700px;
     }
@@ -164,6 +164,16 @@
       height: 100%;
       object-fit: contain;
       width: 100%;
+    }
+
+    .visual-card {
+      color: #111;
+      display: grid;
+      text-decoration: none;
+    }
+
+    .visual-card:hover {
+      text-decoration: none;
     }
 
     .work-preview {
@@ -613,8 +623,8 @@
     <a class="back" href="index.html">Index</a>
 
     <header>
-      <h1>Research</h1>
       <div class="date">18 June, 2026</div>
+      <h1>Research</h1>
       <p class="intro">Market writing, protocol analysis, interface studies, and AI agent systems.</p>
       <div class="research-visual-strip" aria-label="Research visual examples">
         <a class="research-visual-card" href="work-mobile-markets.html">
@@ -655,21 +665,11 @@
         </article>
 
         <article class="embedded-work">
-          <a class="work-preview concept-preview" href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">
-            <span class="visual-panel">
-              <span class="visual-topline"><span>Product Concept</span><span>HyperEVM</span></span>
-              <span class="visual-grid">
-                <span class="market-window" aria-hidden="true">
-                  <span class="market-line"><span></span><strong>24.6%</strong></span>
-                  <span class="market-line"><span></span><strong>8.2x</strong></span>
-                  <span class="market-line"><span></span><strong>LIVE</strong></span>
-                  <span class="market-line"><span></span><strong>PERP</strong></span>
-                </span>
-                <span class="visual-stat">
-                  <strong>futures.xyz</strong>
-                  <span>Clean trading surface for spot, perps, and HyperEVM workflows.</span>
-                </span>
-              </span>
+          <a class="visual-card" href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">
+            <span class="media-frame">
+              <video autoplay muted loop playsinline controls preload="metadata">
+                <source src="assets/work-media/product-direction.mp4" type="video/mp4" />
+              </video>
             </span>
           </a>
           <div class="caption">
@@ -689,161 +689,69 @@
       </p>
       <div class="work-stack">
         <article class="embedded-work">
-          <a class="work-preview tweet-card" href="https://x.com/christophorusan/status/2041169845212049453?s=20" target="_blank" rel="noreferrer">
-            <span class="tweet-head">
-              <img class="tweet-avatar" src="BFj1ujC7_400x400.jpg" alt="" loading="lazy" />
-              <span>
-                <span class="tweet-name">Cristobal Silva</span>
-                <span class="tweet-handle">@christophorusan</span>
-              </span>
-            </span>
-            <span class="tweet-text">Research note on market structure, liquidity, and ecosystem positioning.</span>
-            <span class="note-visual" aria-hidden="true">
-              <span class="note-grid">
-                <span class="note-kicker">Market Research</span>
-                <span class="note-title">Liquidity and positioning</span>
-                <span class="note-line"></span>
-                <span class="note-line short"></span>
-              </span>
-              <span class="note-matrix">
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-              </span>
+          <a class="visual-card" href="https://x.com/christophorusan/status/2041169845212049453?s=20" target="_blank" rel="noreferrer">
+            <span class="media-frame">
+              <img src="assets/hyperliquid-media/hype-vs-binance.jpg" alt="HYPE vs Binance market structure research visual" loading="eager" />
             </span>
           </a>
           <div class="caption">
-            <strong>Research Note</strong>
+            <strong>HYPE vs Binance</strong>
             <time>Apr 2026</time>
-            <span>Market research and ecosystem analysis.</span>
+            <span>Market structure, liquidity, and ecosystem positioning analysis around Hyperliquid.</span>
             <a href="https://x.com/christophorusan/status/2041169845212049453?s=20" target="_blank" rel="noreferrer">Open original</a>
           </div>
         </article>
 
         <article class="embedded-work">
-          <a class="work-preview tweet-card" href="https://x.com/christophorusan/status/2003516149443805462?s=20" target="_blank" rel="noreferrer">
-            <span class="tweet-head">
-              <img class="tweet-avatar" src="BFj1ujC7_400x400.jpg" alt="" loading="lazy" />
-              <span>
-                <span class="tweet-name">Cristobal Silva</span>
-                <span class="tweet-handle">@christophorusan</span>
-              </span>
-            </span>
-            <span class="tweet-text">Protocol note on how markets, incentives, and distribution connect inside emerging ecosystems.</span>
-            <span class="note-visual" aria-hidden="true">
-              <span class="note-grid">
-                <span class="note-kicker">Protocol Research</span>
-                <span class="note-title">Incentives and distribution</span>
-                <span class="note-line"></span>
-                <span class="note-line short"></span>
-              </span>
-              <span class="note-matrix">
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-              </span>
+          <a class="visual-card" href="https://x.com/christophorusan/status/2003516149443805462?s=20" target="_blank" rel="noreferrer">
+            <span class="media-frame">
+              <img src="assets/hyperliquid-media/lighter-to-hype.jpg" alt="Lighter to HYPE market rotation research visual" loading="eager" />
             </span>
           </a>
           <div class="caption">
-            <strong>Research Note</strong>
+            <strong>Lighter to HYPE</strong>
             <time>Dec 2025</time>
-            <span>Protocol and market research.</span>
+            <span>Protocol note on how markets, incentives, and distribution connect inside emerging ecosystems.</span>
             <a href="https://x.com/christophorusan/status/2003516149443805462?s=20" target="_blank" rel="noreferrer">Open original</a>
           </div>
         </article>
 
         <article class="embedded-work">
-          <a class="work-preview tweet-card" href="https://x.com/christophorusan/status/1958601471290917269?s=20" target="_blank" rel="noreferrer">
-            <span class="tweet-head">
-              <img class="tweet-avatar" src="BFj1ujC7_400x400.jpg" alt="" loading="lazy" />
-              <span>
-                <span class="tweet-name">Cristobal Silva</span>
-                <span class="tweet-handle">@christophorusan</span>
-              </span>
-            </span>
-            <span class="tweet-text">Market thesis and ecosystem research around emerging crypto infrastructure.</span>
-            <span class="note-visual" aria-hidden="true">
-              <span class="note-grid">
-                <span class="note-kicker">Market Thesis</span>
-                <span class="note-title">Infrastructure as markets</span>
-                <span class="note-line"></span>
-                <span class="note-line short"></span>
-              </span>
-              <span class="note-matrix">
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-              </span>
+          <a class="visual-card" href="https://x.com/christophorusan/status/1958601471290917269?s=20" target="_blank" rel="noreferrer">
+            <span class="media-frame">
+              <video autoplay muted loop playsinline controls preload="metadata" poster="assets/hyperliquid-media/purr-launch-poster.jpg">
+                <source src="assets/hyperliquid-media/purr-launch.mp4" type="video/mp4" />
+              </video>
             </span>
           </a>
           <div class="caption">
-            <strong>Research Note</strong>
+            <strong>PURR Launch</strong>
             <time>Aug 2025</time>
-            <span>Market thesis and ecosystem research.</span>
+            <span>Launch narrative and ecosystem research around the first community token on Hyperliquid.</span>
             <a href="https://x.com/christophorusan/status/1958601471290917269?s=20" target="_blank" rel="noreferrer">Open original</a>
           </div>
         </article>
 
         <article class="embedded-work">
-          <a class="work-preview tweet-card" href="https://x.com/christophorusan/status/1943423137015538003?s=20" target="_blank" rel="noreferrer">
-            <span class="tweet-head">
-              <img class="tweet-avatar" src="BFj1ujC7_400x400.jpg" alt="" loading="lazy" />
-              <span>
-                <span class="tweet-name">Cristobal Silva</span>
-                <span class="tweet-handle">@christophorusan</span>
-              </span>
-            </span>
-            <span class="tweet-text">Protocol thesis and market analysis for early-stage crypto networks.</span>
-            <span class="note-visual" aria-hidden="true">
-              <span class="note-grid">
-                <span class="note-kicker">Protocol Thesis</span>
-                <span class="note-title">Networks and demand</span>
-                <span class="note-line"></span>
-                <span class="note-line short"></span>
-              </span>
-              <span class="note-matrix">
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-                <span class="note-pill"></span>
-              </span>
+          <a class="visual-card" href="https://x.com/christophorusan/status/1943423137015538003?s=20" target="_blank" rel="noreferrer">
+            <span class="media-frame">
+              <video autoplay muted loop playsinline controls preload="metadata">
+                <source src="assets/work-media/hyperliquid-tge.mp4" type="video/mp4" />
+              </video>
             </span>
           </a>
           <div class="caption">
-            <strong>Research Note</strong>
+            <strong>Hyperliquid TGE</strong>
             <time>Jul 2025</time>
-            <span>Protocol thesis and market analysis.</span>
+            <span>Protocol thesis and market analysis for early-stage crypto networks.</span>
             <a href="https://x.com/christophorusan/status/1943423137015538003?s=20" target="_blank" rel="noreferrer">Open original</a>
           </div>
         </article>
 
         <article class="embedded-work">
-          <a class="work-preview article-preview" href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">
-            <span class="visual-panel">
-              <span class="visual-topline"><span>Article</span><span>Stablecoins</span></span>
-              <span class="report-window" aria-hidden="true">
-                <span class="report-title">2024 Protocols to Watch</span>
-                <span class="report-lines">
-                  <span class="report-line"></span>
-                  <span class="report-line"></span>
-                  <span class="report-line"></span>
-                </span>
-                <span class="visual-stat">
-                  <strong>DeFi Yield</strong>
-                  <span>Stablecoin and fiat-alternative market analysis.</span>
-                </span>
-              </span>
+          <a class="visual-card" href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">
+            <span class="media-frame">
+              <img src="assets/hyperliquid-media/x-hyperliquid.jpg" alt="Protocol research interface visual" loading="eager" />
             </span>
           </a>
           <div class="caption">
@@ -863,23 +771,9 @@
       </p>
       <div class="work-stack">
         <article class="embedded-work">
-          <a class="work-preview agent-preview" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">
-            <span class="visual-panel">
-              <span class="visual-topline"><span>Protocol Interface</span><span>HyperEVM</span></span>
-              <span class="visual-grid">
-                <span class="agent-window" aria-hidden="true">
-                  <span class="agent-node"><strong>Supply</strong><span></span></span>
-                  <span class="agent-node"><strong>Borrow</strong><span></span></span>
-                  <span class="agent-node"><strong>Risk</strong><span></span></span>
-                  <span class="agent-node"><strong>Vault</strong><span></span></span>
-                  <span class="agent-node"><strong>Rate</strong><span></span></span>
-                  <span class="agent-node"><strong>Route</strong><span></span></span>
-                </span>
-                <span class="visual-stat">
-                  <strong>Louis</strong>
-                  <span>Morpho fork experiment mapped as protocol surface.</span>
-                </span>
-              </span>
+          <a class="visual-card" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">
+            <span class="media-frame">
+              <img src="assets/hyperliquid-media/x-hyperliquid.jpg" alt="HyperEVM protocol interface research visual" loading="eager" />
             </span>
           </a>
           <div class="caption">
@@ -891,23 +785,11 @@
         </article>
 
         <article class="embedded-work">
-          <a class="work-preview system-preview" href="https://github.com/Christophorusan/oslo" target="_blank" rel="noreferrer">
-            <span class="visual-panel">
-              <span class="visual-topline"><span>AI Agents</span><span>Operations</span></span>
-              <span class="visual-grid">
-                <span class="agent-window" aria-hidden="true">
-                  <span class="agent-node"><strong>Marketing</strong><span></span></span>
-                  <span class="agent-node"><strong>BD</strong><span></span></span>
-                  <span class="agent-node"><strong>Research</strong><span></span></span>
-                  <span class="agent-node"><strong>Engineering</strong><span></span></span>
-                  <span class="agent-node"><strong>Security</strong><span></span></span>
-                  <span class="agent-node"><strong>Ops</strong><span></span></span>
-                </span>
-                <span class="visual-stat">
-                  <strong>Oslo</strong>
-                  <span>Agent system for company operations and protocol work.</span>
-                </span>
-              </span>
+          <a class="visual-card" href="https://github.com/Christophorusan/oslo" target="_blank" rel="noreferrer">
+            <span class="media-frame">
+              <video autoplay muted loop playsinline controls preload="metadata">
+                <source src="assets/work-media/product-direction.mp4" type="video/mp4" />
+              </video>
             </span>
           </a>
           <div class="caption">
