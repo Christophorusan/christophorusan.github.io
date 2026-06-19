@@ -338,6 +338,13 @@
       width: 100%;
     }
 
+    .research-media-image {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
     .visual-card {
       color: #111;
       display: grid;
@@ -909,27 +916,14 @@
       <p class="intro">Writing, AI systems, technical exploration, and engineering notes that do not belong to a single product or campaign section.</p>
       <div class="research-visual-strip" aria-label="Research visual examples">
         <a class="research-visual-card" href="#technical-writing">
-          <span class="research-visual-media diagram">
-            <span class="diagram-lines" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-            <span class="diagram-nodes" aria-hidden="true">
-              <span class="diagram-node"><strong>Thesis</strong><span></span></span>
-              <span class="diagram-node"><strong>Evidence</strong><span></span></span>
-            </span>
+          <span class="research-visual-media">
+            <img class="research-media-image" src="assets/research-media/defi-today.svg" alt="" loading="eager">
           </span>
           <span class="research-visual-label">Writing and protocol analysis</span>
         </a>
         <a class="research-visual-card" href="#ai-systems">
-          <span class="research-visual-media diagram">
-            <span class="diagram-nodes" aria-hidden="true">
-              <span class="diagram-node"><strong>Ops</strong><span></span></span>
-              <span class="diagram-node"><strong>BD</strong><span></span></span>
-              <span class="diagram-node"><strong>Eng</strong><span></span></span>
-              <span class="diagram-node"><strong>Security</strong><span></span></span>
-            </span>
+          <span class="research-visual-media">
+            <img class="research-media-image" src="assets/research-media/oslo-hermes.svg" alt="" loading="eager">
           </span>
           <span class="research-visual-label">AI agents and engineering systems</span>
         </a>
@@ -944,18 +938,7 @@
       <div class="work-stack">
         <article class="embedded-work">
           <a class="work-preview article-preview" href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">
-            <span class="visual-panel">
-              <span class="visual-topline">Research Note <span>Stablecoins</span></span>
-              <span class="report-window">
-                <span class="report-title">DeFi Today</span>
-                <span class="report-lines" aria-hidden="true">
-                  <span class="report-line"></span>
-                  <span class="report-line"></span>
-                  <span class="report-line"></span>
-                </span>
-                <span class="preview-row" aria-hidden="true"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span></span>
-              </span>
-            </span>
+            <img class="research-media-image" src="assets/research-media/defi-today.svg" alt="DeFi Today stablecoin research note visual" loading="lazy">
           </a>
           <div class="caption">
             <strong>DeFi Today</strong>
@@ -967,17 +950,7 @@
 
         <article class="embedded-work">
           <div class="work-preview concept-preview">
-            <span class="visual-panel">
-              <span class="visual-topline">Documentation Study <span>Systems</span></span>
-              <span class="visual-grid">
-                <span class="market-window" aria-hidden="true">
-                  <span class="market-line"><span></span><strong>Spec</strong></span>
-                  <span class="market-line"><span></span><strong>Docs</strong></span>
-                  <span class="market-line"><span></span><strong>Ship</strong></span>
-                </span>
-                <span class="visual-stat"><strong>02</strong><span>Making technical work legible across teams.</span></span>
-              </span>
-            </span>
+            <img class="research-media-image" src="assets/research-media/engineering-docs.svg" alt="Engineering documentation workflow visual" loading="lazy">
           </div>
           <div class="caption">
             <strong>Engineering Notes</strong>
@@ -996,17 +969,7 @@
       <div class="work-stack">
         <article class="embedded-work">
           <a class="work-preview agent-preview" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">
-            <span class="visual-panel">
-              <span class="visual-topline">Protocol Experiment <span>HyperEVM</span></span>
-              <span class="agent-window" aria-hidden="true">
-                <span class="agent-node"><strong>Markets</strong><span></span></span>
-                <span class="agent-node"><strong>Risk</strong><span></span></span>
-                <span class="agent-node"><strong>Vaults</strong><span></span></span>
-                <span class="agent-node"><strong>Users</strong><span></span></span>
-                <span class="agent-node"><strong>Rates</strong><span></span></span>
-                <span class="agent-node"><strong>Docs</strong><span></span></span>
-              </span>
-            </span>
+            <img class="research-media-image" src="assets/research-media/louis-agent.svg" alt="Louis HyperEVM protocol experiment architecture visual" loading="lazy">
           </a>
           <div class="caption">
             <strong>Louis</strong>
@@ -1017,25 +980,8 @@
         </article>
 
         <article class="embedded-work">
-          <a class="visual-card" href="https://github.com/Christophorusan/oslo" target="_blank" rel="noreferrer">
-            <span class="docs-diagram">
-              <span class="visual-topline">Oslo <span>Hermes AI Agent</span></span>
-              <span class="hermes-core" aria-hidden="true">
-                <span>Operating Layer</span>
-                <strong>Hermes</strong>
-                <span>Company memory + execution</span>
-              </span>
-              <span class="docs-flow" aria-hidden="true">
-                <span class="docs-step"><strong>Specs</strong><span></span><span></span><span></span></span>
-                <span class="docs-step"><strong>Tasks</strong><span></span><span></span><span></span></span>
-                <span class="docs-step"><strong>Engineering Docs</strong><span></span><span></span><span></span></span>
-                <span class="docs-step"><strong>Review Memory</strong><span></span><span></span><span></span></span>
-              </span>
-              <span class="docs-map" aria-hidden="true">
-                <span><strong>Ops + BD</strong><span></span><span></span><span></span></span>
-                <span><strong>Security + Engineering</strong><span></span><span></span><span></span></span>
-              </span>
-            </span>
+          <a class="work-preview system-preview" href="https://github.com/Christophorusan/oslo" target="_blank" rel="noreferrer">
+            <img class="research-media-image" src="assets/research-media/oslo-hermes.svg" alt="Oslo Hermes AI agent documentation workflow diagram" loading="lazy">
           </a>
           <div class="caption">
             <strong>Oslo</strong>

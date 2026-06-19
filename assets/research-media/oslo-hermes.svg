@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Oslo Hermes AI agent diagram</title>
+  <desc id="desc">A diagram of Hermes as the AI operating layer for specs, tasks, engineering docs, review memory, operations, business development, security, and engineering.</desc>
+  <rect width="1200" height="750" fill="#fbfbfa"/>
+  <rect x="64" y="56" width="1072" height="638" rx="28" fill="#fff" stroke="#e8e8e3"/>
+  <text x="104" y="118" fill="#92928c" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">OSLO</text>
+  <text x="104" y="190" fill="#111" font-family="Arial, sans-serif" font-size="76" font-weight="700" letter-spacing="-4">Hermes AI Agent</text>
+  <g transform="translate(104 260)">
+    <rect x="330" y="122" width="332" height="154" rx="24" fill="#111"/>
+    <text x="496" y="184" fill="#fff" font-family="Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle">Hermes</text>
+    <text x="496" y="222" fill="#aaa" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">company memory + execution</text>
+    <g fill="none" stroke="#111" opacity=".18" stroke-width="2">
+      <path d="M330 199H198"/>
+      <path d="M662 199h132"/>
+      <path d="M496 122V30"/>
+      <path d="M496 276v92"/>
+      <path d="M198 199V54"/>
+      <path d="M794 199V54"/>
+      <path d="M198 199v145"/>
+      <path d="M794 199v145"/>
+    </g>
+    <g>
+      <rect x="0" y="0" width="198" height="108" rx="18" fill="#f4f7ff" stroke="#dfe6f7"/>
+      <text x="22" y="46" fill="#111" font-family="Arial, sans-serif" font-size="24" font-weight="700">Specs</text>
+      <rect x="22" y="70" width="118" height="9" rx="5" fill="#111" opacity=".1"/>
+    </g>
+    <g transform="translate(794)">
+      <rect width="198" height="108" rx="18" fill="#f4fbf7" stroke="#dcefe4"/>
+      <text x="22" y="46" fill="#111" font-family="Arial, sans-serif" font-size="24" font-weight="700">Tasks</text>
+      <rect x="22" y="70" width="126" height="9" rx="5" fill="#111" opacity=".1"/>
+    </g>
+    <g transform="translate(0 290)">
+      <rect width="198" height="108" rx="18" fill="#fff8ee" stroke="#eee0c9"/>
+      <text x="22" y="46" fill="#111" font-family="Arial, sans-serif" font-size="24" font-weight="700">Eng Docs</text>
+      <rect x="22" y="70" width="142" height="9" rx="5" fill="#111" opacity=".1"/>
+    </g>
+    <g transform="translate(794 290)">
+      <rect width="198" height="108" rx="18" fill="#f8f5ff" stroke="#e7defa"/>
+      <text x="22" y="46" fill="#111" font-family="Arial, sans-serif" font-size="24" font-weight="700">Review Memory</text>
+      <rect x="22" y="70" width="132" height="9" rx="5" fill="#111" opacity=".1"/>
+    </g>
+  </g>
+  <g transform="translate(104 626)">
+    <rect width="240" height="36" rx="18" fill="#111" opacity=".08"/>
+    <rect x="264" width="240" height="36" rx="18" fill="#111" opacity=".08"/>
+    <rect x="528" width="240" height="36" rx="18" fill="#111" opacity=".08"/>
+    <rect x="792" width="240" height="36" rx="18" fill="#111" opacity=".08"/>
+    <text x="28" y="25" fill="#555" font-family="Arial, sans-serif" font-size="15" font-weight="700">Ops</text>
+    <text x="292" y="25" fill="#555" font-family="Arial, sans-serif" font-size="15" font-weight="700">BD</text>
+    <text x="556" y="25" fill="#555" font-family="Arial, sans-serif" font-size="15" font-weight="700">Security</text>
+    <text x="820" y="25" fill="#555" font-family="Arial, sans-serif" font-size="15" font-weight="700">Engineering</text>
+  </g>
+</svg>

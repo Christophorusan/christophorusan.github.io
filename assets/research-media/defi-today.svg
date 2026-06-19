@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">DeFi Today research note visual</title>
+  <desc id="desc">A research note layout with stablecoin yield, fiat comparison, and protocol evidence panels.</desc>
+  <rect width="1200" height="750" fill="#fbfbfa"/>
+  <rect x="64" y="56" width="1072" height="638" rx="28" fill="#fff" stroke="#e8e8e3"/>
+  <text x="104" y="118" fill="#92928c" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">RESEARCH NOTE</text>
+  <text x="104" y="194" fill="#111" font-family="Arial, sans-serif" font-size="72" font-weight="700" letter-spacing="-3">DeFi Today</text>
+  <text x="104" y="244" fill="#5f625d" font-family="Arial, sans-serif" font-size="28">Outperforming fiat with stablecoins</text>
+  <g transform="translate(104 312)">
+    <rect width="296" height="230" rx="18" fill="#f5f8f4" stroke="#e1e8dc"/>
+    <text x="28" y="58" fill="#697066" font-family="Arial, sans-serif" font-size="18" font-weight="700">STABLECOIN YIELD</text>
+    <text x="28" y="132" fill="#111" font-family="Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="-3">5.2%</text>
+    <rect x="28" y="168" width="226" height="10" rx="5" fill="#111" opacity=".12"/>
+    <rect x="28" y="194" width="168" height="10" rx="5" fill="#111" opacity=".08"/>
+  </g>
+  <g transform="translate(452 312)">
+    <rect width="296" height="230" rx="18" fill="#f6f7fb" stroke="#e2e5ee"/>
+    <text x="28" y="58" fill="#686d78" font-family="Arial, sans-serif" font-size="18" font-weight="700">FIAT BASELINE</text>
+    <text x="28" y="132" fill="#111" font-family="Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="-3">1.8%</text>
+    <rect x="28" y="168" width="210" height="10" rx="5" fill="#111" opacity=".11"/>
+    <rect x="28" y="194" width="138" height="10" rx="5" fill="#111" opacity=".08"/>
+  </g>
+  <g transform="translate(800 312)">
+    <rect width="296" height="230" rx="18" fill="#fff8ee" stroke="#eee0c9"/>
+    <text x="28" y="58" fill="#75684f" font-family="Arial, sans-serif" font-size="18" font-weight="700">EVIDENCE</text>
+    <rect x="28" y="91" width="230" height="12" rx="6" fill="#111" opacity=".12"/>
+    <rect x="28" y="125" width="196" height="12" rx="6" fill="#111" opacity=".1"/>
+    <rect x="28" y="159" width="248" height="12" rx="6" fill="#111" opacity=".08"/>
+    <rect x="28" y="193" width="172" height="12" rx="6" fill="#111" opacity=".1"/>
+  </g>
+  <path d="M104 616h992" stroke="#111" opacity=".1"/>
+  <text x="104" y="654" fill="#8a8a84" font-family="Arial, sans-serif" font-size="22">Thesis -> evidence -> market implication</text>
+</svg>
