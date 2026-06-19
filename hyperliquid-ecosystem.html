@@ -210,6 +210,12 @@
       text-align: left;
     }
 
+    .tweet-card.full-tweet {
+      background: #fff;
+      gap: 0;
+      padding: 24px;
+    }
+
     .tweet-card .tweet-head {
       align-items: center;
       display: flex;
@@ -249,14 +255,25 @@
       white-space: pre-line;
     }
 
+    .full-tweet .tweet-text {
+      font-size: 18px;
+      line-height: 1.48;
+      margin-bottom: 18px;
+    }
+
     .tweet-image {
-      aspect-ratio: 4 / 3;
       background: #fafafa;
       border: 1px solid #ececec;
       border-radius: 8px;
       display: block;
+      height: auto;
       object-fit: contain;
       width: 100%;
+    }
+
+    .full-tweet .tweet-image {
+      border-radius: 10px;
+      margin-top: 2px;
     }
 
     .tweet-meta {
@@ -436,7 +453,7 @@
           <p class="artifact-note">
             Market structure writing on Hyperliquid's position against centralized perps venues, using volume share, distribution, and operating leverage as the core frame. The point was to make a structural shift visible: Hyperliquid was not just growing, it was changing how people compared onchain perps to incumbent exchanges.
           </p>
-          <a class="work-preview tweet-card" href="https://x.com/christophorusan/status/2045611398248722799?s=20" target="_blank" rel="noreferrer">
+          <a class="work-preview tweet-card full-tweet" href="https://x.com/christophorusan/status/2045611398248722799?s=20" target="_blank" rel="noreferrer">
             <span class="tweet-head">
               <img class="tweet-avatar" src="BFj1ujC7_400x400.jpg" alt="" loading="lazy" />
               <span>
@@ -466,7 +483,7 @@ $2.95T in 2025 with 11 employees. 2x Coinbase, 12x Robinhood.</span>
           <p class="artifact-note">
             Allocation commentary connecting market conviction to ecosystem rotation: how liquidity, incentives, and protocol momentum shape what deserves attention. The Lighter-to-HYPE rotation framed a key competitive moment, using market share and community focus to explain why attention was moving back toward Hyperliquid.
           </p>
-          <a class="work-preview tweet-card" href="https://x.com/christophorusan/status/2006504610777936264?s=20" target="_blank" rel="noreferrer">
+          <a class="work-preview tweet-card full-tweet" href="https://x.com/christophorusan/status/2006504610777936264?s=20" target="_blank" rel="noreferrer">
             <span class="tweet-head">
               <img class="tweet-avatar" src="BFj1ujC7_400x400.jpg" alt="" loading="lazy" />
               <span>
