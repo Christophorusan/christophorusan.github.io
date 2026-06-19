@@ -138,7 +138,7 @@
       max-width: 260px;
     }
 
-    .writing-preview span {
+    .writing-preview > span {
       aspect-ratio: 1 / 1;
       background: #f7f7f7;
       border: 1px solid #ececec;
@@ -157,6 +157,25 @@
     .writing-preview .contain {
       object-fit: contain;
     }
+
+    .mini-diagram {
+      display: grid;
+      gap: 7px;
+      height: 100%;
+      padding: 12px;
+    }
+
+    .mini-diagram i,
+    .mini-diagram b {
+      background: #111;
+      border-radius: 999px;
+      display: block;
+      opacity: 0.12;
+    }
+
+    .mini-diagram i { height: 7px; }
+    .mini-diagram i:nth-child(2) { width: 72%; }
+    .mini-diagram b { align-self: end; height: 34%; opacity: 0.08; width: 100%; }
 
     .beliefs {
       list-style: none;
@@ -241,13 +260,13 @@
         <a class="writing-link" href="research.html">
           <strong>Research <time>2023-2026</time></strong>
           <span>
-            Market writing, protocol analysis, AI agents, and technical exploration.
+            Technical writing, AI agents, engineering docs, and systems notes.
             <span class="writing-preview" aria-label="Research preview visuals">
-              <span><img class="contain" src="assets/hyperliquid-media/hype-vs-binance.jpg" alt="Hyperliquid market structure research preview" loading="lazy"></span>
               <span>
-                <video autoplay muted loop playsinline preload="metadata" poster="assets/hyperliquid-media/purr-launch-poster.jpg">
-                  <source src="assets/work-media/mobile-markets.mp4" type="video/mp4">
-                </video>
+                <span class="mini-diagram" aria-hidden="true"><i></i><i></i><i></i><b></b></span>
+              </span>
+              <span>
+                <span class="mini-diagram" aria-hidden="true"><i></i><i></i><b></b><i></i></span>
               </span>
             </span>
           </span>

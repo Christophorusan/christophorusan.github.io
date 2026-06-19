@@ -102,6 +102,148 @@
       width: 100%;
     }
 
+    .research-visual-media.diagram {
+      display: grid;
+      gap: 10px;
+      padding: 18px;
+    }
+
+    .diagram-lines {
+      align-content: center;
+      display: grid;
+      gap: 9px;
+    }
+
+    .diagram-lines span,
+    .diagram-node span {
+      background: #111;
+      border-radius: 999px;
+      display: block;
+      height: 7px;
+      opacity: 0.1;
+    }
+
+    .diagram-lines span:nth-child(2) { width: 78%; }
+    .diagram-lines span:nth-child(3) { width: 54%; }
+
+    .diagram-nodes {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .diagram-node {
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      display: grid;
+      gap: 8px;
+      min-height: 66px;
+      padding: 10px;
+    }
+
+    .diagram-node strong {
+      color: #111;
+      font-size: 12px;
+      font-weight: 560;
+      letter-spacing: 0;
+    }
+
+    .docs-diagram {
+      background: #fafafa;
+      border: 1px solid #ececec;
+      border-radius: 10px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.04);
+      display: grid;
+      gap: 16px;
+      padding: 22px;
+    }
+
+    .docs-flow {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .docs-step {
+      background: #fff;
+      border: 1px solid #e7e7e7;
+      border-radius: 8px;
+      min-height: 94px;
+      padding: 12px;
+      position: relative;
+    }
+
+    .docs-step::after {
+      background: #111;
+      content: "";
+      height: 1px;
+      opacity: 0.18;
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      width: 10px;
+    }
+
+    .docs-step:last-child::after {
+      display: none;
+    }
+
+    .docs-step strong {
+      color: #111;
+      display: block;
+      font-size: 13px;
+      font-weight: 560;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .docs-step span {
+      background: #111;
+      border-radius: 999px;
+      display: block;
+      height: 6px;
+      margin-top: 7px;
+      opacity: 0.1;
+    }
+
+    .docs-step span:nth-child(3) { width: 72%; }
+    .docs-step span:nth-child(4) { width: 48%; }
+
+    .docs-map {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .docs-map div {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .docs-map strong {
+      color: #999;
+      display: block;
+      font-size: 11px;
+      font-weight: 650;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .docs-map span {
+      background: #111;
+      border-radius: 999px;
+      display: block;
+      height: 6px;
+      margin-top: 8px;
+      opacity: 0.1;
+    }
+
+    .docs-map span:nth-child(3) { width: 66%; }
+    .docs-map span:nth-child(4) { width: 42%; }
+
     .research-visual-label {
       color: #777;
       font-size: 13px;
@@ -718,6 +860,9 @@
       .visual-panel { gap: 14px; padding: 20px; }
       .visual-grid,
       .agent-window { grid-template-columns: 1fr; }
+      .docs-flow,
+      .docs-map { grid-template-columns: 1fr; }
+      .docs-step::after { display: none; }
       .market-window,
       .report-window,
       .agent-window { min-height: 0; }
@@ -731,215 +876,136 @@
     <header>
       <div class="date">18 June, 2026</div>
       <h1>Research</h1>
-      <p class="intro">Market writing, protocol analysis, interface studies, and AI agent systems.</p>
+      <p class="intro">Writing, AI systems, technical exploration, and engineering notes that do not belong to a single product or campaign section.</p>
       <div class="research-visual-strip" aria-label="Research visual examples">
-        <a class="research-visual-card" href="work-mobile-markets.html">
-          <span class="research-visual-media">
-            <video autoplay muted loop playsinline preload="metadata">
-              <source src="assets/work-media/mobile-markets.mp4" type="video/mp4" />
-            </video>
+        <a class="research-visual-card" href="#technical-writing">
+          <span class="research-visual-media diagram">
+            <span class="diagram-lines" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span class="diagram-nodes" aria-hidden="true">
+              <span class="diagram-node"><strong>Thesis</strong><span></span></span>
+              <span class="diagram-node"><strong>Evidence</strong><span></span></span>
+            </span>
           </span>
-          <span class="research-visual-label">Market interface studies</span>
+          <span class="research-visual-label">Writing and protocol analysis</span>
         </a>
-        <a class="research-visual-card" href="hyperliquid-ecosystem.html">
-          <span class="research-visual-media">
-            <img src="assets/hyperliquid-media/x-hyperliquid.jpg" alt="Hyperliquid social trading interface concept" loading="eager" />
+        <a class="research-visual-card" href="#ai-systems">
+          <span class="research-visual-media diagram">
+            <span class="diagram-nodes" aria-hidden="true">
+              <span class="diagram-node"><strong>Ops</strong><span></span></span>
+              <span class="diagram-node"><strong>BD</strong><span></span></span>
+              <span class="diagram-node"><strong>Eng</strong><span></span></span>
+              <span class="diagram-node"><strong>Security</strong><span></span></span>
+            </span>
           </span>
-          <span class="research-visual-label">Protocol and distribution surfaces</span>
+          <span class="research-visual-label">AI agents and engineering systems</span>
         </a>
       </div>
     </header>
 
-    <section>
-      <h2>Interfaces</h2>
+    <section id="technical-writing">
+      <h2>Technical Writing</h2>
       <p>
-        Research often turns into interface work. I use product design to make complex markets feel simple: clean layouts, minimal visual noise, intuitive flows, and small cues that help people understand what is happening without needing the product explained.
+        This section is for the thinking layer: notes, protocol research, interface studies, and technical explanations that sit outside the specific Hyperliquid, Harmonix, or Persona case studies.
       </p>
       <div class="work-stack">
         <article class="embedded-work">
-          <a class="media-frame" href="work-mobile-markets.html">
-            <video autoplay muted loop playsinline controls preload="metadata">
-              <source src="assets/work-media/mobile-markets.mp4" type="video/mp4" />
-            </video>
-          </a>
-          <div class="caption">
-            <strong>Mobile Prediction Markets</strong>
-            <time>2026</time>
-            <span>Phone-native prediction market interface focused on clarity, quick scanning, and more intuitive market discovery.</span>
-            <a href="work-mobile-markets.html">Open project</a>
-          </div>
-        </article>
-
-        <article class="embedded-work">
-          <a class="visual-card" href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">
-            <span class="media-frame">
-              <video autoplay muted loop playsinline controls preload="metadata">
-                <source src="assets/work-media/product-direction.mp4" type="video/mp4" />
-              </video>
-            </span>
-          </a>
-          <div class="caption">
-            <strong>futures.xyz</strong>
-            <time>2026</time>
-            <span>Hyperliquid and HyperEVM terminal concept built around simplicity, visual hierarchy, and fast decision-making.</span>
-            <a href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">Open project</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section>
-      <h2>Market Notes</h2>
-      <p>
-        Public notes on protocol positioning, market structure, stablecoins, and how liquidity moves through crypto systems.
-      </p>
-      <div class="work-stack">
-        <article class="embedded-work">
-          <a class="tweet-card" href="https://x.com/christophorusan/status/2045611398248722799?s=20" target="_blank" rel="noreferrer">
-            <span class="tweet-head">
-              <img class="tweet-avatar" src="BFj1ujC7_400x400.jpg" alt="" loading="lazy" />
-              <span>
-                <span class="tweet-name">Cristobal Silva</span>
-                <span class="tweet-handle">@christophorusan</span>
+          <a class="work-preview article-preview" href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">
+            <span class="visual-panel">
+              <span class="visual-topline">Research Note <span>Stablecoins</span></span>
+              <span class="report-window">
+                <span class="report-title">DeFi Today</span>
+                <span class="report-lines" aria-hidden="true">
+                  <span class="report-line"></span>
+                  <span class="report-line"></span>
+                  <span class="report-line"></span>
+                </span>
+                <span class="preview-row" aria-hidden="true"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span></span>
               </span>
             </span>
-            <span class="tweet-text">Something structural is happening in crypto perps.
-
-The DEX/CEX perp ratio went from 6.3% to 18.7% in 2025. Tripled in one year.
-
-Hyperliquid alone is now 18% of Binance perps volume. It was 2% in October 2024.
-
-$2.95T in 2025 with 11 employees. 2x Coinbase, 12x Robinhood.
-
-Binance's perps volume is down 24% over the past 12 months. Hyperliquid's is up 75%.</span>
-            <img class="tweet-image" src="assets/hyperliquid-media/hype-vs-binance.jpg" alt="HYPE vs Binance market structure research visual" loading="eager" />
-            <span class="tweet-meta">Apr 18, 2026</span>
-            <span class="tweet-engagement" aria-label="Tweet engagement metrics">
-              <span><strong>Replies</strong><em>Live on X</em></span>
-              <span><strong>Reposts</strong><em>Live on X</em></span>
-              <span><strong>Likes</strong><em>Live on X</em></span>
-              <span><strong>Views</strong><em>Live on X</em></span>
-            </span>
           </a>
           <div class="caption">
-            <strong>HYPE vs Binance</strong>
-            <time>Apr 2026</time>
-            <span>Market structure, liquidity, and ecosystem positioning analysis around Hyperliquid.</span>
-            <a href="https://x.com/christophorusan/status/2045611398248722799?s=20" target="_blank" rel="noreferrer">Open original</a>
-          </div>
-        </article>
-
-        <article class="embedded-work">
-          <a class="tweet-card" href="https://x.com/christophorusan/status/2006504610777936264?s=20" target="_blank" rel="noreferrer">
-            <span class="tweet-head">
-              <img class="tweet-avatar" src="BFj1ujC7_400x400.jpg" alt="" loading="lazy" />
-              <span>
-                <span class="tweet-name">Cristobal Silva</span>
-                <span class="tweet-handle">@christophorusan</span>
-              </span>
-            </span>
-            <span class="tweet-text">Sold all my LIT and rotated back to Hyperliquid.
-
-As Hyperliquid retakes first place in perps volume.
-
-Protocols worth farming / looking into: Unit, TradeXYZ, Ventuals, Felix.</span>
-            <img class="tweet-image" src="assets/hyperliquid-media/lighter-to-hype.jpg" alt="Lighter to HYPE market rotation research visual" loading="eager" />
-            <span class="tweet-meta">Dec 31, 2025</span>
-            <span class="tweet-engagement" aria-label="Tweet engagement metrics">
-              <span><strong>Replies</strong><em>Live on X</em></span>
-              <span><strong>Reposts</strong><em>Live on X</em></span>
-              <span><strong>Likes</strong><em>Live on X</em></span>
-              <span><strong>Views</strong><em>Live on X</em></span>
-            </span>
-          </a>
-          <div class="caption">
-            <strong>Lighter to HYPE</strong>
-            <time>Dec 2025</time>
-            <span>Protocol note on how markets, incentives, and distribution connect inside emerging ecosystems.</span>
-            <a href="https://x.com/christophorusan/status/2006504610777936264?s=20" target="_blank" rel="noreferrer">Open original</a>
-          </div>
-        </article>
-
-        <article class="embedded-work">
-          <a class="visual-card" href="https://x.com/christophorusan/status/1958601471290917269?s=20" target="_blank" rel="noreferrer">
-            <span class="media-frame">
-              <video autoplay muted loop playsinline controls preload="metadata" poster="assets/hyperliquid-media/purr-launch-poster.jpg">
-                <source src="assets/hyperliquid-media/purr-launch.mp4" type="video/mp4" />
-              </video>
-            </span>
-          </a>
-          <div class="caption">
-            <strong>PURR Launch</strong>
-            <time>Aug 2025</time>
-            <span>Launch narrative and ecosystem research around the first community token on Hyperliquid.</span>
-            <a href="https://x.com/christophorusan/status/1958601471290917269?s=20" target="_blank" rel="noreferrer">Open original</a>
-          </div>
-        </article>
-
-        <article class="embedded-work">
-          <a class="visual-card" href="https://x.com/christophorusan/status/1943423137015538003?s=20" target="_blank" rel="noreferrer">
-            <span class="media-frame">
-              <video autoplay muted loop playsinline controls preload="metadata">
-                <source src="assets/work-media/hyperliquid-tge.mp4" type="video/mp4" />
-              </video>
-            </span>
-          </a>
-          <div class="caption">
-            <strong>Hyperliquid TGE</strong>
-            <time>Jul 2025</time>
-            <span>Protocol thesis and market analysis for early-stage crypto networks.</span>
-            <a href="https://x.com/christophorusan/status/1943423137015538003?s=20" target="_blank" rel="noreferrer">Open original</a>
-          </div>
-        </article>
-
-        <article class="embedded-work">
-          <a class="visual-card" href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">
-            <span class="media-frame">
-              <img src="assets/hyperliquid-media/x-hyperliquid.jpg" alt="Protocol research interface visual" loading="eager" />
-            </span>
-          </a>
-          <div class="caption">
-            <strong>2024 Protocols to Watch</strong>
+            <strong>DeFi Today</strong>
             <time>2024</time>
-            <span>Stablecoin and DeFi market analysis.</span>
+            <span>Stablecoin and DeFi market analysis, kept here as writing rather than product or campaign work.</span>
             <a href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">Open article</a>
           </div>
         </article>
+
+        <article class="embedded-work">
+          <div class="work-preview concept-preview">
+            <span class="visual-panel">
+              <span class="visual-topline">Documentation Study <span>Systems</span></span>
+              <span class="visual-grid">
+                <span class="market-window" aria-hidden="true">
+                  <span class="market-line"><span></span><strong>Spec</strong></span>
+                  <span class="market-line"><span></span><strong>Docs</strong></span>
+                  <span class="market-line"><span></span><strong>Ship</strong></span>
+                </span>
+                <span class="visual-stat"><strong>02</strong><span>Making technical work legible across teams.</span></span>
+              </span>
+            </span>
+          </div>
+          <div class="caption">
+            <strong>Engineering Notes</strong>
+            <time>2026</time>
+            <span>System notes and diagrams for engineering workflows, kept separate from product and campaign case-study media.</span>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section>
+    <section id="ai-systems">
       <h2>AI Agents and Systems</h2>
       <p>
-        Small systems for protocol interfaces, AI operations, and HyperEVM infrastructure.
+        Technical work around AI agents, company workflows, engineering documentation, and systems that turn messy operating knowledge into repeatable processes.
       </p>
       <div class="work-stack">
         <article class="embedded-work">
-          <a class="visual-card" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">
-            <span class="media-frame">
-              <img src="assets/hyperliquid-media/x-hyperliquid.jpg" alt="HyperEVM protocol interface research visual" loading="eager" />
+          <a class="work-preview agent-preview" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">
+            <span class="visual-panel">
+              <span class="visual-topline">Protocol Experiment <span>HyperEVM</span></span>
+              <span class="agent-window" aria-hidden="true">
+                <span class="agent-node"><strong>Markets</strong><span></span></span>
+                <span class="agent-node"><strong>Risk</strong><span></span></span>
+                <span class="agent-node"><strong>Vaults</strong><span></span></span>
+                <span class="agent-node"><strong>Users</strong><span></span></span>
+                <span class="agent-node"><strong>Rates</strong><span></span></span>
+                <span class="agent-node"><strong>Docs</strong><span></span></span>
+              </span>
             </span>
           </a>
           <div class="caption">
             <strong>Louis</strong>
             <time>2025</time>
-            <span>Morpho fork experiment on HyperEVM.</span>
+            <span>Morpho fork experiment on HyperEVM, represented as protocol architecture rather than borrowed ecosystem imagery.</span>
             <a href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">Open repository</a>
           </div>
         </article>
 
         <article class="embedded-work">
           <a class="visual-card" href="https://github.com/Christophorusan/oslo" target="_blank" rel="noreferrer">
-            <span class="media-frame">
-              <video autoplay muted loop playsinline controls preload="metadata">
-                <source src="assets/work-media/product-direction.mp4" type="video/mp4" />
-              </video>
+            <span class="docs-diagram">
+              <span class="visual-topline">Oslo Engineering Docs <span>Agent System</span></span>
+              <span class="docs-flow" aria-hidden="true">
+                <span class="docs-step"><strong>Spec Intake</strong><span></span><span></span><span></span></span>
+                <span class="docs-step"><strong>Agent Plan</strong><span></span><span></span><span></span></span>
+                <span class="docs-step"><strong>Engineering Docs</strong><span></span><span></span><span></span></span>
+                <span class="docs-step"><strong>Review Loop</strong><span></span><span></span><span></span></span>
+              </span>
+              <span class="docs-map" aria-hidden="true">
+                <span><strong>Company Memory</strong><span></span><span></span><span></span></span>
+                <span><strong>Engineering Surface</strong><span></span><span></span><span></span></span>
+              </span>
             </span>
           </a>
           <div class="caption">
             <strong>Oslo</strong>
             <time>2026</time>
-            <span>AI agent system for company operations, marketing, BD, engineering, and security.</span>
+            <span>AI agent system for company operations and engineering documentation, shown as a docs flow instead of unrelated product media.</span>
             <a href="https://github.com/Christophorusan/oslo" target="_blank" rel="noreferrer">Open repository</a>
           </div>
         </article>
