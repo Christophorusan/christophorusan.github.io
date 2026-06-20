@@ -51,6 +51,7 @@
     .case-gallery { display: grid; gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 430px; }
     .venue-entry .case-gallery { gap: 6px; max-width: 100%; }
     .case-gallery.snape-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; }
+    .venue-combined-gallery { grid-column: 1 / -1; grid-template-columns: repeat(5, minmax(0, 1fr)); max-width: 100%; }
     .case-gallery figure { aspect-ratio: 1 / 1; background: #f7f7f7; border-radius: 8px; overflow: hidden; }
     .case-gallery img { background: #fafafa; display: block; filter: none; height: 100%; object-fit: contain; padding: 6px; width: 100%; }
     .compact-case { padding: 18px 0 20px; }
@@ -88,7 +89,7 @@
     .video-card figcaption span { color: #111; font-size: 14px; font-weight: 520; }
     .video-card figcaption a { color: #777; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .venue-group, .festival-proof-grid { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .poster-wall, .compact-case .photo-grid, .case-gallery, .case-gallery.snape-gallery, .broadcast-case .broadcast-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-wall { gap: 8px; } .poster-card figcaption { display: none; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .venue-group, .festival-proof-grid { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .poster-wall, .compact-case .photo-grid, .case-gallery, .case-gallery.snape-gallery, .venue-combined-gallery, .broadcast-case .broadcast-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-wall { gap: 8px; } .poster-card figcaption { display: none; } }
   </style>
 </head>
 <body>
@@ -214,10 +215,6 @@
           <div class="method-note">
             <span>Built demand locally first, then widened the campaign through radio and paid social. The work connected the festival's regional identity to conversion-focused audiences, making the campaign feel cultural while still being accountable to ticket sales.</span>
           </div>
-          <div class="case-gallery" aria-label="Rendez-vous de l'Erdre campaign photos">
-            <figure><img src="assets/persona-rendezvous/rendezvous-erdre-01.jpg" alt="Rendez-vous de l'Erdre stage view with audience in Nantes" loading="lazy" /></figure>
-            <figure><img src="assets/persona-rendezvous/rendezvous-erdre-03.jpg" alt="Rendez-vous de l'Erdre campaign crowd photo" loading="lazy" /></figure>
-          </div>
         </div>
         <div class="venue-entry">
           <h2>Snape Maltings <time>2023</time></h2>
@@ -227,11 +224,13 @@
           <div class="method-note">
             <span>The challenge was distance: a strong venue, but a harder conversion path. We used BBC Radio and audience development to create legitimacy, then paired it with targeted online ads that reached people likely to travel for a high-value cultural night.</span>
           </div>
-          <div class="case-gallery snape-gallery" aria-label="Snape Maltings campaign photos">
-            <figure><img src="assets/persona-snape/snape-maltings-01.jpg" alt="Snape Maltings venue seating from the stage" loading="lazy" /></figure>
-            <figure><img src="assets/persona-snape/snape-maltings-02.jpg" alt="Snape Maltings campaign photo" loading="lazy" /></figure>
-            <figure><img src="assets/persona-snape/snape-maltings-03-square.jpg" alt="Snape Maltings exterior in Suffolk" loading="lazy" /></figure>
-          </div>
+        </div>
+        <div class="case-gallery venue-combined-gallery" aria-label="Rendez-vous de l'Erdre and Snape Maltings campaign photos">
+          <figure><img src="assets/persona-rendezvous/rendezvous-erdre-01.jpg" alt="Rendez-vous de l'Erdre stage view with audience in Nantes" loading="lazy" /></figure>
+          <figure><img src="assets/persona-rendezvous/rendezvous-erdre-03.jpg" alt="Rendez-vous de l'Erdre campaign crowd photo" loading="lazy" /></figure>
+          <figure><img src="assets/persona-snape/snape-maltings-01.jpg" alt="Snape Maltings venue seating from the stage" loading="lazy" /></figure>
+          <figure><img src="assets/persona-snape/snape-maltings-02.jpg" alt="Snape Maltings campaign photo" loading="lazy" /></figure>
+          <figure><img src="assets/persona-snape/snape-maltings-03-square.jpg" alt="Snape Maltings exterior in Suffolk" loading="lazy" /></figure>
         </div>
       </article>
       <article class="case-study compact-case broadcast-case">
