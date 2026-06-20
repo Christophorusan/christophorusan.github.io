@@ -57,11 +57,14 @@
     }
 
     .media {
+      aspect-ratio: 1 / 1;
+      background: #f8f8f8;
       display: block;
+      height: auto;
+      object-fit: contain;
       width: min(100%, 520px);
       border: 1px solid #ececec;
       border-radius: 10px;
-      background: #f8f8f8;
     }
 
     .source {
@@ -101,7 +104,7 @@
     </header>
 
     <section class="section">
-      <video class="media" controls playsinline preload="metadata">
+      <video class="media" controls playsinline preload="metadata" poster="assets/work-media/product-direction-poster.jpg">
         <source src="assets/work-media/product-direction.mp4" type="video/mp4" />
       </video>
       <a class="source" href="https://x.com/christophorusan/status/2062653950562812222?s=20" target="_blank" rel="noreferrer">Open original</a>

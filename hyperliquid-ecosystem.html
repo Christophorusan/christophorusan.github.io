@@ -93,14 +93,18 @@
     }
 
     video {
+      aspect-ratio: 16 / 9;
       background: #f8f8f8;
       border: 1px solid #ececec;
       border-radius: 10px;
       display: block;
+      height: auto;
+      object-fit: contain;
       width: 100%;
     }
 
     .square video {
+      aspect-ratio: 1 / 1;
       max-width: 520px;
       margin: 0 auto;
     }
@@ -427,7 +431,7 @@
         Early Hyperliquid work focused on organic growth: simple launch artifacts, crypto-native language, and distribution loops that helped make the HYPE TGE feel legible, repeatable, and easy for the community to carry forward.
       </p>
       <figure class="media">
-        <video controls playsinline preload="metadata">
+        <video controls playsinline preload="metadata" poster="assets/work-media/hyperliquid-tge-poster.jpg">
           <source src="assets/work-media/hyperliquid-tge.mp4" type="video/mp4" />
         </video>
         <figcaption class="caption">
@@ -445,7 +449,7 @@
         A concept for where Hyperliquid can go next: P2P challenges, social payments, spendable PnL, spot, perps, borrowing, and yield in one coherent consumer surface.
       </p>
       <figure class="media square">
-        <video controls playsinline preload="metadata">
+        <video controls playsinline preload="metadata" poster="assets/work-media/product-direction-poster.jpg">
           <source src="assets/work-media/product-direction.mp4" type="video/mp4" />
         </video>
         <figcaption class="caption">
@@ -467,11 +471,11 @@
           <p class="artifact-note">
             A launch artifact for PURR, one of the early Hyperliquid-native spot assets. The work treated the token less like a one-off meme and more like a narrative entry point: a simple, recognizable object that helped people understand Hyperliquid as an ecosystem with culture, distribution, and native assets forming around it.
           </p>
-          <a class="work-preview has-media purr-preview" href="https://x.com/christophorusan/status/1833874341932532122?s=20" target="_blank" rel="noreferrer">
+          <div class="work-preview has-media purr-preview">
             <video autoplay muted loop playsinline preload="metadata" poster="assets/hyperliquid-media/purr-launch-poster.jpg">
               <source src="assets/hyperliquid-media/purr-launch.mp4" type="video/mp4" />
             </video>
-          </a>
+          </div>
           <div class="caption">
             <strong>PURR Launch</strong>
             <time>Sep 2024</time>
