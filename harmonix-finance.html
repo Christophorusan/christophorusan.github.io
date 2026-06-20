@@ -17,12 +17,12 @@
     .featured, .story-section { border-top: 1px solid #ededed; margin-bottom: 42px; padding-top: 30px; }
     .featured h2, .story-section h2 { color: #999; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; margin-bottom: 16px; text-transform: uppercase; }
     .featured p, .story-section p { color: #222; font-size: clamp(17px, 2vw, 20px); line-height: 1.5; max-width: 680px; }
-    .media-card { color: #111; display: block; margin: 26px auto 0; max-width: 640px; }
+    .media-card { color: #111; display: block; margin: 26px auto 0; max-width: 640px; width: 100%; }
     .media-link { display: block; text-decoration: none; }
     .media-link:hover { text-decoration: none; }
     .archive-card { margin: 30px auto; }
-    .media-frame { aspect-ratio: 16 / 10; background: #fff; border: 1px solid #ededed; border-radius: 10px; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.04); display: grid; overflow: hidden; }
-    .media-frame.square-frame { aspect-ratio: 1 / 1; }
+    .media-frame { aspect-ratio: 16 / 10; background: #fff; border: 1px solid #ededed; border-radius: 10px; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.04); display: grid; overflow: hidden; place-items: center; }
+    .media-frame.square-frame { aspect-ratio: 16 / 10; }
     .media-frame img, .media-frame video { background: #fff; display: block; filter: none; height: 100%; object-fit: contain; width: 100%; }
     .constructed-visual { background: #f8faf8; display: grid; gap: 22px; height: 100%; min-height: 0; padding: 28px; }
     .visual-kicker { color: #7f8b80; font-size: 12px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; }
@@ -64,7 +64,7 @@
     .story-grid { display: grid; gap: 28px; margin-top: 26px; }
     .story-grid .media-card { margin-top: 0; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .featured, .story-section { margin-bottom: 34px; padding-top: 24px; } .apy-visual { padding: 18px; } .apy-top { grid-template-columns: 1fr; } .apy-metric { min-width: 0; } .apy-chart { height: 190px; } .media-frame { aspect-ratio: 1 / 1; } .constructed-visual { gap: 14px; padding: 20px; } .visual-row, .metrics-grid, .timeline-grid { grid-template-columns: 1fr; } .visual-node, .visual-metric, .visual-step { min-height: 0; } .visual-arrow { font-size: 12px; justify-self: start; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .featured, .story-section { margin-bottom: 34px; padding-top: 24px; } .apy-visual { padding: 18px; } .apy-top { grid-template-columns: 1fr; } .apy-metric { min-width: 0; } .apy-chart { height: 190px; } .constructed-visual { gap: 14px; padding: 20px; } .visual-row, .metrics-grid, .timeline-grid { grid-template-columns: 1fr; } .visual-node, .visual-metric, .visual-step { min-height: 0; } .visual-arrow { font-size: 12px; justify-self: start; } }
   </style>
 </head>
 <body>
