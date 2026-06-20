@@ -70,6 +70,7 @@
     .festival-proof-grid .method-note span { font-size: 12.5px; line-height: 1.4; }
     .festival-proof-grid .photo-grid { gap: 8px; margin-top: 10px; max-width: 100%; }
     .festival-proof-grid .photo-grid.single-column-gallery { max-width: 100%; }
+    .festival-proof-grid .photo-grid.three-up-gallery { --proof-thumb: 100px; grid-template-columns: repeat(3, var(--proof-thumb)); }
     .broadcast-case h2 { font-size: 16px; margin-bottom: 7px; }
     .broadcast-case p { font-size: 13.5px; line-height: 1.45; }
     .broadcast-case .method-note { gap: 3px; margin-top: 9px; }
@@ -261,7 +262,7 @@
           <div class="method-note">
             <span>Used French cultural media as a distribution layer, turning broadcast credibility into demand signals for ticket conversion.</span>
           </div>
-          <div class="photo-grid" aria-label="Jazz a la Villette campaign photos">
+          <div class="photo-grid three-up-gallery" aria-label="Jazz a la Villette campaign photos">
             <img src="assets/persona-jazz-villette/jazz-villette-01.jpg" alt="Jazz a la Villette signage at Grande Halle in Paris" loading="lazy" />
             <img src="assets/persona-jazz-villette/jazz-villette-02.jpg" alt="Jazz a la Villette venue and stage setup" loading="lazy" />
             <img src="assets/persona-jazz-villette/jazz-villette-03.jpg" alt="Jazz a la Villette campaign and broadcast production image" loading="lazy" />
