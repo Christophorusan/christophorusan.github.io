@@ -44,6 +44,7 @@
     .venue-entry { display: grid; gap: 14px; }
     .venue-entry h2 { margin-bottom: -4px; }
     .case-gallery { display: grid; gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 430px; }
+    .case-gallery.snape-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 100%; }
     .case-gallery figure { aspect-ratio: 1 / 1; background: #f7f7f7; border-radius: 8px; overflow: hidden; }
     .case-gallery img { background: #fafafa; display: block; filter: none; height: 100%; object-fit: cover; width: 100%; }
     .compact-case { padding: 18px 0 20px; }
@@ -51,7 +52,7 @@
     .compact-case p { font-size: 15px; line-height: 1.5; max-width: 560px; }
     .compact-case .photo-grid { gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 14px; max-width: 430px; }
     .compact-case .photo-grid .wide-shot { aspect-ratio: 1 / 1; grid-column: auto; object-fit: cover; }
-    .compact-case .broadcast-grid { max-width: 560px; }
+    .compact-case .broadcast-grid { gap: 6px; margin-top: 10px; max-width: 430px; }
     .compact-case .broadcast-grid .wide-shot { aspect-ratio: 1 / 1; grid-column: auto; object-fit: cover; }
     .compact-case .broadcast-grid .contain-shot { background: #fafafa; object-fit: cover; }
     .festival-proof-grid { display: grid; gap: 0 22px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -74,7 +75,7 @@
     .video-card figcaption span { color: #111; font-size: 14px; font-weight: 520; }
     .video-card figcaption a { color: #777; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .festival-proof-grid { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .poster-wall, .compact-case .photo-grid, .case-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .festival-proof-grid { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .poster-wall, .compact-case .photo-grid, .case-gallery, .case-gallery.snape-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
   </style>
 </head>
 <body>
@@ -224,11 +225,11 @@
           </p>
           <div class="method-note">
             <strong>Execution</strong>
-            <span>The challenge was distance: a strong venue, but a harder conversion path. We used BBC Radio and audience development to create legitimacy, then paired it with targeted online ads that reached people likely to travel for a high-value cultural event.</span>
+            <span>The challenge was distance: a strong venue, but a harder conversion path. We used BBC Radio and audience development to create legitimacy, then paired it with targeted online ads that reached people likely to travel for a high-value cultural night.</span>
           </div>
-          <div class="case-gallery" aria-label="Snape Maltings campaign photos">
+          <div class="case-gallery snape-gallery" aria-label="Snape Maltings campaign photos">
             <figure><img src="assets/persona-snape/snape-maltings-01.jpg" alt="Snape Maltings venue seating from the stage" loading="lazy" /></figure>
-            <figure><img src="assets/persona-snape/snape-maltings-02.jpg" alt="Snape Maltings campaign event photo" loading="lazy" /></figure>
+            <figure><img src="assets/persona-snape/snape-maltings-02.jpg" alt="Snape Maltings campaign photo" loading="lazy" /></figure>
             <figure><img src="assets/persona-snape/snape-maltings-03-square.jpg" alt="Snape Maltings exterior in Suffolk" loading="lazy" /></figure>
           </div>
         </div>
@@ -236,11 +237,11 @@
       <article class="case-study compact-case">
         <h2>Broadcast, Radio, and TV <time>2022-2023</time></h2>
         <p>
-          Built broadcast and radio publicity around festival campaigns, working across BBC, London Jazz Festival, RFI, France TV, France 24, Culturebox, and media production teams to move audiences from cultural coverage into ticket demand.
+          Built broadcast and radio publicity across BBC, London Jazz Festival, RFI, France TV, France 24, Culturebox, and media production teams.
         </p>
         <div class="method-note">
-          <strong>How broadcast became distribution</strong>
-          <span>The goal was not coverage for its own sake. TV and radio were used to create authority, explain why the event mattered, and give paid campaigns stronger proof points. Editorial moments became audience signals that could be reused in ads, partner communications, and local press.</span>
+          <strong>Broadcast as distribution</strong>
+          <span>TV and radio created authority, then those editorial moments became proof points for ads, partner communications, and local press.</span>
         </div>
         <div class="photo-grid broadcast-grid" aria-label="Broadcast, radio, and TV publicity photos">
           <img class="wide-shot" src="assets/persona-broadcast/culturebox-studio.jpg" alt="Culturebox France TV studio production setup" loading="lazy" />
