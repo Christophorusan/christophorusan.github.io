@@ -205,124 +205,18 @@
       object-fit: cover;
     }
 
-    .tweet-card {
-      align-items: stretch;
-      aspect-ratio: auto;
-      background: #fff;
-      justify-items: stretch;
-      padding: 22px;
-      text-align: left;
-    }
-
-    .tweet-card.full-tweet {
-      background: #fff;
-      gap: 0;
-      margin-left: auto;
-      margin-right: auto;
+    .x-embed-frame {
+      display: grid;
+      justify-items: center;
+      margin: 0 auto;
       max-width: 560px;
-      padding: 18px;
-    }
-
-    .tweet-card .tweet-head {
-      align-items: center;
-      display: flex;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-
-    .tweet-avatar {
-      background: #111;
-      border-radius: 50%;
-      flex: 0 0 36px;
-      height: 36px;
-      object-fit: cover;
-      width: 36px;
-    }
-
-    .tweet-name {
-      color: #111;
-      display: block;
-      font-size: 14px;
-      font-weight: 560;
-      line-height: 1.2;
-    }
-
-    .tweet-handle {
-      color: #888;
-      display: block;
-      font-size: 13px;
-      line-height: 1.2;
-    }
-
-    .tweet-text {
-      color: #1f1f1f;
-      font-size: 15px;
-      line-height: 1.45;
-      margin-bottom: 12px;
-      white-space: pre-line;
-    }
-
-    .full-tweet .tweet-text {
-      font-size: 15.5px;
-      line-height: 1.48;
-      margin-bottom: 14px;
-    }
-
-    .tweet-image {
-      background: #fafafa;
-      border: 1px solid #ececec;
-      border-radius: 8px;
-      display: block;
-      height: auto;
-      max-height: 360px;
-      object-fit: contain;
       width: 100%;
     }
 
-    .full-tweet .tweet-image {
-      border-radius: 10px;
-      margin-top: 2px;
-    }
-
-    .tweet-image.tall {
-      max-height: 300px;
-    }
-
-    .tweet-meta {
-      color: #999;
-      font-size: 13px;
-      margin-top: 12px;
-    }
-
-    .tweet-engagement {
-      border-top: 1px solid #ededed;
-      color: #8a8a8a;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 18px;
-      margin-top: 14px;
-      padding-top: 10px;
-    }
-
-    .tweet-engagement span {
-      align-items: center;
-      display: inline-flex;
-      gap: 5px;
-      min-width: 0;
-    }
-
-    .tweet-engagement strong {
-      color: #777;
-      font-size: 13px;
-      font-weight: 500;
-      line-height: 1.2;
-    }
-
-    .tweet-engagement em {
-      color: #777;
-      font-size: 13px;
-      font-style: normal;
-      line-height: 1.2;
+    .x-embed-frame .twitter-tweet {
+      margin: 0 !important;
+      max-width: 100% !important;
+      width: 100% !important;
     }
 
     .work-preview::before,
@@ -418,10 +312,6 @@
       section { margin-top: 42px; padding-top: 28px; }
       h2 { font-size: 13px; }
       .work-preview { padding: 26px; }
-      .tweet-card.full-tweet { padding: 14px; }
-      .tweet-image { max-height: 260px; }
-      .tweet-image.tall { max-height: 240px; }
-      .tweet-engagement { gap: 9px 14px; }
     }
   </style>
 </head>
@@ -515,32 +405,12 @@
           <p class="artifact-note">
             Market structure writing on Hyperliquid's position against centralized perps venues, using volume share, distribution, and operating leverage as the core frame. The point was to make a structural shift visible: Hyperliquid was not just growing, it was changing how people compared onchain perps to incumbent exchanges.
           </p>
-          <a class="work-preview tweet-card full-tweet" href="https://x.com/christophorusan/status/2045611398248722799?s=20" target="_blank" rel="noreferrer">
-            <span class="tweet-head">
-              <img class="tweet-avatar" src="BFj1ujC7_400x400.jpg" alt="" loading="lazy" />
-              <span>
-                <span class="tweet-name">Cristobal Silva</span>
-                <span class="tweet-handle">@christophorusan</span>
-              </span>
-            </span>
-            <span class="tweet-text">Something structural is happening in crypto perps.
-
-The DEX/CEX perp ratio went from 6.3% to 18.7% in 2025. Tripled in one year.
-
-Hyperliquid alone is now 18% of Binance perps volume. It was 2% in October 2024.
-
-$2.95T in 2025 with 11 employees. 2x Coinbase, 12x Robinhood.
-
-Binance's perps volume is down 24% over the past 12 months. Hyperliquid's is up 75%.</span>
-            <img class="tweet-image" src="assets/hyperliquid-media/hype-vs-binance.jpg" alt="HYPE vs Binance market structure analysis" loading="lazy" />
-            <span class="tweet-meta">Apr 18, 2026</span>
-            <span class="tweet-engagement" aria-label="Tweet engagement categories">
-              <span><strong>↩</strong><em>Replies</em></span>
-              <span><strong>↻</strong><em>Reposts</em></span>
-              <span><strong>♡</strong><em>Likes</em></span>
-              <span><strong>◷</strong><em>Views</em></span>
-            </span>
-          </a>
+          <div class="x-embed-frame">
+            <blockquote class="twitter-tweet" data-dnt="true" data-theme="light">
+              <p lang="en" dir="ltr">Something structural is happening in crypto perps.<br><br>The DEX/CEX perp ratio went from 6.3% to 18.7% in 2025. Tripled in one year.<br><br>Hyperliquid alone is now 18% of Binance perps volume. It was 2% in October 2024.<br><br>$2.95T in 2025 with 11 employees. 2x Coinbase, 12x Robinhood.<br><br>Binance's perps volume is down 24% over the past 12 months. Hyperliquid's is up 75%.</p>
+              &mdash; Cristobal Silva (@christophorusan) <a href="https://twitter.com/christophorusan/status/2045611398248722799">April 18, 2026</a>
+            </blockquote>
+          </div>
           <div class="caption">
             <strong>HYPE vs Binance</strong>
             <time>Apr 2026</time>
@@ -553,28 +423,12 @@ Binance's perps volume is down 24% over the past 12 months. Hyperliquid's is up 
           <p class="artifact-note">
             Allocation commentary connecting market conviction to ecosystem rotation: how liquidity, incentives, and protocol momentum shape what deserves attention. The Lighter-to-HYPE rotation framed a key competitive moment, using market share and community focus to explain why attention was moving back toward Hyperliquid.
           </p>
-          <a class="work-preview tweet-card full-tweet" href="https://x.com/christophorusan/status/2006504610777936264?s=20" target="_blank" rel="noreferrer">
-            <span class="tweet-head">
-              <img class="tweet-avatar" src="BFj1ujC7_400x400.jpg" alt="" loading="lazy" />
-              <span>
-                <span class="tweet-name">Cristobal Silva</span>
-                <span class="tweet-handle">@christophorusan</span>
-              </span>
-            </span>
-            <span class="tweet-text">Sold all my LIT and rotated back to Hyperliquid.
-
-As Hyperliquid retakes first place in perps volume.
-
-Protocols worth farming / looking into: Unit, TradeXYZ, Ventuals, Felix.</span>
-            <img class="tweet-image tall" src="assets/hyperliquid-media/lighter-to-hype.jpg" alt="Lighter to HYPE allocation logic post image" loading="lazy" />
-            <span class="tweet-meta">Dec 31, 2025</span>
-            <span class="tweet-engagement" aria-label="Tweet engagement categories">
-              <span><strong>↩</strong><em>Replies</em></span>
-              <span><strong>↻</strong><em>Reposts</em></span>
-              <span><strong>♡</strong><em>Likes</em></span>
-              <span><strong>◷</strong><em>Views</em></span>
-            </span>
-          </a>
+          <div class="x-embed-frame">
+            <blockquote class="twitter-tweet" data-dnt="true" data-theme="light">
+              <p lang="en" dir="ltr">Sold all my LIT and rotated back to Hyperliquid.<br><br>As Hyperliquid retakes first place in perps volume.<br><br>Protocols worth farming / looking into: Unit, TradeXYZ, Ventuals, Felix.</p>
+              &mdash; Cristobal Silva (@christophorusan) <a href="https://twitter.com/christophorusan/status/2006504610777936264">December 31, 2025</a>
+            </blockquote>
+          </div>
           <div class="caption">
             <strong>Lighter to HYPE</strong>
             <time>Dec 2025</time>
@@ -588,5 +442,6 @@ Protocols worth farming / looking into: Unit, TradeXYZ, Ventuals, Felix.</span>
 
     <footer>&copy; 2026 Cristobal Silva</footer>
   </main>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
