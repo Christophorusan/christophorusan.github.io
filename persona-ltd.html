@@ -40,11 +40,17 @@
     .method-note span { color: #555; font-size: 14px; line-height: 1.48; }
     .photo-grid { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 18px; max-width: 430px; }
     .photo-grid img { aspect-ratio: 1 / 1; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; height: auto; object-fit: cover; width: 100%; }
-    .venue-group { display: grid; gap: 24px; }
-    .venue-entry { display: grid; gap: 14px; }
-    .venue-entry h2 { margin-bottom: -4px; }
+    .venue-group { display: grid; gap: 0 22px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .venue-group-note { grid-column: 1 / -1; }
+    .venue-entry { display: grid; gap: 9px; padding: 16px 0 18px; }
+    .venue-entry h2 { font-size: 16px; margin-bottom: 0; }
+    .venue-entry p { font-size: 13.5px; line-height: 1.45; }
+    .venue-entry .method-note { gap: 3px; margin-top: 0; }
+    .venue-entry .method-note strong { font-size: 12.5px; }
+    .venue-entry .method-note span { font-size: 12.5px; line-height: 1.4; }
     .case-gallery { display: grid; gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 430px; }
-    .case-gallery.snape-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 100%; }
+    .venue-entry .case-gallery { gap: 6px; max-width: 100%; }
+    .case-gallery.snape-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; }
     .case-gallery figure { aspect-ratio: 1 / 1; background: #f7f7f7; border-radius: 8px; overflow: hidden; }
     .case-gallery img { background: #fafafa; display: block; filter: none; height: 100%; object-fit: cover; width: 100%; }
     .compact-case { padding: 18px 0 20px; }
@@ -63,6 +69,12 @@
     .festival-proof-grid .method-note strong { font-size: 12.5px; }
     .festival-proof-grid .method-note span { font-size: 12.5px; line-height: 1.4; }
     .festival-proof-grid .photo-grid { gap: 6px; margin-top: 10px; max-width: 100%; }
+    .broadcast-case h2 { font-size: 16px; margin-bottom: 7px; }
+    .broadcast-case p { font-size: 13.5px; line-height: 1.45; }
+    .broadcast-case .method-note { gap: 3px; margin-top: 9px; }
+    .broadcast-case .method-note strong { font-size: 12.5px; }
+    .broadcast-case .method-note span { font-size: 12.5px; line-height: 1.4; }
+    .broadcast-case .broadcast-grid { max-width: 330px; }
     .poster-wall { display: grid; gap: 12px 10px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 18px; max-width: 100%; }
     .poster-card { min-width: 0; }
     .poster-card img { aspect-ratio: 3 / 4; background: #fafafa; border: 1px solid #ededed; border-radius: 6px; display: block; filter: none; object-fit: cover; width: 100%; }
@@ -75,7 +87,7 @@
     .video-card figcaption span { color: #111; font-size: 14px; font-weight: 520; }
     .video-card figcaption a { color: #777; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .festival-proof-grid { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .poster-wall, .compact-case .photo-grid, .case-gallery, .case-gallery.snape-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-wall { gap: 8px; } .poster-card figcaption { display: none; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .venue-group, .festival-proof-grid { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .poster-wall, .compact-case .photo-grid, .case-gallery, .case-gallery.snape-gallery, .broadcast-case .broadcast-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-wall { gap: 8px; } .poster-card figcaption { display: none; } }
   </style>
 </head>
 <body>
@@ -223,7 +235,7 @@
           </div>
         </div>
       </article>
-      <article class="case-study compact-case">
+      <article class="case-study compact-case broadcast-case">
         <h2>Broadcast, Radio, and TV <time>2022-2023</time></h2>
         <p>
           Each festival or partner became a public story that could travel across press, radio, TV, institutions, local cultural networks, and paid social.
