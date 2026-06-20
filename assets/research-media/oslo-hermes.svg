@@ -1,53 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
-  <title id="title">Oslo Hermes AI agent diagram</title>
-  <desc id="desc">A diagram of Hermes as the AI operating layer for specs, tasks, engineering docs, review memory, operations, business development, security, and engineering.</desc>
-  <rect width="1200" height="750" fill="#fbfbfa"/>
-  <rect x="64" y="56" width="1072" height="638" rx="28" fill="#fff" stroke="#e8e8e3"/>
-  <text x="104" y="118" fill="#92928c" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">OSLO</text>
-  <text x="104" y="190" fill="#111" font-family="Arial, sans-serif" font-size="76" font-weight="700" letter-spacing="-4">Hermes AI Agent</text>
-  <g transform="translate(104 260)">
-    <rect x="330" y="122" width="332" height="154" rx="24" fill="#111"/>
-    <text x="496" y="184" fill="#fff" font-family="Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle">Hermes</text>
-    <text x="496" y="222" fill="#aaa" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">company memory + execution</text>
-    <g fill="none" stroke="#111" opacity=".18" stroke-width="2">
-      <path d="M330 199H198"/>
-      <path d="M662 199h132"/>
-      <path d="M496 122V30"/>
-      <path d="M496 276v92"/>
-      <path d="M198 199V54"/>
-      <path d="M794 199V54"/>
-      <path d="M198 199v145"/>
-      <path d="M794 199v145"/>
-    </g>
-    <g>
-      <rect x="0" y="0" width="198" height="108" rx="18" fill="#f4f7ff" stroke="#dfe6f7"/>
-      <text x="22" y="46" fill="#111" font-family="Arial, sans-serif" font-size="24" font-weight="700">Specs</text>
-      <rect x="22" y="70" width="118" height="9" rx="5" fill="#111" opacity=".1"/>
-    </g>
-    <g transform="translate(794)">
-      <rect width="198" height="108" rx="18" fill="#f4fbf7" stroke="#dcefe4"/>
-      <text x="22" y="46" fill="#111" font-family="Arial, sans-serif" font-size="24" font-weight="700">Tasks</text>
-      <rect x="22" y="70" width="126" height="9" rx="5" fill="#111" opacity=".1"/>
-    </g>
-    <g transform="translate(0 290)">
-      <rect width="198" height="108" rx="18" fill="#fff8ee" stroke="#eee0c9"/>
-      <text x="22" y="46" fill="#111" font-family="Arial, sans-serif" font-size="24" font-weight="700">Eng Docs</text>
-      <rect x="22" y="70" width="142" height="9" rx="5" fill="#111" opacity=".1"/>
-    </g>
-    <g transform="translate(794 290)">
-      <rect width="198" height="108" rx="18" fill="#f8f5ff" stroke="#e7defa"/>
-      <text x="22" y="46" fill="#111" font-family="Arial, sans-serif" font-size="24" font-weight="700">Review Memory</text>
-      <rect x="22" y="70" width="132" height="9" rx="5" fill="#111" opacity=".1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified Oslo architecture diagram</title>
+  <desc id="desc">A simplified architecture diagram showing Oslo entry points, agent core, signals, skills, units, memory, connectors, safety, outputs, control plane, and observability.</desc>
+  <rect width="1600" height="1000" fill="#172b2c"/>
+  <rect x="56" y="48" width="1488" height="904" rx="34" fill="#1e3839" stroke="#305858" stroke-width="2"/>
+
+  <text x="104" y="118" fill="#e2f6a1" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="5">OSLO</text>
+  <text x="104" y="166" fill="#ffffff" font-family="Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-1">Growth Intelligence Architecture</text>
+  <text x="104" y="204" fill="#a8bdb0" font-family="Arial, sans-serif" font-size="20">Many surfaces, one agent core, shared memory, gated execution.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e2f6a1"/>
+    </marker>
+    <style>
+      .label { fill: #6b8577; font: 700 16px Arial, sans-serif; letter-spacing: 2px; text-transform: uppercase; }
+      .title { fill: #ffffff; font: 700 24px Arial, sans-serif; }
+      .sub { fill: #a8bdb0; font: 16px Arial, sans-serif; }
+      .mono { fill: #a8bdb0; font: 15px "Arial", sans-serif; }
+      .box { fill: #172b2c; stroke: #305858; stroke-width: 2; }
+      .boxSoft { fill: rgba(226,246,161,0.08); stroke: rgba(226,246,161,0.35); stroke-width: 2; }
+      .pill { fill: #223f40; stroke: #305858; stroke-width: 1.5; }
+      .line { stroke: rgba(226,246,161,0.5); stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .thin { stroke: rgba(226,246,161,0.22); stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <g transform="translate(104 250)">
+    <rect class="box" x="0" y="0" width="1392" height="98" rx="18"/>
+    <text class="label" x="32" y="34">Entry Points</text>
+    <g transform="translate(30 48)">
+      <rect class="pill" x="0" y="0" width="186" height="32" rx="16"/>
+      <rect class="pill" x="208" y="0" width="186" height="32" rx="16"/>
+      <rect class="pill" x="416" y="0" width="186" height="32" rx="16"/>
+      <rect class="pill" x="624" y="0" width="186" height="32" rx="16"/>
+      <rect class="pill" x="832" y="0" width="186" height="32" rx="16"/>
+      <rect class="pill" x="1040" y="0" width="284" height="32" rx="16"/>
+      <text class="mono" x="93" y="21" text-anchor="middle">Codex</text>
+      <text class="mono" x="301" y="21" text-anchor="middle">Claude Code</text>
+      <text class="mono" x="509" y="21" text-anchor="middle">Discord</text>
+      <text class="mono" x="717" y="21" text-anchor="middle">Telegram</text>
+      <text class="mono" x="925" y="21" text-anchor="middle">Cron / API</text>
+      <text class="mono" x="1182" y="21" text-anchor="middle">X reactions + app activity</text>
     </g>
   </g>
-  <g transform="translate(104 626)">
-    <rect width="240" height="36" rx="18" fill="#111" opacity=".08"/>
-    <rect x="264" width="240" height="36" rx="18" fill="#111" opacity=".08"/>
-    <rect x="528" width="240" height="36" rx="18" fill="#111" opacity=".08"/>
-    <rect x="792" width="240" height="36" rx="18" fill="#111" opacity=".08"/>
-    <text x="28" y="25" fill="#555" font-family="Arial, sans-serif" font-size="15" font-weight="700">Ops</text>
-    <text x="292" y="25" fill="#555" font-family="Arial, sans-serif" font-size="15" font-weight="700">BD</text>
-    <text x="556" y="25" fill="#555" font-family="Arial, sans-serif" font-size="15" font-weight="700">Security</text>
-    <text x="820" y="25" fill="#555" font-family="Arial, sans-serif" font-size="15" font-weight="700">Engineering</text>
+
+  <path class="line" d="M800 348 V398"/>
+
+  <g transform="translate(420 398)">
+    <rect class="boxSoft" x="0" y="0" width="760" height="128" rx="24"/>
+    <text class="label" x="36" y="38">Agent Core + Gateway</text>
+    <text class="title" x="380" y="76" text-anchor="middle">normalize input -> load context -> route model -> call tools</text>
+    <text class="sub" x="380" y="104" text-anchor="middle">stream result -> save session -> write memory</text>
+  </g>
+
+  <path class="line" d="M800 526 V572"/>
+
+  <g transform="translate(176 572)">
+    <rect class="box" x="0" y="0" width="1248" height="112" rx="18"/>
+    <text class="label" x="32" y="34">Signals + Dispatch</text>
+    <text class="sub" x="32" y="70">watch revenue, deposits, withdrawals, conversion, retention</text>
+    <text class="sub" x="32" y="96">classify user or partner -> enrich profile -> route to unit</text>
+  </g>
+
+  <path class="line" d="M800 684 V728"/>
+
+  <g transform="translate(104 728)">
+    <g>
+      <rect class="box" x="0" y="0" width="296" height="142" rx="18"/>
+      <text class="label" x="24" y="34">Skills</text>
+      <text class="sub" x="24" y="68">flat verb namespace</text>
+      <text class="mono" x="24" y="96">research · recommend · draft</text>
+      <text class="mono" x="24" y="120">track · measure · improve</text>
+    </g>
+    <g transform="translate(332 0)">
+      <rect class="box" x="0" y="0" width="296" height="142" rx="18"/>
+      <text class="label" x="24" y="34">Units</text>
+      <text class="sub" x="24" y="68">six departments</text>
+      <text class="mono" x="24" y="96">BD · Marketing · Engineering</text>
+      <text class="mono" x="24" y="120">Security · Ops · Data</text>
+    </g>
+    <g transform="translate(664 0)">
+      <rect class="box" x="0" y="0" width="296" height="142" rx="18"/>
+      <text class="label" x="24" y="34">Memory + Connectors</text>
+      <text class="sub" x="24" y="68">shared company graph</text>
+      <text class="mono" x="24" y="96">X · Supabase · GitHub</text>
+      <text class="mono" x="24" y="120">Hyperliquid · analytics</text>
+    </g>
+    <g transform="translate(996 0)">
+      <rect class="box" x="0" y="0" width="296" height="142" rx="18"/>
+      <text class="label" x="24" y="34">Safety + Outputs</text>
+      <text class="sub" x="24" y="68">approval gates + guards</text>
+      <text class="mono" x="24" y="96">briefs · DMs · reports</text>
+      <text class="mono" x="24" y="120">posts · files · logged outcomes</text>
+    </g>
+  </g>
+
+  <g transform="translate(144 900)">
+    <path class="thin" d="M0 0 H1312"/>
+    <text class="mono" x="0" y="34">Control plane: skill registry · prompt registry · connector catalog · eval harness · feature flags · session routing</text>
+    <text class="mono" x="0" y="62">Observability spine: traces · logs · metrics · replayable runs · token cost · latency · success rate</text>
   </g>
 </svg>
