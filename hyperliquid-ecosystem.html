@@ -88,8 +88,8 @@
     p + p { margin-top: 18px; }
 
     .media {
-      margin: 30px auto 0;
-      max-width: 640px;
+      margin: 28px auto 0;
+      max-width: 520px;
     }
 
     video {
@@ -105,7 +105,7 @@
 
     .square video {
       aspect-ratio: 1 / 1;
-      max-width: 520px;
+      max-width: 420px;
       margin: 0 auto;
     }
 
@@ -147,7 +147,7 @@
 
     .embedded-work {
       margin: 0 auto;
-      max-width: 640px;
+      max-width: 520px;
       width: 100%;
     }
 
@@ -205,18 +205,22 @@
       object-fit: cover;
     }
 
-    .x-embed-frame {
+    .tweet-summary {
+      background: #fafafa;
+      border: 1px solid #ececec;
+      border-radius: 10px;
+      color: #222;
       display: grid;
-      justify-items: center;
-      margin: 0 auto;
-      max-width: 560px;
-      width: 100%;
+      font-size: 15px;
+      gap: 12px;
+      line-height: 1.5;
+      padding: 18px;
     }
 
-    .x-embed-frame .twitter-tweet {
-      margin: 0 !important;
-      max-width: 100% !important;
-      width: 100% !important;
+    .tweet-summary p {
+      font-size: 15px;
+      line-height: 1.5;
+      max-width: none;
     }
 
     .work-preview::before,
@@ -405,11 +409,8 @@
           <p class="artifact-note">
             Market structure writing on Hyperliquid's position against centralized perps venues, using volume share, distribution, and operating leverage as the core frame. The point was to make a structural shift visible: Hyperliquid was not just growing, it was changing how people compared onchain perps to incumbent exchanges.
           </p>
-          <div class="x-embed-frame">
-            <blockquote class="twitter-tweet" data-dnt="true" data-theme="light">
-              <p lang="en" dir="ltr">Something structural is happening in crypto perps.<br><br>The DEX/CEX perp ratio went from 6.3% to 18.7% in 2025. Tripled in one year.<br><br>Hyperliquid alone is now 18% of Binance perps volume. It was 2% in October 2024.<br><br>$2.95T in 2025 with 11 employees. 2x Coinbase, 12x Robinhood.<br><br>Binance's perps volume is down 24% over the past 12 months. Hyperliquid's is up 75%.</p>
-              &mdash; Cristobal Silva (@christophorusan) <a href="https://twitter.com/christophorusan/status/2045611398248722799">April 18, 2026</a>
-            </blockquote>
+          <div class="tweet-summary">
+            <p>Something structural is happening in crypto perps: DEX/CEX perp share tripled in 2025, Hyperliquid reached 18% of Binance perps volume, and the comparison shifted from product growth to exchange-level market structure.</p>
           </div>
           <div class="caption">
             <strong>HYPE vs Binance</strong>
@@ -423,11 +424,8 @@
           <p class="artifact-note">
             Allocation commentary connecting market conviction to ecosystem rotation: how liquidity, incentives, and protocol momentum shape what deserves attention. The Lighter-to-HYPE rotation framed a key competitive moment, using market share and community focus to explain why attention was moving back toward Hyperliquid.
           </p>
-          <div class="x-embed-frame">
-            <blockquote class="twitter-tweet" data-dnt="true" data-theme="light">
-              <p lang="en" dir="ltr">Sold all my LIT and rotated back to Hyperliquid.<br><br>As Hyperliquid retakes first place in perps volume.<br><br>Protocols worth farming / looking into: Unit, TradeXYZ, Ventuals, Felix.</p>
-              &mdash; Cristobal Silva (@christophorusan) <a href="https://twitter.com/christophorusan/status/2006504610777936264">December 31, 2025</a>
-            </blockquote>
+          <div class="tweet-summary">
+            <p>Allocation note on rotating conviction back toward Hyperliquid as it regained perps leadership, with adjacent ecosystem protocols framed as places where liquidity and attention were beginning to compound.</p>
           </div>
           <div class="caption">
             <strong>Lighter to HYPE</strong>
@@ -442,6 +440,5 @@
 
     <footer>&copy; 2026 Cristobal Silva</footer>
   </main>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
