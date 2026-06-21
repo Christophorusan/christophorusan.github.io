@@ -138,16 +138,16 @@
     }
 
     .artifact-note {
-      color: #444;
-      font-size: 15px;
+      color: #222;
+      font-size: clamp(18px, 2vw, 22px);
       line-height: 1.5;
-      margin: 8px auto 14px;
-      max-width: 620px;
+      margin: 0 auto 22px;
+      max-width: 700px;
     }
 
     .embedded-work {
       margin: 0 auto;
-      max-width: 520px;
+      max-width: 700px;
       width: 100%;
     }
 
@@ -178,6 +178,7 @@
       color: #999;
       display: inline-block;
       font-size: 12px;
+      margin-left: calc((100% - min(520px, 100%)) / 2);
       margin-top: 8px;
     }
 
@@ -195,6 +196,12 @@
       position: relative;
       text-align: center;
       text-decoration: none;
+    }
+
+    .embedded-work > .work-preview {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 520px;
     }
 
     .work-preview:hover {
