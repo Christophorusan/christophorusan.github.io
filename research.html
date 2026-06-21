@@ -315,35 +315,31 @@
       width: 100%;
     }
 
-    .piece-intro {
-      color: #6f6f6f;
-      font-size: 14px;
-      line-height: 1.55;
-      margin: 0 0 12px;
-      max-width: 560px;
-    }
-
-    .artifact-meta {
-      color: #777;
-      display: grid;
-      gap: 4px;
-      font-size: 14px;
-      line-height: 1.45;
-      margin: 0 0 12px;
-      max-width: 560px;
-    }
-
-    .artifact-meta strong {
+    .piece-title {
       color: #111;
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 560;
+      line-height: 1.2;
+      margin: 0 auto 10px;
+      max-width: 680px;
     }
 
-    .artifact-meta time {
-      color: #aaa;
-      font-size: 12px;
-      font-weight: 500;
-      margin-top: -2px;
+    .piece-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .piece-title a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .piece-intro {
+      color: #222;
+      font-size: clamp(17px, 2vw, 20px);
+      line-height: 1.5;
+      margin: 0 auto 20px;
+      max-width: 680px;
     }
 
     .media-frame,
@@ -996,26 +992,19 @@
       opacity: 0.14;
     }
 
-    .caption {
-      color: #777;
-      display: grid;
-      gap: 4px;
-      font-size: 14px;
-      line-height: 1.45;
-      margin-top: 10px;
-    }
-
-    .caption strong {
-      color: #111;
-      font-size: 15px;
-      font-weight: 560;
-    }
-
-    .caption time {
-      color: #aaa;
+    .source-link {
+      color: #999;
+      display: inline-block;
       font-size: 12px;
-      font-weight: 500;
-      margin-top: -2px;
+      margin-left: calc((100% - min(640px, 100%)) / 2);
+      margin-top: 8px;
+      text-decoration: none;
+    }
+
+    .source-link:hover {
+      color: #111;
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
 
     footer {
@@ -1063,23 +1052,21 @@
     <section id="technical-writing">
       <h2>Technical Writing</h2>
       <p>
-        This section is for the thinking layer: notes, protocol research, interface studies, and technical explanations that sit outside the specific Hyperliquid, Harmonix, or Persona case studies.
+        This section is for the thinking layer: protocol research, market notes, growth frameworks, and technical explanations that sit outside the specific Hyperliquid, Harmonix, or Persona case studies.
       </p>
       <div class="work-stack">
         <article class="embedded-work">
+          <h3 class="piece-title"><a href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">DeFi Today</a></h3>
+          <p class="piece-intro">A public article about stablecoins and DeFi market structure, framed as writing rather than product or campaign work. The piece uses a broader market lens to explain why crypto-native financial rails can compete with fiat-based yield and distribution.</p>
           <a class="work-preview article-preview" href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">
             <img class="research-media-image full-image" src="assets/research-media/defi-today.webp" alt="DeFi Today stablecoin research note visual" loading="lazy">
           </a>
-          <div class="caption">
-            <strong>DeFi Today</strong>
-            <time>2024</time>
-            <span>Stablecoin and DeFi market analysis, kept here as writing rather than product or campaign work.</span>
-            <a href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">Open article</a>
-          </div>
+          <a class="source-link" href="https://medium.com/@christophosu/defi-today-outperforming-fiat-with-stablecoins-49105cc6dc2f" target="_blank" rel="noreferrer">DeFi Today · 2024 · Open article</a>
         </article>
 
         <article class="embedded-work">
-          <p class="piece-intro">A compact operating map for organic crypto protocol growth: how brand, product, partnerships, community, and data become one repeatable distribution system.</p>
+          <h3 class="piece-title"><a href="https://www.notion.so/Growth-Strategy-2c5cf7cfca1180f9be61e1ff5536677d" target="_blank" rel="noreferrer">Growth Strategy</a></h3>
+          <p class="piece-intro">A compact operating map for marketing a crypto protocol organically: social growth, funnel design, brand positioning, product distribution, partner and agency coordination, community incentives, and data-led performance tracking.</p>
           <a class="work-preview strategy-preview" href="https://www.notion.so/Growth-Strategy-2c5cf7cfca1180f9be61e1ff5536677d" target="_blank" rel="noreferrer">
             <div class="strategy-label">Table of contents</div>
             <div class="strategy-title">Growth Strategy</div>
@@ -1114,38 +1101,25 @@
               <span>Analytics</span>
             </div>
           </a>
-          <div class="caption">
-            <strong>Growth Strategy</strong>
-            <time>2025</time>
-            <span>Framework for marketing a crypto protocol organically through social growth, brand positioning, product distribution, partner and agency coordination, community incentives, and data-led performance tracking.</span>
-            <a href="https://www.notion.so/Growth-Strategy-2c5cf7cfca1180f9be61e1ff5536677d" target="_blank" rel="noreferrer">Open note</a>
-          </div>
+          <a class="source-link" href="https://www.notion.so/Growth-Strategy-2c5cf7cfca1180f9be61e1ff5536677d" target="_blank" rel="noreferrer">Growth Strategy · 2025 · Open note</a>
         </article>
 
         <article class="embedded-work">
-          <div class="artifact-meta">
-            <strong>X Research Piece</strong>
-            <time>Jul 2025</time>
-            <span>Original X artifact embedded directly so the post media and context render from the source.</span>
-            <a href="https://x.com/christophorusan/status/1943423137015538003?s=20" target="_blank" rel="noreferrer">Open original</a>
-          </div>
+          <h3 class="piece-title"><a href="https://x.com/christophorusan/status/1943423137015538003?s=20" target="_blank" rel="noreferrer">Felix and Spot Equities</a></h3>
           <p class="piece-intro">An article about Felix, a CDP protocol built on HyperEVM, and how its launch of spot stocks and equities extended the Hyperliquid ecosystem into a broader onchain market surface.</p>
           <a class="work-preview x-source-preview" href="https://x.com/christophorusan/status/1943423137015538003?s=20" target="_blank" rel="noreferrer">
             <img class="research-media-image" src="assets/research-media/x-research-piece-2025.jpg" alt="X research piece article cover image" loading="lazy">
           </a>
+          <a class="source-link" href="https://x.com/christophorusan/status/1943423137015538003?s=20" target="_blank" rel="noreferrer">Felix and Spot Equities · Jul 2025 · Open original</a>
         </article>
 
         <article class="embedded-work">
-          <div class="artifact-meta">
-            <strong>X Research Note</strong>
-            <time>Mar 2026</time>
-            <span>Original X artifact embedded directly so the post media and context render from the source.</span>
-            <a href="https://x.com/christophorusan/status/2035471123614470655?s=20" target="_blank" rel="noreferrer">Open original</a>
-          </div>
+          <h3 class="piece-title"><a href="https://x.com/christophorusan/status/2035471123614470655?s=20" target="_blank" rel="noreferrer">24/7 Perps on Hyperliquid</a></h3>
           <p class="piece-intro">A research note on 24/7 perpetual markets on Hyperliquid: how always-on synthetic exposure can be built through Hyperliquid's matching engine, oracle-driven pricing, margin design, and liquidity rails rather than relying on traditional market hours.</p>
           <a class="work-preview x-source-preview" href="https://x.com/christophorusan/status/2035471123614470655?s=20" target="_blank" rel="noreferrer">
             <img class="research-media-image" src="assets/research-media/x-research-note-2026.jpg" alt="X research note media image" loading="lazy">
           </a>
+          <a class="source-link" href="https://x.com/christophorusan/status/2035471123614470655?s=20" target="_blank" rel="noreferrer">24/7 Perps on Hyperliquid · Mar 2026 · Open original</a>
         </article>
       </div>
     </section>
@@ -1157,27 +1131,21 @@
       </p>
       <div class="work-stack">
         <article class="embedded-work">
+          <h3 class="piece-title"><a href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">Louis</a></h3>
+          <p class="piece-intro">A HyperEVM protocol experiment around vault routing and lending-market architecture, shown here as the system diagram itself: user flow, swap routing, the Louis Vault, and downstream integrations across HyperLend, HypurrFi, and Felix.</p>
           <a class="work-preview agent-preview" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">
             <img class="research-media-image contain-image" src="assets/research-media/louis.jpg" alt="Louis HyperEVM protocol experiment architecture visual" loading="lazy">
           </a>
-          <div class="caption">
-            <strong>Louis</strong>
-            <time>2025</time>
-            <span>Morpho fork experiment on HyperEVM, represented as protocol architecture rather than borrowed ecosystem imagery.</span>
-            <a href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">Open repository</a>
-          </div>
+          <a class="source-link" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">Louis · 2025 · Open repository</a>
         </article>
 
         <article class="embedded-work">
+          <h3 class="piece-title"><a href="https://christophorusan.github.io/oslo-architecture/" target="_blank" rel="noreferrer">Oslo and Hermes</a></h3>
+          <p class="piece-intro">A simplified architecture view for an AI agent system where Hermes turns company memory, engineering documentation, tasks, reviews, BD context, operations, and security workflows into a repeatable operating layer.</p>
           <a class="work-preview system-preview" href="https://christophorusan.github.io/oslo-architecture/" target="_blank" rel="noreferrer">
             <img class="research-media-image" src="assets/research-media/oslo-hermes.svg" alt="Oslo Hermes AI agent documentation workflow diagram" loading="lazy">
           </a>
-          <div class="caption">
-            <strong>Oslo</strong>
-            <time>2026</time>
-            <span>AI agent system with Hermes as the operating layer for company memory, engineering documentation, tasks, review loops, BD, operations, and security workflows.</span>
-            <a href="https://christophorusan.github.io/oslo-architecture/" target="_blank" rel="noreferrer">Open architecture</a>
-          </div>
+          <a class="source-link" href="https://christophorusan.github.io/oslo-architecture/" target="_blank" rel="noreferrer">Oslo and Hermes · 2026 · Open architecture</a>
         </article>
       </div>
     </section>
