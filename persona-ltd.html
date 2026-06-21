@@ -84,10 +84,11 @@
     .poster-card img { aspect-ratio: 1 / 1; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; object-fit: contain; padding: 6px; width: 100%; }
     .poster-card figcaption { color: #777; font-size: 11.5px; line-height: 1.3; margin-top: 5px; }
     .poster-card figcaption span { color: #111; display: block; font-size: 12.5px; font-weight: 520; letter-spacing: -0.01em; }
-    .media-stack { display: grid; gap: 14px; margin: 18px auto 0; max-width: 500px; }
-    .video-card { margin: 0; }
-    .video-card .visual-note { color: #333; font-size: 13.5px; line-height: 1.45; margin-bottom: 8px; max-width: 500px; }
+    .media-stack { display: grid; gap: 14px; margin: 18px 0 0; max-width: 100%; }
+    .video-card { align-items: start; display: grid; gap: 18px; grid-template-columns: minmax(150px, 0.38fr) 1fr; margin: 0; }
+    .video-card .visual-note { color: #333; font-size: 13.5px; line-height: 1.45; margin-bottom: 0; max-width: none; text-align: left; }
     .video-card .visual-note strong { color: #111; display: block; font-size: 14px; font-weight: 520; margin-bottom: 2px; }
+    .video-card .video-reference { min-width: 0; }
     .video-card .source-link { color: #777; display: inline-block; font-size: 12px; margin-top: 7px; text-decoration: none; }
     .video-card .source-link:hover { color: #111; text-decoration: underline; text-underline-offset: 4px; }
     .video-card video { aspect-ratio: 16 / 9; background: #f8f8f8; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; object-fit: cover; width: 100%; }
@@ -95,7 +96,7 @@
     .video-card figcaption span { color: #111; font-size: 14px; font-weight: 520; }
     .video-card figcaption a { color: #777; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .venue-group, .festival-proof-grid { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .case-gallery { --proof-thumb: min(128px, calc((100vw - 44px) / 2)); grid-template-columns: repeat(2, var(--proof-thumb)); max-width: 100%; } .poster-wall { gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .venue-group, .festival-proof-grid { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .case-gallery { --proof-thumb: min(128px, calc((100vw - 44px) / 2)); grid-template-columns: repeat(2, var(--proof-thumb)); max-width: 100%; } .video-card { gap: 8px; grid-template-columns: 1fr; } .poster-wall { gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
   </style>
 </head>
 <body>
@@ -131,20 +132,24 @@
               <strong>Arweave</strong>
               Campaign and publicity work around permanent storage, cultural infrastructure, and ecosystem storytelling.
             </p>
-            <video autoplay muted loop playsinline controls preload="metadata" poster="assets/arweave-media/arweave-campaign-poster.jpg">
-              <source src="assets/arweave-media/arweave-campaign.mp4" type="video/mp4" />
-            </video>
-            <a class="source-link" href="https://x.com/christophorusan/status/1788154455432556613?s=20" target="_blank" rel="noreferrer">Arweave · May 2024 · Open original</a>
+            <div class="video-reference">
+              <video autoplay muted loop playsinline controls preload="metadata" poster="assets/arweave-media/arweave-campaign-poster.jpg">
+                <source src="assets/arweave-media/arweave-campaign.mp4" type="video/mp4" />
+              </video>
+              <a class="source-link" href="https://x.com/christophorusan/status/1788154455432556613?s=20" target="_blank" rel="noreferrer">Arweave · May 2024 · Open original</a>
+            </div>
           </figure>
           <figure class="video-card">
             <p class="visual-note">
               <strong>Sagrada Familia x AR.IO</strong>
               Culture and infrastructure campaign work connecting public heritage, permanent storage, and media distribution.
             </p>
-            <video autoplay muted loop playsinline controls preload="metadata" poster="assets/arweave-media/sagrada-familia-ario-poster.jpg">
-              <source src="assets/arweave-media/sagrada-familia-ario.mp4" type="video/mp4" />
-            </video>
-            <a class="source-link" href="https://x.com/christophorusan/status/1839326982477414407?s=20" target="_blank" rel="noreferrer">Sagrada Familia x AR.IO · Sep 2024 · Open original</a>
+            <div class="video-reference">
+              <video autoplay muted loop playsinline controls preload="metadata" poster="assets/arweave-media/sagrada-familia-ario-poster.jpg">
+                <source src="assets/arweave-media/sagrada-familia-ario.mp4" type="video/mp4" />
+              </video>
+              <a class="source-link" href="https://x.com/christophorusan/status/1839326982477414407?s=20" target="_blank" rel="noreferrer">Sagrada Familia x AR.IO · Sep 2024 · Open original</a>
+            </div>
           </figure>
         </div>
       </article>
