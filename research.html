@@ -352,6 +352,13 @@
       overflow: hidden;
     }
 
+    .work-preview,
+    .tweet-card {
+      margin: 22px auto 0;
+      max-width: 520px;
+      width: 100%;
+    }
+
     .media-frame {
       aspect-ratio: 16 / 10;
     }
@@ -1007,7 +1014,7 @@
       color: #999;
       display: inline-block;
       font-size: 12px;
-      margin-left: calc((100% - min(640px, 100%)) / 2);
+      margin-left: calc((100% - min(520px, 100%)) / 2);
       margin-top: 8px;
       text-decoration: none;
     }
@@ -1031,6 +1038,8 @@
       .research-visual-strip { grid-template-columns: 1fr; }
       section { margin-top: 42px; padding-top: 28px; }
       h2 { font-size: 13px; }
+      .work-preview,
+      .tweet-card { max-width: 100%; }
       .work-preview { padding: 26px; }
       .concept-preview,
       .article-preview,
