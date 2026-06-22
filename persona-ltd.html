@@ -49,6 +49,7 @@
     .venue-entry .method-note strong { font-size: 12.5px; }
     .venue-entry .method-note span { font-size: 15px; line-height: 1.5; }
     .venue-entry .case-gallery { gap: 8px; max-width: 100%; }
+    .venue-entry .rendez-gallery { grid-template-columns: repeat(2, var(--proof-thumb)); margin-left: auto; margin-right: auto; width: max-content; }
     .case-gallery.snape-gallery { max-width: 100%; }
     .venue-combined-gallery { grid-column: 1 / -1; max-width: 100%; }
     .case-gallery figure { aspect-ratio: 1 / 1; background: #f7f7f7; border-radius: 8px; height: var(--proof-thumb); overflow: hidden; width: var(--proof-thumb); }
@@ -250,7 +251,7 @@
           <div class="method-note">
             <span>Built demand locally first, then widened the campaign through radio and paid social. The work connected the festival's regional identity to conversion-focused audiences, making the campaign feel cultural while still being accountable to ticket sales.</span>
           </div>
-          <div class="case-gallery" aria-label="Rendez-vous de l'Erdre campaign photos">
+          <div class="case-gallery rendez-gallery" aria-label="Rendez-vous de l'Erdre campaign photos">
             <figure><img src="assets/persona-rendezvous/rendezvous-erdre-01.jpg" alt="Rendez-vous de l'Erdre stage view with audience in Nantes" loading="lazy" /></figure>
             <figure><img src="assets/persona-rendezvous/rendezvous-erdre-03.jpg" alt="Rendez-vous de l'Erdre campaign crowd photo" loading="lazy" /></figure>
           </div>
