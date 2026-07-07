@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 :root {
-  --paper: #fff;
-  --ink: #10100e;
+  --paper: #fbfaf7;
+  --ink: #1c1c19;
   --muted: #7b7b76;
   --faint: #aaa9a3;
-  --rule: #e8e7e2;
-  --soft: #f7f7f4;
+  --rule: #e8e6df;
+  --soft: #f4f3ee;
   --measure: 640px;
   --wide-measure: 760px;
   --mobile-measure: 346px;
@@ -19,7 +21,7 @@ html {
 body {
   background: var(--paper) !important;
   color: var(--ink) !important;
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   letter-spacing: 0 !important;
   overflow-x: hidden;
@@ -57,7 +59,7 @@ a:hover {
 
 h1 {
   color: var(--ink) !important;
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: 500 !important;
   letter-spacing: -0.018em !important;
 }
@@ -97,6 +99,7 @@ footer,
 .video-card .source-link,
 .arweave-piece .source-link {
   color: var(--faint) !important;
+  font-variant-numeric: tabular-nums;
 }
 
 .back {
