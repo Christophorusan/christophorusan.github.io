@@ -153,6 +153,12 @@ footer,
   text-transform: none !important;
 }
 
+.persona-page .work-list,
+.persona-page .case-study,
+.persona-page .closing-note {
+  max-width: 620px;
+}
+
 .persona-page .lead-case h2 {
   margin-bottom: 14px !important;
 }
