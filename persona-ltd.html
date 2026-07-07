@@ -23,12 +23,12 @@
     .work-static:hover span { text-decoration: none; }
     .case-study { border-top: 1px solid #ededed; padding: 22px 0 24px; }
     .lead-case { padding: 30px 0 34px; }
-    .case-study h2 { display: flex; flex-direction: column; font-size: 19px; font-weight: 520; letter-spacing: -0.015em; line-height: 1.2; margin-bottom: 10px; }
+    .case-study h2 { color: #111; display: block; font-size: 18px; font-weight: 620; letter-spacing: -0.012em; line-height: 1.25; margin-bottom: 10px; text-transform: none; }
     .case-study time { color: #aaa; font-size: 12px; font-weight: 500; letter-spacing: 0; margin-top: 4px; }
     .case-study p { color: #333; font-size: 16px; line-height: 1.58; max-width: 620px; }
     .case-study p + p { margin-top: 10px; }
     .case-study a { color: #111; text-decoration: underline; text-underline-offset: 4px; }
-    .lead-case h2 { color: #9a9a9a; font-size: 14px; font-weight: 560; letter-spacing: 0; margin-bottom: 18px; }
+    .lead-case h2 { color: #111; font-size: 18px; font-weight: 620; letter-spacing: -0.012em; margin-bottom: 14px; }
     .lead-case time { color: #b0b0b0; font-size: 12px; margin-top: 5px; }
     .lead-case p { color: #222; font-size: 16px; line-height: 1.58; max-width: 620px; }
     .lead-case p + p { margin-top: 16px; }
@@ -37,20 +37,13 @@
     .pov-block { display: grid; gap: 10px; margin-top: 18px; max-width: 640px; }
     .pov-block p { color: #333; font-size: 16px; line-height: 1.58; }
     .pov-block strong { color: #111; font-weight: 560; }
-    .method-note { color: #444; display: grid; gap: 5px; margin-top: 12px; max-width: 560px; }
-    .method-note strong { color: #111; font-size: 14px; font-weight: 560; letter-spacing: -0.01em; line-height: 1.25; }
-    .method-note span { color: #555; font-size: 16px; line-height: 1.58; }
     .arweave-feature, .arweave-media, .photo-grid, .case-gallery, .poster-wall { margin-left: auto; margin-right: auto; }
     .photo-grid, .case-gallery { --proof-thumb: 106px; display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, var(--proof-thumb)); justify-content: center; margin-top: 18px; max-width: 100%; width: fit-content; }
     .photo-grid img { aspect-ratio: 1 / 1; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; height: var(--proof-thumb); object-fit: contain; padding: 6px; width: var(--proof-thumb); }
     .venue-group { display: grid; gap: 0; grid-template-columns: 1fr; }
-    .venue-group-note { grid-column: 1 / -1; }
     .venue-entry { display: grid; gap: 9px; padding: 16px 0 18px; }
-    .venue-entry h2 { font-size: 16px; margin-bottom: 0; }
+    .venue-entry h2 { font-size: 17px; margin-bottom: 0; }
     .venue-entry p { font-size: 16px; line-height: 1.58; }
-    .venue-entry .method-note { gap: 3px; margin-top: 0; }
-    .venue-entry .method-note strong { font-size: 12.5px; }
-    .venue-entry .method-note span { font-size: 16px; line-height: 1.58; }
     .venue-entry .case-gallery { --proof-thumb: 124px; gap: 8px; grid-template-columns: repeat(3, var(--proof-thumb)); margin-left: auto; margin-right: auto; max-width: 100%; width: max-content; }
     .venue-entry .rendez-gallery { grid-template-columns: repeat(2, var(--proof-thumb)); }
     .case-gallery.snape-gallery { max-width: 100%; }
@@ -69,17 +62,11 @@
     .festival-proof-grid .compact-case { padding: 16px 0 18px; }
     .festival-proof-grid .compact-case h2 { font-size: 16px; margin-bottom: 7px; }
     .festival-proof-grid .compact-case p { font-size: 16px; line-height: 1.58; }
-    .festival-proof-grid .method-note { gap: 3px; margin-top: 9px; }
-    .festival-proof-grid .method-note strong { font-size: 12.5px; }
-    .festival-proof-grid .method-note span { font-size: 16px; line-height: 1.58; }
     .festival-proof-grid .photo-grid { --proof-thumb: 124px; gap: 8px; grid-template-columns: repeat(2, var(--proof-thumb)); margin-left: auto; margin-right: auto; margin-top: 10px; max-width: 100%; width: max-content; }
     .festival-proof-grid .photo-grid.single-column-gallery { grid-template-columns: repeat(2, var(--proof-thumb)); max-width: 100%; }
     .festival-proof-grid .photo-grid.three-up-gallery { --proof-thumb: 118px; grid-template-columns: repeat(3, var(--proof-thumb)); }
     .broadcast-case h2 { font-size: 16px; margin-bottom: 7px; }
     .broadcast-case p { font-size: 16px; line-height: 1.58; }
-    .broadcast-case .method-note { gap: 3px; margin-top: 9px; }
-    .broadcast-case .method-note strong { font-size: 12.5px; }
-    .broadcast-case .method-note span { font-size: 16px; line-height: 1.58; }
     .broadcast-case .broadcast-grid { max-width: 100%; }
     .broadcast-case .broadcast-grid .zoom-shot { object-fit: cover; object-position: 52% 58%; padding: 0; }
     .broadcast-case .broadcast-grid .media-signage-shot { object-fit: cover; object-position: 50% 48%; padding: 0; }
@@ -117,7 +104,7 @@
   </style>
   <link rel="stylesheet" href="assets/site-aesthetic.css" />
 </head>
-<body>
+<body class="persona-page">
   <main class="container">
     <a class="back" href="index.html">↩ Index</a>
     <header>
@@ -128,7 +115,7 @@
 
     <nav class="work-list" aria-label="Persona LTD work">
       <article class="case-study lead-case">
-        <h2>Agency <time>Dublin, Ireland · Remote</time></h2>
+        <h2>Agency</h2>
         <p>
           Persona grew into a 25-person remote team across more than five countries, working across online ads, radio, television, print press, podcasts, and institutional media.
         </p>
@@ -140,7 +127,7 @@
         </p>
       </article>
       <article class="case-study">
-        <h2>Arweave <time>2024</time></h2>
+        <h2>Arweave</h2>
         <p>
           Persona's crypto work focused on translating infrastructure into public narratives. For Arweave and AR.IO, that meant turning permanent storage, gateway networks, and cultural preservation into campaigns people could understand.
         </p>
@@ -176,14 +163,13 @@
         </div>
       </article>
       <article class="case-study">
-        <h2>Festival Advertising <time>2018-2024</time></h2>
+        <h2>Festival Advertising</h2>
         <p>
           A selection of festivals I helped sell out and build advertising for across Europe. Many were still relying on print-heavy advertising habits; my work focused on making campaigns more profitable, sustainable, and repeatable by pairing radio, television, local media, and cultural partnerships with online ad strategies that could be measured, amplified, and reused across markets.
         </p>
-        <div class="method-note">
-          <strong>Market read</strong>
-          <span>The work started before spending: mapping the venue, audience geography, ticket velocity, historic media habits, and the gap between cultural relevance and actual demand.</span>
-        </div>
+        <p>
+          The work started before spending: mapping the venue, audience geography, ticket velocity, historic media habits, and the gap between cultural relevance and actual demand.
+        </p>
         <div class="poster-wall" aria-label="Selection of festival advertising posters">
           <figure class="poster-card">
             <img src="assets/persona-posters/fiestasete-2024.jpg" alt="Fiest'a Sete 2024 festival poster" loading="lazy" />
@@ -236,14 +222,13 @@
         </div>
       </article>
       <article class="case-study compact-case broadcast-case">
-        <h2>Broadcast, Radio, TV, and Podcasts <time>2020-2024</time></h2>
+        <h2>Broadcast, Radio, TV, and Podcasts</h2>
         <p>
           Media work across live TV, radio, podcasts, and printed press: shaping appearances, production moments, interviews, and editorial coverage so public attention could become a useful distribution layer.
         </p>
-        <div class="method-note">
-          <strong>Media as distribution</strong>
-          <span>The work treated broadcast and press as more than visibility. Live TV, radio, podcasts, and print created authority, then those moments became proof points for ads, partner communications, local media, and audience development.</span>
-        </div>
+        <p>
+          The work treated broadcast and press as more than visibility. Live TV, radio, podcasts, and print created authority, then those moments became proof points for ads, partner communications, local media, and audience development.
+        </p>
         <div class="photo-grid broadcast-grid" aria-label="Broadcast, radio, TV, and podcast advertising photos">
           <img class="wide-shot" src="assets/persona-broadcast/culturebox-studio.jpg" alt="Culturebox France TV studio production setup" loading="lazy" />
           <img class="wide-shot" src="assets/persona-broadcast/culturebox-france-tv.jpg" alt="Culturebox France TV broadcast advertising screenshot" loading="lazy" />
@@ -253,19 +238,18 @@
         </div>
       </article>
       <article class="case-study compact-case venue-group">
-        <h2>Venue Case Studies <time>2023</time></h2>
-        <div class="method-note venue-group-note">
-          <strong>Accountable campaigns</strong>
-          <span>Print-heavy budgets were moved into tracked online ad systems with audience testing, retargeting, and ROI discipline, then compounded through broadcast, editorial coverage, partner lists, and city media.</span>
-        </div>
+        <h2>Venue Case Studies</h2>
+        <p>
+          Print-heavy budgets were moved into tracked online ad systems with audience testing, retargeting, and ROI discipline, then compounded through broadcast, editorial coverage, partner lists, and city media.
+        </p>
         <div class="venue-entry">
-          <h2>London Jazz Festival x Southbank Centre <time>2023</time></h2>
+          <h2>London Jazz Festival x Southbank Centre</h2>
           <p>
             London Jazz Festival trusted me with advertising for Royal Festival Hall at Southbank Centre, where the work prioritized measurable online ads over print and radio-heavy spend.
           </p>
-          <div class="method-note">
-            <span>The campaign treated one of London's most visible cultural venues as an accountability problem: use the authority of the institution, but move budget toward channels that could be tested, repeated, and tied back to demand.</span>
-          </div>
+          <p>
+            The campaign treated one of London's most visible cultural venues as an accountability problem: use the authority of the institution, but move budget toward channels that could be tested, repeated, and tied back to demand.
+          </p>
           <div class="case-gallery" aria-label="Southbank Centre and Royal Festival Hall campaign photos">
             <figure><img src="assets/persona-bbc-london-jazz/royal-festival-hall-interior.jpg" alt="Royal Festival Hall interior at Southbank Centre" loading="lazy" /></figure>
             <figure><img src="assets/persona-bbc-london-jazz/royal-festival-hall-southbank.webp" alt="Royal Festival Hall at Southbank Centre from the Thames" loading="lazy" /></figure>
@@ -273,26 +257,26 @@
           </div>
         </div>
         <div class="venue-entry">
-          <h2>Rendez-vous de l'Erdre <time>2023</time></h2>
+          <h2>Rendez-vous de l'Erdre</h2>
           <p>
             Sold out 5,000 seats for <a href="https://www.rendezvouserdre.com/" target="_blank" rel="noreferrer">Rendez-vous de l'Erdre</a> in Nantes, France through an integrated campaign across online ads, radio, and printed press.
           </p>
-          <div class="method-note">
-            <span>Built demand locally first, then widened the campaign through radio and paid social. The work connected the festival's regional identity to conversion-focused audiences, making the campaign feel cultural while still being accountable to ticket sales.</span>
-          </div>
+          <p>
+            Built demand locally first, then widened the campaign through radio and paid social. The work connected the festival's regional identity to conversion-focused audiences, making the campaign feel cultural while still being accountable to ticket sales.
+          </p>
           <div class="case-gallery rendez-gallery" aria-label="Rendez-vous de l'Erdre campaign photos">
             <figure><img src="assets/persona-rendezvous/rendezvous-erdre-01.jpg" alt="Rendez-vous de l'Erdre stage view with audience in Nantes" loading="lazy" /></figure>
             <figure><img src="assets/persona-rendezvous/rendezvous-erdre-03.jpg" alt="Rendez-vous de l'Erdre campaign crowd photo" loading="lazy" /></figure>
           </div>
         </div>
         <div class="venue-entry">
-          <h2>Snape Maltings <time>2023</time></h2>
+          <h2>Snape Maltings</h2>
           <p>
             Sold out <a href="https://www.brittenpearsarts.org/?gad_source=1&gad_campaignid=927608615&gbraid=0AAAAADgVlQOh1GXA0imfIZcF6tm0yOwVz&gclid=Cj0KCQjwrs7RBhDuARIsAIVfBD2mSDkiol4iL2n3zVto1GXQqQHOwuScbrwg0gIik6RQEGmI8DS1ZlYaAlQXEALw_wcB" target="_blank" rel="noreferrer">Snape Maltings</a>, an 850-seat venue in a remote location in the UK, through online ads, BBC Radio, audience development, and campaign delivery.
           </p>
-          <div class="method-note">
-            <span>The challenge was distance: a strong venue, but a harder conversion path. We used BBC Radio and audience development to create legitimacy, then paired it with targeted online ads that reached people likely to travel for a high-value cultural night.</span>
-          </div>
+          <p>
+            The challenge was distance: a strong venue, but a harder conversion path. We used BBC Radio and audience development to create legitimacy, then paired it with targeted online ads that reached people likely to travel for a high-value cultural night.
+          </p>
           <div class="case-gallery" aria-label="Snape Maltings campaign photos">
             <figure><img src="assets/persona-snape/snape-maltings-01.jpg" alt="Snape Maltings venue seating from the stage" loading="lazy" /></figure>
             <figure><img src="assets/persona-snape/snape-maltings-02.jpg" alt="Snape Maltings campaign photo" loading="lazy" /></figure>

@@ -142,6 +142,26 @@ footer,
   letter-spacing: -0.012em !important;
 }
 
+.persona-page .case-study h2 {
+  color: var(--ink) !important;
+  display: block !important;
+  font-size: 17px !important;
+  font-weight: 620 !important;
+  letter-spacing: -0.012em !important;
+  line-height: 1.25 !important;
+  margin-bottom: 10px !important;
+  text-transform: none !important;
+}
+
+.persona-page .lead-case h2 {
+  margin-bottom: 14px !important;
+}
+
+.persona-page .venue-entry h2 {
+  font-size: 16px !important;
+  margin-bottom: 2px !important;
+}
+
 .contact {
   gap: 8px 20px !important;
 }
