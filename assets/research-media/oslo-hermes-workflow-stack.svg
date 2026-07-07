@@ -1,111 +1,57 @@
-<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1600" height="980" fill="#F1F1EB"/>
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#fbfaf7"/>
 
   <defs>
-    <linearGradient id="bgGlowA" x1="240" y1="140" x2="520" y2="420" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#EDF9F2" stop-opacity="0.95"/>
-      <stop offset="1" stop-color="#EDF9F2" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="bgGlowB" x1="1040" y1="120" x2="1380" y2="460" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E2F6A1" stop-opacity="0.4"/>
-      <stop offset="1" stop-color="#E2F6A1" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="heroCard" x1="70" y1="250" x2="280" y2="470" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#EDF9F2"/>
-      <stop offset="1" stop-color="#E8EDEC"/>
-    </linearGradient>
-    <linearGradient id="softCard" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#FFFFFF" stop-opacity="0.7"/>
-      <stop offset="1" stop-color="#EDF9F2" stop-opacity="0.55"/>
-    </linearGradient>
-    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="160%">
-      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#173132" flood-opacity="0.08"/>
-    </filter>
-    <filter id="softBlur" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="24"/>
-    </filter>
-    <marker id="arrowHead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M0,0 L12,6 L0,12 Z" fill="#7A9A88"/>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,1.5 L8,5 L0,8.5 Z" fill="#aaa9a3"/>
     </marker>
-    <style>
-      .title { font: 700 58px "Aeonik", "Avenir Next", "Segoe UI", sans-serif; fill: #173132; }
-      .subtitle { font: 400 24px "Aeonik", "Avenir Next", "Segoe UI", sans-serif; fill: #6E8176; }
-      .boxTitle { font: 700 26px "Aeonik", "Avenir Next", "Segoe UI", sans-serif; fill: #173132; }
-      .boxText { font: 500 20px "Aeonik", "Avenir Next", "Segoe UI", sans-serif; fill: #173132; }
-      .note { font: 500 19px "Aeonik", "Avenir Next", "Segoe UI", sans-serif; fill: #6E8176; }
-      .arrow { stroke: #7A9A88; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; fill: none; }
-      .glassStroke { stroke: rgba(255,255,255,0.72); stroke-width: 1.4; }
-    </style>
   </defs>
 
-  <circle cx="330" cy="250" r="150" fill="url(#bgGlowA)" filter="url(#softBlur)"/>
-  <circle cx="1220" cy="230" r="170" fill="url(#bgGlowB)" filter="url(#softBlur)"/>
+  <text x="90" y="100" font-size="21" font-weight="600" letter-spacing="3.5" fill="#aaa9a3">OSLO — AI OPERATING SYSTEM</text>
+  <text x="90" y="158" font-size="52" font-weight="500" letter-spacing="-1.5" fill="#1c1c19">Oslo and Hermes</text>
+  <text x="90" y="200" font-size="24" fill="#7b7b76">Company workflows turned into repeatable systems</text>
+  <line x1="90" y1="240" x2="1510" y2="240" stroke="#e8e6df" stroke-width="2"/>
 
-  <text x="800" y="88" text-anchor="middle" class="title">How Harmonix Uses AI to Automate Work</text>
-  <text x="800" y="128" text-anchor="middle" class="subtitle">a lightweight stack for turning workflows into repeatable systems</text>
-
-  <g filter="url(#cardShadow)">
-    <rect x="70" y="250" rx="34" ry="34" width="210" height="220" fill="url(#heroCard)"/>
-    <rect x="70" y="250" rx="34" ry="34" width="210" height="220" fill="none" stroke="#D8E7DE" stroke-width="1.6"/>
-
-    <rect x="350" y="250" rx="34" ry="34" width="210" height="220" fill="url(#softCard)"/>
-    <rect x="350" y="250" rx="34" ry="34" width="210" height="220" fill="none" stroke="#E2E7E2" stroke-width="1.6"/>
-
-    <rect x="630" y="250" rx="34" ry="34" width="210" height="220" fill="url(#softCard)"/>
-    <rect x="630" y="250" rx="34" ry="34" width="210" height="220" fill="none" stroke="#E2E7E2" stroke-width="1.6"/>
-
-    <rect x="910" y="250" rx="34" ry="34" width="230" height="220" fill="url(#softCard)"/>
-    <rect x="910" y="250" rx="34" ry="34" width="230" height="220" fill="none" stroke="#E2E7E2" stroke-width="1.6"/>
-
-    <rect x="1210" y="250" rx="34" ry="34" width="210" height="220" fill="url(#softCard)"/>
-    <rect x="1210" y="250" rx="34" ry="34" width="210" height="220" fill="none" stroke="#E2E7E2" stroke-width="1.6"/>
+  <rect x="90" y="300" width="400" height="470" rx="10" fill="#ffffff" stroke="#e8e6df" stroke-width="2"/>
+  <text x="122" y="356" font-size="17" font-weight="600" letter-spacing="2.5" fill="#aaa9a3">COMPANY KNOWLEDGE</text>
+  <g font-size="25" fill="#1c1c19">
+    <line x1="122" y1="405" x2="138" y2="405" stroke="#c9c7bf" stroke-width="3"/><text x="154" y="413">Memory</text>
+    <line x1="122" y1="461" x2="138" y2="461" stroke="#c9c7bf" stroke-width="3"/><text x="154" y="469">Engineering docs</text>
+    <line x1="122" y1="517" x2="138" y2="517" stroke="#c9c7bf" stroke-width="3"/><text x="154" y="525">Tasks and reviews</text>
+    <line x1="122" y1="573" x2="138" y2="573" stroke="#c9c7bf" stroke-width="3"/><text x="154" y="581">BD context</text>
+    <line x1="122" y1="629" x2="138" y2="629" stroke="#c9c7bf" stroke-width="3"/><text x="154" y="637">Operations</text>
+    <line x1="122" y1="685" x2="138" y2="685" stroke="#c9c7bf" stroke-width="3"/><text x="154" y="693">Security workflows</text>
   </g>
 
-  <text x="175" y="300" text-anchor="middle" class="boxTitle">Interface</text>
-  <text x="175" y="342" text-anchor="middle" class="boxText">Codex</text>
-  <text x="175" y="374" text-anchor="middle" class="boxText">Claude Code</text>
-  <text x="175" y="416" text-anchor="middle" class="boxText">human loop</text>
-  <text x="175" y="448" text-anchor="middle" class="boxText">review + reasoning</text>
+  <line x1="500" y1="535" x2="576" y2="535" stroke="#aaa9a3" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <text x="455" y="300" text-anchor="middle" class="boxTitle">Memory</text>
-  <text x="455" y="342" text-anchor="middle" class="boxText">stores data</text>
-  <text x="455" y="374" text-anchor="middle" class="boxText">history</text>
-  <text x="455" y="406" text-anchor="middle" class="boxText">context</text>
-  <text x="455" y="438" text-anchor="middle" class="boxText">rules + preferences</text>
-
-  <text x="735" y="300" text-anchor="middle" class="boxTitle">Skills</text>
-  <text x="735" y="342" text-anchor="middle" class="boxText">support</text>
-  <text x="735" y="374" text-anchor="middle" class="boxText">finance</text>
-  <text x="735" y="406" text-anchor="middle" class="boxText">compliance</text>
-  <text x="735" y="438" text-anchor="middle" class="boxText">security · ops · growth</text>
-
-  <text x="1025" y="300" text-anchor="middle" class="boxTitle">Connectors</text>
-  <text x="1025" y="342" text-anchor="middle" class="boxText">social media</text>
-  <text x="1025" y="374" text-anchor="middle" class="boxText">email · messages</text>
-  <text x="1025" y="406" text-anchor="middle" class="boxText">calendar · crm · docs</text>
-  <text x="1025" y="438" text-anchor="middle" class="boxText">payments · internal tools</text>
-
-  <text x="1315" y="300" text-anchor="middle" class="boxTitle">Outputs</text>
-  <text x="1315" y="342" text-anchor="middle" class="boxText">messages sent</text>
-  <text x="1315" y="374" text-anchor="middle" class="boxText">records updated</text>
-  <text x="1315" y="406" text-anchor="middle" class="boxText">reports created</text>
-  <text x="1315" y="438" text-anchor="middle" class="boxText">tasks completed</text>
-
-  <path d="M280 360 L340 360" class="arrow" marker-end="url(#arrowHead)"/>
-  <path d="M560 360 L620 360" class="arrow" marker-end="url(#arrowHead)"/>
-  <path d="M840 360 L900 360" class="arrow" marker-end="url(#arrowHead)"/>
-  <path d="M1140 360 L1200 360" class="arrow" marker-end="url(#arrowHead)"/>
-
-  <g filter="url(#cardShadow)">
-    <rect x="610" y="640" rx="34" ry="34" width="380" height="150" fill="#E2F6A1" fill-opacity="0.68"/>
-    <rect x="610" y="640" rx="34" ry="34" width="380" height="150" fill="none" stroke="#D8E7DE" stroke-width="1.6"/>
+  <rect x="590" y="300" width="420" height="470" rx="10" fill="#1c1c19"/>
+  <text x="800" y="386" font-size="46" font-weight="500" letter-spacing="-1" fill="#ffffff" text-anchor="middle">Hermes</text>
+  <text x="800" y="422" font-size="16" font-weight="600" letter-spacing="3" fill="#8f8f88" text-anchor="middle">OPERATING LAYER</text>
+  <line x1="632" y1="456" x2="968" y2="456" stroke="#3a3a35" stroke-width="2"/>
+  <g text-anchor="middle">
+    <text x="800" y="512" font-size="25" font-weight="500" fill="#ffffff">Memory</text>
+    <text x="800" y="541" font-size="18" fill="#8f8f88">context, history, rules</text>
+    <text x="800" y="600" font-size="25" font-weight="500" fill="#ffffff">Skills</text>
+    <text x="800" y="629" font-size="18" fill="#8f8f88">repeatable work across ops and growth</text>
+    <text x="800" y="688" font-size="25" font-weight="500" fill="#ffffff">Connectors</text>
+    <text x="800" y="717" font-size="18" fill="#8f8f88">email, docs, socials, internal tools</text>
   </g>
-  <text x="800" y="692" text-anchor="middle" class="boxTitle">Feedback</text>
-  <text x="800" y="734" text-anchor="middle" class="boxText">results · corrections · new context · performance</text>
 
-  <path d="M1315 470 L1315 560 C1315 610, 1180 620, 1005 640" class="arrow" marker-end="url(#arrowHead)"/>
-  <path d="M610 715 L420 715 C250 715, 135 640, 135 500 L135 482" class="arrow" marker-end="url(#arrowHead)"/>
+  <line x1="1024" y1="535" x2="1100" y2="535" stroke="#aaa9a3" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <text x="800" y="860" text-anchor="middle" class="note">Codex and Claude Code are the human loop. Memory stores what Harmonix learns.</text>
-  <text x="800" y="892" text-anchor="middle" class="note">Skills do repeatable work. Connectors touch real systems. Feedback improves the next run.</text>
+  <rect x="1110" y="300" width="400" height="470" rx="10" fill="#ffffff" stroke="#e8e6df" stroke-width="2"/>
+  <text x="1142" y="356" font-size="17" font-weight="600" letter-spacing="2.5" fill="#aaa9a3">REPEATABLE WORK</text>
+  <g font-size="25" fill="#1c1c19">
+    <line x1="1142" y1="419" x2="1158" y2="419" stroke="#c9c7bf" stroke-width="3"/><text x="1174" y="427">Messages sent</text>
+    <line x1="1142" y1="489" x2="1158" y2="489" stroke="#c9c7bf" stroke-width="3"/><text x="1174" y="497">Records updated</text>
+    <line x1="1142" y1="559" x2="1158" y2="559" stroke="#c9c7bf" stroke-width="3"/><text x="1174" y="567">Reports created</text>
+    <line x1="1142" y1="629" x2="1158" y2="629" stroke="#c9c7bf" stroke-width="3"/><text x="1174" y="637">Tasks completed</text>
+  </g>
+
+  <path d="M 1310 770 L 1310 862 L 290 862 L 290 778" stroke="#aaa9a3" stroke-width="2.5" stroke-dasharray="1 9" stroke-linecap="round" fill="none" marker-end="url(#arrow)"/>
+  <rect x="470" y="838" width="660" height="46" fill="#fbfaf7"/>
+  <text x="800" y="869" font-size="18" font-weight="600" letter-spacing="2.5" fill="#aaa9a3" text-anchor="middle">FEEDBACK — RESULTS · CORRECTIONS · CONTEXT</text>
+
+  <text x="90" y="948" font-size="19" fill="#7b7b76">Claude Code and Codex form the human review loop. Every run improves the next one.</text>
 </svg>
