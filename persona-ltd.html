@@ -65,7 +65,8 @@
     .festival-proof-grid .photo-grid.three-up-gallery { --proof-thumb: 118px; grid-template-columns: repeat(3, var(--proof-thumb)); }
     .broadcast-case h2 { font-size: 16px; margin-bottom: 7px; }
     .broadcast-case p { font-size: 16px; line-height: 1.58; }
-    .broadcast-case .broadcast-grid { max-width: 100%; }
+    .broadcast-case .broadcast-grid { --proof-thumb: 88px; gap: 8px; grid-template-columns: repeat(6, var(--proof-thumb)); max-width: 100%; width: fit-content; }
+    .broadcast-case .broadcast-grid a { display: block; height: var(--proof-thumb); width: var(--proof-thumb); }
     .broadcast-case .broadcast-grid .zoom-shot { object-fit: cover; object-position: 52% 58%; padding: 0; }
     .broadcast-case .broadcast-grid .media-signage-shot { object-fit: cover; object-position: 50% 48%; padding: 0; }
     .poster-wall { display: flex; flex-wrap: wrap; gap: 12px 10px; justify-content: center; margin-top: 18px; max-width: 620px; width: 100%; }
@@ -95,7 +96,7 @@
     .arweave-piece .source-link { color: #777; display: block; font-size: 12px; margin-left: auto; margin-right: auto; margin-top: 7px; max-width: 500px; text-decoration: none; }
     .arweave-piece .source-link:hover { color: #111; text-decoration: underline; text-underline-offset: 4px; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .venue-group, .festival-proof-grid { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .case-gallery, .venue-entry .case-gallery, .festival-proof-grid .photo-grid, .festival-proof-grid .photo-grid.three-up-gallery { --proof-thumb: min(128px, calc((100vw - 44px) / 2)); grid-template-columns: repeat(2, var(--proof-thumb)); max-width: 100%; width: fit-content; } .poster-wall { gap: 8px; max-width: 100%; width: 100%; } .poster-card { flex-basis: min(128px, calc((100vw - 44px) / 2)); } .poster-card figcaption { display: none; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .venue-group, .festival-proof-grid { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .case-gallery, .venue-entry .case-gallery, .festival-proof-grid .photo-grid, .festival-proof-grid .photo-grid.three-up-gallery, .broadcast-case .broadcast-grid { --proof-thumb: min(128px, calc((100vw - 44px) / 2)); grid-template-columns: repeat(2, var(--proof-thumb)); max-width: 100%; width: fit-content; } .poster-wall { gap: 8px; max-width: 100%; width: 100%; } .poster-card { flex-basis: min(128px, calc((100vw - 44px) / 2)); } .poster-card figcaption { display: none; } }
   </style>
   <link rel="stylesheet" href="assets/site-aesthetic.css" />
 </head>
@@ -152,7 +153,7 @@
           </article>
         </div>
       </article>
-      <article class="case-study">
+      <article class="case-study broadcast-case">
         <h2>Broadcast, Radio, TV, and Podcasts</h2>
         <p>
           I used television, radio, podcasts, online blogs, and press because different regions and age groups trusted different surfaces. A campaign could not depend on one channel if the audience was distributed across countries, habits, and generations.
