@@ -41,7 +41,7 @@
     .method-note strong { color: #111; font-size: 14px; font-weight: 560; letter-spacing: -0.01em; line-height: 1.25; }
     .method-note span { color: #555; font-size: 16px; line-height: 1.58; }
     .arweave-feature, .arweave-media, .photo-grid, .case-gallery, .poster-wall { margin-left: auto; margin-right: auto; }
-    .photo-grid, .case-gallery { --proof-thumb: 106px; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, var(--proof-thumb)); justify-content: center; margin-top: 18px; max-width: 100%; }
+    .photo-grid, .case-gallery { --proof-thumb: 106px; display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, var(--proof-thumb)); justify-content: center; margin-top: 18px; max-width: 100%; width: fit-content; }
     .photo-grid img { aspect-ratio: 1 / 1; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; height: var(--proof-thumb); object-fit: contain; padding: 6px; width: var(--proof-thumb); }
     .venue-group { display: grid; gap: 0; grid-template-columns: 1fr; }
     .venue-group-note { grid-column: 1 / -1; }
@@ -60,9 +60,9 @@
     .compact-case { padding: 18px 0 20px; }
     .compact-case h2 { font-size: 18px; margin-bottom: 8px; }
     .compact-case p { font-size: 16px; line-height: 1.58; max-width: 620px; }
-    .compact-case .photo-grid { gap: 8px; margin-top: 14px; max-width: 100%; }
+    .compact-case .photo-grid { gap: 8px; margin-top: 14px; max-width: 100%; width: fit-content; }
     .compact-case .photo-grid .wide-shot { aspect-ratio: 1 / 1; grid-column: auto; object-fit: contain; }
-    .compact-case .broadcast-grid { gap: 8px; margin-top: 10px; max-width: 100%; }
+    .compact-case .broadcast-grid { gap: 8px; margin-top: 10px; max-width: 100%; width: fit-content; }
     .compact-case .broadcast-grid .wide-shot { aspect-ratio: 1 / 1; grid-column: auto; object-fit: contain; }
     .compact-case .broadcast-grid .contain-shot { background: #fafafa; object-fit: contain; }
     .festival-proof-grid { display: grid; gap: 0; grid-template-columns: 1fr; }
@@ -83,7 +83,7 @@
     .broadcast-case .broadcast-grid { max-width: 100%; }
     .broadcast-case .broadcast-grid .zoom-shot { object-fit: cover; object-position: 52% 58%; padding: 0; }
     .broadcast-case .broadcast-grid .media-signage-shot { object-fit: cover; object-position: 50% 48%; padding: 0; }
-    .poster-wall { display: grid; gap: 12px 10px; grid-template-columns: repeat(auto-fill, 106px); justify-content: center; margin-top: 18px; max-width: 100%; }
+    .poster-wall { display: grid; gap: 12px 10px; grid-template-columns: repeat(6, 106px); justify-content: center; margin-top: 18px; max-width: 100%; width: fit-content; }
     .poster-card { min-width: 0; }
     .poster-card img { aspect-ratio: 1 / 1; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; object-fit: contain; padding: 6px; width: 100%; }
     .poster-card figcaption { color: #777; font-size: 11.5px; line-height: 1.3; margin-top: 5px; }
@@ -113,7 +113,7 @@
     .arweave-piece .source-link { color: #777; display: block; font-size: 12px; margin-left: auto; margin-right: auto; margin-top: 7px; max-width: 500px; text-decoration: none; }
     .arweave-piece .source-link:hover { color: #111; text-decoration: underline; text-underline-offset: 4px; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .venue-group, .festival-proof-grid, .arweave-feature { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .case-gallery, .venue-entry .case-gallery, .festival-proof-grid .photo-grid, .festival-proof-grid .photo-grid.three-up-gallery { --proof-thumb: min(128px, calc((100vw - 44px) / 2)); grid-template-columns: repeat(2, var(--proof-thumb)); max-width: 100%; } .poster-wall { gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .venue-group, .festival-proof-grid, .arweave-feature { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .case-gallery, .venue-entry .case-gallery, .festival-proof-grid .photo-grid, .festival-proof-grid .photo-grid.three-up-gallery { --proof-thumb: min(128px, calc((100vw - 44px) / 2)); grid-template-columns: repeat(2, var(--proof-thumb)); max-width: 100%; width: fit-content; } .poster-wall { gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; width: 100%; } .poster-card figcaption { display: none; } }
   </style>
   <link rel="stylesheet" href="assets/site-aesthetic.css" />
 </head>
