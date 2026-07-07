@@ -32,6 +32,12 @@
     .lead-case time { color: #b0b0b0; font-size: 12px; margin-top: 5px; }
     .lead-case p { color: #222; font-size: clamp(17px, 2vw, 20px); line-height: 1.55; max-width: 650px; }
     .lead-case p + p { margin-top: 16px; }
+    .proof-points { border-top: 1px solid #ededed; display: grid; gap: 0; grid-template-columns: repeat(3, 1fr); list-style: none; margin-top: 24px; max-width: 620px; }
+    .proof-points li { border-bottom: 1px solid #ededed; padding: 13px 14px 13px 0; }
+    .proof-points strong { color: #111; display: block; font-size: 18px; font-weight: 520; letter-spacing: -0.015em; line-height: 1.15; }
+    .proof-points span { color: #777; display: block; font-size: 12px; line-height: 1.35; margin-top: 4px; }
+    .closing-note { border-top: 1px solid #ededed; margin-top: 10px; padding: 26px 0 0; }
+    .closing-note p { color: #222; font-size: clamp(17px, 2vw, 20px); line-height: 1.55; max-width: 650px; }
     .pov-block { display: grid; gap: 10px; margin-top: 18px; max-width: 640px; }
     .pov-block p { color: #333; font-size: 15px; line-height: 1.5; }
     .pov-block strong { color: #111; font-weight: 560; }
@@ -96,7 +102,10 @@
     .video-card figcaption { color: #777; display: grid; font-size: 13px; gap: 3px; line-height: 1.4; margin-top: 8px; }
     .video-card figcaption span { color: #111; font-size: 14px; font-weight: 520; }
     .video-card figcaption a { color: #777; }
-    .arweave-stack { display: grid; gap: 34px; margin-top: 28px; }
+    .arweave-stack { display: grid; gap: 24px; margin-top: 24px; }
+    .arweave-feature { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 620px; }
+    .arweave-feature .arweave-media { margin: 0; max-width: none; }
+    .arweave-feature .source-link { margin-left: 0; }
     .arweave-piece { margin: 0; max-width: 620px; width: 100%; }
     .arweave-piece h3 { color: #111; font-size: 20px; font-weight: 560; line-height: 1.2; margin: 0 0 10px; }
     .arweave-piece h3 a { color: inherit; text-decoration: none; }
@@ -107,7 +116,7 @@
     .arweave-piece .source-link { color: #777; display: inline-block; font-size: 12px; margin-left: calc((100% - min(500px, 100%)) / 2); margin-top: 7px; text-decoration: none; }
     .arweave-piece .source-link:hover { color: #111; text-decoration: underline; text-underline-offset: 4px; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
-    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .venue-group, .festival-proof-grid { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .case-gallery, .venue-entry .case-gallery, .festival-proof-grid .photo-grid, .festival-proof-grid .photo-grid.three-up-gallery { --proof-thumb: min(128px, calc((100vw - 44px) / 2)); grid-template-columns: repeat(2, var(--proof-thumb)); max-width: 100%; } .poster-wall { gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
+    @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .venue-group, .festival-proof-grid, .arweave-feature { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .proof-points { grid-template-columns: 1fr; } .photo-grid, .case-gallery, .venue-entry .case-gallery, .festival-proof-grid .photo-grid, .festival-proof-grid .photo-grid.three-up-gallery { --proof-thumb: min(128px, calc((100vw - 44px) / 2)); grid-template-columns: repeat(2, var(--proof-thumb)); max-width: 100%; } .poster-wall { gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; } .poster-card figcaption { display: none; } }
   </style>
   <link rel="stylesheet" href="assets/site-aesthetic.css" />
 </head>
@@ -116,56 +125,61 @@
     <a class="back" href="index.html">↩ Index</a>
     <header>
       <div class="date">18 June, 2026</div>
-      <h1>Persona LTD</h1>
-      <p class="intro">An advertising agency I founded and scaled across culture, media, technology, and crypto.</p>
+      <h1>Persona, 2018-2024</h1>
+      <p class="intro">An advertising agency I founded for culture, media, technology, and crypto. The work was simple: turn attention into measurable demand.</p>
     </header>
 
     <nav class="work-list" aria-label="Persona LTD work">
       <article class="case-study lead-case">
         <h2>Agency <time>Dublin, Ireland · Remote</time></h2>
         <p>
-          I founded Persona as an advertising agency for culture, media, technology, and crypto. It grew into a 25-person remote team working across more than five countries.
+          Persona grew into a 25-person remote team across more than five countries, working across online ads, radio, television, print press, podcasts, and institutional media.
         </p>
         <p>
-          The agency built performance-driven campaigns across digital ads, radio, television, print press, and institutional media, generating 50,000+ ticket sales, 50M+ online views, and up to 3x ROI per campaign.
+          The agency sat between culture and distribution: shaping public narratives, building demand, and moving audiences for partners including EFG, CaixaBank, BBC, ARTE TV, Institut Français, Arweave, and major European festivals.
         </p>
-        <p>
-          The work sat between culture and distribution: shaping public narratives, building demand, and moving audiences for partners including EFG, CaixaBank, BBC, ARTE TV, Institut Français, and major European festivals.
-        </p>
+        <ul class="proof-points" aria-label="Persona proof points">
+          <li><strong>25</strong><span>person remote team</span></li>
+          <li><strong>5+</strong><span>countries represented</span></li>
+          <li><strong>50,000+</strong><span>ticket sales generated</span></li>
+          <li><strong>50M+</strong><span>online views</span></li>
+          <li><strong>3x</strong><span>campaign ROI achieved</span></li>
+          <li><strong>BBC · ARTE · EFG</strong><span>institutional partners</span></li>
+        </ul>
       </article>
       <article class="case-study">
         <h2>Arweave <time>2024</time></h2>
         <p>
-          Advertising and campaign work around cultural infrastructure, permanent storage, and public-facing ecosystem storytelling.
+          Persona's crypto work focused on translating infrastructure into public narratives. For Arweave and AR.IO, that meant turning permanent storage, gateway networks, and cultural preservation into campaigns people could understand.
         </p>
-        <div class="arweave-stack" aria-label="Arweave campaign videos">
+        <div class="arweave-stack" aria-label="Arweave and AR.IO work">
           <article class="arweave-piece">
-            <div class="arweave-media">
-              <video autoplay muted loop playsinline controls preload="metadata" poster="assets/arweave-media/arweave-campaign-poster.jpg">
-                <source src="assets/arweave-media/arweave-campaign.mp4" type="video/mp4" />
-              </video>
+            <h3>Permanent data as a public story</h3>
+            <p>One block, three artifacts: the launch campaign, the Sagrada Familia x AR.IO cultural preservation work, and the Paragraph report explaining the protocol layer around the permaweb.</p>
+            <div class="arweave-feature">
+              <div>
+                <div class="arweave-media">
+                  <video autoplay muted loop playsinline controls preload="metadata" poster="assets/arweave-media/arweave-campaign-poster.jpg">
+                    <source src="assets/arweave-media/arweave-campaign.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <a class="source-link" href="https://x.com/christophorusan/status/1788154455432556613?s=20" target="_blank" rel="noreferrer">Arweave campaign · May 2024</a>
+              </div>
+              <div>
+                <div class="arweave-media">
+                  <video autoplay muted loop playsinline controls preload="metadata" poster="assets/arweave-media/sagrada-familia-ario-poster.jpg">
+                    <source src="assets/arweave-media/sagrada-familia-ario.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <a class="source-link" href="https://x.com/christophorusan/status/1839326982477414407?s=20" target="_blank" rel="noreferrer">Sagrada Familia x AR.IO · Sep 2024</a>
+              </div>
             </div>
-            <a class="source-link" href="https://x.com/christophorusan/status/1788154455432556613?s=20" target="_blank" rel="noreferrer">Arweave · May 2024 · Open original</a>
-          </article>
-          <article class="arweave-piece">
-            <h3><a href="https://x.com/christophorusan/status/1839326982477414407?s=20" target="_blank" rel="noreferrer">Sagrada Familia x AR.IO</a></h3>
-            <p>Culture and infrastructure campaign work connecting public heritage, permanent storage, and media distribution.</p>
-            <div class="arweave-media">
-              <video autoplay muted loop playsinline controls preload="metadata" poster="assets/arweave-media/sagrada-familia-ario-poster.jpg">
-                <source src="assets/arweave-media/sagrada-familia-ario.mp4" type="video/mp4" />
-              </video>
-            </div>
-            <a class="source-link" href="https://x.com/christophorusan/status/1839326982477414407?s=20" target="_blank" rel="noreferrer">Sagrada Familia x AR.IO · Sep 2024 · Open original</a>
-          </article>
-          <article class="arweave-piece">
-            <h3><a href="https://paragraph.com/@christophorus/what-is-ar-io-arweave-q3-update-2024" target="_blank" rel="noreferrer">What is AR.IO?</a></h3>
-            <p>A Paragraph report on AR.IO and Arweave's Q3 2024 update, connecting permanent data infrastructure, gateway networks, and ecosystem storytelling.</p>
             <div class="arweave-media">
               <a href="https://paragraph.com/@christophorus/what-is-ar-io-arweave-q3-update-2024" target="_blank" rel="noreferrer" aria-label="Open What is AR.IO article">
                 <img src="assets/arweave-media/ario-arweave-q3-2024.avif" alt="AR.IO and Arweave Q3 2024 article visual" loading="lazy" />
               </a>
             </div>
-            <a class="source-link" href="https://paragraph.com/@christophorus/what-is-ar-io-arweave-q3-update-2024" target="_blank" rel="noreferrer">What is AR.IO? · 2024 · Open original</a>
+            <a class="source-link" href="https://paragraph.com/@christophorus/what-is-ar-io-arweave-q3-update-2024" target="_blank" rel="noreferrer">What is AR.IO? · 2024 · Paragraph report</a>
           </article>
         </div>
       </article>
@@ -251,6 +265,7 @@
         </div>
       </article>
       <article class="case-study compact-case venue-group">
+        <h2>Venue Case Studies <time>2023</time></h2>
         <div class="method-note venue-group-note">
           <strong>Accountable campaigns</strong>
           <span>Print-heavy budgets were moved into tracked online ad systems with audience testing, retargeting, and ROI discipline, then compounded through broadcast, editorial coverage, partner lists, and city media.</span>
@@ -297,55 +312,11 @@
           </div>
         </div>
       </article>
-      <div class="festival-proof-grid" aria-label="Additional festival advertising proof points">
-        <article class="case-study compact-case">
-          <h2>Jazz à la Villette <time>2022</time></h2>
-          <p>
-            Sold out Jazz à la Villette in Paris by driving advertising strategy, broadcast relationships, and media production support across France TV, France Culture, France 24, Mezzo, and Culturebox.
-          </p>
-          <div class="method-note">
-            <span>Used French cultural media as a distribution layer, turning broadcast credibility into demand signals for ticket conversion.</span>
-          </div>
-          <div class="photo-grid three-up-gallery" aria-label="Jazz a la Villette campaign photos">
-            <img src="assets/persona-jazz-villette/jazz-villette-01.jpg" alt="Jazz a la Villette signage at Grande Halle in Paris" loading="lazy" />
-            <img src="assets/persona-jazz-villette/jazz-villette-02.jpg" alt="Jazz a la Villette venue and stage setup" loading="lazy" />
-            <img src="assets/persona-jazz-villette/jazz-villette-03.jpg" alt="Jazz a la Villette campaign and broadcast production image" loading="lazy" />
-          </div>
-        </article>
-        <article class="case-study compact-case">
-          <h2>Jazz sous les Pommiers <time>2023</time></h2>
-          <p>
-            Sold out <a href="https://www.jazzsouslespommiers.com/" target="_blank" rel="noreferrer">Jazz sous les Pommiers</a> while working with TV and production companies, and was awarded a residency to produce and promote culture in the region.
-          </p>
-          <div class="method-note">
-            <span>Combined regional storytelling, production access, and audience development so media attention could keep compounding after each appearance.</span>
-          </div>
-          <div class="photo-grid single-column-gallery" aria-label="Jazz sous les Pommiers campaign photos">
-            <img src="assets/persona-jazz-pommiers/jazz-pommiers-01.jpg" alt="Jazz sous les Pommiers stage and venue setup" loading="lazy" />
-            <img src="assets/persona-jazz-pommiers/jazz-pommiers-02.jpg" alt="Jazz sous les Pommiers sold-out performance from the stage" loading="lazy" />
-          </div>
-        </article>
-        <article class="case-study compact-case">
-          <h2>Rudolstadt Festival <time>2023</time></h2>
-          <p>
-            Sold out a 5,000-seat venue in Germany for Rudolstadt Festival through audience development and campaign delivery.
-          </p>
-          <div class="photo-grid" aria-label="Rudolstadt Festival campaign photos">
-            <img src="assets/persona-rudolstadt/rudolstadt-01.jpg" alt="Rudolstadt Festival outdoor stage and audience in Germany" loading="lazy" />
-            <img src="assets/persona-rudolstadt/rudolstadt-02.jpg" alt="Rudolstadt Festival sold-out crowd from the stage" loading="lazy" />
-          </div>
-        </article>
-        <article class="case-study compact-case">
-          <h2>Parco archeologico del Colosseo <time>2022</time></h2>
-          <p>
-            Sold out a concert at the Palace of Venus in Rome by pairing audience development with advertising around one of the city's most symbolic historical sites.
-          </p>
-          <div class="photo-grid" aria-label="Parco archeologico del Colosseo concert photos">
-            <img src="assets/persona-colosseo/colosseo-palace-venus-01.jpg" alt="Concert seating at the Palace of Venus facing the Colosseum in Rome" loading="lazy" />
-            <img src="assets/persona-colosseo/colosseo-palace-venus-02.jpg" alt="Colosseum exterior near the Palace of Venus concert venue" loading="lazy" />
-          </div>
-        </article>
-      </div>
+      <article class="closing-note">
+        <p>
+          Persona taught me that distribution is not a channel problem. It is a translation problem: turning a project's real value into something a specific audience can understand, trust, and act on.
+        </p>
+      </article>
     </nav>
 
     <footer>&copy; 2026 Cristobal Silva</footer>
