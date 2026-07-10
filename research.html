@@ -359,6 +359,33 @@
       width: 100%;
     }
 
+    .oslo-analytics {
+      display: grid;
+      gap: 10px;
+      margin: 14px auto 0;
+      max-width: 520px;
+      width: 100%;
+    }
+
+    .oslo-analytics-foot {
+      color: #bbb;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .oslo-analytics-shot {
+      border: 1px solid #ececec;
+      border-radius: 10px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
+      display: block;
+      overflow: hidden;
+    }
+
+    .oslo-analytics-shot img {
+      display: block;
+      width: 100%;
+    }
+
     .media-frame {
       aspect-ratio: 16 / 10;
     }
@@ -1078,12 +1105,18 @@
       </p>
       <div class="work-stack">
         <article class="embedded-work" id="oslo-architecture" style="scroll-margin-top: 40px;">
-          <h3 class="piece-title"><a href="https://christophorusan.github.io/oslo-architecture/" target="_blank" rel="noreferrer">Oslo and Hermes</a></h3>
-          <p class="piece-intro">A simplified architecture view for an AI agent system where Hermes turns company memory, engineering documentation, tasks, reviews, BD context, operations, and security workflows into a repeatable operating layer.</p>
-          <a class="work-preview system-preview" href="https://christophorusan.github.io/oslo-architecture/" target="_blank" rel="noreferrer">
+          <h3 class="piece-title"><a href="oslo-architecture/">Oslo</a></h3>
+          <p class="piece-intro">A public product note for the AI workflow system I am building for crypto GTM: shared memory, unit skills, daily briefs, proposal queues, approval-gated actions, and outcome learning.</p>
+          <a class="work-preview system-preview" href="oslo-architecture/">
             <img class="research-media-image" src="assets/research-media/oslo-hermes-workflow-stack.svg" alt="Oslo and Hermes AI workflow stack diagram" loading="lazy">
           </a>
-          <a class="source-link" href="https://christophorusan.github.io/oslo-architecture/" target="_blank" rel="noreferrer">Oslo and Hermes · 2026 · Open original</a>
+          <div class="oslo-analytics" aria-label="Oslo analytics interface">
+            <a class="oslo-analytics-shot" href="oslo-architecture/">
+              <img src="assets/research-media/oslo-analytics-interface.png" alt="Oslo analytics interface: live capital board, HAR token strip, and protocol funnel metrics" loading="lazy">
+            </a>
+            <div class="oslo-analytics-foot">Oslo · Analytics · live capital board, HAR, protocol funnel</div>
+          </div>
+          <a class="source-link" href="oslo-architecture/">Oslo · 2026 · Open article</a>
         </article>
 
         <article class="embedded-work">

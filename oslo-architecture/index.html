@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oslo - AI Workflow System</title>
+  <link rel="icon" href="../assets/og-image.png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --paper: #fbfaf7;
+      --ink: #1c1c19;
+      --muted: #77766f;
+      --faint: #aaa9a3;
+      --rule: #e8e6df;
+      --soft: #f3f2ec;
+      --card: #ffffff;
+      --green: #5f8f73;
+      --amber: #b98645;
+      --blue: #385d9f;
+      --red: #b35d5d;
+      --measure: 720px;
+    }
+
+    html {
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.62;
+      padding: 54px 24px 96px;
+    }
+
+    .page {
+      margin: 0 auto;
+      max-width: var(--measure);
+    }
+
+    a {
+      color: inherit;
+      text-decoration-color: rgba(28, 28, 25, 0.24);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+      text-decoration-color: rgba(28, 28, 25, 0.78);
+    }
+
+    .back {
+      color: var(--muted);
+      display: inline-block;
+      font-size: 13px;
+      margin-bottom: 52px;
+      text-decoration: none;
+    }
+
+    header {
+      margin-bottom: 54px;
+    }
+
+    .date {
+      color: var(--faint);
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 68px;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 0.94;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      color: #2d2d29;
+      font-size: 21px;
+      line-height: 1.5;
+      max-width: 660px;
+    }
+
+    .summary {
+      border-bottom: 1px solid var(--rule);
+      border-top: 1px solid var(--rule);
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin: 34px 0 0;
+      padding: 18px 0;
+    }
+
+    .metric span {
+      color: var(--faint);
+      display: block;
+      font-size: 11px;
+      font-weight: 560;
+      letter-spacing: 0;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 18px;
+      font-weight: 520;
+      letter-spacing: 0;
+    }
+
+    section {
+      border-top: 1px solid var(--rule);
+      margin-top: 56px;
+      padding-top: 24px;
+    }
+
+    h2 {
+      color: var(--faint);
+      font-size: 12px;
+      font-weight: 560;
+      letter-spacing: 0;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 520;
+      letter-spacing: 0;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #30302c;
+      margin-bottom: 14px;
+    }
+
+    code {
+      background: var(--soft);
+      border: 1px solid var(--rule);
+      border-radius: 5px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      padding: 0.1em 0.34em;
+    }
+
+    pre {
+      background: #151512;
+      border-radius: 8px;
+      color: #f7f4ea;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.55;
+      margin: 16px 0;
+      overflow-x: auto;
+      padding: 18px;
+    }
+
+    pre code {
+      background: transparent;
+      border: 0;
+      color: inherit;
+      padding: 0;
+    }
+
+    .system-panel,
+    .workflow-card,
+    .ref-card,
+    .stress-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .system-panel {
+      background: transparent;
+      border-left: 0;
+      border-right: 0;
+      border-radius: 0;
+      margin-top: 34px;
+    }
+
+    .hero-top {
+      align-items: center;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 16px;
+    }
+
+    .chip {
+      align-items: center;
+      background: var(--soft);
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      color: var(--muted);
+      display: inline-flex;
+      font-size: 12px;
+      gap: 7px;
+      line-height: 1;
+      padding: 7px 10px;
+    }
+
+    .dot {
+      background: var(--green);
+      border-radius: 999px;
+      display: inline-block;
+      height: 7px;
+      width: 7px;
+    }
+
+    .dot.sample { background: var(--faint); }
+    .dot.amber { background: var(--amber); }
+    .dot.blue { background: var(--blue); }
+    .dot.red { background: var(--red); }
+
+    .system-map {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: 1fr 1.35fr 1fr;
+      padding: 20px 0;
+    }
+
+    .rail,
+    .core {
+      display: grid;
+      gap: 10px;
+    }
+
+    .node {
+      border-bottom: 1px solid var(--rule);
+      min-height: 76px;
+      padding: 12px;
+    }
+
+    .node strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 560;
+      margin-bottom: 4px;
+    }
+
+    .node span {
+      color: var(--muted);
+      display: block;
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .core-box {
+      align-content: center;
+      background: var(--ink);
+      border-radius: 8px;
+      color: white;
+      display: grid;
+      min-height: 248px;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .core-box strong {
+      display: block;
+      font-size: 34px;
+      font-weight: 520;
+      letter-spacing: 0;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .core-box span {
+      color: rgba(255,255,255,0.68);
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .workflow-grid,
+    .reference-grid,
+    .status-grid,
+    .stress-grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .workflow-card,
+    .status-card,
+    .ref-card,
+    .stress-card {
+      padding: 18px;
+    }
+
+    .workflow-card .eyebrow,
+    .status-card .eyebrow,
+    .ref-card .eyebrow,
+    .stress-card .eyebrow {
+      color: var(--faint);
+      display: block;
+      font-size: 11px;
+      font-weight: 560;
+      letter-spacing: 0;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+    }
+
+    .workflow-card p,
+    .status-card p,
+    .ref-card p,
+    .stress-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .step {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: 96px 1fr;
+    }
+
+    .step time {
+      color: var(--faint);
+      font-size: 12px;
+      padding-top: 2px;
+    }
+
+    .step div {
+      border-left: 1px solid var(--rule);
+      padding-left: 16px;
+    }
+
+    .step strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 560;
+      margin-bottom: 3px;
+    }
+
+    .step span {
+      color: var(--muted);
+      display: block;
+      font-size: 14px;
+    }
+
+    .list {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .list li {
+      color: #30302c;
+      list-style: none;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .list li::before {
+      background: var(--ink);
+      border-radius: 999px;
+      content: "";
+      height: 4px;
+      left: 0;
+      opacity: 0.38;
+      position: absolute;
+      top: 0.78em;
+      width: 4px;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 18px;
+    }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      color: var(--faint);
+      font-size: 13px;
+      margin-top: 64px;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 720px) {
+      body { padding: 32px 18px 72px; }
+      .summary,
+      .system-map,
+      .workflow-grid,
+      .reference-grid,
+      .status-grid,
+      .stress-grid,
+      .step {
+        grid-template-columns: 1fr;
+      }
+      h1 { font-size: 44px; }
+      .intro { font-size: 18px; }
+      .core-box { min-height: 180px; }
+      .step div { border-left: 0; padding-left: 0; }
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/site-aesthetic.css" />
+</head>
+<body>
+  <main class="page">
+    <a class="back" href="../research.html">Back to research</a>
+
+    <header>
+      <div class="date">8 July, 2026</div>
+      <h1>Oslo</h1>
+      <p class="intro">
+        Oslo is an AI workflow system for crypto GTM. It reads market, BD, product, and team signals, routes them through shared memory, then turns them into daily briefs, ranked next moves, campaign drafts, and approval-gated actions.
+      </p>
+
+      <div class="summary">
+        <div class="metric">
+          <span>Surface</span>
+          <strong>Discord, Telegram, CLI, portfolio</strong>
+        </div>
+        <div class="metric">
+          <span>Units</span>
+          <strong>BD, marketing, ops, data, engineering, security</strong>
+        </div>
+        <div class="metric">
+          <span>Rule</span>
+          <strong>Propose first. Humans approve.</strong>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>What it is</h2>
+      <p>
+        Most company knowledge sits in the worst possible places: Telegram threads, Discord channels, half-updated docs, founder memory, scattered GitHub issues, screenshots, and a few dashboards no one checks at the right moment.
+      </p>
+      <p>
+        Oslo turns that mess into a repeatable workflow. It reads signals, assembles context, chooses the right unit, drafts a recommendation, and posts it where the team already works. It is not an autonomous employee. It is a way to make the next useful move visible.
+      </p>
+
+      <div class="system-panel" aria-label="Oslo architecture overview">
+        <div class="hero-top">
+          <span class="chip"><span class="dot"></span> live workflows</span>
+          <span class="chip"><span class="dot sample"></span> gated writes</span>
+        </div>
+        <div class="system-map">
+          <div class="rail">
+            <div class="node"><strong>Signals</strong><span>X, market data, partner updates, product analytics, Discord, Telegram, GitHub.</span></div>
+            <div class="node"><strong>Memory</strong><span>Semantic, episodic, working, unit knowledge, relationship history.</span></div>
+            <div class="node"><strong>Context</strong><span>Daily priority, open proposals, current market state, team goals.</span></div>
+          </div>
+          <div class="core">
+            <div class="core-box">
+              <strong>Oslo</strong>
+              <span>shared agent loop</span>
+            </div>
+          </div>
+          <div class="rail">
+            <div class="node"><strong>Units</strong><span>BD, marketing, ops, data, engineering, security, vault strategy.</span></div>
+            <div class="node"><strong>Outputs</strong><span>Briefs, ranked leads, draft posts, partner notes, proposal queue.</span></div>
+            <div class="node"><strong>Feedback</strong><span>Accepted, rejected, replied, shipped, deposit, churn, no signal.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Status</h2>
+      <div class="status-grid">
+        <article class="status-card">
+          <span class="eyebrow">Running</span>
+          <h3>Daily operating layer</h3>
+          <p>Briefs, unit prompts, proposal queues, memory files, GTM notes, and approval-first workflows are already part of the stack.</p>
+        </article>
+        <article class="status-card">
+          <span class="eyebrow">Building</span>
+          <h3>Public product surface</h3>
+          <p>The next layer is a clean frontend where the system can be explained, demoed, and used without exposing private company data.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Daily workflow</h2>
+      <p>
+        The strongest version of Oslo is not "ask a chatbot." It is a daily operating rhythm where every unit starts from the same context and every proposed move has evidence.
+      </p>
+      <div class="timeline">
+        <div class="step">
+          <time>08:00</time>
+          <div><strong>Morning brief</strong><span>Pulls open proposals, market state, top BD target, content gap, ops issue, and one self-improvement.</span></div>
+        </div>
+        <div class="step">
+          <time>08:30</time>
+          <div><strong>Context of the day</strong><span>Writes the shared daily context every downstream agent reads before drafting anything.</span></div>
+        </div>
+        <div class="step">
+          <time>09:00</time>
+          <div><strong>Unit passes</strong><span>BD suggests contacts, marketing drafts content, data surfaces market signals, ops ranks what matters.</span></div>
+        </div>
+        <div class="step">
+          <time>HITL</time>
+          <div><strong>Approval queue</strong><span>Every external action is a proposal: approve, edit, reject, or postpone. Nothing important auto-sends.</span></div>
+        </div>
+        <div class="step">
+          <time>Weekly</time>
+          <div><strong>Learning review</strong><span>Accepted moves and downstream outcomes feed the scoring logic so the system gets less generic over time.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Workflow examples</h2>
+      <div class="workflow-grid">
+        <article class="workflow-card">
+          <span class="eyebrow">BD</span>
+          <h3>Lead discovery</h3>
+          <p>Ranks new partners by TVL potential, ecosystem fit, social signal, warm path, and next-move clarity.</p>
+        </article>
+        <article class="workflow-card">
+          <span class="eyebrow">Marketing</span>
+          <h3>Daily content draft</h3>
+          <p>Turns current market context into posts, campaign angles, launch copy, and variants for builders, whales, partners, or retail users.</p>
+        </article>
+        <article class="workflow-card">
+          <span class="eyebrow">Ops</span>
+          <h3>Proposal inbox</h3>
+          <p>Collects pending suggestions across units and sorts them by leverage, urgency, evidence, and age.</p>
+        </article>
+        <article class="workflow-card">
+          <span class="eyebrow">Data</span>
+          <h3>Market snapshot</h3>
+          <p>Summarizes HYPE, vault, APY, TVL, and competitor movement into a short operator-facing brief.</p>
+        </article>
+        <article class="workflow-card">
+          <span class="eyebrow">Security</span>
+          <h3>Protocol watch</h3>
+          <p>Surfaces audits, incidents, upgrade risk, exploit signals, and security notes before they become surprises.</p>
+        </article>
+        <article class="workflow-card">
+          <span class="eyebrow">Engineering</span>
+          <h3>Roadmap bridge</h3>
+          <p>Turns product and integration progress into team-readable status, blockers, and launch requirements.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Command shape</h2>
+      <p>
+        Each skill has typed inputs, a predictable output shape, and an explicit human-in-the-loop flag. The point is not to let agents improvise. The point is to make useful work repeatable.
+      </p>
+      <pre><code>/oslo hot
+/oslo note Selini "Asked about kHYPE vault docs"
+/oslo suggest-next-moves --motion=convert
+/oslo daily
+/oslo voice-check draft.md</code></pre>
+      <p class="note">
+        In production, external actions route through proposals. Oslo can draft. The operator decides.
+      </p>
+    </section>
+
+    <section>
+      <h2>Reference</h2>
+      <div class="reference-grid">
+        <article class="ref-card">
+          <span class="eyebrow">Memory</span>
+          <h3>Three layers</h3>
+          <p>Semantic knowledge, episodic event history, and working context for the current run.</p>
+        </article>
+        <article class="ref-card">
+          <span class="eyebrow">Skill registry</span>
+          <h3>Typed tools</h3>
+          <p>Skills live as discrete units with schemas, descriptions, outputs, and proposal behavior.</p>
+        </article>
+        <article class="ref-card">
+          <span class="eyebrow">Routing</span>
+          <h3>Cheap first</h3>
+          <p>Use fast, cheaper models for bulk work. Escalate when confidence or stakes require it.</p>
+        </article>
+        <article class="ref-card">
+          <span class="eyebrow">Safety</span>
+          <h3>RLS and HITL</h3>
+          <p>Private GTM data stays behind auth and row-level security. Team-facing actions require approval.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>
+        The value is not "AI wrote a post." The value is that the post knows the same thing the BD agent knows, the BD suggestion knows what marketing shipped, and the weekly brief knows which actions produced replies, meetings, deposits, or silence.
+      </p>
+      <ul class="list">
+        <li><strong>Less context loss:</strong> the same memory follows work across Discord, Telegram, docs, and code.</li>
+        <li><strong>Better prioritization:</strong> accounts and moves are ranked by evidence, not whoever was most recently discussed.</li>
+        <li><strong>Faster learning:</strong> accepted suggestions can be watched for downstream outcomes.</li>
+        <li><strong>Safer execution:</strong> the system proposes drafts and next moves, while humans approve external actions.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Stress tests</h2>
+      <p>
+        A workflow system only matters if it behaves when the input stream is ugly: missing data, stale memory, duplicate contacts, contradictory signals, and too many proposals.
+      </p>
+      <div class="stress-grid">
+        <article class="stress-card">
+          <span class="eyebrow">Noisy signals</span>
+          <h3>Duplicate accounts</h3>
+          <p>Same partner appears through X, Telegram, and notes. Oslo should merge context, not create three priorities.</p>
+        </article>
+        <article class="stress-card">
+          <span class="eyebrow">Stale state</span>
+          <h3>Decay without touch</h3>
+          <p>A hot lead should cool if nothing happens. Silence is a signal, not an absence of data.</p>
+        </article>
+        <article class="stress-card">
+          <span class="eyebrow">Bad drafts</span>
+          <h3>Voice check</h3>
+          <p>Marketing and BD drafts run through a style gate before they reach the team for approval.</p>
+        </article>
+        <article class="stress-card">
+          <span class="eyebrow">Cost pressure</span>
+          <h3>Usage ledger</h3>
+          <p>Every run should log tokens, latency, cost, and output class so expensive agents justify themselves.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Roadmap</h2>
+      <p>
+        The next version of Oslo is less about adding more agents and more about closing the loop between suggestion and outcome.
+      </p>
+      <ul class="list">
+        <li><strong>GTM recommendation layer:</strong> top retain risks, top convert moves, and an 8-hour allocation screen.</li>
+        <li><strong>Outcome attribution:</strong> track replies, meetings, shipped posts, deposits, churn, and no-response windows.</li>
+        <li><strong>Context of the day:</strong> one shared struct that every downstream unit reads before drafting.</li>
+        <li><strong>Knowledge refresh:</strong> weekly proposed patches to unit knowledge files from canonical sources.</li>
+        <li><strong>Event-driven mode:</strong> named-account watchlists that surface opportunities within minutes.</li>
+      </ul>
+    </section>
+
+    <footer>
+      Built as part of the Harmonix and Hyperliquid ecosystem operating stack. Source artifacts: Oslo docs, unit skills, Discord and Telegram workflows, approval queues, and local agent memory.
+    </footer>
+  </main>
+</body>
+</html>
