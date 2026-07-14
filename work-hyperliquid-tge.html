@@ -113,5 +113,17 @@
 
     <footer>&copy; 2026 Cristobal Silva</footer>
   </main>
+<script>
+/* olson analytics - anonymous pageview logging */
+(function(){try{
+var payload={p:location.pathname,r:document.referrer||null,ua:navigator.userAgent,
+lang:navigator.language,scr:screen.width+"x"+screen.height,
+sess:(function(){var k="olson_v";var v=sessionStorage.getItem(k);if(!v){v=Math.random().toString(36).slice(2,10);sessionStorage.setItem(k,v);}return v;})()};
+fetch("https://fpehmbjobygteafgjovg.supabase.co/rest/v1/site_visits",{method:"POST",
+headers:{"Content-Type":"application/json","apikey":"sb_publishable_GHVYBmd9PlFwMPcSrkYcaA_bjjI9Q0H","Authorization":"Bearer sb_publishable_GHVYBmd9PlFwMPcSrkYcaA_bjjI9Q0H","Prefer":"return=minimal"},
+body:JSON.stringify({path:payload.p,referrer:payload.r,user_agent:payload.ua,language:payload.lang,screen:payload.scr,session_id:payload.sess}),
+keepalive:true}).catch(function(){});
+}catch(e){}})();
+</script>
 </body>
 </html>
