@@ -428,13 +428,13 @@
     }
 
     .ipad-frame {
-      background: #14161b;
-      border: 1px solid #2a2d34;
+      background: #ffffff;
+      border: 1px solid #e6e4dd;
       border-radius: 26px;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.14);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset, 0 24px 60px rgba(0, 0, 0, 0.10);
       display: block;
       margin: 0 0 20px;
-      padding: 18px;
+      padding: 16px;
       text-decoration: none;
     }
 
@@ -444,24 +444,20 @@
 
     .ipad-screen {
       background: #08090d;
+      border: 1px solid #efede7;
       border-radius: 12px;
       display: block;
       overflow: hidden;
     }
 
-    .ipad-screen img {
+    .ipad-screen img,
+    .ipad-screen video {
       aspect-ratio: 1180 / 820;
       display: block;
       height: auto;
       object-fit: cover;
       object-position: top center;
       width: 100%;
-    }
-
-    .ipad-screen.fit img {
-      background: #10141c;
-      object-fit: contain;
-      padding: 4%;
     }
 
     @media (max-width: 640px) {
@@ -1152,8 +1148,8 @@
       </p>
       <div class="work-stack">
         <article class="embedded-work">
-          <a class="ipad-frame" href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">
-            <span class="ipad-screen"><img src="assets/research-media/futuresxyz-app-ipad.jpg" alt="Futuresxyz perps view: BTC/USDC candlestick chart, live order book, and trade panel" loading="lazy"></span>
+          <a class="ipad-frame" href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer" aria-label="Futuresxyz live app: wallet connect demo">
+            <span class="ipad-screen"><video src="assets/research-media/futuresxyz-connect.mp4" poster="assets/research-media/futuresxyz-app-ipad.jpg" autoplay muted loop playsinline preload="metadata"></video></span>
           </a>
           <h3 class="piece-title"><a href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">Futuresxyz</a></h3>
           <p class="piece-intro">A full trading terminal for the Hyperliquid ecosystem — perps, spot, prediction markets, and lending in a single interface. Live orderbooks, candlestick charts, and market data stream over Hyperliquid websockets, with wallet connect, cross-margin and leverage controls, TP/SL order management, and a responsive interface in dark and light themes. Built with React, TypeScript, and lightweight-charts.</p>
@@ -1170,12 +1166,12 @@
         </article>
 
         <article class="embedded-work">
-          <a class="ipad-frame" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">
-            <span class="ipad-screen fit"><img src="assets/research-media/louis.jpg" alt="Louis HyperEVM protocol experiment architecture visual" loading="lazy"></span>
+          <a class="ipad-frame" href="https://louisxyz.vercel.app/" target="_blank" rel="noreferrer">
+            <span class="ipad-screen"><img src="assets/research-media/louis-app-ipad.jpg" alt="Louis home page: AI-powered stablecoin yield vault on HyperEVM" loading="lazy"></span>
           </a>
-          <h3 class="piece-title"><a href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">Louis</a></h3>
-          <p class="piece-intro">A Morpho fork built on HyperEVM, with deployed smart contracts around vault routing and lending-market architecture. The diagram shows the system itself: user flow, swap routing, the Louis Vault, and downstream integrations across HyperLend, HypurrFi, and Felix.</p>
-          <a class="source-link" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">Louis · 2025 · Open original</a>
+          <h3 class="piece-title"><a href="https://louisxyz.vercel.app/" target="_blank" rel="noreferrer">Louis</a></h3>
+          <p class="piece-intro">A Morpho fork built on HyperEVM, with deployed smart contracts around vault routing and lending-market architecture. Louis routes stablecoin deposits to the highest APY across HyperLend, HypurrFi, and Felix through autonomous yield allocation.</p>
+          <a class="source-link" href="https://louisxyz.vercel.app/" target="_blank" rel="noreferrer">Louis · 2025 · Open live app</a>
         </article>
       </div>
     </section>
