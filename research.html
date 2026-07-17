@@ -427,9 +427,51 @@
       object-fit: contain;
     }
 
-    .x-source-preview .research-media-image.futuresxyz-banner {
-      aspect-ratio: 1200 / 630;
+    .ipad-frame {
+      background: #14161b;
+      border: 1px solid #2a2d34;
+      border-radius: 26px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.14);
+      display: block;
+      margin: 0 0 20px;
+      padding: 18px;
+      text-decoration: none;
+    }
+
+    .ipad-frame:hover {
+      text-decoration: none;
+    }
+
+    .ipad-screen {
+      background: #08090d;
+      border-radius: 12px;
+      display: block;
+      overflow: hidden;
+    }
+
+    .ipad-screen img {
+      aspect-ratio: 1180 / 820;
+      display: block;
+      height: auto;
       object-fit: cover;
+      object-position: top center;
+      width: 100%;
+    }
+
+    .ipad-screen.fit img {
+      background: #10141c;
+      object-fit: contain;
+      padding: 4%;
+    }
+
+    @media (max-width: 640px) {
+      .ipad-frame {
+        border-radius: 18px;
+        padding: 10px;
+      }
+      .ipad-screen {
+        border-radius: 8px;
+      }
     }
 
     .visual-card {
@@ -1110,32 +1152,29 @@
       </p>
       <div class="work-stack">
         <article class="embedded-work">
+          <a class="ipad-frame" href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">
+            <span class="ipad-screen"><img src="assets/research-media/futuresxyz-app-ipad.jpg" alt="Futuresxyz perps view: BTC/USDC candlestick chart, live order book, and trade panel" loading="lazy"></span>
+          </a>
           <h3 class="piece-title"><a href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">Futuresxyz</a></h3>
           <p class="piece-intro">A full trading terminal for the Hyperliquid ecosystem — perps, spot, prediction markets, and lending in a single interface. Live orderbooks, candlestick charts, and market data stream over Hyperliquid websockets, with wallet connect, cross-margin and leverage controls, TP/SL order management, and a responsive interface in dark and light themes. Built with React, TypeScript, and lightweight-charts.</p>
-          <a class="work-preview x-source-preview" href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">
-            <img class="research-media-image futuresxyz-banner" src="assets/research-media/futuresxyz-og-banner.png" alt="Futuresxyz trading terminal banner: trade, swap, predict, lend in one terminal" loading="lazy">
-          </a>
           <a class="source-link" href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">Futuresxyz · 2026 · Open live app</a>
         </article>
 
         <article class="embedded-work" id="oslo-architecture" style="scroll-margin-top: 40px;">
+          <a class="ipad-frame" href="oslo-architecture/">
+            <span class="ipad-screen"><img src="assets/research-media/oslo-analytics-interface.png" alt="Oslo analytics interface: live capital board, HAR token strip, and protocol funnel metrics" loading="lazy"></span>
+          </a>
           <h3 class="piece-title"><a href="oslo-architecture/">Oslo</a></h3>
           <p class="piece-intro">A full lifecycle marketing agent. Oslo runs the loop from awareness to retention for a crypto protocol — mindshare and narrative tracking, content drafts, outreach queues, protocol and capital analytics — on shared memory, with approval-gated actions and outcome learning.</p>
-          <div class="oslo-analytics" aria-label="Oslo analytics interface">
-            <a class="oslo-analytics-shot" href="oslo-architecture/">
-              <img src="assets/research-media/oslo-analytics-interface.png" alt="Oslo analytics interface: live capital board, HAR token strip, and protocol funnel metrics" loading="lazy">
-            </a>
-            <div class="oslo-analytics-foot">Oslo · Analytics · live capital board, HAR, protocol funnel</div>
-          </div>
           <a class="source-link" href="oslo-architecture/">Oslo · 2026 · Open article</a>
         </article>
 
         <article class="embedded-work">
+          <a class="ipad-frame" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">
+            <span class="ipad-screen fit"><img src="assets/research-media/louis.jpg" alt="Louis HyperEVM protocol experiment architecture visual" loading="lazy"></span>
+          </a>
           <h3 class="piece-title"><a href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">Louis</a></h3>
           <p class="piece-intro">A Morpho fork built on HyperEVM, with deployed smart contracts around vault routing and lending-market architecture. The diagram shows the system itself: user flow, swap routing, the Louis Vault, and downstream integrations across HyperLend, HypurrFi, and Felix.</p>
-          <a class="work-preview agent-preview" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">
-            <img class="research-media-image contain-image" src="assets/research-media/louis.jpg" alt="Louis HyperEVM protocol experiment architecture visual" loading="lazy">
-          </a>
           <a class="source-link" href="https://github.com/Christophorusan/louis" target="_blank" rel="noreferrer">Louis · 2025 · Open original</a>
         </article>
       </div>
