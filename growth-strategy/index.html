@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Growth Strategy — Pay for Retention, Not Just Users</title>
+<style>
+:root{
+  --paper:#FBFBF9; --ink:#16181D; --soft:#6A6E76; --accent:#0E7C5B; --line:#E5E4DF; --card:#F3F2EE;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --paper:#101214; --ink:#E8E7E2; --soft:#9A9EA6; --accent:#3FBF8F; --line:#26292E; --card:#17191D; }
+}
+:root[data-theme="dark"]{ --paper:#101214; --ink:#E8E7E2; --soft:#9A9EA6; --accent:#3FBF8F; --line:#26292E; --card:#17191D; }
+:root[data-theme="light"]{ --paper:#FBFBF9; --ink:#16181D; --soft:#6A6E76; --accent:#0E7C5B; --line:#E5E4DF; --card:#F3F2EE; }
+
+html{background:var(--paper)}
+body{
+  font-family: Charter, Georgia, 'Times New Roman', serif;
+  color:var(--ink); background:var(--paper);
+  line-height:1.55; font-size:17px;
+  max-width:680px; margin:0 auto; padding:56px 22px 90px;
+}
+h1,h2,h3{font-family:'Avenir Next','Helvetica Neue',Helvetica,Arial,sans-serif; text-wrap:balance; line-height:1.15; margin:0}
+h1{font-size:clamp(30px,6vw,44px); font-weight:700; letter-spacing:-0.015em}
+h2{font-size:24px; font-weight:600; margin-top:8px}
+h3{font-size:17.5px; font-weight:600; margin-top:6px}
+p{margin:12px 0}
+.eyebrow{
+  font-family:ui-monospace,'SF Mono',Menlo,monospace; font-size:11.5px; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--accent); font-weight:500;
+}
+.byline{color:var(--soft); font-size:15px; margin-top:14px}
+.byline a{color:var(--soft)}
+.lede{font-size:19px; color:var(--ink); margin-top:22px}
+a{color:var(--accent); text-decoration:none; border-bottom:1px solid color-mix(in srgb, var(--accent) 35%, transparent)}
+a:hover{border-bottom-color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
+
+.toc{border:1px solid var(--line); background:var(--card); padding:20px 24px; margin:34px 0 10px}
+.toc ol{margin:8px 0 0; padding-left:20px}
+.toc li{margin:7px 0}
+.toc .d{color:var(--soft); font-size:15px}
+
+section{margin-top:58px}
+.secnum{
+  display:flex; align-items:baseline; gap:14px; border-top:2px solid var(--ink);
+  padding-top:14px; margin-bottom:6px;
+}
+.secnum .n{font-family:ui-monospace,'SF Mono',Menlo,monospace; font-size:13px; color:var(--soft)}
+
+ul{padding-left:22px; margin:10px 0}
+li{margin:5px 0}
+li::marker{color:var(--soft)}
+
+.stage{border-left:3px solid var(--accent); padding:2px 0 2px 18px; margin:26px 0}
+.stage .k{font-family:ui-monospace,'SF Mono',Menlo,monospace; font-size:12px; color:var(--soft); letter-spacing:0.08em; text-transform:uppercase}
+.metric{background:var(--card); border:1px solid var(--line); padding:12px 16px; margin:12px 0; font-size:15.5px; color:var(--soft)}
+.metric b{color:var(--ink); font-weight:600}
+
+.egs{font-size:14.5px; color:var(--soft); margin:8px 0 0}
+.egs span{font-family:ui-monospace,'SF Mono',Menlo,monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin-right:8px}
+.egs a{margin-right:14px; white-space:nowrap}
+
+.cols{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin:16px 0}
+@media (max-width:620px){ .cols{grid-template-columns:1fr} }
+.col{border:1px solid var(--line); padding:18px 20px; background:var(--card)}
+.col h3{margin-top:0}
+.col .sub{color:var(--soft); font-size:14px; margin:2px 0 10px}
+
+.loop{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:16px 0}
+@media (max-width:620px){ .loop{grid-template-columns:repeat(2,1fr)} }
+.loop div{border:1px solid var(--line); padding:10px 12px; font-family:'Avenir Next','Helvetica Neue',sans-serif; font-size:14px; font-weight:600; text-align:center}
+.loop div small{display:block; font-weight:400; color:var(--soft); font-family:ui-monospace,'SF Mono',Menlo,monospace; font-size:10.5px; letter-spacing:0.1em; margin-bottom:3px}
+
+footer{margin-top:70px; border-top:1px solid var(--line); padding-top:16px; color:var(--soft); font-size:14px}
+</style>
+
+<div class="eyebrow">Growth Strategy</div>
+<h1>Pay for retention,<br>not just users</h1>
+<p class="byline">by <a href="https://x.com/christophorusan" target="_blank" rel="noopener">@christophorusan</a></p>
+
+<p class="lede">A full-funnel strategy for protocol growth: acquire long-term valuable users rather than short-term point farmers, and treat every marketing dollar as an investment in loyal users — not rented engagement.</p>
+
+<div class="toc">
+  <div class="eyebrow">Contents</div>
+  <ol>
+    <li><b>Social Media Growth Strategy</b> <div class="d">Funnel &amp; brand</div></li>
+    <li><b>Product &amp; Growth</b> <div class="d">Two-team collaboration, roadmap &amp; distribution, agencies &amp; partners, campaigns &amp; community</div></li>
+    <li><b>Data &amp; Performance Tracking</b> <div class="d">Metrics, analytics, KPIs and OKRs</div></li>
+  </ol>
+</div>
+
+<section>
+  <div class="secnum"><span class="n">01</span><h2>Social Media Growth Strategy</h2></div>
+  <p>Target crypto-native users, first-timers, institutions, and retail — with a full-funnel strategy whose goal is buying retention. Campaigns and content are designed to support each stage of the funnel and build long-term loyalty to the protocol's products: the website and mobile app, the core products (vaults, strategies, yield-bearing tokens), and the native token.</p>
+  <p>Content runs in three formats at every stage:</p>
+  <ul>
+    <li><b>Videos</b> — ads, explainers, tutorials, interviews</li>
+    <li><b>Written</b> — website copy, blogs, newsletters, protocol docs</li>
+    <li><b>Memes &amp; graphics</b> — visuals that capture attention and reinforce the message</li>
+  </ul>
+
+  <div class="stage">
+    <div class="k">Funnel · Stage 1</div>
+    <h3>Outreach</h3>
+    <p>The first thing people see should be short and carry one core function of the product as the message — catch attention and pull users to the next part of the funnel, the website.</p>
+    <div class="metric"><b>Measure:</b> click-through rate against impressions, then engagement and shares — and above all, landing-page visits.</div>
+    <p><b>Video.</b> Short ad videos (~30s) that hook users as the first touch.</p>
+    <p class="egs"><span>e.g.</span><a href="https://x.com/christophorusan/status/1855778920747954342" target="_blank" rel="noopener">HYPE TGE ad</a><a href="https://x.com/aave/status/2003155595210424394" target="_blank" rel="noopener">Aave</a></p>
+    <p><b>Written.</b> The first pitch: what the protocol is, its core features, and why it matters — assuming zero prior knowledge. Explain the product, highlight features in plain terms, guide onboarding step by step, build trust with consistent messaging, and close with a clear call to action.</p>
+    <p class="egs"><span>e.g.</span><a href="https://phantom.com/learn/blog/phantom-perps" target="_blank" rel="noopener">Phantom Perps</a></p>
+    <p><b>Memes &amp; designs.</b> Graphics that ride world news, protocol campaigns, roadmaps, and product updates — and pitch the product to first-time users.</p>
+    <p class="egs"><span>e.g.</span><a href="https://x.com/base/status/1912584945127813533" target="_blank" rel="noopener">Base</a><a href="https://x.com/aave/status/2007457760061935712" target="_blank" rel="noopener">Aave</a></p>
+  </div>
+
+  <div class="stage">
+    <div class="k">Funnel · Stage 2</div>
+    <h3>Conversion</h3>
+    <p>Turn visitors into active participants.</p>
+    <div class="metric"><b>Measure:</b> first-time deposits relative to site visits — new users and first-time depositors, tracked from impression to deposit.</div>
+    <p><b>Video.</b> Onboarding videos: create a wallet, fund it, deposit into the protocol, security and risk (hack prevention, key safety), and protocol architecture. Package them as an "Academy hub" — a 101 with levels, from what stablecoins and vaults are, to where the yield comes from, to full technical architecture.</p>
+    <p class="egs"><span>e.g.</span><a href="https://www.youtube.com/shorts/gUmIEtz-gNc" target="_blank" rel="noopener">Shorts example</a><a href="https://www.youtube.com/watch?v=byNNauAJrKI" target="_blank" rel="noopener">Explainer example</a></p>
+    <p><b>Written.</b> A written onboarding path, plus blogs and newsletters explaining product functions, how they work, and how to use them. Split the blog by audience: 101 for non-crypto readers, newsletter &amp; updates, and how-tos (deposit, borrow, stake, trade, swap).</p>
+    <p class="egs"><span>e.g.</span><a href="https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding" target="_blank" rel="noopener">Hyperliquid onboarding docs</a></p>
+    <p><b>Memes &amp; designs.</b> One core message — download, deposit, earn, trade — explained in extremely simple terms: what it is, how it works, the value proposition.</p>
+    <p class="egs"><span>e.g.</span><a href="https://x.com/base/status/1989096686396821803" target="_blank" rel="noopener">Base</a><a href="https://x.com/morpho/status/2009310157768139183" target="_blank" rel="noopener">Morpho</a></p>
+  </div>
+
+  <div class="stage">
+    <div class="k">Funnel · Stage 3</div>
+    <h3>Retention</h3>
+    <p>The stage the whole strategy is built to serve: users who deposit, stay, engage with new products — and go on to hold the token.</p>
+    <div class="metric"><b>Measure:</b> monthly active users and cohort activity — how many depositors keep using the protocol, and how many go on to buy the token and engage with new releases.</div>
+    <p><b>Video.</b> Conference presentations, annual updates, CEO interviews — the vision of the protocol, what the team is working on, and why.</p>
+    <p class="egs"><span>e.g.</span><a href="https://www.youtube.com/watch?v=QDxRDzxxXgY" target="_blank" rel="noopener">Presentation</a><a href="https://www.youtube.com/watch?v=FBHmAq5lmZQ" target="_blank" rel="noopener">Interview</a></p>
+    <p><b>Written.</b> What's next, in simple terms: roadmaps, product vision, and how the protocol scales — so users understand where it's heading.</p>
+    <p class="egs"><span>e.g.</span><a href="https://x.com/ethena_labs/status/1885018297957310686" target="_blank" rel="noopener">Ethena</a><a href="https://x.com/pendle_fi/status/1886764236795429321" target="_blank" rel="noopener">Pendle</a></p>
+    <p><b>Memes &amp; designs.</b> Build community, not just brand recognition — memes as long-term alignment with partners and supporters, like wearing the t-shirt of your favorite club.</p>
+    <p class="egs"><span>e.g.</span><a href="https://x.com/HyperliquidX/status/2008458928288657426" target="_blank" rel="noopener">Hyperliquid</a><a href="https://x.com/solana/status/2010392531218157868" target="_blank" rel="noopener">Solana</a></p>
+  </div>
+
+  <h3>Brand</h3>
+  <p>Focus the brand on solving a specific problem in a target ecosystem. Start with a niche, then expand — Ethereum first, then Solana or Hyperliquid. Goals: grow FDV and market value, increase token holders and community engagement, expand partners and builders, build power users who drive adoption, and attract and retain developers.</p>
+  <p class="egs"><span>e.g.</span><a href="https://x.com/Morpho/status/1842148215342215176" target="_blank" rel="noopener">Morpho brand</a><a href="https://x.com/Morpho/status/1711744126184747077" target="_blank" rel="noopener">Morpho launch</a></p>
+
+  <h3 style="margin-top:26px">Narratives</h3>
+  <p>Use data-driven messages that perform organically or ride trending topics, then amplify across every channel: community, KOLs, newsletters, partners, events, team pages, and ads. Narrative pillars: valuation &amp; growth, protocol health (TVL, liquidity, audits, retention, solvency), community &amp; partners, the token as community-first ownership, technical depth, and exchange features.</p>
+  <p class="egs"><span>e.g.</span><a href="https://x.com/hyperdailytk/status/2016038440043995509" target="_blank" rel="noopener">Narrative thread</a><a href="https://x.com/narwhaltan/status/1974338352557273239" target="_blank" rel="noopener">Analysis thread</a></p>
+</section>
+
+<section>
+  <div class="secnum"><span class="n">02</span><h2>Product &amp; Growth</h2></div>
+  <p>A framework for collaboration between product and growth teams, supported by data and performance tracking.</p>
+  <div class="cols">
+    <div class="col">
+      <h3>Team 1 — Product</h3>
+      <div class="sub">Build, secure, and maintain the protocol</div>
+      <ul>
+        <li>Engineering: contracts, vaults, integrations, front-end</li>
+        <li>Ops / validators: monitor vaults and performance</li>
+        <li>Security: audits, bounties, multisig, user protection</li>
+        <li>Design &amp; UX: seamless vault experiences</li>
+        <li>User support: onboarding and troubleshooting</li>
+        <li>Analytics: TVL, usage, protocol performance</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Team 2 — Growth</h3>
+      <div class="sub">Drive adoption, engagement, ecosystem growth</div>
+      <ul>
+        <li>Social &amp; brand: campaigns, content, product updates</li>
+        <li>Incentives &amp; programs: rewards for power users and builders</li>
+        <li>Partnerships &amp; community: KOLs, private groups</li>
+        <li>Market research: user behavior, whales, trends</li>
+        <li>Education &amp; feedback: tutorials, retention support</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Roadmap</h3>
+  <p>One annual roadmap aligning product releases with growth execution: product defines launch and update timelines; growth builds distribution around each release. The roadmap tracks monthly performance metrics and both teams' execution dates.</p>
+
+  <h3 style="margin-top:26px">Distribution</h3>
+  <p>Distribution follows a four-stage loop:</p>
+  <div class="loop">
+    <div><small>01</small>Design</div>
+    <div><small>02</small>Test</div>
+    <div><small>03</small>Execute</div>
+    <div><small>04</small>Review</div>
+  </div>
+  <ul>
+    <li><b>Design</b> — define target users, regions, and partners from on-chain and social data (DeBank, Etherscan, X, geographic hubs).</li>
+    <li><b>Test</b> — one core message, 3–5 variations, tested organically across accounts and formats; pick winners on CTR, engagement, and conversion.</li>
+    <li><b>Execute</b> — deploy winning assets across social, newsletters, email, KOLs, partners, media, events, community, and education.</li>
+    <li><b>Review</b> — measure clicks, users, deposits, retention; double down on what works; repeat.</li>
+  </ul>
+
+  <h3 style="margin-top:26px">External agencies</h3>
+  <p>An annual budget for partners and agencies that build trust, reputation, and retention — targeted by ecosystem, location, and language. If the target is Tokyo, that means an article, podcast, or blog in a trusted Japanese outlet, so a search for the protocol surfaces a clear explanation. Every campaign is measured and reviewed for profitability and its support of the wider funnel.</p>
+  <p class="egs"><span>e.g.</span><a href="https://x.com/Bankless/status/1978785440892153946" target="_blank" rel="noopener">Bankless</a><a href="https://www.onchaintimes.com/aerodrome-the-defi-revenue-giant/" target="_blank" rel="noopener">OnChain Times on Aerodrome</a></p>
+
+  <h3 style="margin-top:26px">Partners</h3>
+  <p>A repeatable co-marketing process: set objectives and results with each partner, design materials that support the funnel and community initiatives, then use data to gather feedback and improve the process each cycle.</p>
+  <p class="egs"><span>e.g.</span><a href="https://x.com/gauntlet_xyz/status/2011458198679461908" target="_blank" rel="noopener">Gauntlet</a><a href="https://x.com/felixprotocol/status/2011831820371828920" target="_blank" rel="noopener">Felix</a></p>
+
+  <h3 style="margin-top:26px">Social campaigns &amp; community incentives</h3>
+  <p>This is who it's all for: the community of partners, users, builders, and investors. Campaigns target five groups — power users (feedback, content campaigns, NFTs), DAO contributors (governance, foundation, grants, treasury), builders (hackathons, security contests), events (investors, builders, partners, community), and mindshare (ambassador programs, KOLs, narrative control).</p>
+  <p>Community incentives: points programs, giveaways, competitions, leaderboards — points on yield and curated services for power users.</p>
+  <p class="egs"><span>e.g.</span><a href="https://x.com/felixprotocol/status/1986089539362869435" target="_blank" rel="noopener">Felix</a><a href="https://x.com/nikitabier/status/2012307256444854693" target="_blank" rel="noopener">Nikita Bier</a><a href="https://x.com/maplefinance/status/1917927119793078739" target="_blank" rel="noopener">Maple</a></p>
+</section>
+
+<section>
+  <div class="secnum"><span class="n">03</span><h2>Data &amp; Performance Tracking</h2></div>
+  <p>The protocol generates value through token appreciation and product fees. Performance tracking grows both systematically, in a recurring four-stage loop:</p>
+  <div class="loop">
+    <div><small>01</small>Set objectives</div>
+    <div><small>02</small>Measure</div>
+    <div><small>03</small>Forecast</div>
+    <div><small>04</small>Improve</div>
+  </div>
+  <ul>
+    <li><b>Set objectives</b> — one primary long-term objective (users, TVL, FDV, token holders), broken into annual and monthly milestones on a shared roadmap and calendar.</li>
+    <li><b>Measure</b> — funnel conversion rates at each stage; current position in users, TVL, FDV, and holders; how efficiently growth translates into revenue. Retention is read through inflows versus outflows — net retention above 100% means users increase exposure over time rather than churn.</li>
+    <li><b>Forecast</b> — model the steady-state growth rate needed to hit each milestone, and check monthly performance against it.</li>
+    <li><b>Improve</b> — allocate budget to the highest-ROI activities: retention initiatives, funnel optimization, distribution scaling. Learnings feed directly into the next round of tests and campaigns.</li>
+  </ul>
+</section>
+
+<footer>
+  Growth Strategy — pay for retention, not just users · <a href="https://x.com/christophorusan" target="_blank" rel="noopener">@christophorusan</a> · <a href="https://christophorusan.github.io" target="_blank" rel="noopener">christophorusan.github.io</a>
+</footer>
+
+</html>
