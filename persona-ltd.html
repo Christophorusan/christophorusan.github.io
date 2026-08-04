@@ -39,6 +39,7 @@
     .photo-grid, .case-gallery { --proof-thumb: 106px; display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, var(--proof-thumb)); justify-content: center; margin-top: 18px; max-width: 100%; width: fit-content; }
     .photo-grid img { aspect-ratio: 1 / 1; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; height: var(--proof-thumb); object-fit: contain; padding: 6px; width: var(--proof-thumb); }
     .broadcast-slideshow { position: relative; aspect-ratio: 16 / 9; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; margin: 18px auto 0; max-width: 500px; overflow: hidden; width: 100%; }
+    .broadcast-slideshow + p { margin-top: 16px; }
     /* Vertical feed: each image holds, then the next one scrolls up into view.
        7 slides = 6 images + a copy of the first so the loop wraps seamlessly. */
     .broadcast-track { animation: broadcast-scroll 28s cubic-bezier(0.45, 0, 0.15, 1) infinite; display: block; height: 700%; }
@@ -226,6 +227,15 @@
             <span class="slide" aria-hidden="true"><img src="assets/persona-bbc-london-jazz/bbc-london-jazz-02.jpg" alt="" /></span>
           </div>
         </div>
+        <p>
+          For Jazz à la Villette, I worked with production companies on sound and film, then used TV and radio to diffuse the campaign. Distribution ran through partners including Qwest TV, France TV, FIP, Mezzo, and more, so one coherent piece could travel across broadcast, radio, and streaming without losing its identity.
+        </p>
+        <figure class="festival-video">
+          <div class="embed">
+            <iframe src="https://www.youtube-nocookie.com/embed/LaRPrLmbs6g" title="Jazz à la Villette 2024 teaser" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <figcaption><span>Jazz à la Villette</span>Official festival teaser</figcaption>
+        </figure>
       </article>
       <article class="case-study">
         <h2>Festival Advertising</h2>
