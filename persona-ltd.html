@@ -35,7 +35,7 @@
     .pov-block { display: grid; gap: 10px; margin-top: 18px; max-width: 640px; }
     .pov-block p { color: #333; font-size: 16px; line-height: 1.58; }
     .pov-block strong { color: #111; font-weight: 560; }
-    .arweave-media, .photo-grid, .case-gallery, .poster-wall { margin-left: auto; margin-right: auto; }
+    .photo-grid, .case-gallery, .poster-wall { margin-left: auto; margin-right: auto; }
     .photo-grid, .case-gallery { --proof-thumb: 106px; display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, var(--proof-thumb)); justify-content: center; margin-top: 18px; max-width: 100%; width: fit-content; }
     .photo-grid img { aspect-ratio: 1 / 1; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; height: var(--proof-thumb); object-fit: contain; padding: 6px; width: var(--proof-thumb); }
     .broadcast-slideshow { position: relative; aspect-ratio: 16 / 9; background: #fafafa; border: 1px solid #ededed; border-radius: 8px; margin: 18px auto 0; max-width: 500px; overflow: hidden; width: 100%; }
@@ -126,16 +126,6 @@
     .video-card figcaption { color: #777; display: grid; font-size: 13px; gap: 3px; line-height: 1.4; margin-top: 8px; }
     .video-card figcaption span { color: #111; font-size: 14px; font-weight: 520; }
     .video-card figcaption a { color: #777; }
-    .arweave-stack { display: grid; gap: 26px; margin-top: 20px; }
-    .arweave-piece { margin: 0; max-width: 620px; width: 100%; }
-    .arweave-piece h3 { color: #111; font-size: 20px; font-weight: 560; line-height: 1.2; margin: 0 0 10px; }
-    .arweave-piece h3 a { color: inherit; text-decoration: none; }
-    .arweave-piece h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
-    .arweave-media { margin: 12px auto 0; max-width: 500px; width: 100%; }
-    .arweave-media video { aspect-ratio: 16 / 9; background: #f8f8f8; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; object-fit: cover; width: 100%; }
-    .arweave-media img { aspect-ratio: 16 / 9; background: #f8f8f8; border: 1px solid #ededed; border-radius: 8px; display: block; filter: none; object-fit: cover; width: 100%; }
-    .arweave-piece .source-link { color: #777; display: block; font-size: 12px; margin-left: auto; margin-right: auto; margin-top: 7px; max-width: 500px; text-decoration: none; }
-    .arweave-piece .source-link:hover { color: #111; text-decoration: underline; text-underline-offset: 4px; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
     @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .work-link, .venue-group, .festival-proof-grid { grid-template-columns: 1fr; gap: 4px; } .work-link { padding: 14px 0; } .photo-grid, .case-gallery, .venue-entry .case-gallery, .festival-proof-grid .photo-grid, .festival-proof-grid .photo-grid.three-up-gallery, .broadcast-case .broadcast-grid { --proof-thumb: min(128px, calc((100vw - 44px) / 2)); grid-template-columns: repeat(2, var(--proof-thumb)); max-width: 100%; width: fit-content; } .poster-wall { --proof-thumb: min(128px, calc((100vw - 44px) / 2)); gap: 12px 10px; grid-template-columns: repeat(2, var(--proof-thumb)); max-width: 100%; width: fit-content; } .poster-card figcaption { font-size: 10.5px; } .poster-card figcaption span { font-size: 11.5px; } }
   </style>
@@ -161,38 +151,6 @@
         <p>
           That logic shaped work for clients including EFG, CaixaBank, BBC, ARTE TV, Institut Français, TEDx Talks, France 24, the Italian government, Arweave, and major European festivals, generating more than 50,000 ticket sales, 50M online views, and up to 3x ROI through story, creative testing, paid acquisition, media trust, and measured distribution.
         </p>
-      </article>
-      <article class="case-study" id="arweave">
-        <h2>Arweave</h2>
-        <p>
-          Arweave and AR.IO came to Persona as a client, and I led the work. The decision was to avoid explaining technology only through code. Infrastructure is invisible by default, but it still has a life: it changes what can be preserved, financed, verified, and trusted.
-        </p>
-        <div class="arweave-stack" aria-label="Arweave and AR.IO work">
-          <article class="arweave-piece">
-            <p>The launch campaign framed permanent storage through memory, proof, and permanence so non-technical audiences could understand the opportunity without needing to understand the entire protocol first.</p>
-            <div class="arweave-media">
-              <video autoplay muted loop playsinline controls preload="metadata" poster="assets/arweave-media/arweave-campaign-poster.jpg">
-                <source src="assets/arweave-media/arweave-campaign.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </article>
-          <article class="arweave-piece">
-            <p>The Sagrada Familia x AR.IO work used cultural preservation as the entry point. It made the technology concrete for people who would not respond to infrastructure language alone: investors, institutions, and audiences outside crypto.</p>
-            <div class="arweave-media">
-              <video autoplay muted loop playsinline controls preload="metadata" poster="assets/arweave-media/sagrada-familia-ario-poster.jpg">
-                <source src="assets/arweave-media/sagrada-familia-ario.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </article>
-          <article class="arweave-piece">
-            <p>The Paragraph report made the protocol layer legible after the narrative was already visible, connecting AR.IO, gateway networks, and Arweave's Q3 update to the broader permaweb stack.</p>
-            <div class="arweave-media">
-              <a href="https://paragraph.com/@christophorus/what-is-ar-io-arweave-q3-update-2024" target="_blank" rel="noreferrer" aria-label="Open What is AR.IO article">
-                <img src="assets/arweave-media/ario-arweave-q3-2024.avif" alt="AR.IO and Arweave Q3 2024 article visual" loading="lazy" />
-              </a>
-            </div>
-          </article>
-        </div>
       </article>
       <article class="case-study broadcast-case">
         <h2>Broadcast, Radio, TV, and Podcasts</h2>
