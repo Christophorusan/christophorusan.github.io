@@ -1,0 +1,138 @@
+body.hyperliquid-page {
+  padding: 64px 24px 88px;
+  padding-top: 64px !important;
+}
+
+.hyperliquid-page .page {
+  max-width: 640px !important;
+  width: 100% !important;
+  margin-inline: auto !important;
+  padding-top: 0;
+}
+
+.hyperliquid-page .back {
+  margin-bottom: 40px;
+}
+
+.hyperliquid-page header {
+  margin-bottom: 56px !important;
+}
+
+.hyperliquid-page h1 {
+  font-size: 32px !important;
+  font-weight: 560 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.025em !important;
+  margin-bottom: 12px;
+}
+
+.hyperliquid-page .date {
+  color: var(--muted) !important;
+  margin-bottom: 18px;
+}
+
+.hyperliquid-page p,
+.hyperliquid-page .artifact-note {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.hyperliquid-page .intro {
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.hyperliquid-page section {
+  border-color: var(--rule);
+  margin-top: 64px;
+  padding-top: 26px;
+}
+
+.hyperliquid-page section:first-of-type {
+  margin-top: 0;
+}
+
+.hyperliquid-page h2 {
+  color: #71716b !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.075em !important;
+  margin-bottom: 24px;
+}
+
+.hyperliquid-page .piece-title {
+  font-size: 21px;
+  font-weight: 570 !important;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.hyperliquid-page .work-stack {
+  gap: 56px;
+  margin-top: 0;
+}
+
+.hyperliquid-page .artifact-note {
+  margin-bottom: 24px;
+}
+
+.hyperliquid-page .media {
+  margin-top: 24px;
+}
+
+.hyperliquid-page .source-link {
+  color: var(--muted) !important;
+  display: block;
+  font-size: 12px;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 520px;
+  margin: 12px auto 0;
+}
+
+.hyperliquid-page .tweet-image-preview + .source-link {
+  max-width: 420px;
+}
+
+.hyperliquid-page .tweet-image-preview.portrait + .source-link {
+  max-width: 360px;
+}
+
+.hyperliquid-page .source-link + .embedded-work {
+  margin-top: 52px;
+}
+
+@media (max-width: 700px) {
+  body.hyperliquid-page {
+    padding: 32px 24px 64px !important;
+  }
+
+  .hyperliquid-page .back {
+    margin-bottom: 32px;
+  }
+
+  .hyperliquid-page header {
+    margin-bottom: 40px !important;
+  }
+
+  .hyperliquid-page h1 {
+    font-size: 30px !important;
+  }
+
+  .hyperliquid-page .intro {
+    font-size: 18px;
+  }
+
+  .hyperliquid-page section {
+    margin-top: 48px;
+    padding-top: 24px;
+  }
+
+  .hyperliquid-page .work-stack {
+    gap: 44px;
+  }
+
+  .hyperliquid-page .source-link + .embedded-work {
+    margin-top: 44px;
+  }
+}
