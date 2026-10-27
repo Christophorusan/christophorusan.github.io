@@ -1132,73 +1132,64 @@
   </style>
 
   <style>
-    .oslo-live-preview {
-      background: #fff;
-      border: 1px solid #ececec;
-      border-radius: 10px;
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
-      aspect-ratio: 16 / 10;
-      height: auto;
-      max-height: 560px;
-      overflow: hidden;
+    .oslo-case-study {
+      max-width: none;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1280px, calc(100vw - 64px));
     }
-
-    .oslo-live-preview iframe {
-      background: #fff;
-      border: 0;
-      display: block;
-      height: 800px;
-      transform: scale(.546875);
-      transform-origin: top left;
-      width: 1280px;
-    }
-
-    .oslo-screens { display:grid; gap:46px; margin-top:26px; }
+    .oslo-case-study > p { max-width: 760px; }
+    .oslo-screens { display:grid; gap:72px; margin-top:32px; }
     .oslo-screen { margin:0; }
-    .oslo-screen img {
-      aspect-ratio:16 / 9;
-      background:#171717;
-      border:1px solid #e9e9e9;
-      border-radius:10px;
-      box-shadow:0 18px 50px rgba(0,0,0,.07);
-      display:block;
-      object-fit:cover;
-      width:100%;
+    .oslo-screen h4 {
+      color:#111;
+      font-size:13px;
+      font-weight:600;
+      letter-spacing:.08em;
+      margin-bottom:8px;
+      text-transform:uppercase;
     }
-    .oslo-screen figcaption {
-      display:grid;
-      gap:12px;
-      grid-template-columns:minmax(150px, 190px) 1fr;
-      margin:13px auto 0;
-      max-width:650px;
+    .oslo-screen-intent {
+      color:#777;
+      font-size:15px;
+      line-height:1.5;
+      margin:0 0 18px;
+      max-width:760px;
     }
-    .oslo-screen figcaption strong { font-size:14px; font-weight:560; }
-    .oslo-screen figcaption span { color:#777; font-size:13px; line-height:1.5; }
-
-    .oslo-source-link {
-      margin-left: 0;
+    .oslo-screen-copy {
+      color:#222;
+      font-size:clamp(17px, 2vw, 20px);
+      line-height:1.55;
+      margin:16px 0 10px;
+      max-width:760px;
     }
-
-    .oslo-caveat {
-      color: #777;
-      font-size: 13px;
-      line-height: 1.45;
+    .oslo-screen .ipad-frame { margin-bottom:0; }
+    .oslo-wallet-screen .oslo-live-preview { aspect-ratio:16 / 10; max-height:none; }
+    .oslo-wallet-screen .oslo-live-preview iframe {
+      height:800px;
+      transform:scale(.92);
+      transform-origin:top left;
+      width:1280px;
     }
+    .oslo-caveat { color:#777; font-size:13px; line-height:1.45; margin-top:28px; max-width:900px; }
 
-    .oslo-caveat {
-      margin-top: 14px;
+    @media (max-width: 1200px) {
+      .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.72); }
     }
-
-    @media (max-width: 700px) {
-      .oslo-live-preview { aspect-ratio: 16 / 10; max-height: none; }
-      .oslo-live-preview iframe { transform:scale(.5); }
-      .oslo-screen figcaption { grid-template-columns:1fr; gap:4px; }
-
+    @media (max-width: 960px) {
+      .oslo-case-study { width:calc(100vw - 40px); }
+      .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.62); }
     }
-
-    @media(max-width:560px) { .oslo-live-preview iframe { transform:scale(.42); } }
-    @media(max-width:460px) { .oslo-live-preview iframe { transform:scale(.34); } }
-    @media(max-width:400px) { .oslo-live-preview iframe { transform:scale(.29); } }
+    @media (max-width: 760px) {
+      .oslo-case-study { width:calc(100vw - 32px); }
+      .oslo-screens { gap:48px; }
+      .oslo-wallet-screen .oslo-live-preview { aspect-ratio:16 / 10; }
+      .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.5); }
+    }
+    @media(max-width:560px) { .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.42); } }
+    @media(max-width:460px) { .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.34); } }
+    @media(max-width:400px) { .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.29); } }
   </style>
   <link rel="stylesheet" href="assets/site-aesthetic.css" />
 </head>
@@ -1212,58 +1203,52 @@
       <p class="intro">A self-custody wallet that brings payments, prediction markets, perps, and earning into one clear place.</p>
     </header>
 
-    <section id="oslo-architecture" style="scroll-margin-top: 40px;">
-      <h2>One wallet. More ways to participate.</h2>
-      <p>Oslo brings self-custody and open financial tools into one experience. The preview uses illustrative data and does not embed a connected wallet or personal balances.</p>
-      <div class="work-stack">
-        <article class="embedded-work">
-          <h3 class="piece-title">The landing page, at desktop scale</h3>
-          <p class="piece-intro">A desktop-width view of the live landing page, scaled to fit this case study. Its product views use sample data.</p>
+    <section id="oslo-architecture" class="oslo-case-study" style="scroll-margin-top: 40px;">
+      <h2>One wallet. Four ways to put it to work.</h2>
+      <p>I wanted a crypto wallet that made lending, perpetuals, swaps, bridges, and prediction markets feel like parts of one product. The visual language stays calm and Scandinavian, with Swiss-style typography and deliberate color cues to make each choice easier to scan.</p>
+
+      <div class="oslo-screens">
+        <article class="oslo-screen oslo-wallet-screen">
+          <h4>01 / Wallet</h4>
+          <p class="oslo-screen-intent">Start with a clear view of the whole portfolio, then make the next action easy to find.</p>
           <div class="oslo-live-preview">
-            <iframe src="https://christophorusan.github.io/futuresxyz/" title="Oslo landing page with illustrative product previews" loading="lazy"></iframe>
+            <iframe src="https://christophorusan.github.io/futuresxyz/" title="Oslo desktop landing page with illustrative $50,000 wallet preview" loading="lazy"></iframe>
           </div>
+          <p class="oslo-screen-copy">The wallet is the home for everything else. I brought balances, holdings, and everyday actions into one view, then connected that starting point to the broader set of open-finance tools. The portfolio shown is illustrative sample data; no wallet is connected.</p>
           <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">Open the Oslo landing page ↗</a>
         </article>
-        <article class="embedded-work">
-          <h3 class="piece-title">Inside the app</h3>
-          <p class="piece-intro">Real Oslo product screens, captured while disconnected. Each short feature overview comes first, followed by the interface in its iPad-style frame.</p>
-          <div class="oslo-screens">
-            <article class="oslo-screen">
-              <h4>01 / Wallet</h4>
-              <p class="oslo-screen-copy">A starting point across supported networks. Balances and holdings appear only when someone chooses to connect their wallet.</p>
-              <a class="ipad-frame" href="https://christophorusan.github.io/futuresxyz/wallet" target="_blank" rel="noreferrer" aria-label="Open Oslo wallet interface">
-                <span class="ipad-screen"><img src="assets/oslo-media/wallet-interface.svg" alt="Oslo wallet screen with balances hidden and a connect wallet prompt" loading="lazy"></span>
-              </a>
-              <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/wallet" target="_blank" rel="noreferrer">Open Wallet in Oslo ↗</a>
-            </article>
-            <article class="oslo-screen">
-              <h4>02 / Perps</h4>
-              <p class="oslo-screen-copy">A live chart, order book, and trade controls share one focused trading workspace. Account values stay hidden while disconnected.</p>
-              <a class="ipad-frame" href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer" aria-label="Open Oslo perpetuals interface">
-                <span class="ipad-screen"><img src="assets/oslo-media/perps-interface.svg" alt="Oslo perpetuals trading screen with chart, order book, and trade controls" loading="lazy"></span>
-              </a>
-              <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">Open Perps in Oslo ↗</a>
-            </article>
-            <article class="oslo-screen">
-              <h4>03 / Prediction markets</h4>
-              <p class="oslo-screen-copy">Browse event categories and compare outcomes and probabilities. The public preview links to Outcome testnet.</p>
-              <a class="ipad-frame" href="https://christophorusan.github.io/futuresxyz/predictions" target="_blank" rel="noreferrer" aria-label="Open Oslo prediction markets interface">
-                <span class="ipad-screen"><img src="assets/oslo-media/predictions-interface.svg" alt="Oslo prediction markets screen with categories, event outcomes, and probabilities" loading="lazy"></span>
-              </a>
-              <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/predictions" target="_blank" rel="noreferrer">Open Prediction Markets in Oslo ↗</a>
-            </article>
-            <article class="oslo-screen">
-              <h4>04 / Lending</h4>
-              <p class="oslo-screen-copy">Review collateral eligibility, supply and borrow rates, and market totals for HyperLend on HyperEVM.</p>
-              <a class="ipad-frame" href="https://christophorusan.github.io/futuresxyz/lending" target="_blank" rel="noreferrer" aria-label="Open Oslo lending interface">
-                <span class="ipad-screen"><img src="assets/oslo-media/lending-interface.svg" alt="Oslo lending markets screen with collateral eligibility, supply and borrow rates, and market totals" loading="lazy"></span>
-              </a>
-              <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/lending" target="_blank" rel="noreferrer">Open Lending in Oslo ↗</a>
-            </article>
-          </div>
-          <p class="oslo-caveat">Screens are static captures of the public interface with no wallet connected. Market prices and metrics can change; rates and provider terms may vary.</p>
+
+        <article class="oslo-screen">
+          <h4>02 / Perps</h4>
+          <p class="oslo-screen-intent">Keep the essentials visible together, so a market decision needs less hunting around.</p>
+          <a class="ipad-frame" href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer" aria-label="Open Oslo perpetuals interface">
+            <span class="ipad-screen"><img src="assets/oslo-media/perps-interface.svg" alt="Oslo perpetuals trading screen with chart, order book, and trade controls" loading="lazy"></span>
+          </a>
+          <p class="oslo-screen-copy">A live chart, order book, and trade controls share one focused workspace. The quieter neutral surfaces keep attention on price movement and the buy or sell decision; account values stay hidden while disconnected.</p>
+          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer">Open Perps in Oslo ↗</a>
+        </article>
+
+        <article class="oslo-screen">
+          <h4>03 / Prediction markets</h4>
+          <p class="oslo-screen-intent">Make each outcome and its probability easy to compare at a glance.</p>
+          <a class="ipad-frame" href="https://christophorusan.github.io/futuresxyz/predictions" target="_blank" rel="noreferrer" aria-label="Open Oslo prediction markets interface">
+            <span class="ipad-screen"><img src="assets/oslo-media/predictions-interface.svg" alt="Oslo prediction markets screen with categories, event outcomes, and probabilities" loading="lazy"></span>
+          </a>
+          <p class="oslo-screen-copy">Categories, event cards, probability, and volume create a quick reading path from discovery to comparison. I aligned the YES and NO cues with the same green and red used for long and short in Perps, so those signals stay consistent across the product.</p>
+          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/predictions" target="_blank" rel="noreferrer">Open Prediction Markets in Oslo ↗</a>
+        </article>
+
+        <article class="oslo-screen">
+          <h4>04 / Lending</h4>
+          <p class="oslo-screen-intent">Put rates, collateral, and market size in the same reading frame.</p>
+          <a class="ipad-frame" href="https://christophorusan.github.io/futuresxyz/lending" target="_blank" rel="noreferrer" aria-label="Open Oslo lending interface">
+            <span class="ipad-screen"><img src="assets/oslo-media/lending-interface.svg" alt="Oslo lending markets screen with collateral eligibility, supply and borrow rates, and market totals" loading="lazy"></span>
+          </a>
+          <p class="oslo-screen-copy">Supply and borrow rates, collateral eligibility, and market totals help people compare before committing. Lending sits alongside the wallet and trading tools, while its provider and network stay visible.</p>
+          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/lending" target="_blank" rel="noreferrer">Open Lending in Oslo ↗</a>
         </article>
       </div>
+      <p class="oslo-caveat">Wallet amounts are illustrative sample data. App screenshots are static captures with no wallet connected. Prediction market prices and charts are illustrative; external trading links open Outcome testnet. Lending rates and provider terms may vary.</p>
     </section>
 
     <footer>&copy; 2026 Cristobal Silva</footer>
