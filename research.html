@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Engineering - Cristobal Silva</title>
+  <title>Oslo - Cristobal Silva</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1130,6 +1130,65 @@
       .agent-window { min-height: 0; }
     }
   </style>
+
+    .oslo-live-preview {
+      background: #fff;
+      border: 1px solid #ececec;
+      border-radius: 10px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
+      height: 700px;
+      overflow: hidden;
+    }
+
+    .oslo-live-preview iframe {
+      background: #fff;
+      border: 0;
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    .oslo-source-link {
+      margin-left: 0;
+    }
+
+    .oslo-app-links {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 18px;
+      max-width: 600px;
+    }
+
+    .oslo-app-links a {
+      border: 1px solid #ececec;
+      border-radius: 8px;
+      display: grid;
+      gap: 4px;
+      padding: 14px;
+    }
+
+    .oslo-app-links strong {
+      font-size: 15px;
+      font-weight: 560;
+    }
+
+    .oslo-app-links span,
+    .oslo-caveat {
+      color: #777;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .oslo-caveat {
+      margin-top: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .oslo-live-preview { height: 620px; }
+      .oslo-app-links { grid-template-columns: 1fr; }
+    }
+
   <link rel="stylesheet" href="assets/site-aesthetic.css" />
 </head>
 <body>
@@ -1137,51 +1196,34 @@
     <a class="back" href="index.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:2px"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"/></svg> Index</a>
 
     <header>
-      <div class="date">Updated October 7, 2026</div>
-      <h1>Engineering</h1>
-      <p class="intro">I use AI to build trading interfaces and automate research, content, and team workflows.</p>
-    </header>
-
-    <section id="ai-systems">
-      <h2>AI Agents and Frontend Designs</h2>
-      <p>
-        My projects connect product ideas with working interfaces, live market data, and tools for community outreach.
-      </p>
+      <div class="date">Updated October 27, 2026</div>
+      <h1>Oslo</h1>
+      <p class="intro">Oslo is a self-custody DeFi wallet built to make finance more accessible. It brings supported balances, sending and receivi  <section id="oslo-architecture" style="scroll-margin-top: 40px;">
+      <h2>Making finance accessible</h2>
+      <p>Oslo brings everyday wallet actions and open finance tools into one clear experience. Visitors can explore without connecting a wallet; connected users can view supported balances, review payments, and choose which transactions to approve. Lending and borrowing availability depends on each asset and provider.</p>
       <div class="work-stack">
         <article class="embedded-work">
-          <h3 class="piece-title"><a href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">Oslo</a></h3>
-          <p class="piece-intro">I built Oslo as a wallet-centered finance app that brings balances, payments, lending, and Hyperliquid trading into one place. Its blue glass interface starts with the wallet, with charts, order books, and trade controls available inside the app.</p>
-          <a class="ipad-frame" href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">
-            <span class="ipad-screen"><img src="assets/research-media/futuresxyz-app-ipad.jpg" alt="Oslo perps view: BTC/USDC candlestick chart, live order book, and trade panel" loading="lazy"></span>
-          </a>
-          <a class="source-link" href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">Oslo · 2026 · Open live app</a>
+          <h3 class="piece-title">The Oslo landing page</h3>
+          <p class="piece-intro">The landing page introduces Oslo through illustrative product views: a multi-network wallet, a payment review, a trading workspace, and DeFi discovery. The sample balances and market values shown are illustrative.</p>
+          <div class="oslo-live-preview">
+            <iframe src="https://christophorusan.github.io/futuresxyz/" title="Oslo landing page with illustrative wallet, payment, trading, and app discovery previews" loading="lazy"></iframe>
+          </div>
+          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">Open the Oslo landing page ↗</a>
         </article>
-
-        <article class="embedded-work" id="oslo-architecture" style="scroll-margin-top: 40px;">
-          <h3 class="piece-title">Oslo</h3>
-          <p class="piece-intro">I built Oslo to bring research, content, outreach, and analytics into a shared workflow based on my <a href="https://app.notion.com/p/Growth-Strategy-Pay-for-Retention-Not-Just-Users-3aa5f6f2de758199bd87c636edd9e997" target="_blank" rel="noreferrer">growth strategy for crypto protocols and teams</a>. The aim was to help teams carry what they learned from one activity into the next and connect their work with deposits and retention.</p>
-          <a class="ipad-frame" href="https://app.notion.com/p/Growth-Strategy-Pay-for-Retention-Not-Just-Users-3aa5f6f2de758199bd87c636edd9e997" target="_blank" rel="noreferrer" aria-label="Open the original Growth Strategy document in Notion">
-            <span class="ipad-screen"><img src="assets/oslo-media/growth-strategy-notion.png" alt="Growth Strategy — Pay for Retention, Not Just Users: the strategy document Oslo automates" loading="lazy"></span>
-          </a>
-          <a class="source-link" href="https://app.notion.com/p/Growth-Strategy-Pay-for-Retention-Not-Just-Users-3aa5f6f2de758199bd87c636edd9e997" target="_blank" rel="noreferrer">Growth Strategy · 2026 · The theory behind Oslo</a>
-
-        </article>
-
         <article class="embedded-work">
-          <h3 class="piece-title">Oslo Analytics</h3>
-          <p class="piece-intro">I built a dashboard that brings social performance and onchain activity into one view, helping teams track attention, deposits, and retention.</p>
-          <span class="ipad-frame" aria-label="Oslo analytics dashboard scroll-through">
-            <span class="ipad-screen"><video src="assets/research-media/oslo-analytics-scroll.mp4" poster="assets/research-media/oslo-analytics-poster.jpg" autoplay muted loop playsinline preload="metadata"></video></span>
-          </span>
+          <h3 class="piece-title">Explore the app</h3>
+          <p class="piece-intro">Continue from the overview into the live product surfaces. Connect a wallet only when you choose to use wallet features.</p>
+          <div class="oslo-app-links">
+            <a href="https://christophorusan.github.io/futuresxyz/wallet" target="_blank" rel="noreferrer"><strong>Wallet</strong><span>View supported balances, send, receive, or swap.</span></a>
+            <a href="https://christophorusan.github.io/futuresxyz/lending" target="_blank" rel="noreferrer"><strong>Lending</strong><span>Explore available lending markets and collateral.</span></a>
+            <a href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer"><strong>Perps</strong><span>Open the Hyperliquid trading workspace.</span></a>
+            <a href="https://christophorusan.github.io/futuresxyz/discover" target="_blank" rel="noreferrer"><strong>Discover</strong><span>Browse DeFi apps across supported networks.</span></a>
+          </div>
+          <p class="oslo-caveat">Product availability differs by feature and network. Review the app and each transaction before approving.</p>
         </article>
-
-        <article class="embedded-work">
-          <h3 class="piece-title"><a href="https://louisxyz.vercel.app/" target="_blank" rel="noreferrer">Oslo</a></h3>
-          <p class="piece-intro">I built Oslo as an AI lending vault on HyperEVM, using Morpho’s architecture. It tracks yield performance across HyperLend, HypurrFi, and Felix, automatically rebalancing capital toward the highest available yield.</p>
-          <a class="ipad-frame" href="https://louisxyz.vercel.app/" target="_blank" rel="noreferrer">
-            <span class="ipad-screen"><img src="assets/research-media/louis-app-ipad.jpg" alt="Oslo home page: AI-powered stablecoin yield vault on HyperEVM" loading="lazy"></span>
-          </a>
-          <a class="source-link" href="https://louisxyz.vercel.app/" target="_blank" rel="noreferrer">Oslo · 2025 · Open live app</a>
+      </div>
+    </section>
+cel.app/" target="_blank" rel="noreferrer">Oslo · 2025 · Open live app</a>
         </article>
 
       </div>
