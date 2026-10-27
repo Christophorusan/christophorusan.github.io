@@ -1165,6 +1165,8 @@
       max-width:760px;
     }
     .oslo-screen .ipad-frame { margin-bottom:0; }
+    .ipad-live-screen { border:0; display:block; height:890px; transform:scale(.92); transform-origin:top left; width:1280px; }
+    .prediction-live-frame .ipad-screen { aspect-ratio:1180 / 820; }
     .oslo-wallet-screen .oslo-live-preview { aspect-ratio:16 / 10; max-height:none; }
     .oslo-wallet-screen .oslo-live-preview iframe {
       height:800px;
@@ -1176,6 +1178,7 @@
 
     @media (max-width: 1200px) {
       .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.88); }
+      .ipad-live-screen { transform:scale(.86); }
     }
     @media (max-width: 960px) {
       .oslo-case-study { width:calc(100vw - 40px); }
@@ -1186,10 +1189,11 @@
       .oslo-screens { gap:48px; }
       .oslo-wallet-screen .oslo-live-preview { aspect-ratio:16 / 10; }
       .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.5); }
+      .ipad-live-screen { transform:scale(.53); }
     }
-    @media(max-width:560px) { .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.42); } }
-    @media(max-width:460px) { .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.34); } }
-    @media(max-width:400px) { .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.29); } }
+    @media(max-width:560px) { .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.42); } .ipad-live-screen { transform:scale(.38); } }
+    @media(max-width:460px) { .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.34); } .ipad-live-screen { transform:scale(.30); } }
+    @media(max-width:400px) { .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.29); } .ipad-live-screen { transform:scale(.26); } }
   </style>
   <link rel="stylesheet" href="assets/site-aesthetic.css" />
 </head>
@@ -1231,9 +1235,9 @@
         <article class="oslo-screen">
           <h4>03 / Prediction markets</h4>
           <p class="oslo-screen-intent">Make each outcome and its probability easy to compare at a glance.</p>
-          <a class="ipad-frame" href="https://christophorusan.github.io/futuresxyz/predictions" target="_blank" rel="noreferrer" aria-label="Open Oslo prediction markets interface">
-            <span class="ipad-screen"><img src="assets/oslo-media/predictions-interface.svg" alt="Oslo prediction markets screen with categories, event outcomes, and probabilities" loading="lazy"></span>
-          </a>
+          <div class="ipad-frame prediction-live-frame">
+            <span class="ipad-screen"><iframe class="ipad-live-screen" src="https://christophorusan.github.io/futuresxyz/predictions" title="Live Oslo prediction markets interface, shown without a connected wallet" loading="lazy"></iframe></span>
+          </div>
           <p class="oslo-screen-copy">Categories, event cards, probability, and volume create a quick reading path from discovery to comparison. I aligned the YES and NO cues with the same green and red used for long and short in Perps, so those signals stay consistent across the product.</p>
           <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/predictions" target="_blank" rel="noreferrer">Open Prediction Markets in Oslo ↗</a>
         </article>
@@ -1248,7 +1252,7 @@
           <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/lending" target="_blank" rel="noreferrer">Open Lending in Oslo ↗</a>
         </article>
       </div>
-      <p class="oslo-caveat">Wallet amounts are illustrative sample data. App screenshots are static captures with no wallet connected. Prediction market prices and charts are illustrative; external trading links open Outcome testnet. Lending rates and provider terms may vary.</p>
+      <p class="oslo-caveat">Wallet amounts are illustrative sample data. App screenshots are static captures with no wallet connected. Prediction markets load as a live preview and external trading links open Outcome testnet. Lending rates and provider terms may vary.</p>
     </section>
 
     <footer>&copy; 2026 Cristobal Silva</footer>
