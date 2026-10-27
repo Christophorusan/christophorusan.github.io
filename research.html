@@ -461,6 +461,14 @@
     }
 
 
+    @media (max-width: 740px) {
+      .ipad-live-screen { transform: scale(.52); }
+      .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.547); }
+    }
+    @media (max-width: 700px) {
+      .ipad-live-screen { transform: scale(.49); }
+      .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.5156); }
+    }
     @media (max-width: 640px) {
       .ipad-frame {
         border-radius: 18px;
@@ -1148,20 +1156,20 @@
       color: #222; font-size: clamp(18px, 2vw, 22px);
       line-height: 1.5; margin: 4px auto 8px; max-width: 700px;
     }
-    .oslo-screen .ipad-frame { margin: 0 auto; max-width: 520px; width: 100%; }
+    .oslo-screen .ipad-frame { margin: 0 auto; max-width: 720px; width: 100%; }
     .oslo-screen .ipad-screen { aspect-ratio: 16 / 10; position: relative; }
     .ipad-live-screen {
       border: 0; display: block; height: 800px; left: 0; position: absolute;
-      top: 0; transform: scale(.38); transform-origin: top left; width: 1280px;
+      top: 0; transform: scale(.535); transform-origin: top left; width: 1280px;
     }
     .oslo-wallet-screen .oslo-live-preview {
       aspect-ratio: 16 / 10; margin: 0 auto; max-height: none;
-      max-width: 520px; width: 100%;
+      max-width: 720px; width: 100%;
     }
     .oslo-wallet-screen .oslo-live-preview iframe {
-      height: 800px; transform: scale(.40625); transform-origin: top left; width: 1280px;
+      height: 800px; transform: scale(.5625); transform-origin: top left; width: 1280px;
     }
-    .oslo-source-link { margin-left: calc((100% - min(520px, 100%)) / 2); }
+    .oslo-source-link { margin-left: calc((100% - min(720px, 100%)) / 2); }
     .oslo-caveat {
       color: #777; font-size: 13px; line-height: 1.45; margin-top: 24px; max-width: 700px;
     }
