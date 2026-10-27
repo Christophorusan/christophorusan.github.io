@@ -1132,69 +1132,97 @@
   </style>
 
   <style>
-    .oslo-case-study {
-      max-width: none;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-      width: min(1280px, calc(100vw - 64px));
-    }
-    .oslo-case-study > p { max-width: 760px; }
-    .oslo-screens { display:grid; gap:72px; margin-top:32px; }
-    .oslo-screen { margin:0; }
+    .oslo-case-study { max-width: 760px; }
+    .oslo-case-study > p { max-width: 700px; }
+    .oslo-screens { display: grid; gap: 34px; margin-top: 30px; }
+    .oslo-screen { margin: 0; }
     .oslo-screen h4 {
-      color:#111;
-      font-size:13px;
-      font-weight:600;
-      letter-spacing:.08em;
-      margin-bottom:8px;
-      text-transform:uppercase;
+      color: #111;
+      font-size: 20px;
+      font-weight: 560;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin: 0 0 10px;
     }
     .oslo-screen-intent {
-      color:#777;
-      font-size:15px;
-      line-height:1.5;
-      margin:0 0 18px;
-      max-width:760px;
+      color: #222;
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.5;
+      margin: 0 0 22px;
+      max-width: 700px;
     }
     .oslo-screen-copy {
-      color:#222;
-      font-size:clamp(17px, 2vw, 20px);
-      line-height:1.55;
-      margin:16px 0 10px;
-      max-width:760px;
+      color: #222;
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.5;
+      margin: 18px 0 10px;
+      max-width: 700px;
     }
-    .oslo-screen .ipad-frame { margin-bottom:0; }
-    .ipad-live-screen { border:0; display:block; height:890px; transform:scale(.92); transform-origin:top left; width:1280px; }
-    .prediction-live-frame .ipad-screen { aspect-ratio:1180 / 820; }
-    .oslo-wallet-screen .oslo-live-preview { aspect-ratio:16 / 10; max-height:none; }
+    .oslo-screen .ipad-frame {
+      margin: 28px auto 0;
+      max-width: 520px;
+      width: 100%;
+    }
+    .ipad-live-screen {
+      border: 0;
+      display: block;
+      height: 890px;
+      transform: scale(.38);
+      transform-origin: top left;
+      width: 1280px;
+    }
+    .prediction-live-frame .ipad-screen { aspect-ratio: 1180 / 820; }
+    .oslo-wallet-screen .oslo-live-preview {
+      aspect-ratio: 16 / 10;
+      margin: 28px auto 0;
+      max-height: none;
+      max-width: 520px;
+      width: 100%;
+    }
     .oslo-wallet-screen .oslo-live-preview iframe {
-      height:800px;
-      transform:scale(.92);
-      transform-origin:top left;
-      width:1280px;
+      height: 800px;
+      transform: scale(.40625);
+      transform-origin: top left;
+      width: 1280px;
     }
-    .oslo-caveat { color:#777; font-size:13px; line-height:1.45; margin-top:28px; max-width:900px; }
-
-    @media (max-width: 1200px) {
-      .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.88); }
-      .ipad-live-screen { transform:scale(.86); }
+    .oslo-source-link {
+      margin-left: calc((100% - min(520px, 100%)) / 2);
     }
-    @media (max-width: 960px) {
-      .oslo-case-study { width:calc(100vw - 40px); }
-      .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.70);
+    .oslo-caveat {
+      color: #777;
+      font-size: 13px;
+      line-height: 1.45;
+      margin-top: 28px;
+      max-width: 700px;
     }
-    @media (max-width: 760px) {
-      .oslo-case-study { width:calc(100vw - 32px); }
-      .oslo-screens { gap:48px; }
-      .oslo-wallet-screen .oslo-live-preview { aspect-ratio:16 / 10; }
-      .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.5); }
-      .ipad-live-screen { transform:scale(.53); }
+    @media (max-width: 640px) {
+      .oslo-screen .ipad-frame { border-radius: 18px; padding: 10px; }
+      .oslo-screen .ipad-screen { border-radius: 8px; }
     }
-    @media(max-width:560px) { .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.42); } .ipad-live-screen { transform:scale(.38); } }
-    @media(max-width:460px) { .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.34); } .ipad-live-screen { transform:scale(.30); } }
-    @media(max-width:400px) { .oslo-wallet-screen .oslo-live-preview iframe { transform:scale(.29); } .ipad-live-screen { transform:scale(.26); } }
+    @media (max-width: 520px) {
+      .oslo-screen .ipad-frame,
+      .oslo-wallet-screen .oslo-live-preview { width: calc(100vw - 36px); }
+      .ipad-live-screen { transform: scale(.35); }
+      .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.35); }
+    }
+    @media (max-width: 480px) {
+      .ipad-live-screen { transform: scale(.32); }
+      .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.32); }
+    }
+    @media (max-width: 440px) {
+      .ipad-live-screen { transform: scale(.29); }
+      .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.29); }
+    }
+    @media (max-width: 400px) {
+      .ipad-live-screen { transform: scale(.26); }
+      .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.26); }
+    }
+    @media (max-width: 360px) {
+      .ipad-live-screen { transform: scale(.23); }
+      .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.23); }
+    }
   </style>
+
   <link rel="stylesheet" href="assets/site-aesthetic.css" />
 </head>
 <body>
