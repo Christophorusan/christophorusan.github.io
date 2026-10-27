@@ -1134,92 +1134,56 @@
   <style>
     .oslo-case-study { max-width: 760px; }
     .oslo-case-study > p { max-width: 700px; }
-    .oslo-screens { display: grid; gap: 34px; margin-top: 30px; }
+    .oslo-screens { display: grid; gap: 38px; margin-top: 30px; }
     .oslo-screen { margin: 0; }
     .oslo-screen h4 {
-      color: #111;
-      font-size: 20px;
-      font-weight: 560;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin: 0 0 10px;
+      color: #111; font-size: 20px; font-weight: 560;
+      letter-spacing: -0.02em; line-height: 1.2; margin: 0 0 8px;
     }
     .oslo-screen-intent {
-      color: #222;
-      font-size: clamp(18px, 2vw, 22px);
-      line-height: 1.5;
-      margin: 0 0 22px;
-      max-width: 700px;
+      color: #222; font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.5; margin: 0 0 14px; max-width: 700px;
     }
     .oslo-screen-copy {
-      color: #222;
-      font-size: clamp(18px, 2vw, 22px);
-      line-height: 1.5;
-      margin: 18px 0 10px;
-      max-width: 700px;
+      color: #222; font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.5; margin: 12px auto 8px; max-width: 700px;
     }
-    .oslo-screen .ipad-frame {
-      margin: 28px auto 0;
-      max-width: 520px;
-      width: 100%;
-    }
+    .oslo-screen .ipad-frame { margin: 0 auto; max-width: 520px; width: 100%; }
+    .oslo-screen .ipad-screen { aspect-ratio: 16 / 10; position: relative; }
     .ipad-live-screen {
-      border: 0;
-      display: block;
-      height: 890px;
-      transform: scale(.38);
-      transform-origin: top left;
-      width: 1280px;
+      border: 0; display: block; height: 800px; left: 0; position: absolute;
+      top: 0; transform: scale(.38); transform-origin: top left; width: 1280px;
     }
-    .prediction-live-frame .ipad-screen { aspect-ratio: 1180 / 820; }
     .oslo-wallet-screen .oslo-live-preview {
-      aspect-ratio: 16 / 10;
-      margin: 28px auto 0;
-      max-height: none;
-      max-width: 520px;
-      width: 100%;
+      aspect-ratio: 16 / 10; margin: 0 auto; max-height: none;
+      max-width: 520px; width: 100%;
     }
     .oslo-wallet-screen .oslo-live-preview iframe {
-      height: 800px;
-      transform: scale(.40625);
-      transform-origin: top left;
-      width: 1280px;
+      height: 800px; transform: scale(.40625); transform-origin: top left; width: 1280px;
     }
-    .oslo-source-link {
-      margin-left: calc((100% - min(520px, 100%)) / 2);
-    }
+    .oslo-source-link { margin-left: calc((100% - min(520px, 100%)) / 2); }
     .oslo-caveat {
-      color: #777;
-      font-size: 13px;
-      line-height: 1.45;
-      margin-top: 28px;
-      max-width: 700px;
+      color: #777; font-size: 13px; line-height: 1.45; margin-top: 24px; max-width: 700px;
     }
     @media (max-width: 640px) {
       .oslo-screen .ipad-frame { border-radius: 18px; padding: 10px; }
       .oslo-screen .ipad-screen { border-radius: 8px; }
     }
     @media (max-width: 520px) {
-      .oslo-screen .ipad-frame,
-      .oslo-wallet-screen .oslo-live-preview { width: calc(100vw - 36px); }
-      .ipad-live-screen { transform: scale(.35); }
-      .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.35); }
+      .oslo-screen .ipad-frame, .oslo-wallet-screen .oslo-live-preview { width: calc(100vw - 36px); }
+      .ipad-live-screen, .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.35); }
     }
     @media (max-width: 480px) {
-      .ipad-live-screen { transform: scale(.32); }
-      .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.32); }
+      .ipad-live-screen, .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.32); }
     }
     @media (max-width: 440px) {
-      .ipad-live-screen { transform: scale(.29); }
-      .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.29); }
+      .ipad-live-screen, .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.29); }
     }
     @media (max-width: 400px) {
-      .ipad-live-screen { transform: scale(.26); }
-      .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.26); }
+      .ipad-live-screen, .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.26); }
     }
     @media (max-width: 360px) {
-      .ipad-live-screen { transform: scale(.23); }
-      .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.23); }
+      .ipad-live-screen, .oslo-wallet-screen .oslo-live-preview iframe { transform: scale(.23); }
     }
   </style>
 
@@ -1241,7 +1205,7 @@
 
       <div class="oslo-screens">
         <article class="oslo-screen oslo-wallet-screen">
-          <h4>01 / Wallet</h4>
+          <h4>Wallet</h4>
           <p class="oslo-screen-intent">Start with a clear view of the whole portfolio, then make the next action easy to find.</p>
           <div class="oslo-live-preview">
             <iframe src="https://christophorusan.github.io/futuresxyz/" title="Oslo desktop landing page with illustrative $50,000 wallet preview" loading="lazy"></iframe>
@@ -1251,7 +1215,7 @@
         </article>
 
         <article class="oslo-screen">
-          <h4>02 / Perps</h4>
+          <h4>Perps</h4>
           <p class="oslo-screen-intent">Keep the essentials visible together, so a market decision needs less hunting around.</p>
           <div class="ipad-frame">
             <span class="ipad-screen"><iframe class="ipad-live-screen" src="https://christophorusan.github.io/futuresxyz/perps?preview=embed" title="Live Oslo perpetuals trading screen, shown without a connected wallet" loading="lazy"></iframe></span>
@@ -1261,7 +1225,7 @@
         </article>
 
         <article class="oslo-screen">
-          <h4>03 / Prediction markets</h4>
+          <h4>Prediction markets</h4>
           <p class="oslo-screen-intent">Make each outcome and its probability easy to compare at a glance.</p>
           <div class="ipad-frame prediction-live-frame">
             <span class="ipad-screen"><iframe class="ipad-live-screen" src="https://christophorusan.github.io/futuresxyz/predictions?preview=embed" title="Live Oslo prediction markets interface, shown without a connected wallet" loading="lazy"></iframe></span>
@@ -1271,7 +1235,7 @@
         </article>
 
         <article class="oslo-screen">
-          <h4>04 / Lending</h4>
+          <h4>Lending</h4>
           <p class="oslo-screen-intent">Put rates, collateral, and market size in the same reading frame.</p>
           <div class="ipad-frame">
             <span class="ipad-screen"><iframe class="ipad-live-screen" src="https://christophorusan.github.io/futuresxyz/lending?preview=embed" title="Live Oslo lending markets screen, shown without a connected wallet" loading="lazy"></iframe></span>
