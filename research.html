@@ -1137,7 +1137,9 @@
       border: 1px solid #ececec;
       border-radius: 10px;
       box-shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
-      height: 700px;
+      aspect-ratio: 16 / 10;
+      height: auto;
+      max-height: 560px;
       overflow: hidden;
     }
 
@@ -1149,6 +1151,24 @@
       width: 100%;
     }
 
+    .oslo-feature-grid { display:grid; gap:16px; grid-template-columns:repeat(3,minmax(0,1fr)); margin:22px auto 0; max-width:680px; }
+    .oslo-feature { min-width:0; }
+    .feature-window { background:#fff; border:1px solid #e9e9e9; border-radius:10px; box-shadow:0 14px 38px rgba(0,0,0,.045); min-height:225px; padding:14px; }
+    .feature-top { border-bottom:1px solid #eee; color:#aaa; display:flex; font-size:8px; justify-content:space-between; letter-spacing:.08em; padding-bottom:10px; }
+    .feature-label { color:#999; font-size:9px; letter-spacing:.12em; margin-top:17px; }
+    .feature-headline { display:block; font-size:14px; font-weight:560; letter-spacing:-.02em; line-height:1.25; margin:5px 0 12px; }
+    .prediction-row,.earn-row { align-items:center; border-top:1px solid #f0f0f0; display:flex; font-size:9px; gap:6px; justify-content:space-between; padding:9px 0; }
+    .prediction-row b,.earn-row b { font-size:9px; white-space:nowrap; }
+    .feature-window small { color:#aaa; display:block; font-size:8px; margin-top:11px; }
+    .perps-price { font-size:14px; font-weight:600; }
+    .perps-price span { color:#3c8b66; font-size:9px; margin-left:4px; }
+    .chart-line { background:linear-gradient(180deg,rgba(17,17,17,.07),transparent); border-bottom:1px solid #222; height:44px; margin:12px 0 8px; clip-path:polygon(0 74%,12% 62%,22% 68%,34% 38%,46% 51%,57% 24%,69% 41%,82% 18%,100% 25%,100% 100%,0 100%); }
+    .perps-actions { display:grid; gap:6px; grid-template-columns:1fr 1fr; }
+    .perps-actions span { border:1px solid #e8e8e8; border-radius:5px; font-size:9px; padding:5px; text-align:center; }
+    .perps-actions span:first-child { background:#111; color:white; }
+    .oslo-feature h4 { font-size:16px; font-weight:550; letter-spacing:-.02em; margin:14px 0 4px; }
+    .oslo-feature p { color:#777; font-size:12px; line-height:1.5; }
+    @media(max-width:700px) { .oslo-feature-grid { grid-template-columns:1fr; } .feature-window { min-height:210px; } }
     .oslo-source-link {
       margin-left: 0;
     }
@@ -1186,7 +1206,7 @@
     }
 
     @media (max-width: 700px) {
-      .oslo-live-preview { height: 620px; }
+      .oslo-live-preview { aspect-ratio: 4 / 5; max-height: none; }
       .oslo-app-links { grid-template-columns: 1fr; }
     }
   </style>
@@ -1199,28 +1219,61 @@
     <header>
       <div class="date">Updated October 27, 2026</div>
       <h1>Oslo</h1>
-      <p class="intro">Oslo is a self-custody DeFi wallet built to make finance more accessible. It brings supported balances, sending and receivi  <section id="oslo-architecture" style="scroll-margin-top: 40px;">
-      <h2>Making finance accessible</h2>
-      <p>Oslo brings everyday wallet actions and open finance tools into one clear experience. Visitors can explore without connecting a wallet; connected users can view supported balances, review payments, and choose which transactions to approve. Lending and borrowing availability depends on each asset and provider.</p>
+      <p class="intro">A self-custody wallet that brings payments, trading, prediction markets, and earning into one clear place.</p>
+    </header>
+
+<section id="oslo-architecture" style="scroll-margin-top: 40px;">
+      <h2>One wallet. More ways to participate.</h2>
+      <p>Oslo brings self-custody and open financial tools into one experience. The preview shows illustrative product data; it never embeds a connected wallet or personal balances.</p>
       <div class="work-stack">
         <article class="embedded-work">
           <h3 class="piece-title">The Oslo landing page</h3>
-          <p class="piece-intro">The landing page introduces Oslo through illustrative product views: a multi-network wallet, a payment review, a trading workspace, and DeFi discovery. The sample balances and market values shown are illustrative.</p>
+          <p class="piece-intro">A tighter preview of the public landing page, sized to show the product story at a glance. All values shown inside it are illustrative.</p>
           <div class="oslo-live-preview">
-            <iframe src="https://christophorusan.github.io/futuresxyz/" title="Oslo landing page with illustrative wallet, payment, trading, and app discovery previews" loading="lazy"></iframe>
+            <iframe src="https://christophorusan.github.io/futuresxyz/" title="Oslo landing page with illustrative product previews" loading="lazy"></iframe>
           </div>
           <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">Open the Oslo landing page ↗</a>
         </article>
         <article class="embedded-work">
-          <h3 class="piece-title">Explore the app</h3>
-          <p class="piece-intro">Continue from the overview into the live product surfaces. Connect a wallet only when you choose to use wallet features.</p>
-          <div class="oslo-app-links">
-            <a href="https://christophorusan.github.io/futuresxyz/wallet" target="_blank" rel="noreferrer"><strong>Wallet</strong><span>View supported balances, send, receive, or swap.</span></a>
-            <a href="https://christophorusan.github.io/futuresxyz/lending" target="_blank" rel="noreferrer"><strong>Lending</strong><span>Explore available lending markets and collateral.</span></a>
-            <a href="https://christophorusan.github.io/futuresxyz/perps" target="_blank" rel="noreferrer"><strong>Perps</strong><span>Open the Hyperliquid trading workspace.</span></a>
-            <a href="https://christophorusan.github.io/futuresxyz/discover" target="_blank" rel="noreferrer"><strong>Discover</strong><span>Browse DeFi apps across supported networks.</span></a>
+          <h3 class="piece-title">Three ways to use Oslo</h3>
+          <p class="piece-intro">A wallet is the starting point. From there, Oslo opens into markets and earning tools, each with its own focused workspace.</p>
+          <div class="oslo-feature-grid">
+            <article class="oslo-feature">
+              <div class="feature-window prediction-window" aria-label="Illustrative prediction market screen">
+                <div class="feature-top"><span>OSLO / MARKETS</span><span>PREVIEW</span></div>
+                <div class="feature-label">PREDICTION MARKETS</div>
+                <strong class="feature-headline">What happens next?</strong>
+                <div class="prediction-row"><span>Will ETH close above $4,000 this week?</span><b>YES&nbsp; 42¢</b></div>
+                <div class="prediction-row"><span>Will the Fed cut rates this month?</span><b>YES&nbsp; 31¢</b></div>
+                <small>Illustrative markets · sample data</small>
+              </div>
+              <h4>Predict</h4><p>Follow event markets and express a view with clear odds and outcomes.</p>
+            </article>
+            <article class="oslo-feature">
+              <div class="feature-window perps-window" aria-label="Illustrative perpetuals trading screen">
+                <div class="feature-top"><span>OSLO / TRADE</span><span>PREVIEW</span></div>
+                <div class="feature-label">PERPETUALS</div>
+                <strong class="feature-headline">ETH / USD</strong>
+                <div class="perps-price">$3,842.60 <span>+2.4%</span></div>
+                <div class="chart-line" aria-hidden="true"></div>
+                <div class="perps-actions"><span>Long</span><span>Short</span></div>
+                <small>Illustrative market view · sample data</small>
+              </div>
+              <h4>Trade</h4><p>Access perpetual markets through a focused trading workspace.</p>
+            </article>
+            <article class="oslo-feature">
+              <div class="feature-window earn-window" aria-label="Illustrative earn screen">
+                <div class="feature-top"><span>OSLO / EARN</span><span>PREVIEW</span></div>
+                <div class="feature-label">EARN</div>
+                <strong class="feature-headline">Put assets to work</strong>
+                <div class="earn-row"><span>USDC</span><b>Up to 5.2% APY</b></div>
+                <div class="earn-row"><span>ETH</span><b>Variable rewards</b></div>
+                <small>Illustrative opportunities · terms vary</small>
+              </div>
+              <h4>Earn</h4><p>Discover yield opportunities and review terms before choosing where to deposit.</p>
+            </article>
           </div>
-          <p class="oslo-caveat">Product availability differs by feature and network. Review the app and each transaction before approving.</p>
+          <p class="oslo-caveat">These panels are static illustrations with sample values. They do not show a connected account, wallet address, or personal balance. Availability, rates, and risks vary by market and provider.</p>
         </article>
       </div>
     </section>
