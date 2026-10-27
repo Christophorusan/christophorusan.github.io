@@ -1141,20 +1141,23 @@
 
   <style>
     .oslo-case-study { max-width: 760px; }
-    .oslo-case-study > p { max-width: 700px; }
-    .oslo-screens { display: grid; gap: 38px; margin-top: 30px; }
+    .oslo-case-study > p {
+      font-size: 16px; line-height: 1.65; margin: 0; max-width: 700px;
+    }
+    .oslo-case-study > h2 { margin-bottom: 14px; }
+    .oslo-screens { display: grid; gap: 34px; margin-top: 28px; }
     .oslo-screen { margin: 0; }
     .oslo-screen h4 {
       color: #111; font-size: 20px; font-weight: 560;
-      letter-spacing: -0.02em; line-height: 1.2; margin: 0 0 8px;
+      letter-spacing: -0.02em; line-height: 1.25; margin: 0;
     }
     .oslo-screen-intent {
-      color: #222; font-size: clamp(18px, 2vw, 22px);
-      line-height: 1.5; margin: 0 0 8px; max-width: 700px;
+      color: #666; font-size: 14px; line-height: 1.55;
+      margin: 0; max-width: 700px;
     }
     .oslo-screen-copy {
-      color: #222; font-size: clamp(18px, 2vw, 22px);
-      line-height: 1.5; margin: 4px auto 8px; max-width: 700px;
+      color: #333; font-size: 16px; line-height: 1.6;
+      margin: 0; max-width: 700px;
     }
     .oslo-screen .ipad-frame { margin: 0 auto; max-width: 720px; width: 100%; }
     .oslo-screen .ipad-screen { aspect-ratio: 16 / 10; position: relative; }
@@ -1209,46 +1212,46 @@
 
     <section id="oslo-architecture" class="oslo-case-study" style="scroll-margin-top: 40px;">
       <h2>One wallet. Four ways to put it to work.</h2>
-      <p>I built Oslo on Hyperliquid and designed it to connect Hyperliquid markets with HyperEVM and other networks. The product centers on self-custody: people keep control of their wallets and keys while getting a simple way to send, receive, borrow against eligible assets, trade, and discover protocols. The goal is to make access to open finance feel as straightforward as logging onto the internet. I used Scandinavian product simplicity, Swiss typography, and neuromarketing principles as a lens for a clear color hierarchy that makes actions and outcomes easier to scan.</p>
+      <p>Oslo is a self-custody DeFi wallet for exploring open finance in one interface. Built around Hyperliquid and connected to HyperEVM and other networks, it brings sending, receiving, borrowing against eligible assets, trading, and protocol discovery together. I designed a clear visual hierarchy so balances, actions, and market outcomes are easy to scan.</p>
 
       <div class="oslo-screens">
         <article class="oslo-screen oslo-wallet-screen">
           <h4>Wallet</h4>
-          <p class="oslo-screen-intent">Start with a clear view of the whole portfolio, then make the next action easy to find.</p>
+          <p class="oslo-screen-intent">See supported balances and find core actions from a single home.</p>
           <div class="oslo-live-preview">
             <iframe src="https://christophorusan.github.io/futuresxyz/" title="Oslo desktop landing page with illustrative $50,000 wallet preview" loading="lazy"></iframe>
           </div>
-          <p class="oslo-screen-copy">The wallet is the home for everything else. I brought balances, holdings, and everyday actions into one view, then connected that starting point to the broader set of open-finance tools. The portfolio shown is illustrative sample data; no wallet is connected.</p>
+          <p class="oslo-screen-copy">The wallet brings balances, holdings, and everyday actions into one view. This preview uses sample data; no wallet is connected.</p>
           <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">Open the Oslo landing page ↗</a>
         </article>
 
         <article class="oslo-screen">
           <h4>Perps</h4>
-          <p class="oslo-screen-intent">Keep the essentials visible together, so a market decision needs less hunting around.</p>
+          <p class="oslo-screen-intent">Review price action, liquidity, and order controls together.</p>
           <div class="ipad-frame">
             <span class="ipad-screen"><iframe class="ipad-live-screen" src="https://christophorusan.github.io/futuresxyz/perps?preview=embed" title="Live Oslo perpetuals trading screen, shown without a connected wallet" loading="lazy"></iframe></span>
           </div>
-          <p class="oslo-screen-copy">A live chart, order book, and trade controls share one focused workspace. The quieter neutral surfaces keep attention on price movement and the buy or sell decision; account values stay hidden while disconnected.</p>
+          <p class="oslo-screen-copy">A live chart, order book, and trade panel share one focused workspace. Account details stay hidden until a wallet connects.</p>
           <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/perps?preview=embed" target="_blank" rel="noreferrer">Open Perps in Oslo ↗</a>
         </article>
 
         <article class="oslo-screen">
           <h4>Prediction markets</h4>
-          <p class="oslo-screen-intent">Make each outcome and its probability easy to compare at a glance.</p>
+          <p class="oslo-screen-intent">Compare event probabilities, volume, and YES or NO outcomes at a glance.</p>
           <div class="ipad-frame prediction-live-frame">
             <span class="ipad-screen"><iframe class="ipad-live-screen" src="https://christophorusan.github.io/futuresxyz/predictions?preview=embed" title="Live Oslo prediction markets interface, shown without a connected wallet" loading="lazy"></iframe></span>
           </div>
-          <p class="oslo-screen-copy">Categories, event cards, probability, and volume create a quick reading path from discovery to comparison. I aligned the YES and NO cues with the same green and red used for long and short in Perps, so those signals stay consistent across the product.</p>
+          <p class="oslo-screen-copy">Green and red cues distinguish the two outcomes, while categories and volume help people compare markets. Trading links open Outcome testnet.</p>
           <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/predictions?preview=embed" target="_blank" rel="noreferrer">Open Prediction Markets in Oslo ↗</a>
         </article>
 
         <article class="oslo-screen">
           <h4>Lending</h4>
-          <p class="oslo-screen-intent">Put rates, collateral, and market size in the same reading frame.</p>
+          <p class="oslo-screen-intent">Compare rates, collateral, and market size before choosing a provider.</p>
           <div class="ipad-frame">
             <span class="ipad-screen"><iframe class="ipad-live-screen" src="https://christophorusan.github.io/futuresxyz/lending?preview=embed" title="Live Oslo lending markets screen, shown without a connected wallet" loading="lazy"></iframe></span>
           </div>
-          <p class="oslo-screen-copy">Supply and borrow rates, collateral eligibility, and market totals help people compare before committing. Lending sits alongside the wallet and trading tools, while its provider and network stay visible.</p>
+          <p class="oslo-screen-copy">Supply and borrow rates, eligible collateral, and market totals appear together for easier comparison. Provider and network details stay visible.</p>
           <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/lending?preview=embed" target="_blank" rel="noreferrer">Open Lending in Oslo ↗</a>
         </article>
       </div>
