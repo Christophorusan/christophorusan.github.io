@@ -1141,6 +1141,29 @@
 
   <style>
     .oslo-case-study { max-width: 760px; }
+    .oslo-static-preview { display:block; cursor:default; }
+    .oslo-static-preview .ipad-screen { overflow:hidden; }
+    .oslo-demo { background:#f8f9fb; color:#15171b; display:grid; font-family:inherit; gap:12px; height:100%; padding:22px 26px; }
+    .oslo-demo-top { align-items:center; display:flex; justify-content:space-between; }
+    .oslo-demo-top strong { font-size:22px; letter-spacing:-.03em; }
+    .oslo-demo-top span { color:#777; font-size:12px; }
+    .oslo-demo-tabs { align-items:center; border-bottom:1px solid #e7e9ed; display:flex; gap:20px; padding:8px 0 12px; }
+    .oslo-demo-tabs b,.oslo-demo-tabs span { color:#747982; font-size:12px; font-weight:500; }
+    .oslo-demo-tabs b { border-bottom:2px solid #17191e; color:#17191e; padding-bottom:7px; margin-bottom:-14px; }
+    .oslo-demo-market { align-items:center; background:#fff; border:1px solid #eaecf0; border-radius:9px; display:flex; gap:12px; min-height:66px; padding:10px 12px; }
+    .oslo-demo-icon { align-items:center; background:#f1f3f6; border-radius:50%; color:#30343a; display:flex; flex:0 0 34px; font-size:15px; height:34px; justify-content:center; }
+    .oslo-demo-market div { display:grid; flex:1; gap:4px; min-width:0; }
+    .oslo-demo-market strong { font-size:13px; font-weight:600; }
+    .oslo-demo-market small,.oslo-demo-metrics small { color:#878b93; font-size:10px; }
+    .oslo-demo-market em { background:#e8f5ee; border-radius:6px; color:#16834b; font-size:12px; font-style:normal; font-weight:600; padding:7px 9px; white-space:nowrap; }
+    .oslo-demo-lending { gap:10px; }
+    .oslo-demo-metrics { display:grid; gap:10px; grid-template-columns:1fr 1fr; }
+    .oslo-demo-metrics span { background:#fff; border:1px solid #eaecf0; border-radius:8px; display:grid; gap:5px; padding:10px 12px; }
+    .oslo-demo-metrics strong { font-size:18px; letter-spacing:-.02em; }
+    .oslo-demo-market .oslo-demo-rate { background:#f0f2f5; color:#30343a; }
+    .oslo-demo-note { color:#91959c; font-size:10px; text-align:right; }
+    @media(max-width:520px) { .oslo-demo { gap:7px; padding:12px; } .oslo-demo-top strong { font-size:17px; } .oslo-demo-market { gap:7px; min-height:53px; padding:7px; } .oslo-demo-market strong { font-size:11px; } .oslo-demo-market small { font-size:9px; } .oslo-demo-tabs { gap:10px; } }
+
     .oslo-case-study > p { max-width: 700px; }
     .oslo-screens { display: grid; gap: 38px; margin-top: 30px; }
     .oslo-screen { margin: 0; }
@@ -1157,7 +1180,7 @@
       line-height: 1.5; margin: 4px auto 8px; max-width: 700px;
     }
     .oslo-screen .ipad-frame { margin: 0 auto; max-width: 720px; width: 100%; }
-    .oslo-screen .ipad-screen { aspect-ratio: 16 / 10; position: relative; }
+    .oslo-screen .ipad-screen { aspect-ratio: 16 / 10; position: relative; }\n    .oslo-static-preview .ipad-screen img { display:block; height:100%; object-fit:cover; object-position:top left; width:100%; }\n    .oslo-static-preview:hover { text-decoration:none; }
     .ipad-live-screen {
       border: 0; display: block; height: 800px; left: 0; position: absolute;
       top: 0; transform: scale(.535); transform-origin: top left; width: 1280px;
@@ -1235,24 +1258,20 @@
         <article class="oslo-screen">
           <h4>Prediction markets</h4>
           <p class="oslo-screen-intent">Make each outcome and its probability easy to compare at a glance.</p>
-          <div class="ipad-frame prediction-live-frame">
-            <span class="ipad-screen"><iframe class="ipad-live-screen" src="https://christophorusan.github.io/futuresxyz/predictions?preview=embed" title="Live Oslo prediction markets interface, shown without a connected wallet" loading="lazy"></iframe></span>
-          </div>
+          <div class="ipad-frame oslo-static-preview" aria-label="Static Oslo prediction markets preview"><div class="ipad-screen"><div class="oslo-demo oslo-demo-predictions"><div class="oslo-demo-top"><strong>Markets</strong><span>Explore outcomes</span></div><div class="oslo-demo-tabs"><b>Trending</b><span>Politics</span><span>Crypto</span><span>Sports</span></div><div class="oslo-demo-market"><span class="oslo-demo-icon">₿</span><div><strong>Bitcoin above $100k in 2026?</strong><small>Crypto · 24.8k volume</small></div><em>YES 64%</em></div><div class="oslo-demo-market"><span class="oslo-demo-icon">◎</span><div><strong>Will ETH outperform BTC?</strong><small>Crypto · 12.1k volume</small></div><em>YES 52%</em></div><div class="oslo-demo-market"><span class="oslo-demo-icon">◉</span><div><strong>Fed rate cut by September?</strong><small>Economics · 8.6k volume</small></div><em>YES 38%</em></div><div class="oslo-demo-note">Illustrative market data · no account connected</div></div></div></div>
           <p class="oslo-screen-copy">Categories, event cards, probability, and volume create a quick reading path from discovery to comparison. I aligned the YES and NO cues with the same green and red used for long and short in Perps, so those signals stay consistent across the product.</p>
-          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/predictions?preview=embed" target="_blank" rel="noreferrer">Open Prediction Markets in Oslo ↗</a>
+          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/predictions" target="_blank" rel="noreferrer">Open Prediction Markets in Oslo ↗</a>
         </article>
 
         <article class="oslo-screen">
           <h4>Lending</h4>
           <p class="oslo-screen-intent">Put rates, collateral, and market size in the same reading frame.</p>
-          <div class="ipad-frame">
-            <span class="ipad-screen"><iframe class="ipad-live-screen" src="https://christophorusan.github.io/futuresxyz/lending?preview=embed" title="Live Oslo lending markets screen, shown without a connected wallet" loading="lazy"></iframe></span>
-          </div>
+          <div class="ipad-frame oslo-static-preview" aria-label="Static Oslo lending preview"><div class="ipad-screen"><div class="oslo-demo oslo-demo-lending"><div class="oslo-demo-top"><strong>Lending markets</strong><span>HyperEVM</span></div><div class="oslo-demo-metrics"><span><small>Total supplied</small><strong>$42.8M</strong></span><span><small>Total borrowed</small><strong>$18.3M</strong></span></div><div class="oslo-demo-market"><span class="oslo-demo-icon">H</span><div><strong>HYPE</strong><small>Supply APY · Collateral</small></div><em class="oslo-demo-rate">4.82%</em></div><div class="oslo-demo-market"><span class="oslo-demo-icon">＄</span><div><strong>USDC</strong><small>Borrow APY · Variable</small></div><em class="oslo-demo-rate">6.14%</em></div><div class="oslo-demo-market"><span class="oslo-demo-icon">◈</span><div><strong>kHYPE</strong><small>Supply APY · Collateral</small></div><em class="oslo-demo-rate">3.76%</em></div><div class="oslo-demo-note">Illustrative market data · no account connected</div></div></div></div>
           <p class="oslo-screen-copy">Supply and borrow rates, collateral eligibility, and market totals help people compare before committing. Lending sits alongside the wallet and trading tools, while its provider and network stay visible.</p>
-          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/lending?preview=embed" target="_blank" rel="noreferrer">Open Lending in Oslo ↗</a>
+          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/lending" target="_blank" rel="noreferrer">Open Lending in Oslo ↗</a>
         </article>
       </div>
-      <p class="oslo-caveat">Wallet amounts are illustrative sample data. App feature screens are live previews with no wallet connected. Prediction markets load as a live preview and external trading links open Outcome testnet. Lending rates and provider terms may vary.</p>
+      <p class="oslo-caveat">Wallet and account data are not shown in this portfolio. Prediction and lending screens are static product previews; links open the live Oslo app. Rates and provider terms may vary.</p>
     </section>
 
     <footer>&copy; 2026 Cristobal Silva</footer>
