@@ -1147,9 +1147,33 @@
       background: #fff;
       border: 0;
       display: block;
-      height: 100%;
-      width: 100%;
+      height: 800px;
+      transform: scale(.546875);
+      transform-origin: top left;
+      width: 1280px;
     }
+
+    .oslo-screens { display:grid; gap:46px; margin-top:26px; }
+    .oslo-screen { margin:0; }
+    .oslo-screen img {
+      aspect-ratio:16 / 9;
+      background:#171717;
+      border:1px solid #e9e9e9;
+      border-radius:10px;
+      box-shadow:0 18px 50px rgba(0,0,0,.07);
+      display:block;
+      object-fit:cover;
+      width:100%;
+    }
+    .oslo-screen figcaption {
+      display:grid;
+      gap:12px;
+      grid-template-columns:minmax(150px, 190px) 1fr;
+      margin:13px auto 0;
+      max-width:650px;
+    }
+    .oslo-screen figcaption strong { font-size:14px; font-weight:560; }
+    .oslo-screen figcaption span { color:#777; font-size:13px; line-height:1.5; }
 
     .oslo-feature-grid { display:grid; gap:16px; grid-template-columns:repeat(3,minmax(0,1fr)); margin:22px auto 0; max-width:680px; }
     .oslo-feature { min-width:0; }
@@ -1168,7 +1192,9 @@
     .perps-actions span:first-child { background:#111; color:white; }
     .oslo-feature h4 { font-size:16px; font-weight:550; letter-spacing:-.02em; margin:14px 0 4px; }
     .oslo-feature p { color:#777; font-size:12px; line-height:1.5; }
-    @media(max-width:700px) { .oslo-feature-grid { grid-template-columns:1fr; } .feature-window { min-height:210px; } }
+    @media(max-width:560px) { .oslo-live-preview iframe { transform:scale(.42); } }
+    @media(max-width:460px) { .oslo-live-preview iframe { transform:scale(.34); } }
+    @media(max-width:400px) { .oslo-live-preview iframe { transform:scale(.29); } }
     .oslo-source-link {
       margin-left: 0;
     }
@@ -1206,7 +1232,9 @@
     }
 
     @media (max-width: 700px) {
-      .oslo-live-preview { aspect-ratio: 4 / 5; max-height: none; }
+      .oslo-live-preview { aspect-ratio: 16 / 10; max-height: none; }
+      .oslo-live-preview iframe { transform:scale(.5); }
+      .oslo-screen figcaption { grid-template-columns:1fr; gap:4px; }
       .oslo-app-links { grid-template-columns: 1fr; }
     }
   </style>
@@ -1219,36 +1247,44 @@
     <header>
       <div class="date">Updated October 27, 2026</div>
       <h1>Oslo</h1>
-      <p class="intro">A self-custody wallet that brings payments, trading, prediction markets, and earning into one clear place.</p>
+      <p class="intro">A self-custody wallet that brings payments, prediction markets, perps, and earning into one clear place.</p>
     </header>
 
-<section id="oslo-architecture" style="scroll-margin-top: 40px;">
+    <section id="oslo-architecture" style="scroll-margin-top: 40px;">
       <h2>One wallet. More ways to participate.</h2>
       <p>Oslo brings self-custody and open financial tools into one experience. The preview shows illustrative product data; it never embeds a connected wallet or personal balances.</p>
       <div class="work-stack">
         <article class="embedded-work">
-          <h3 class="piece-title">The Oslo landing page</h3>
-          <p class="piece-intro">A tighter preview of the public landing page, sized to show the product story at a glance. All values shown inside it are illustrative.</p>
+          <h3 class="piece-title">The landing page, at desktop scale</h3>
+          <p class="piece-intro">A desktop-width view of the live landing page, scaled to fit this case study. The app’s product views use sample data.</p>
           <div class="oslo-live-preview">
             <iframe src="https://christophorusan.github.io/futuresxyz/" title="Oslo landing page with illustrative product previews" loading="lazy"></iframe>
           </div>
           <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">Open the Oslo landing page ↗</a>
         </article>
         <article class="embedded-work">
-          <h3 class="piece-title">Three ways to use Oslo</h3>
-          <p class="piece-intro">A wallet is the starting point. From there, Oslo opens into markets and earning tools, each with its own focused workspace.</p>
-          <div class="oslo-feature-grid">
-            <article class="oslo-feature">
-              <div class="feature-window prediction-window" aria-label="Illustrative prediction market screen">
-                <div class="feature-top"><span>OSLO / MARKETS</span><span>PREVIEW</span></div>
-                <div class="feature-label">PREDICTION MARKETS</div>
-                <strong class="feature-headline">What happens next?</strong>
-                <div class="prediction-row"><span>Will ETH close above $4,000 this week?</span><b>YES&nbsp; 42¢</b></div>
-                <div class="prediction-row"><span>Will the Fed cut rates this month?</span><b>YES&nbsp; 31¢</b></div>
-                <small>Illustrative markets · sample data</small>
-              </div>
-              <h4>Predict</h4><p>Follow event markets and express a view with clear odds and outcomes.</p>
-            </article>
+          <h3 class="piece-title">Inside the app</h3>
+          <p class="piece-intro">These are real Oslo screens, captured with no wallet connected. They show the product itself without exposing anyone’s address, holdings, or account activity.</p>
+          <div class="oslo-screens">
+            <figure class="oslo-screen">
+              <img src="assets/oslo-media/wallet-interface.svg" alt="Oslo wallet interface with no wallet connected; balance and token holdings are hidden until a wallet is connected" loading="lazy">
+              <figcaption><strong>01 / Wallet</strong><span>A clear starting point for assets across supported networks. The preview keeps balances hidden until a person chooses to connect.</span></figcaption>
+            </figure>
+            <figure class="oslo-screen">
+              <img src="assets/oslo-media/predictions-interface.svg" alt="Oslo prediction markets interface with categories, event probabilities, and market cards" loading="lazy">
+              <figcaption><strong>02 / Prediction markets</strong><span>Browse event markets, compare outcomes, and see probabilities in the live Oslo interface. This public preview links to Outcome testnet.</span></figcaption>
+            </figure>
+            <figure class="oslo-screen">
+              <img src="assets/oslo-media/perps-interface.svg" alt="Oslo perpetuals trading interface with chart, order book, and order panel; no wallet connected" loading="lazy">
+              <figcaption><strong>03 / Perps</strong><span>Chart, order book, and order controls come together in the trading workspace. Account values remain unavailable until a wallet is connected.</span></figcaption>
+            </figure>
+            <figure class="oslo-screen">
+              <img src="assets/oslo-media/earn-interface.svg" alt="Oslo staking and earn interface with provider options and illustrative rates; no wallet connected" loading="lazy">
+              <figcaption><strong>04 / Earn</strong><span>Explore staking providers and review rates, exchange details, and terms before continuing to a provider.</span></figcaption>
+            </figure>
+          </div>
+          <p class="oslo-caveat">Screens are static captures of Oslo’s public interface with the wallet disconnected. Market prices, prediction probabilities, and staking metrics can change; rates and provider terms are illustrative and may vary.</p>
+        </article>
             <article class="oslo-feature">
               <div class="feature-window perps-window" aria-label="Illustrative perpetuals trading screen">
                 <div class="feature-top"><span>OSLO / TRADE</span><span>PREVIEW</span></div>
