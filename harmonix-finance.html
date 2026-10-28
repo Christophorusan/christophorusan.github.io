@@ -63,6 +63,22 @@
     .piece-note { color: #222; font-size: clamp(17px, 2vw, 20px); line-height: 1.5; margin: 0; max-width: 680px; }
     .source-link { color: #999; display: inline-block; font-size: 12px; margin-left: calc((100% - min(520px, 100%)) / 2); margin-top: 8px; text-decoration: none; }
     .source-link:hover { color: #111; text-decoration: underline; text-underline-offset: 4px; }
+    .oslo-flow-link { display: block; text-decoration: none; }
+    .oslo-flow-link:hover .oslo-flow-svg { border-color: #d7d7d7; }
+    .oslo-flow-svg { background: #fafafa; border: 1px solid #ededed; border-radius: 10px; display: block; height: 100%; width: 100%; }
+    .oslo-flow-svg text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .oslo-flow-svg .eyebrow { fill: #999; font-size: 12px; font-weight: 600; letter-spacing: 1.1px; }
+    .oslo-flow-svg .stage { fill: #fff; stroke: #e7e7e7; stroke-width: 1; }
+    .oslo-flow-svg .stage-num { fill: #aaa; font-size: 11px; font-weight: 600; }
+    .oslo-flow-svg .stage-title { fill: #161616; font-size: 16px; font-weight: 600; }
+    .oslo-flow-svg .stage-copy { fill: #777; font-size: 12px; }
+    .oslo-flow-svg .flow { fill: none; stroke: #bdbdbd; stroke-width: 1.5; }
+    .oslo-flow-svg .metric { fill: #fff; stroke: #ededed; stroke-width: 1; }
+    .oslo-flow-svg .metric-label { fill: #999; font-size: 10px; font-weight: 600; letter-spacing: .7px; }
+    .oslo-flow-svg .metric-copy { fill: #444; font-size: 12px; }
+    .oslo-flow-svg .calendar { fill: #f3f6f3; stroke: #e2e9e2; stroke-width: 1; }
+    .oslo-flow-svg .calendar-title { fill: #263b2a; font-size: 12px; font-weight: 600; }
+    .oslo-flow-svg .calendar-copy { fill: #6d786e; font-size: 11px; }
     footer { color: #c6c6c6; font-size: 13px; margin-top: 58px; }
     @media (max-width: 700px) { body { padding: 32px 18px 64px; font-size: 15px; } .back { margin-bottom: 34px; } header { margin-bottom: 36px; } .featured, .story-section { margin-bottom: 34px; padding-top: 24px; } .media-card { max-width: 100%; } .piece-reference { max-width: 100%; } .apy-visual { padding: 18px; } .apy-top { grid-template-columns: 1fr; } .apy-metric { min-width: 0; } .apy-chart { height: 190px; } .constructed-visual { gap: 14px; padding: 20px; } .visual-row, .metrics-grid, .timeline-grid { grid-template-columns: 1fr; } .visual-node, .visual-metric, .visual-step { min-height: 0; } .visual-arrow { font-size: 12px; justify-self: start; } }
   </style>
@@ -80,7 +96,67 @@
     <section class="featured" aria-labelledby="timeline-heading">
       <h2 id="timeline-heading">Harmonix</h2>
       <div class="work-stack">
-        <article class="media-card">
+                  <article class="media-card oslo-analytics">
+            <div class="piece-copy">
+              <h3 class="piece-title"><a href="https://christophorusan.github.io/oslo-architecture/?view=calendar" target="_blank" rel="noreferrer">Oslo Analytics</a></h3>
+              <p class="piece-note">I built Oslo as Harmonix’s analytics layer, bringing X and community activity together with Hyperliquid wallet and vault flows. It maps the journey from campaign reach and UTM activity to deposits, then surfaces monthly new and active wallets, deposit and withdrawal trends, and retention signals. The calendar connects those insights to content, experiments, and follow-up actions.</p>
+            </div>
+            <div class="piece-reference">
+              <a class="media-link media-frame oslo-flow-link" href="https://christophorusan.github.io/oslo-architecture/?view=calendar" target="_blank" rel="noreferrer" aria-label="Open Oslo analytics calendar view">
+                <svg class="oslo-flow-svg" viewBox="0 0 760 475" role="img" aria-labelledby="oslo-flow-title oslo-flow-desc" xmlns="http://www.w3.org/2000/svg">
+                  <title id="oslo-flow-title">Oslo analytics loop for Harmonix</title>
+                  <desc id="oslo-flow-desc">A four-stage visual showing campaign reach, deposit conversion, wallet retention, and protocol growth, connected to a calendar for planning content, experiments, and follow-up.</desc>
+                  <text class="eyebrow" x="28" y="38">HARMONIX GROWTH ANALYTICS</text>
+                  <text x="732" y="38" text-anchor="end" fill="#999" font-size="11">OSLO · SIGNAL TO ACTION</text>
+                  <g>
+                    <rect class="stage" x="24" y="62" width="160" height="150" rx="8"/>
+                    <text class="stage-num" x="40" y="88">01 / ACQUISITION</text>
+                    <text class="stage-title" x="40" y="119">Campaign reach</text>
+                    <text class="stage-copy" x="40" y="148">X + community</text>
+                    <text class="stage-copy" x="40" y="168">UTM source + narrative</text>
+                    <path class="flow" d="M188 137h17m-5-5 5 5-5 5"/>
+                    <rect class="stage" x="208" y="62" width="160" height="150" rx="8"/>
+                    <text class="stage-num" x="224" y="88">02 / CONVERSION</text>
+                    <text class="stage-title" x="224" y="119">Deposits</text>
+                    <text class="stage-copy" x="224" y="148">Campaign → visit</text>
+                    <text class="stage-copy" x="224" y="168">Visit → deposit signal</text>
+                    <path class="flow" d="M372 137h17m-5-5 5 5-5 5"/>
+                    <rect class="stage" x="392" y="62" width="160" height="150" rx="8"/>
+                    <text class="stage-num" x="408" y="88">03 / RETENTION</text>
+                    <text class="stage-title" x="408" y="119">Wallet activity</text>
+                    <text class="stage-copy" x="408" y="148">New vs active wallets</text>
+                    <text class="stage-copy" x="408" y="168">Deposit + withdrawal flows</text>
+                    <path class="flow" d="M556 137h17m-5-5 5 5-5 5"/>
+                    <rect class="stage" x="576" y="62" width="160" height="150" rx="8"/>
+                    <text class="stage-num" x="592" y="88">04 / GROWTH</text>
+                    <text class="stage-title" x="592" y="119">Protocol growth</text>
+                    <text class="stage-copy" x="592" y="148">TVL + depositor trends</text>
+                    <text class="stage-copy" x="592" y="168">Review what moves them</text>
+                  </g>
+                  <rect class="metric" x="24" y="238" width="224" height="70" rx="7"/>
+                  <text class="metric-label" x="40" y="261">CONVERSION</text>
+                  <text class="metric-copy" x="40" y="284">UTM → deposit path</text>
+                  <rect class="metric" x="268" y="238" width="224" height="70" rx="7"/>
+                  <text class="metric-label" x="284" y="261">RETENTION</text>
+                  <text class="metric-copy" x="284" y="284">New vs active wallet activity</text>
+                  <rect class="metric" x="512" y="238" width="224" height="70" rx="7"/>
+                  <text class="metric-label" x="528" y="261">GROWTH</text>
+                  <text class="metric-copy" x="528" y="284">Deposits, flows + TVL</text>
+                  <path class="flow" d="M380 310v24"/>
+                  <rect class="calendar" x="24" y="342" width="712" height="86" rx="8"/>
+                  <rect x="44" y="360" width="44" height="48" rx="5" fill="#fff" stroke="#e2e9e2"/>
+                  <path d="M44 373h44" stroke="#e2e9e2"/>
+                  <path d="M56 356v9m20-9v9" stroke="#8c9c8d" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="58" cy="385" r="2" fill="#91a292"/><circle cx="70" cy="385" r="2" fill="#91a292"/><circle cx="58" cy="395" r="2" fill="#91a292"/><circle cx="70" cy="395" r="2" fill="#1d9bf0"/>
+                  <text class="calendar-title" x="108" y="376">Insight → calendar → action</text>
+                  <text class="calendar-copy" x="108" y="399">Turn the readout into content, experiments, and follow-up. Open the Oslo calendar view.</text>
+                  <text x="712" y="389" text-anchor="end" fill="#727d73" font-size="12" font-weight="600">VIEW ↗</text>
+                </svg>
+              </a>
+            </div>
+            <a class="source-link" href="https://christophorusan.github.io/oslo-architecture/?view=calendar" target="_blank" rel="noreferrer">Oslo analytics · Funnel, wallet activity & calendar view</a>
+          </article>
+<article class="media-card">
           <div class="piece-copy">
             <h3 class="piece-title"><a href="https://x.com/harmonixfi/status/1926265822223184067?s=20" target="_blank" rel="noreferrer">2025 Thesis</a></h3>
             <p class="piece-note">I wrote the product thesis and narratives that positioned Harmonix as a liquidity layer for Hyperliquid, connecting vaults, staking, and stablecoin infrastructure. This work helped us raise about $2M in total and grow TVL from $2M to $20M.</p>
