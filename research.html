@@ -1196,6 +1196,60 @@
   </style>
 
   <link rel="stylesheet" href="assets/site-aesthetic.css" />
+
+  <style>
+    #oslo-architecture > h2 {
+      color: var(--ink) !important;
+      font-size: clamp(32px, 5vw, 46px) !important;
+      font-weight: 500 !important;
+      letter-spacing: -0.035em !important;
+      line-height: 1.08 !important;
+      margin-bottom: 18px !important;
+      text-transform: none !important;
+    }
+    #oslo-architecture > p:first-of-type {
+      color: var(--muted) !important;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 680px;
+    }
+    .oslo-screen h4 {
+      font-size: 18px;
+      font-weight: 560;
+      margin-bottom: 5px;
+    }
+    .oslo-screen-intent {
+      color: var(--muted) !important;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .oslo-screen-copy {
+      color: var(--muted) !important;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+    .oslo-source-link {
+      background: var(--ink);
+      border-radius: 999px;
+      color: #fff !important;
+      display: inline-flex;
+      font-size: 13px;
+      font-weight: 520;
+      margin: 12px 0 14px;
+      padding: 10px 16px;
+      transition: background 160ms ease, transform 160ms ease;
+    }
+    .oslo-source-link:hover {
+      background: #343631;
+      color: #fff !important;
+      text-decoration: none !important;
+      transform: translateY(-1px);
+    }
+    .oslo-source-link:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 3px;
+    }
+  </style>
 </head>
 <body>
   <main class="page">
@@ -1215,41 +1269,45 @@
         <article class="oslo-screen oslo-wallet-screen">
           <h4>Wallet</h4>
           <p class="oslo-screen-intent">Start with a clear view of the whole portfolio, then make the next action easy to find.</p>
+          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noopener noreferrer">Open live Oslo ↗</a>
           <div class="oslo-live-preview">
             <iframe src="https://christophorusan.github.io/futuresxyz/" title="Oslo desktop landing page with illustrative $50,000 wallet preview" loading="lazy"></iframe>
           </div>
           <p class="oslo-screen-copy">The wallet is the home for everything else. I brought balances, holdings, and everyday actions into one view, then connected that starting point to the broader set of open-finance tools. The portfolio shown is illustrative sample data; no wallet is connected.</p>
-          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/" target="_blank" rel="noreferrer">Open the Oslo landing page ↗</a>
+          
         </article>
 
         <article class="oslo-screen">
           <h4>Perps</h4>
           <p class="oslo-screen-intent">Keep the essentials visible together, so a market decision needs less hunting around.</p>
+          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/perps?preview=embed" target="_blank" rel="noopener noreferrer">Open Perps ↗</a>
           <div class="ipad-frame">
             <span class="ipad-screen"><iframe class="ipad-live-screen" src="https://christophorusan.github.io/futuresxyz/perps?preview=embed" title="Live Oslo perpetuals trading screen, shown without a connected wallet" loading="lazy"></iframe></span>
           </div>
           <p class="oslo-screen-copy">A live chart, order book, and trade controls share one focused workspace. The quieter neutral surfaces keep attention on price movement and the buy or sell decision; account values stay hidden while disconnected.</p>
-          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/perps?preview=embed" target="_blank" rel="noreferrer">Open Perps in Oslo ↗</a>
+          
         </article>
 
         <article class="oslo-screen">
           <h4>Prediction markets</h4>
           <p class="oslo-screen-intent">Make each outcome and its probability easy to compare at a glance.</p>
+          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/predictions?preview=embed" target="_blank" rel="noopener noreferrer">Open Predictions ↗</a>
           <div class="ipad-frame prediction-live-frame">
             <span class="ipad-screen"><iframe class="ipad-live-screen" src="https://christophorusan.github.io/futuresxyz/predictions?preview=embed" title="Live Oslo prediction markets interface, shown without a connected wallet" loading="lazy"></iframe></span>
           </div>
           <p class="oslo-screen-copy">Categories, event cards, probability, and volume create a quick reading path from discovery to comparison. I aligned the YES and NO cues with the same green and red used for long and short in Perps, so those signals stay consistent across the product.</p>
-          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/predictions?preview=embed" target="_blank" rel="noreferrer">Open Prediction Markets in Oslo ↗</a>
+          
         </article>
 
         <article class="oslo-screen">
           <h4>Lending</h4>
           <p class="oslo-screen-intent">Put rates, collateral, and market size in the same reading frame.</p>
+          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/lending?preview=embed" target="_blank" rel="noopener noreferrer">Open Lending ↗</a>
           <div class="ipad-frame">
             <span class="ipad-screen"><iframe class="ipad-live-screen" src="https://christophorusan.github.io/futuresxyz/lending?preview=embed" title="Live Oslo lending markets screen, shown without a connected wallet" loading="lazy"></iframe></span>
           </div>
           <p class="oslo-screen-copy">Supply and borrow rates, collateral eligibility, and market totals help people compare before committing. Lending sits alongside the wallet and trading tools, while its provider and network stay visible.</p>
-          <a class="source-link oslo-source-link" href="https://christophorusan.github.io/futuresxyz/lending?preview=embed" target="_blank" rel="noreferrer">Open Lending in Oslo ↗</a>
+          
         </article>
       </div>
       <p class="oslo-caveat">Wallet amounts are illustrative sample data. App feature screens are live previews with no wallet connected. Prediction markets load as a live preview and external trading links open Outcome testnet. Lending rates and provider terms may vary.</p>
